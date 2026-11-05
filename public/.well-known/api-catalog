@@ -1,0 +1,33 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://onestopvapestore.com/",
+      "https://www.iana.org/assignments/link-relations/service-doc": [
+        {
+          "href": "https://onestopvapestore.com/faq/"
+        }
+      ],
+      "title": "One Stop Vape Store — Premium Vaping Essentials & Advanced Hardware"
+    },
+    {
+      "anchor": "https://onestopvapestore.com/shop/",
+      "type": "text/html",
+      "title": "One Stop Vape Store Product Catalog"
+    },
+    {
+      "anchor": "https://onestopvapestore.com/api/products",
+      "type": "application/json",
+      "title": "One Stop Vape Store Products API"
+    },
+    {
+      "anchor": "https://onestopvapestore.com/api/mcp",
+      "type": "application/json",
+      "https://www.iana.org/assignments/link-relations/service-desc": [
+        {
+          "href": "https://onestopvapestore.com/.well-known/mcp/server-card.json"
+        }
+      ],
+      "title": "One Stop Vape Store MCP Server"
+    }
+  ]
+}

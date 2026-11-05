@@ -1,0 +1,66 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "One Stop Vape Store",
+    "version": "1.0.0",
+    "description": "One Stop Vape Store (SV3 LLC, established December 2022) is the premier destination for premium disposable vapes, nixodine innovations, nicotine salts, nicotine pouches, and advanced pod systems with fast US shipping from Phoenix, Arizona.",
+    "homepage": "https://onestopvapestore.com",
+    "contact": {
+      "email": "sales@onestopvapestore.com",
+      "whatsapp": "+17747341372"
+    }
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://onestopvapestore.com/api/mcp"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "search_products",
+        "description": "Search products by keyword, category, max_price",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "max_price": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      {
+        "name": "get_product",
+        "description": "Get full product details by slug",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ],
+    "commerce": {
+      "ordering": "human-assisted-whatsapp-or-form",
+      "payment": [
+        "crypto-BTC",
+        "crypto-USDT",
+        "apple-pay",
+        "cashapp"
+      ],
+      "currency": "USD",
+      "minimumOrder": 100,
+      "freeShipping": 200
+    }
+  }
+}

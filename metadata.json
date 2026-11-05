@@ -1,0 +1,6 @@
+{
+  "name": "One Stop Vape Store",
+  "description": "One Stop Vape Store is the ultimate destination for premium disposable vapes, nicotine salts, and advanced pod systems. Featuring flagship brands like Geek Bar, we offer professional-grade hardware and liquids with fast US shipping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
