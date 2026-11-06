@@ -18,7 +18,7 @@ export default function ReturnsPage() {
       <p>If there is an issue with your purchase at onestopvapestore.com, you can call or email us, and we will guide you through our processes. Returns must be done within 30 days from the date you purchased it.</p>
 
       <h2>Refunds</h2>
-      <p>Once the product is received, we will issue you a refund back to the card used in the original order, minus a 15% restocking fee. We do not provide pre-paid labels to return the product back to us and we do not refund any shipping fee’s. We highly suggest adding insurance to your package when shipping back to us.</p>
+      <p>Once the product is received, we will issue your refund back through the same payment method the payment was received through (Cash App, Apple Pay, Chime, cryptocurrency or gift card), minus a 15% restocking fee. We do not provide pre-paid labels to return the product back to us and we do not refund any shipping fee’s. We highly suggest adding insurance to your package when shipping back to us.</p>
 
       <h2>Exchanges</h2>
       <p>We are more than happy to do exchanges within 30 days from purchase.</p>

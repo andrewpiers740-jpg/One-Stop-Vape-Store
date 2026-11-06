@@ -56,7 +56,7 @@ export default function ShippingPage() {
       <p>If there is an issue with your purchase at onestopvapestore.com, you can call or email us, and we&apos;ll guide you through our processes. Returns must be done within 30 days from the date you purchased it. Puffco products do not qualify for refunds or exchanges.</p>
 
       <h2>Refunds</h2>
-      <p>Once the product is received, we will issue you a refund back to the card used in the original order, minus a 15% restocking fee.</p>
+      <p>Once the product is received, we will issue your refund back through the same payment method the payment was received through (Cash App, Apple Pay, Chime, cryptocurrency or gift card), minus a 15% restocking fee.</p>
 
       <h2>Refund/Exchange Restrictions</h2>
       <p>Unfortunately, there are certain items we can&apos;t accept as a return due to FDA Regulation:</p>

@@ -11,7 +11,6 @@ import { productOffers } from "@/lib/schema";
 import { productFaq } from "@/lib/productFaq";
 import PaymentLogos from "@/src/components/PaymentLogos";
 import PostBody from "@/src/components/blog/PostBody";
-import longDescriptions from "@/src/data/product-descriptions.json";
 import { notFound } from "next/navigation";
 import { Check, MessageSquare, ShieldCheck, Truck, ChevronRight } from "lucide-react";
 
@@ -48,7 +47,8 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const product = (products as any[]).find(p => p.slug === slug);
   if (!product) notFound();
 
-  const rawContent = (longDescriptions as Record<string, any>)[product.slug];
+  // Per-product copy is written by scripts/gen-product-copy.mjs; loaded on demand so the page bundle stays small.
+  const rawContent: any = await import(`@/src/data/product-copy/${slug}.json`).then((m) => m.default).catch(() => null);
   const content: { body?: string; short?: string; faq?: { q: string; a: string }[] } = typeof rawContent === "string" ? { body: rawContent } : rawContent || {};
   const faq = content.faq && content.faq.length === 10 ? content.faq : productFaq(product);
   const shortDesc = content.short || product.description;

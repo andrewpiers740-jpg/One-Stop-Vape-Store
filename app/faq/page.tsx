@@ -119,7 +119,7 @@ const FAQ_SECTIONS = [
     title: "Returns, Refunds & Damaged Items",
     icon: ShieldCheck,
     items: [
-      { q: "What is your return policy?", a: "Contact us within 30 days of purchase. Unopened items in original packaging can be returned or exchanged. Opened or used e-liquid, devices and accessories cannot be returned. A 15% restocking fee applies to refunds. See the Returns & Refund Policy for full details." },
+      { q: "What is your return policy?", a: "Contact us within 30 days of purchase. Unopened items in original packaging can be returned or exchanged. Opened or used e-liquid, devices and accessories cannot be returned. A 15% restocking fee applies to refunds, paid back through the payment method you used. See the Returns & Refund Policy for full details." },
       { q: "What if my parcel arrives damaged or wrong?", a: "Email your order number and photos of the parcel and items to sales@onestopvapestore.com. We will arrange a replacement or resolution." },
       { q: "How do I start a return?", a: "Contact us first to receive an RMA form. Returns without an RMA cannot be guaranteed a refund or exchange." }
     ]
