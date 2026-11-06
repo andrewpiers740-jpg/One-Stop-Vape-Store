@@ -6,7 +6,7 @@ The easiest way to dispose of devices responsibly is to make it a routine instea
 Each device you recycle keeps a lithium battery out of the waste stream and returns materials to use. It also keeps nicotine residue away from children, pets and water. The effort is small compared with the risk of a fire in a bin or a collection truck, and compared with the harm a leaking bottle can do. Responsible disposal is one of the simplest ways to be a considerate adult user.
 
 ### What the process looks like at a drop-off site
-You arrive, tell an attendant what you have and hand over the sealed bag or place it where they direct. The attendant sorts it into the correct stream. You do not need to explain how you used it, and you are not judged for using it. The aim is to get the items out of circulation safely and responsibly.`,
+You arrive, tell an attendant what you have and hand over the sealed bag or place it where they direct. The attendant sorts it into the correct stream. You do not need to explain how you used it, and you are not judged for using it. The aim is to get the items out of circulation securely and responsibly.`,
 
 "keeping-vapes-away-from-children-and-pets": `## Planning for emergencies in advance
 Save the Poison Control number, 1-800-222-1222, in your phone and write it where family members can see it, for example on the fridge or inside a cabinet door. Know the name and address of a nearby veterinary emergency clinic. Teach other adults in the household what to do: call first, have the packaging ready and do not wait for symptoms. A prepared household reacts faster, and in an exposure, speed matters.
