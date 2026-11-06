@@ -14,7 +14,7 @@ export default function BrandCarousel() {
 
   return (
     <div className="w-full py-16 bg-white overflow-hidden">
-      <h2 className="text-center text-xs font-black text-zinc-400 uppercase tracking-[0.3em] mb-12">Trusted Brands</h2>
+      <h2 className="text-center text-xs font-black text-slate-600 uppercase tracking-[0.3em] mb-12">Trusted Brands</h2>
       <div className="relative flex overflow-hidden">
         <motion.div
           className="flex gap-16 items-center"
@@ -41,7 +41,7 @@ export default function BrandCarousel() {
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `<span class="font-bold text-zinc-500 text-xs">${brand}</span>`;
+                      e.target.parentElement.innerHTML = `<span class="font-bold text-slate-500 text-xs">${brand}</span>`;
                     }}
                  />
               </div>

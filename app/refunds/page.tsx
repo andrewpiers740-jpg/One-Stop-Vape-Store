@@ -1,5 +1,6 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: "Refund and Return Policy | One Stop Vape Store",
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function ReturnsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 prose prose-invert">
+    <>
+      <PageBanner slug="refunds" label="Refunds" />
+      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
       <h1><strong>Refund and Return Policy</strong></h1>
 
       <h3>Exchange and Refund policy</h3>
@@ -47,5 +50,6 @@ export default function ReturnsPage() {
         Call us at 1-774-734-1372
       </p>
     </div>
+    </>
   );
 }

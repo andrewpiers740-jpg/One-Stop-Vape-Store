@@ -8,10 +8,10 @@ No authentication required. All resources are publicly accessible.
 ## Public Resources
 | Resource | URL |
 |---|---|
-| Product Catalog | https://onestopvapestore.com/shop/ |
-| Blog | https://onestopvapestore.com/blog/ |
-| FAQ | https://onestopvapestore.com/faq/ |
-| Wholesale | https://onestopvapestore.com/wholesale/ |
+| Product Catalog | https://www.onestopvapestore.com/shop/ |
+| Blog | https://www.onestopvapestore.com/blog/ |
+| FAQ | https://www.onestopvapestore.com/faq/ |
+| Wholesale | https://www.onestopvapestore.com/wholesale/ |
 
 ## Authentication
 ```json

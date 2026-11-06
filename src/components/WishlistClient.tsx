@@ -77,18 +77,18 @@ export default function WishlistClient() {
   if (items.length === 0) {
     return (
       <div className="max-w-2xl mx-auto px-6 py-24 text-center flex flex-col items-center gap-6">
-        <div className="w-20 h-20 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-500">
-          <Heart size={36} className="text-zinc-600" />
+        <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-500">
+          <Heart size={36} className="text-slate-400" />
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Your Wishlist is Empty</h1>
-          <p className="text-zinc-400 text-sm md:text-base max-w-md mx-auto">
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">Your Wishlist is Empty</h1>
+          <p className="text-slate-600 text-sm md:text-base max-w-md mx-auto">
             Save your favorite disposable vapes, nixodine innovations, pod systems, and e-liquids here to easily revisit or order anytime.
           </p>
         </div>
         <Link
           href="/shop"
-          className="mt-4 px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-xl shadow-emerald-500/20 text-xs"
+          className="mt-4 px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-white font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 shadow-xl shadow-emerald-500/20 text-xs"
         >
           <span>Explore Shop Catalog</span>
           <ArrowRight size={16} />
@@ -101,16 +101,16 @@ export default function WishlistClient() {
     <div className="max-w-[1440px] mx-auto px-6 py-12 flex flex-col gap-10">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 border-b border-zinc-900">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 border-b border-slate-200">
         <div className="flex flex-col gap-2">
-          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-zinc-600">
-            <Link href="/" className="hover:text-emerald-500 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+            <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-zinc-400">Wishlist</span>
+            <span className="text-slate-600">Wishlist</span>
           </nav>
           <div className="flex items-center gap-3">
-            <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">My Wishlist</h1>
-            <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-black rounded-full">
+            <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter">My Wishlist</h1>
+            <span className="px-3 py-1 bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 text-xs font-black rounded-full">
               {items.length} {items.length === 1 ? "Item" : "Items"}
             </span>
           </div>
@@ -118,7 +118,7 @@ export default function WishlistClient() {
 
         <button
           onClick={clearAll}
-          className="text-xs text-zinc-500 hover:text-red-400 transition-colors flex items-center gap-1.5 self-start sm:self-end font-bold uppercase tracking-wider"
+          className="text-xs text-slate-500 hover:text-red-700 transition-colors flex items-center gap-1.5 self-start sm:self-end font-bold uppercase tracking-wider"
         >
           <Trash2 size={14} />
           <span>Clear Wishlist</span>
@@ -135,7 +135,7 @@ export default function WishlistClient() {
           return (
             <div
               key={item.slug}
-              className="group flex flex-col justify-between gap-4 p-4 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-emerald-500/40 transition-all duration-300"
+              className="group flex flex-col justify-between gap-4 p-4 rounded-3xl bg-slate-100/40 border border-slate-200 hover:border-emerald-500/40 transition-all duration-300"
             >
               <div className="flex flex-col gap-4">
                 {/* Pure white background card for image */}
@@ -148,30 +148,30 @@ export default function WishlistClient() {
                   <button
                     onClick={() => removeItem(item.slug)}
                     aria-label="Remove item"
-                    className="absolute top-3 right-3 w-8 h-8 rounded-full bg-zinc-900/80 hover:bg-red-500 text-zinc-300 hover:text-white flex items-center justify-center transition-colors"
+                    className="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-100/80 hover:bg-red-500 text-slate-700 hover:text-white flex items-center justify-center transition-colors"
                   >
                     <Trash2 size={14} />
                   </button>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-[10px] text-zinc-500 uppercase font-black tracking-widest">{item.brand}</span>
+                  <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{item.brand}</span>
                   <Link
                     href={`/shop/${item.category}/${item.slug}/`}
-                    className="text-sm font-bold text-white hover:text-emerald-400 transition-colors line-clamp-1 tracking-tight"
+                    className="text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors line-clamp-1 tracking-tight"
                   >
                     {item.title}
                   </Link>
-                  <StarRating rating={item.rating || 5.0} reviewsCount={item.reviewsCount || 48} size="xs" />
-                  <p className="text-emerald-400 font-mono text-sm font-bold tabular-nums mt-1">{item.priceDisplay}</p>
+                  {item.rating && item.reviewsCount ? <StarRating rating={item.rating} reviewsCount={item.reviewsCount} size="xs" /> : null}
+                  <p className="text-emerald-600 font-mono text-sm font-bold tabular-nums mt-1">{item.priceDisplay}</p>
                 </div>
               </div>
 
               {/* Action buttons */}
-              <div className="flex flex-col gap-2 pt-3 border-t border-zinc-800/60">
+              <div className="flex flex-col gap-2 pt-3 border-t border-slate-200/60">
                 <Link
                   href={`/shop/${item.category}/${item.slug}/`}
-                  className="w-full py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-black uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 bg-slate-200 hover:bg-zinc-700 text-slate-900 text-xs font-black uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
                 >
                   <ShoppingBag size={14} />
                   <span>View Details</span>
@@ -180,7 +180,7 @@ export default function WishlistClient() {
                   href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2.5 bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-black text-xs font-black uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 border border-emerald-500/20"
+                  className="w-full py-2.5 bg-emerald-500/10 hover:bg-emerald-500 text-emerald-600 hover:text-white text-xs font-black uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 border border-emerald-500/20"
                 >
                   <MessageSquare size={14} />
                   <span>Order on WhatsApp</span>

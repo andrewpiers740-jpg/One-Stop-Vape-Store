@@ -69,8 +69,8 @@ export default function WishlistButton({ product }: WishlistButtonProps) {
           price: product.price,
           priceDisplay: product.priceDisplay,
           image: product.image,
-          rating: product.rating || 5.0,
-          reviewsCount: product.reviewsCount || 48,
+          rating: product.rating,
+          reviewsCount: product.reviewsCount,
         });
       }
 
@@ -88,13 +88,13 @@ export default function WishlistButton({ product }: WishlistButtonProps) {
       type="button"
       className={`w-full py-4 rounded-full font-black text-xs uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 border ${
         isInWishlist
-          ? "bg-rose-500/10 border-rose-500/30 text-rose-400 hover:bg-rose-500 hover:text-white"
-          : "bg-zinc-900 border-zinc-800 text-zinc-300 hover:border-emerald-500 hover:text-white"
+          ? "bg-rose-500/10 border-rose-500/30 text-rose-400 hover:bg-rose-500 hover:text-slate-900"
+          : "bg-slate-100 border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-slate-900"
       }`}
     >
       <Heart
         size={16}
-        className={isInWishlist ? "fill-rose-500 text-rose-500" : "text-zinc-400"}
+        className={isInWishlist ? "fill-rose-500 text-rose-500" : "text-slate-600"}
       />
       <span>{isInWishlist ? "Saved in Wishlist" : "Save to Wishlist"}</span>
     </button>

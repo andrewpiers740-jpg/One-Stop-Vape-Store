@@ -2,6 +2,8 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Canonical URLs, sitemap and internal links all end in "/"; serve them that way (no redirect loops).
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -10,20 +12,9 @@ const nextConfig: NextConfig = {
   },
   // Allow access to remote image placeholder.
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn11.bigcommerce.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    // Every image is pre-optimised WebP in /public/images (see scripts/images-*.mjs), so the runtime optimiser is not
+    // needed — this also avoids Vercel's per-plan source-image quota with a 2,500-product catalogue.
+    unoptimized: true,
   },
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {

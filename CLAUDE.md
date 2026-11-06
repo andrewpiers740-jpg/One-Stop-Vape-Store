@@ -19,3 +19,11 @@ React/Next.js ecommerce vape store, Vercel, deployed via GitHub.
 2. Run `node scripts/gen-agent-files.mjs`.
 3. Run `node scripts/crosscheck.mjs`.
 4. Ensure `ADMIN_PASSCODE` is set in Vercel env vars.
+
+## Orders, payments, content (added)
+- Never put keys or seed phrases in the repo; wallets in `src/config/wallets.js` are PUBLIC addresses.
+- Price authority is server-side (`lib/catalog.js`); free shipping = $200+ AFTER discount (matches /shipping/).
+- Admin auth: `lib/adminAuth.js` has no fallback passcode. Do not add one.
+- Blog is data: edit `content/blog/*.mjs`, then `npm run blog`. Banned wording (safe, healthy, cure, risk-free, ...) fails the build.
+- Do not invent reviews, ratings, sales popups or statistics. Only real, attributable social proof.
+- Images are local WebP in `public/images`; the Next image optimizer is off (`images.unoptimized`).

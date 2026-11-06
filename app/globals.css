@@ -2,24 +2,78 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html, body { 
-  overflow-x: hidden; 
-  max-width: 100vw; 
-  background-color: black;
-  color: white;
+/*
+ * Brand theme — sampled from the logo (electric cyan-blue cloud, black ink, white outline).
+ * The site's utility classes were written against Tailwind's `emerald` scale, so the scale is
+ * re-pointed at the logo blue here: one change recolours every existing component consistently.
+ * Use `brand-*` in new code; `emerald-*` remains an alias so legacy markup stays on-theme.
+ */
+@theme {
+  /* Trustpilot green — used for the reviews section and every rating star */
+  --color-trust: #00b67a;
+  --color-trust-dark: #00875a;
+
+  --color-brand-50: #eaf6ff;
+  --color-brand-100: #d1ecff;
+  --color-brand-200: #a6dbff;
+  --color-brand-300: #5cc8ff;
+  --color-brand-400: #1fb4ff;
+  --color-brand-500: #0b6dff;
+  --color-brand-600: #0555e0;
+  --color-brand-700: #0440b8;
+  --color-brand-800: #043393;
+  --color-brand-900: #052870;
+  --color-brand-950: #031847;
+
+  --color-emerald-50: #eaf6ff;
+  --color-emerald-100: #d1ecff;
+  --color-emerald-200: #a6dbff;
+  --color-emerald-300: #5cc8ff;
+  --color-emerald-400: #1fb4ff;
+  --color-emerald-500: #0b6dff;
+  --color-emerald-600: #0555e0;
+  --color-emerald-700: #0440b8;
+  --color-emerald-800: #043393;
+  --color-emerald-900: #052870;
+  --color-emerald-950: #031847;
 }
 
-* { 
-  box-sizing: border-box; 
-  min-width: 0; 
+:root {
+  --brand-ink: #0a0a0a;
+  --brand-primary: #0b6dff;
+  --brand-sky: #1fb4ff;
+  --brand-deep: #0440b8;
 }
 
-img, video, iframe { 
-  max-width: 100%; 
-  height: auto; 
+/* Global overflow guards. Kept in Tailwind's base layer so utility classes (h-10, w-full, ...) can override them —
+   unlayered `img { height:auto }` would otherwise beat every sized image on the site. */
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+
+  * {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width:600px) {
   [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   [style*="display:grid"] { display: block !important; }
+}
+
+@keyframes hero-pop { 0% { transform: scale(0.94); opacity: 0.4; } 60% { transform: scale(1.012); } 100% { transform: scale(1); opacity: 1; } }
+.hero-pop { animation: hero-pop 650ms cubic-bezier(.2,.8,.2,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }

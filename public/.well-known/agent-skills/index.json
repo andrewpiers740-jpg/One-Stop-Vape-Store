@@ -1,20 +1,20 @@
 {
   "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
   "name": "One Stop Vape Store",
-  "url": "https://onestopvapestore.com",
+  "url": "https://www.onestopvapestore.com",
   "description": "Premium Vaping Essentials & Advanced Hardware",
   "skills": [
     {
       "name": "search-products",
       "type": "commerce",
       "description": "Search vapes by keyword, category, or price",
-      "url": "https://onestopvapestore.com/api/mcp"
+      "url": "https://www.onestopvapestore.com/api/mcp"
     },
     {
       "name": "browse-catalog",
       "type": "navigation",
       "description": "Browse the full product catalog",
-      "url": "https://onestopvapestore.com/shop/"
+      "url": "https://www.onestopvapestore.com/shop/"
     }
   ]
 }

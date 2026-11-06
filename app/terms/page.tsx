@@ -1,5 +1,6 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: "Terms of Service | One Stop Vape Store",
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 prose prose-invert">
+    <>
+      <PageBanner slug="terms" label="Terms" />
+      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
       <h1><strong>Terms of Service</strong></h1>
 
       <h3>OVERVIEW</h3>
@@ -112,5 +115,6 @@ export default function TermsPage() {
       <h3>SECTION 20 - CONTACT INFORMATION</h3>
       <p>Questions about the Terms of Service should be sent to us at Sales@onestopvapestore.com</p>
     </div>
+    </>
   );
 }

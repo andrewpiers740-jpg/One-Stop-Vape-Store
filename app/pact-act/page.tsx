@@ -1,5 +1,6 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: "Pact Act FAQ | One Stop Vape Store",
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function PactActPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 prose prose-invert">
+    <>
+      <PageBanner slug="pact-act" label="PACT Act" />
+      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
       <h1><strong>Pact Act FAQ</strong></h1>
 
       <h3>What is the PACT Act?</h3>
@@ -31,5 +34,6 @@ export default function PactActPage() {
       <h3>Can I still buy from One Stop Vape Store?</h3>
       <p>Despite what some people tell you, online sales for vape are not banned but the PACT Act has made it harder for us. But we are determined to rise to this challenge and continue to sell a great range of products at competitive prices.</p>
     </div>
+    </>
   );
 }

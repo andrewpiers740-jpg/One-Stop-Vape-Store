@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 import { SITE } from "@/src/config/site";
 
 export default function AgeGateModal() {
   const [show, setShow] = React.useState(false);
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const confirmed = localStorage.getItem("age-confirmed");
@@ -18,7 +20,7 @@ export default function AgeGateModal() {
     setShow(false);
   };
 
-  if (!show) return null;
+  if (!show || pathname?.startsWith("/admin")) return null; // staff pages are exempt
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/95 backdrop-blur-md">
@@ -40,7 +42,7 @@ export default function AgeGateModal() {
         <div className="flex flex-col gap-3">
           <button
             onClick={handleConfirm}
-            className="w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-xl transition-all duration-300"
+            className="w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-xl transition-all duration-300"
           >
             I am {SITE.compliance.ageThreshold} or older
           </button>

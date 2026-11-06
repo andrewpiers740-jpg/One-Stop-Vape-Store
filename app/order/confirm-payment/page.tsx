@@ -1,92 +1,86 @@
 "use client";
-import React from "react";
-import { useSearchParams } from "next/navigation";
-import { Check, Upload, ShieldCheck, ArrowLeft } from "lucide-react";
+import React, { Suspense } from "react";
 import Link from "next/link";
+import { usePortalOrder, ProofUploader, CryptoStatus, StatusPill, ExternalBtn, CopyField } from "@/src/components/OrderPortal";
+import { money } from "@/lib/order";
+import { waPaymentConfirmationLink } from "@/lib/whatsapp";
 import { SITE } from "@/src/config/site";
+import { MessageCircle } from "lucide-react";
 
-function ConfirmPaymentContent() {
-  const searchParams = useSearchParams();
-  const orderId = searchParams.get("id") || "---";
-  const [status, setStatus] = React.useState("idle"); // idle, uploading, success
-
-  const handleUpload = (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("uploading");
-    setTimeout(() => {
-      setStatus("success");
-    }, 2000);
-  };
-
-  if (status === "success") {
-    return (
-      <div className="max-w-xl mx-auto px-6 py-24 flex flex-col items-center text-center gap-8">
-        <div className="w-24 h-24 rounded-full bg-emerald-500 flex items-center justify-center text-black shadow-2xl shadow-emerald-500/20">
-          <Check size={48} strokeWidth={3} />
-        </div>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-black text-white uppercase tracking-tighter italic">Receipt Received</h1>
-          <p className="text-zinc-500 leading-relaxed max-w-sm">
-            Thank you. Your payment for Order <span className="text-white font-bold">{orderId}</span> is now under review. We will notify you once verified.
-          </p>
-        </div>
-        <Link href="/" className="px-12 py-5 bg-zinc-900 hover:bg-zinc-800 text-white font-black uppercase tracking-widest rounded-2xl transition-all border border-zinc-800 mt-8">
-          Return to Store
-        </Link>
-      </div>
-    );
-  }
+function Inner() {
+  const { id, token, data, error, loading, reload } = usePortalOrder();
+  if (loading) return <p className="text-slate-500">Loading your order…</p>;
+  if (error || !data) return <p role="alert" className="rounded-2xl border border-red-200 bg-red-50 p-6 text-red-700">{error || "Order not found."}</p>;
+  const o = data.order;
+  const kind = o.paymentKind as string;
+  const done = o.status === "payment-confirmed" || o.status === "shipped";
+  const detailsUrl = `/order/payment-details/?id=${encodeURIComponent(id)}&token=${encodeURIComponent(token)}`;
 
   return (
-    <div className="max-w-xl mx-auto px-6 py-12 md:py-24 flex flex-col gap-10">
-      
-      <div className="flex flex-col gap-4">
-        <Link href={`/order/payment-details?id=${orderId}`} className="inline-flex items-center gap-2 text-[10px] font-black uppercase text-zinc-500 hover:text-emerald-500 transition-colors tracking-widest">
-           <ArrowLeft size={12} />
-           Back to details
-        </Link>
-        <h1 className="text-4xl font-black text-white uppercase tracking-tighter italic leading-none">Confirm Payment</h1>
-        <p className="text-zinc-500 text-sm">Please upload a screenshot of your transaction confirmation.</p>
+    <div className="flex flex-col gap-8">
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <div>
+          <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Order</p>
+          <p className="font-mono text-xl font-black text-slate-900">{o.orderNumber}</p>
+        </div>
+        <div className="text-right">
+          <p className="font-mono text-xl font-black text-emerald-600">{money(o.total)}</p>
+          <StatusPill status={o.status} />
+        </div>
       </div>
 
-      <form onSubmit={handleUpload} className="bg-zinc-950 border border-zinc-900 rounded-[2.5rem] p-8 md:p-12 flex flex-col gap-8 shadow-2xl relative">
-        <div className="flex flex-col gap-6">
-           <div className="flex flex-col gap-2">
-             <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 ml-1">Order Reference</label>
-             <input type="text" readOnly value={orderId} className="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-4 text-zinc-400 font-mono focus:outline-none cursor-default" />
-           </div>
+      {kind === "crypto" && (
+        <>
+          <section aria-labelledby="pay-send" className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <h2 id="pay-send" className="text-sm font-black uppercase tracking-widest text-emerald-600">Your crypto payment</h2>
+            <CopyField label={`Send (${o.cryptoToken})`} value={`${o.cryptoAmount} ${o.cryptoToken}`} />
+            <CopyField label={`Network`} value={o.cryptoNetwork} />
+            <CopyField label="Wallet address" value={o.cryptoAddress} />
+            <p className="text-xs text-slate-500">Amount shown was quoted when you ordered; a payment within a small tolerance of {money(o.total)} is accepted. Use exactly the network above.</p>
+          </section>
+          <CryptoStatus id={id} token={token} order={o} onConfirmed={reload} />
+        </>
+      )}
 
-           <div className="flex flex-col gap-4">
-              <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500 ml-1 text-center">Transaction Screenshot</label>
-              <div className="relative aspect-video rounded-3xl border-2 border-dashed border-zinc-800 bg-zinc-900/50 flex flex-col items-center justify-center text-center p-8 group hover:border-emerald-500/50 transition-all cursor-pointer">
-                 <input type="file" required className="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" />
-                 <Upload size={32} className="text-zinc-700 group-hover:text-emerald-500 transition-colors mb-4" />
-                 <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest group-hover:text-white transition-colors">Tap to select image</p>
-                 <p className="text-[9px] text-zinc-700 mt-2 uppercase font-black">JPEG, PNG, or WebP</p>
-              </div>
-           </div>
-        </div>
+      {kind === "giftcard" && data.giftCard && !done && (
+        <section aria-labelledby="gc" className="flex flex-col gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+          <h2 id="gc" className="text-sm font-black uppercase tracking-widest text-emerald-600">Pay with your {data.giftCard.name} gift card</h2>
+          <p className="text-sm text-slate-700">Amount due: <b className="font-mono text-slate-900">{money(o.total)}</b> — buy a card for exactly this amount, then upload the details below. We&apos;ve also emailed you this guide.</p>
+          <ol className="list-decimal space-y-2 pl-5 text-sm text-slate-700">
+            <li><b>Buy the card online</b> — <ExternalBtnInline href={data.giftCard.buyUrl} label={`Open ${data.giftCard.name}`} /></li>
+            {data.giftCard.steps.slice(1).map((s) => <li key={s}>{s}</li>)}
+            <li>Upload the code, photos of the card and your receipt below.</li>
+          </ol>
+          <ExternalBtn href={data.giftCard.buyUrl}>Buy {data.giftCard.name} gift card</ExternalBtn>
+        </section>
+      )}
 
-        <button 
-          disabled={status === "uploading"}
-          className="w-full py-5 bg-emerald-500 hover:bg-emerald-400 disabled:bg-zinc-800 disabled:text-zinc-500 text-black font-black uppercase tracking-widest rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl shadow-emerald-500/10"
-        >
-          {status === "uploading" ? "Uploading..." : <>Submit for Verification <ShieldCheck size={18} /></>}
-        </button>
-
-        <p className="text-[10px] text-zinc-600 text-center uppercase font-bold tracking-widest">
-           Secure SSL encrypted transmission
+      {kind !== "crypto" && kind !== "giftcard" && !done && (
+        <p className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-700">
+          Have your payment details? <Link href={detailsUrl} className="font-bold text-emerald-600 underline">Open the payment page</Link>. Haven&apos;t received them yet? We&apos;re preparing them now.
         </p>
-      </form>
+      )}
 
+      {!done && (
+        <section aria-labelledby="up" className="flex flex-col gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+          <h2 id="up" className="text-sm font-black uppercase tracking-widest text-emerald-600">{kind === "giftcard" ? "Upload your gift card details" : kind === "crypto" ? "Optional: upload a screenshot as backup" : "Upload your payment receipt"}</h2>
+          <ProofUploader id={id} token={token} kind={kind} onDone={reload} />
+          <a href={waPaymentConfirmationLink({ ...o })} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-slate-900"><MessageCircle size={14} /> Or message us on WhatsApp ({SITE.contact.whatsappDisplay})</a>
+        </section>
+      )}
     </div>
   );
 }
 
-export default function ConfirmPayment() {
+function ExternalBtnInline({ href, label }: { href: string; label: string }) {
+  return <a href={href} target="_blank" rel="noopener noreferrer" className="font-bold text-emerald-600 underline">{label}</a>;
+}
+
+export default function ConfirmPaymentPage() {
   return (
-    <React.Suspense fallback={<div className="max-w-xl mx-auto px-6 py-24 text-center text-zinc-500">Loading payment form...</div>}>
-      <ConfirmPaymentContent />
-    </React.Suspense>
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
+      <h1 className="mb-8 text-3xl font-black uppercase tracking-tighter text-slate-900 sm:text-4xl">Payment &amp; order status</h1>
+      <Suspense fallback={<p className="text-slate-500">Loading…</p>}><Inner /></Suspense>
+    </div>
   );
 }

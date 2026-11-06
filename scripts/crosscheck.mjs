@@ -21,7 +21,7 @@ function check(name, condition, message) {
 }
 
 // 1. Single Source of Truth
-check("Domain Configuration", SITE.domain === "onestopvapestore.com", "SITE.domain must match the intended target.");
+check("Domain Configuration", SITE.domain === "www.onestopvapestore.com", "SITE.domain must match the intended target.");
 
 // 2. Mandatory Agent Files
 const agentFiles = [

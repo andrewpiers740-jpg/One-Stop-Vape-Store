@@ -6,10 +6,11 @@ export const SITE = {
   legalName: "SV3 LLC",
   foundingDate: "2022-12",
   tagline: "Premium Vaping Essentials & Advanced Hardware",
-  domain: "onestopvapestore.com",
+  domain: "www.onestopvapestore.com", // primary host: Vercel redirects the apex to www
   description: "One Stop Vape Store (SV3 LLC, established December 2022) is the premier destination for premium disposable vapes, nixodine innovations, nicotine salts, nicotine pouches, and advanced pod systems with fast US shipping from Phoenix, Arizona.",
-  primaryColor: "#10b981", // Emerald Green
-  accentColor: "#34d399",
+  primaryColor: "#0b6dff", // Logo electric blue
+  accentColor: "#1fb4ff", // Logo cyan highlight
+  logo: "/brand/logo-transparent.webp",
   gscVerification: "I'll set this up",
   indexNowKey: "6d7c406455fb4b66bc9010d5246997b3", // Static fallback key
   locale: "en-US",
@@ -35,17 +36,19 @@ export const SITE = {
     cryptoDiscount: 10,
     giftCardDiscount: 10,
     paymentMethods: [
-      "Crypto (BTC/USDT/ETH/SOL/TRX)",
+      "Crypto (BTC, USDT, USDC, ETH, BNB, SOL)",
       "Apple Pay",
-      "Cashapp",
+      "Cash App",
       "Chime",
-      "Gift Cards (Apple, Razer Gold, Paysafe, Sephora, Macy)"
+      "Gift Cards (Apple, Razer Gold, Paysafe, Sephora, Macy's)"
     ]
   },
-  
+
   reply: {
+    channels: { whatsapp: true, email: true },
+    ownerEmailEnv: "ORDER_EMAIL", // falls back to contact.email
     brand: {
-      primary: "#10b981",
+      primary: "#0b6dff",
       headerDark: "#09090b"
     },
     orderPrefix: "OSV",
@@ -53,8 +56,9 @@ export const SITE = {
     dispatchLogisticsLine: "Fast Tracked Shipping via USPS/UPS from Phoenix, Arizona.",
     paymentMethodsDetail: [
       { id: "crypto", label: "Cryptocurrency", opening: "Please send the equivalent of {amount} in {crypto_type} to the following address:", closing: "Kindly send a screenshot of the transaction hash once completed." },
-      { id: "applepay", label: "Apple Pay", opening: "Please send payment to the following number:", closing: "Include your order ID {order_id} in the notes." },
-      { id: "cashapp", label: "Cashapp", opening: "Please pay to our $Cashtag:", closing: "Screenshot the confirmation screen." }
+      { id: "applepay", label: "Apple Pay", opening: "Please send {amount} by Apple Pay to the following number:", closing: "Include your order ID {order_id} in the notes, then upload your receipt." },
+      { id: "cashapp", label: "Cash App", opening: "Please send {amount} on Cash App to our $Cashtag:", closing: "Include your order ID {order_id} in the note, then screenshot the confirmation screen." },
+      { id: "chime", label: "Chime", opening: "Please send {amount} on Chime to the following ChimeSign / details:", closing: "Include your order ID {order_id} in the memo, then upload your receipt." }
     ]
   },
   

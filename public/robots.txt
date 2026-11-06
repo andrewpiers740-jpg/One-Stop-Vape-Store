@@ -3,7 +3,15 @@ Disallow: /thank-you-contact/
 Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
 Disallow: /admin/
-Sitemap: https://onestopvapestore.com/sitemap.xml
+Disallow: /order/
+Disallow: /api/admin/
+Disallow: /api/order/
+Disallow: /api/contact/
+Disallow: /api/crypto/
+Disallow: /api/crypto-rate/
+Disallow: /cart/
+Disallow: /checkout/
+Sitemap: https://www.onestopvapestore.com/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { SITE } from "@/src/config/site";
 import { HelpCircle, ShieldCheck, Truck, CreditCard, Box, Sparkles, MessageSquare } from "lucide-react";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata: Metadata = {
   title: `Frequently Asked Questions | ${SITE.name}`,
@@ -113,7 +114,9 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 py-12 md:py-20 text-white flex flex-col gap-16">
+    <>
+      <PageBanner slug="faq" label="FAQ" />
+      <div className="max-w-[1440px] mx-auto px-6 py-12 md:py-20 text-slate-900 flex flex-col gap-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -121,14 +124,14 @@ export default function FAQPage() {
 
       {/* Header */}
       <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em] mx-auto">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-[10px] font-black uppercase tracking-[0.2em] mx-auto">
           <HelpCircle size={12} />
           <span>Support & Help Center</span>
         </div>
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-          Frequently Asked <span className="text-emerald-500">Questions</span>
+          Frequently Asked <span className="text-emerald-600">Questions</span>
         </h1>
-        <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
           Clear answers on shipping procedures, PACT Act compliance, Nixodine formulations, crypto discounts, and order tracking.
         </p>
       </div>
@@ -139,24 +142,24 @@ export default function FAQPage() {
           const Icon = section.icon;
           return (
             <div key={sIdx} className="flex flex-col gap-6">
-              <div className="flex items-center gap-3 pb-3 border-b border-zinc-900">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <div className="flex items-center gap-3 pb-3 border-b border-slate-200">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600">
                   <Icon size={16} />
                 </div>
-                <h2 className="text-xl font-black uppercase tracking-tight text-white">{section.title}</h2>
+                <h2 className="text-xl font-black uppercase tracking-tight text-slate-900">{section.title}</h2>
               </div>
 
               <div className="flex flex-col gap-4">
                 {section.items.map((item, iIdx) => (
                   <div
                     key={iIdx}
-                    className="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/30 transition-all duration-300"
+                    className="p-6 md:p-8 rounded-2xl bg-slate-100/40 border border-slate-200/80 hover:border-emerald-500/30 transition-all duration-300"
                   >
-                    <h3 className="text-base font-bold text-white mb-3 flex items-start gap-3">
-                      <span className="text-emerald-400 font-mono text-xs mt-1 shrink-0">0{iIdx + 1}.</span>
+                    <h3 className="text-base font-bold text-slate-900 mb-3 flex items-start gap-3">
+                      <span className="text-emerald-600 font-mono text-xs mt-1 shrink-0">0{iIdx + 1}.</span>
                       <span>{item.q}</span>
                     </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed pl-7">
+                    <p className="text-slate-600 text-sm leading-relaxed pl-7">
                       {item.a}
                     </p>
                   </div>
@@ -169,19 +172,19 @@ export default function FAQPage() {
 
       {/* Support CTA */}
       <div className="max-w-4xl mx-auto w-full p-8 md:p-12 rounded-3xl bg-gradient-to-r from-emerald-500/10 via-zinc-900 to-zinc-900 border border-emerald-500/20 text-center flex flex-col items-center gap-6">
-        <h2 className="text-3xl font-black uppercase tracking-tighter text-white">Have a Specific Inquiry?</h2>
-        <p className="text-sm text-zinc-400 max-w-md">Our Phoenix support specialists are available on WhatsApp and email for real-time order inquiries and product guidance.</p>
+        <h2 className="text-3xl font-black uppercase tracking-tighter text-slate-900">Have a Specific Inquiry?</h2>
+        <p className="text-sm text-slate-600 max-w-md">Our Phoenix support specialists are available on WhatsApp and email for real-time order inquiries and product guidance.</p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href={`https://wa.me/${SITE.contact.whatsapp}`}
-            className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 text-xs shadow-xl shadow-emerald-500/20"
+            className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 text-xs shadow-xl shadow-emerald-500/20"
           >
             <MessageSquare size={14} />
             <span>Chat on WhatsApp</span>
           </a>
           <a
             href={`mailto:${SITE.contact.email}`}
-            className="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-black uppercase tracking-widest rounded-full transition-all duration-300 text-xs border border-zinc-700"
+            className="px-8 py-4 bg-slate-200 hover:bg-zinc-700 text-slate-900 font-black uppercase tracking-widest rounded-full transition-all duration-300 text-xs border border-slate-300"
           >
             <span>Email Support</span>
           </a>
@@ -189,5 +192,6 @@ export default function FAQPage() {
       </div>
 
     </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: "Shipping Policy | One Stop Vape Store",
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function ShippingPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 prose prose-invert">
+    <>
+      <PageBanner slug="shipping" label="Shipping" />
+      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
       <h1><strong>Shipping Policy</strong></h1>
 
       <h3>Free Domestic Shipping on Orders Over $200!</h3>
@@ -75,5 +78,6 @@ export default function ShippingPage() {
         Phoenix, Arizona 85008
       </p>
     </div>
+    </>
   );
 }

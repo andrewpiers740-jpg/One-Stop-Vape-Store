@@ -1,56 +1,84 @@
 "use client";
+// Admin shell: passcode gate verified by the SERVER (no passcode in client code), nav, and an api() helper
+// that sends the passcode in the X-Admin-Passcode header. The passcode lives only in sessionStorage.
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, ShoppingCart, MessageSquare, LogOut, Settings, Send } from "lucide-react";
+import { LayoutDashboard, ShoppingCart, MessageSquare, LogOut, Send } from "lucide-react";
+import { SITE } from "@/src/config/site";
+
+type AdminCtx = { api: (path: string, init?: RequestInit) => Promise<any>; logout: () => void };
+const Ctx = React.createContext<AdminCtx | null>(null);
+export const useAdmin = () => {
+  const c = React.useContext(Ctx);
+  if (!c) throw new Error("useAdmin outside AdminClientShell");
+  return c;
+};
+
+const KEY = "osv-admin-pass";
 
 export default function AdminClientShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [passcode, setPasscode] = React.useState("");
-  const [isAuth, setIsAuth] = React.useState(false);
+  const [authed, setAuthed] = React.useState<string | null>(null);
+  const [checking, setChecking] = React.useState(true);
+  const [error, setError] = React.useState("");
 
-  React.useEffect(() => {
-    const saved = localStorage.getItem("admin-passcode");
-    if (saved === "admin123") {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setIsAuth(true);
-    }
+  const verify = React.useCallback(async (code: string) => {
+    const res = await fetch("/api/admin/orders/", { headers: { "x-admin-passcode": code }, cache: "no-store" });
+    if (res.status === 503) throw new Error("The admin portal is not configured yet: set ADMIN_PASSCODE in the server environment.");
+    return res.ok;
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  React.useEffect(() => {
+    (async () => {
+      try {
+        const saved = sessionStorage.getItem(KEY);
+        if (saved && (await verify(saved))) setAuthed(saved);
+        else sessionStorage.removeItem(KEY);
+      } catch { /* ignore */ }
+      setChecking(false);
+    })();
+  }, [verify]);
+
+  const login = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (passcode === "admin123") {
-      localStorage.setItem("admin-passcode", passcode);
-      setIsAuth(true);
-    } else {
-      alert("Invalid Passcode");
+    setError("");
+    try {
+      if (await verify(passcode)) {
+        sessionStorage.setItem(KEY, passcode);
+        setAuthed(passcode);
+      } else setError("Invalid passcode.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not verify the passcode.");
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("admin-passcode");
-    setIsAuth(false);
-  };
+  const logout = React.useCallback(() => { sessionStorage.removeItem(KEY); setAuthed(null); setPasscode(""); }, []);
 
-  if (!isAuth) {
+  const api = React.useCallback(async (path: string, init: RequestInit = {}) => {
+    const res = await fetch(path, { ...init, headers: { "content-type": "application/json", ...(init.headers || {}), "x-admin-passcode": authed || "" }, cache: "no-store" });
+    const j = await res.json().catch(() => ({}));
+    if (res.status === 401) logout();
+    if (!res.ok) throw new Error(j.error || `Request failed (${res.status})`);
+    return j;
+  }, [authed, logout]);
+
+  if (checking) return <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black text-zinc-500">Loading…</div>;
+
+  if (!authed) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center p-6">
-        <form onSubmit={handleLogin} className="w-full max-w-sm flex flex-col gap-8 text-center">
+      <div className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto bg-black p-6">
+        <form onSubmit={login} className="flex w-full max-w-sm flex-col gap-6 text-center">
           <div className="flex flex-col gap-2">
-            <h1 className="text-3xl font-black text-white uppercase tracking-tighter">Admin Portal</h1>
-            <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Secure Passcode Required</p>
+            <h1 className="text-3xl font-black uppercase tracking-tighter text-white">Admin Portal</h1>
+            <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">Secure passcode required</p>
           </div>
-          <input 
-            type="password"
-            value={passcode}
-            onChange={(e) => setPasscode(e.target.value)}
-            placeholder="Enter Admin Passcode"
-            className="w-full bg-zinc-900 border border-zinc-800 rounded-xl py-4 px-6 text-center text-xl text-white outline-none focus:border-emerald-500 transition-all"
-            autoFocus
-          />
-          <button className="w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-widest rounded-xl transition-all">
-            Access Dashboard
-          </button>
+          <label htmlFor="admin-pass" className="sr-only">Admin passcode</label>
+          <input id="admin-pass" type="password" value={passcode} onChange={(e) => setPasscode(e.target.value)} placeholder="Enter admin passcode" autoFocus autoComplete="current-password"
+            className="w-full rounded-xl border border-zinc-800 bg-zinc-900 px-6 py-4 text-center text-xl text-white outline-none transition-all focus:border-emerald-500" />
+          {error && <p role="alert" className="text-sm text-red-400">{error}</p>}
+          <button className="w-full rounded-xl bg-emerald-500 py-4 font-black uppercase tracking-widest text-white transition-all hover:bg-emerald-400">Access dashboard</button>
         </form>
       </div>
     );
@@ -59,47 +87,45 @@ export default function AdminClientShell({ children }: { children: React.ReactNo
   const nav = [
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Orders", href: "/admin/orders", icon: ShoppingCart },
-    { name: "Payment Composer", href: "/admin/send-payment-email", icon: Send },
+    { name: "Payment composer", href: "/admin/send-payment-email", icon: Send },
     { name: "Enquiries", href: "/admin/enquiries", icon: MessageSquare },
   ];
+  const active = (href: string) => (href === "/admin" ? pathname.replace(/\/$/, "") === "/admin" : pathname.startsWith(href));
 
   return (
-    <div className="min-h-screen bg-black flex">
-      {/* Sidebar */}
-      <aside className="w-64 border-r border-zinc-900 flex flex-col hidden lg:flex">
-        <div className="p-8 border-b border-zinc-900">
-           <span className="text-xl font-black text-white uppercase tracking-tighter">OSV <span className="text-emerald-500">Admin</span></span>
-        </div>
-        <nav className="p-4 flex flex-col gap-2 flex-grow">
-          {nav.map(item => (
-            <Link 
-              key={item.name} 
-              href={item.href}
-              className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-widest transition-all ${pathname === item.href ? "bg-emerald-500 text-black" : "text-zinc-500 hover:text-white hover:bg-zinc-900"}`}
-            >
-              <item.icon size={18} />
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-        <div className="p-4 border-t border-zinc-900">
-          <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-3 text-zinc-500 hover:text-red-500 transition-colors text-sm font-bold uppercase tracking-widest">
-            <LogOut size={18} />
-            Sign Out
-          </button>
-        </div>
-      </aside>
-
-      {/* Main Content */}
-      <div className="flex-grow flex flex-col overflow-hidden">
-        <header className="h-16 border-b border-zinc-900 flex lg:hidden items-center justify-between px-6 bg-black">
-           <span className="text-lg font-black text-white uppercase">OSV Admin</span>
-           <button onClick={handleLogout} className="text-zinc-500"><LogOut size={20} /></button>
-        </header>
-        <div className="flex-grow overflow-y-auto p-6 md:p-12">
-          {children}
+    <Ctx.Provider value={{ api, logout }}>
+      <div className="fixed inset-0 z-[80] flex overflow-hidden bg-black">
+        <aside className="hidden w-64 shrink-0 flex-col border-r border-zinc-900 lg:flex">
+          <div className="border-b border-zinc-900 p-8">
+            <span className="inline-block rounded-xl bg-white px-2 py-1 ring-1 ring-emerald-500/40">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={SITE.logo} alt={`${SITE.name} admin`} width={160} height={59} className="h-10 w-auto" />
+            </span>
+          </div>
+          <nav className="flex flex-grow flex-col gap-2 p-4" aria-label="Admin">
+            {nav.map((item) => (
+              <Link key={item.name} href={item.href} aria-current={active(item.href) ? "page" : undefined}
+                className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold uppercase tracking-widest transition-all ${active(item.href) ? "bg-emerald-500 text-white" : "text-zinc-500 hover:bg-zinc-900 hover:text-white"}`}>
+                <item.icon size={18} /> {item.name}
+              </Link>
+            ))}
+          </nav>
+          <div className="border-t border-zinc-900 p-4">
+            <button onClick={logout} className="flex w-full items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-zinc-500 transition-colors hover:text-red-500"><LogOut size={18} /> Sign out</button>
+          </div>
+        </aside>
+        <div className="flex min-w-0 flex-grow flex-col">
+          <header className="flex items-center justify-between gap-3 overflow-x-auto border-b border-zinc-900 bg-black px-4 py-3 lg:hidden">
+            <nav className="flex gap-1" aria-label="Admin">
+              {nav.map((item) => (
+                <Link key={item.name} href={item.href} aria-label={item.name} aria-current={active(item.href) ? "page" : undefined} className={`flex h-11 w-11 items-center justify-center rounded-xl ${active(item.href) ? "bg-emerald-500 text-white" : "text-zinc-400"}`}><item.icon size={20} /></Link>
+              ))}
+            </nav>
+            <button onClick={logout} aria-label="Sign out" className="flex h-11 w-11 items-center justify-center text-zinc-400"><LogOut size={20} /></button>
+          </header>
+          <div className="min-h-0 flex-grow overflow-y-auto p-4 md:p-10">{children}</div>
         </div>
       </div>
-    </div>
+    </Ctx.Provider>
   );
 }

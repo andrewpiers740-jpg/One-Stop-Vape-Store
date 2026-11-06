@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { SITE } from "@/src/config/site";
 import WishlistClient from "@/src/components/WishlistClient";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata: Metadata = {
   title: `My Wishlist | ${SITE.name}`,
@@ -13,8 +14,11 @@ export const metadata: Metadata = {
 
 export default function WishlistPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <>
+      <PageBanner slug="wishlist" label="Wishlist" />
+      <div className="min-h-screen bg-white text-slate-900">
       <WishlistClient />
     </div>
+    </>
   );
 }

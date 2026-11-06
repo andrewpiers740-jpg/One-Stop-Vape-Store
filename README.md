@@ -78,3 +78,23 @@ git push -u origin main
 - **Educational Hub**: Informative guides on Nixodine, battery safety, and coil maintenance (`/blog`).
 - **Agent-Ready Protocol**: Full RFC 9727 API catalog, Model Context Protocol (`/api/mcp`), UCP, ACP, and WebMCP browser bridge.
 - **Trustpilot Integration**: 4.9/5 verified reviews section highlighting customer satisfaction since December 2022.
+
+---
+
+## 🧾 Orders, payments & the Reply Portal
+- **Checkout** (`/checkout/`): crypto (BTC, USDT ERC20/TRC20, USDC on Solana, ETH, BNB, SOL — 10% off), gift cards (Apple, Razer Gold, Paysafe, Sephora, Macy's — 10% off), Cash App, Apple Pay and Chime. Prices, discounts and shipping are **always recalculated on the server** from `src/data/products.json`.
+- **Crypto**: wallets live in `src/config/wallets.js`. After "I have paid" the order page polls `/api/crypto/verify`, which reads public chain data and auto-confirms a matching transfer (BNB needs `ETHERSCAN_API_KEY`; otherwise it is confirmed manually from the customer's screenshot).
+- **Gift cards**: the order email contains the official buy link for the chosen card and a private upload link (code, card photos, receipt).
+- **Admin** (`/admin/`): passcode from `ADMIN_PASSCODE` (checked on the server, no default). Orders and enquiries are stored in Upstash Redis.
+- Copy `.env.example` to `.env.local` for local work. Offline tests: `npm test`.
+
+## 📝 Content pipelines
+- Blog: `content/blog/*.mjs` → `npm run blog` (validates banned terms, links, lengths) → `src/data/blog-posts.json`.
+- Images: `npm run images:products` (white-background product frames), `images:curated` (hero, banners, tiles), `images:blog` (4 per post). Photographer credits at `/credits/`.
+
+## ✍️ Long-form content with the Claude API (optional)
+Goal: 400+ word product descriptions and 1,500+ word blog posts. Output is validated (length, banned wording, link integrity) and resumable.
+1. Put `ANTHROPIC_API_KEY` in `.env.local` (local only — never in Vercel).
+2. `npm run content:estimate` → token estimate. Then **test small**: `node scripts/ai-content.mjs products --limit 5` and read the results in `content/generated/products/`.
+3. Run `npm run content:products` and `npm run content:blog` (re-run to retry failures), then `npm run content:merge` and commit.
+`--mock` exercises the pipeline without a key; mock output is never merged.

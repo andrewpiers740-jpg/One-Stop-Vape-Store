@@ -4,13 +4,13 @@
 One Stop Vape Store (SV3 LLC, established December 2022) is the premier destination for premium disposable vapes, nixodine innovations, nicotine salts, nicotine pouches, and advanced pod systems with fast US shipping from Phoenix, Arizona.
 
 ## Shop Categories
-- [Vape Juice](https://onestopvapestore.com/shop/vape-juice/): Premium e-liquids and nicotine salts.
-- [Coils & Pods](https://onestopvapestore.com/shop/coils-pods/): Replacement coils and high-performance tanks.
-- [Disposable Vapes](https://onestopvapestore.com/shop/disposables/): Long-lasting, pre-filled, and hassle-free disposable devices.
-- [Vape Kits](https://onestopvapestore.com/shop/vape-kits/): Complete starter kits for new and advanced users.
-- [Vaporizers](https://onestopvapestore.com/shop/vaporizers/): High-quality dry herb and concentrate vaporizers.
-- [Nicotine Pouches](https://onestopvapestore.com/shop/nic-pouches/): Tobacco-free nicotine pouches for any occasion.
-- [Nixodine](https://onestopvapestore.com/shop/nixodine/): Alternative non-tobacco active formulations for advanced adult vapor enjoyment.
+- [Vape Juice](https://www.onestopvapestore.com/shop/vape-juice/): Premium e-liquids and nicotine salts.
+- [Coils & Pods](https://www.onestopvapestore.com/shop/coils-pods/): Replacement coils and high-performance tanks.
+- [Disposable Vapes](https://www.onestopvapestore.com/shop/disposables/): Long-lasting, pre-filled, and hassle-free disposable devices.
+- [Vape Kits](https://www.onestopvapestore.com/shop/vape-kits/): Complete starter kits for new and advanced users.
+- [Vaporizers](https://www.onestopvapestore.com/shop/vaporizers/): High-quality dry herb and concentrate vaporizers.
+- [Nicotine Pouches](https://www.onestopvapestore.com/shop/nic-pouches/): Tobacco-free nicotine pouches for any occasion.
+- [Nixodine](https://www.onestopvapestore.com/shop/nixodine/): Alternative non-tobacco active formulations for advanced adult vapor enjoyment.
 
 ## Contact & Rules
 - WhatsApp: [17747341372](https://wa.me/17747341372)
@@ -20,7 +20,7 @@ One Stop Vape Store (SV3 LLC, established December 2022) is the premier destinat
 - Location: 4908 E McDowell Road STE 103, Phoenix, Arizona 85008
 
 ## Agent Resources
-- [API Catalog](https://onestopvapestore.com/.well-known/api-catalog)
-- [Agent Skills](https://onestopvapestore.com/.well-known/agent-skills/index.json)
-- [MCP Server](https://onestopvapestore.com/.well-known/mcp/server-card.json)
-- [Auth Policy](https://onestopvapestore.com/auth.md)
+- [API Catalog](https://www.onestopvapestore.com/.well-known/api-catalog)
+- [Agent Skills](https://www.onestopvapestore.com/.well-known/agent-skills/index.json)
+- [MCP Server](https://www.onestopvapestore.com/.well-known/mcp/server-card.json)
+- [Auth Policy](https://www.onestopvapestore.com/auth.md)

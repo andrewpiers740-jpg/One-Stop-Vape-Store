@@ -10,6 +10,14 @@ Disallow: /thank-you-contact/
 Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
 Disallow: /admin/
+Disallow: /order/
+Disallow: /api/admin/
+Disallow: /api/order/
+Disallow: /api/contact/
+Disallow: /api/crypto/
+Disallow: /api/crypto-rate/
+Disallow: /cart/
+Disallow: /checkout/
 Sitemap: https://${SITE.domain}/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
@@ -147,7 +155,7 @@ const mcp = {
       { name: "search_products", description: "Search products by keyword, category, max_price", inputSchema: { type: "object", properties: { query: { type: "string" }, category: { type: "string" }, max_price: { type: "number" } } } },
       { name: "get_product", description: "Get full product details by slug", inputSchema: { type: "object", required: ["slug"], properties: { slug: { type: "string" } } } }
     ],
-    commerce: { ordering: "human-assisted-whatsapp-or-form", payment: ["crypto-BTC", "crypto-USDT", "apple-pay", "cashapp"], currency: SITE.contact.currency.code, minimumOrder: SITE.order.minOrder, freeShipping: SITE.order.freeShippingThreshold }
+    commerce: { ordering: "human-assisted-whatsapp-or-form", payment: ["crypto-BTC", "crypto-USDT", "crypto-USDC", "crypto-ETH", "crypto-BNB", "crypto-SOL", "giftcard-apple", "giftcard-razer", "giftcard-paysafe", "giftcard-sephora", "giftcard-macys", "cashapp", "apple-pay", "chime"], currency: SITE.contact.currency.code, minimumOrder: SITE.order.minOrder, freeShipping: SITE.order.freeShippingThreshold }
   }
 };
 fs.mkdirSync(path.join(root, "public/.well-known/mcp"), { recursive: true });
@@ -156,8 +164,8 @@ fs.writeFileSync(path.join(root, "public/.well-known/mcp/server-card.json"), JSO
 // --- 7. vercel.json ---
 const vercel = {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  // apex -> www is configured in Vercel (Project > Domains); a www -> apex rule here would loop, so there is none.
   redirects: [
-    { source: "/:path*", has: [{ type: "host", value: `www.${SITE.domain}` }], destination: `https://${SITE.domain}/:path*`, permanent: true }
   ],
   headers: [
     { source: "/((?!_next|favicon.ico).*)", headers: [

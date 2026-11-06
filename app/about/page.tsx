@@ -1,5 +1,6 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: "About Us | One Stop Vape Store",
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-24 prose prose-invert">
+    <>
+      <PageBanner slug="about" label="About" />
+      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
       <h1><strong>About Us</strong></h1>
       
       <h3>Our Mission</h3>
@@ -36,5 +39,6 @@ export default function AboutPage() {
       <p>Our commitment to quality extends to providing the biggest names in vape juice as well as cutting-edge disposable vape devices. We meticulously select items that stand out for their innovation, reliability, and user satisfaction.</p>
       <p>From beginner kits to advanced mods, every product is chosen to provide an exceptional vaping experience. Customers enjoy a seamless purchase process that ensures their favorite vaping essentials are delivered swiftly and efficiently, maintaining our standard of excellence.</p>
     </div>
+    </>
   );
 }

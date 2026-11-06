@@ -1,115 +1,60 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { ShoppingBag, X } from "lucide-react";
-import products from "@/src/data/products.json";
 
-const CUSTOMERS = [
-  "Sarah M.", "David K.", "Jessica R.", "Michael B.", "Elena V.", 
-  "Marcus T.", "Sophia L.", "James P.", "Olivia H.", "Robert N.",
-  "Chloe S.", "Kevin W.", "Mia D.", "Lucas F.", "Ava G.",
-  "Ethan C.", "Isabella J.", "Benjamin H.", "Amelia B.", "Jacob K."
-];
-const LOCATIONS = [
-  "Austin, TX", "Miami, FL", "Seattle, WA", "Denver, CO", "Chicago, IL", 
-  "Atlanta, GA", "Phoenix, AZ", "Boston, MA", "Portland, OR", "Dallas, TX"
-];
+// "Recent purchase" notification driven by REAL confirmed orders (see /api/recent-orders). It shows nothing until
+// there are genuine orders, and never invents names, places or products.
+function ago(iso) {
+  const m = Math.max(1, Math.round((Date.now() - Date.parse(iso)) / 60000));
+  if (m < 60) return `${m} minute${m === 1 ? "" : "s"} ago`;
+  const h = Math.round(m / 60);
+  if (h < 48) return `${h} hour${h === 1 ? "" : "s"} ago`;
+  return `${Math.round(h / 24)} days ago`;
+}
 
 export default function SalesPopup() {
-  const [currentSale, setCurrentSale] = useState(null);
+  const [sales, setSales] = useState([]);
+  const [i, setI] = useState(0);
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    if (dismissed) return;
+    try { if (sessionStorage.getItem("osv-sales-dismissed")) setDismissed(true); } catch { /* ignore */ }
+    fetch("/api/recent-orders/").then((r) => r.json()).then((d) => setSales(d.sales || [])).catch(() => {});
+  }, []);
 
-    let shownSignatures = JSON.parse(sessionStorage.getItem("shown-sales-signatures") || "[]");
-    let usedCustomerIndices = JSON.parse(sessionStorage.getItem("shown-customer-indices") || "[]");
+  useEffect(() => {
+    if (dismissed || !sales.length) return undefined;
+    const first = setTimeout(() => setVisible(true), 6000);
+    return () => clearTimeout(first);
+  }, [dismissed, sales.length]);
 
-    const showNextSale = () => {
-      let sale;
-      let signature;
-      let attempts = 0;
-      
-      do {
-        // 1. Unique Customer
-        let availableCustomers = CUSTOMERS.map((_, i) => i).filter(i => !usedCustomerIndices.includes(i));
-        if (availableCustomers.length === 0) {
-          usedCustomerIndices = [];
-          availableCustomers = CUSTOMERS.map((_, i) => i);
-        }
-        const custIdx = availableCustomers[Math.floor(Math.random() * availableCustomers.length)];
-        
-        // 2. Weighted Tiered Cost
-        const rand = Math.random();
-        let min, max;
-        if (rand < 0.75) { min = 100; max = 1000; }
-        else if (rand < 0.95) { min = 1001; max = 2500; }
-        else { min = 2501; max = 12000; }
-        
-        const targetTotal = Math.random() * (max - min) + min;
-        
-        // 3. Select Item
-        const product = products[Math.floor(Math.random() * products.length)];
-        const quantity = Math.max(1, Math.round(targetTotal / product.price));
-        const totalCost = (product.price * quantity);
-        
-        signature = `${custIdx}-${product.id}-${quantity}-${totalCost.toFixed(2)}`;
-        
-        sale = {
-          name: CUSTOMERS[custIdx],
-          location: LOCATIONS[Math.floor(Math.random() * LOCATIONS.length)],
-          product: product.title,
-          quantity,
-          totalCost: totalCost.toFixed(2),
-        };
-        attempts++;
-      } while (shownSignatures.includes(signature) && attempts < 100);
-      
-      setCurrentSale(sale);
-      setVisible(true);
-      
-      shownSignatures.push(signature);
-      sessionStorage.setItem("shown-sales-signatures", JSON.stringify(shownSignatures));
-      
-      // Track customer usage
-      const custIdx = CUSTOMERS.indexOf(sale.name);
-      if(!usedCustomerIndices.includes(custIdx)) usedCustomerIndices.push(custIdx);
-      sessionStorage.setItem("shown-customer-indices", JSON.stringify(usedCustomerIndices));
+  useEffect(() => {
+    if (dismissed || !sales.length || !visible) return undefined;
+    const hide = setTimeout(() => setVisible(false), 7000);
+    return () => clearTimeout(hide);
+  }, [visible, dismissed, sales.length, i]);
 
-      setTimeout(() => setVisible(false), 8000);
-    };
+  useEffect(() => {
+    if (dismissed || !sales.length) return undefined;
+    const next = setInterval(() => { setI((n) => (n + 1) % sales.length); setVisible(true); }, 22000);
+    return () => clearInterval(next);
+  }, [dismissed, sales.length]);
 
-    showNextSale();
-    const interval = setInterval(showNextSale, 15000);
-    return () => clearInterval(interval);
-  }, [dismissed]);
-
-  if (dismissed || !currentSale) return null;
-
+  if (dismissed || !sales.length || !visible) return null;
+  const s = sales[i % sales.length];
   return (
-    <div 
-      className={`fixed bottom-4 left-4 z-40 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl transition-all duration-500 flex items-center gap-4 max-w-[340px] w-full
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-    >
-      <button 
-        onClick={() => setDismissed(true)}
-        className="absolute -top-2 -right-2 p-1 bg-zinc-800 rounded-full text-zinc-500 hover:text-white transition-colors"
-      >
-        <X size={12} />
-      </button>
-      
-      <div className="w-12 h-12 bg-zinc-950 rounded-xl flex items-center justify-center shrink-0 border border-zinc-800">
-        <ShoppingBag className="text-emerald-500" size={20} />
+    <div role="status" aria-live="polite" className="fixed bottom-4 left-4 z-40 flex max-w-[calc(100vw-2rem)] items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 pr-9 shadow-2xl shadow-slate-900/10 sm:max-w-sm">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white">
+        {s.image ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={s.image} alt="" width={48} height={48} className="h-full w-full object-contain p-1" /> : <ShoppingBag size={20} className="text-emerald-600" />}
       </div>
-
-      <div className="flex flex-col gap-0.5 overflow-hidden">
-        <p className="text-[11px] text-zinc-400 leading-tight">
-          <span className="font-bold text-white">{currentSale.name}</span> from {currentSale.location} bought 
-          <span className="font-bold text-white"> {currentSale.quantity}x {currentSale.product}</span> 
-          <br/>
-          for <span className="font-bold text-emerald-500">${currentSale.totalCost}</span>
-        </p>
+      <div className="min-w-0 text-xs leading-snug">
+        <p className="text-slate-600">A customer in <b className="text-slate-900">{s.state}</b> bought</p>
+        <p className="truncate font-bold text-slate-900">{s.qty > 1 ? `${s.qty} × ` : ""}{s.slug ? <Link href={`/shop/${s.category}/${s.slug}/`} className="hover:text-emerald-600">{s.title}</Link> : s.title}</p>
+        <p className="text-[11px] text-slate-500">{ago(s.at)}</p>
       </div>
+      <button type="button" aria-label="Dismiss notification" onClick={() => { setDismissed(true); try { sessionStorage.setItem("osv-sales-dismissed", "1"); } catch { /* ignore */ } }} className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-700"><X size={14} /></button>
     </div>
   );
 }
