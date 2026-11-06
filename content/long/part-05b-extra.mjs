@@ -1,0 +1,19 @@
+export default {
+"send-crypto-from-an-exchange-to-a-wallet": `## If something goes wrong with a withdrawal
+If the exchange shows the withdrawal as complete but the status page shows nothing after the normal time for that network, copy the transaction ID and look it up on a public block explorer for the network you used. The explorer shows whether the transfer is pending, confirmed or failed, and the destination address. If the destination does not match our window, contact the exchange immediately and tell us. If it matches and is confirmed, add the ID to the status page and contact us, and we will check the match. Having the ID ready turns a vague worry into a specific question that can be answered quickly.`,
+
+"scan-wallet-qr-code-and-copy-address": `## What to do if the address does not match
+Stop and do not confirm. Clear your clipboard by copying a short piece of ordinary text, copy the address again from the payment window and paste it once more. If the pasted address still differs from the one on screen, your device may have software that alters copied text. Switch to scanning the QR code with a different device, or send from a different device altogether, and run a security scan on the affected one. Contact us through the [contact page](/contact/) so we know what happened, and never send funds to an address that does not match the current window. Most of the time the mismatch is a simple incomplete paste, and pasting again fixes it.`,
+
+"sent-crypto-on-the-wrong-network": `## Keeping a record
+Whatever the outcome, keep a record of everything: the transaction hash, screenshots, your messages with us and with your provider and the dates and times. If a recovery is possible, a clear record speeds it up, and if it is not, the record helps you understand what happened and avoid it again. Store it somewhere private, and do not post transaction details or order references publicly. If you are asked for it by us, send it through the official channels listed on our [contact page](/contact/).`,
+
+"why-your-crypto-payment-shows-underpaid": `## What not to do
+Do not send random small amounts hoping they will tip the order over the line, because each transfer is matched separately and extra transfers create more to reconcile. Do not send the balance to a new address, because only the address in your payment window is watched for your order. Do not change networks for the balance, because a different network means a different address and a different matching process. And do not wait silently: if you are unsure, contact us, because a short message with your order reference and the transaction hash usually resolves it within the same day during business hours.`,
+
+"how-to-upload-a-payment-screenshot": `## How long should you keep your proof?
+Keep the original screenshots, receipts and emails until your order is delivered and for a few weeks afterward, in case a question about payment or a return comes up. After that, delete screenshots that contain gift card codes or other sensitive details from shared albums and cloud folders. Keeping a tidy record protects you, and deleting sensitive images when you no longer need them protects you even more, because it removes the chance that someone with access to your gallery could misuse them.`,
+
+"crypto-payment-faq": `## A final word before you pay
+Crypto payments are straightforward when you follow the steps: choose the coin and network, copy the address, send the exact amount with any fees on top and press the button. Most problems come from one of three habits: choosing the wrong network, typing an address by hand or forgetting an exchange fee. Avoid those three, and your payment will almost always match on the first try. If you ever feel unsure, pause and contact us before you send. A short message costs nothing, and it can save a lot of trouble.`,
+};
