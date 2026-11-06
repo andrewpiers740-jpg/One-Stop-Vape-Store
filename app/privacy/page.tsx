@@ -53,7 +53,7 @@ export default function PrivacyPage() {
           <ul>
             <li><strong>Hosting and infrastructure:</strong> Vercel hosts the website, and Upstash stores order records.</li>
             <li><strong>Email:</strong> our email provider delivers order and support messages.</li>
-            <li><strong>Carriers:</strong> USPS and UPS receive your name, address and phone number to deliver your package, including adult-signature service.</li>
+            <li><strong>Carriers:</strong> The regional delivery carriers receive your name, address and phone number to deliver your package, including adult-signature service.</li>
             <li><strong>Live chat:</strong> if tawk.to chat is enabled, messages you type in the chat are processed by tawk.to under its own privacy policy.</li>
             <li><strong>Authorities:</strong> where the law requires it, or to protect our rights and customers.</li>
           </ul>

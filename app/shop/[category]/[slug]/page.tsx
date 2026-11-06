@@ -252,7 +252,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               </div>
               <div>
                 <p className="text-xs font-bold text-slate-900 uppercase tracking-tight">Express Shipping</p>
-                <p className="text-[10px] text-slate-600">Tracked USPS/UPS</p>
+                <p className="text-[10px] text-slate-600">Tracked regional carriers</p>
               </div>
             </div>
 

@@ -53,7 +53,7 @@ export const SITE = {
     },
     orderPrefix: "OSV",
     headerTagline: "Order Payment Details",
-    dispatchLogisticsLine: "Fast Tracked Shipping via USPS/UPS from Phoenix, Arizona.",
+    dispatchLogisticsLine: "Fast Tracked Shipping via regional carriers from Phoenix, Arizona.",
     paymentMethodsDetail: [
       { id: "crypto", label: "Cryptocurrency", opening: "Please send the equivalent of {amount} in {crypto_type} to the following address:", closing: "Kindly send a screenshot of the transaction hash once completed." },
       { id: "applepay", label: "Apple Pay", opening: "Please send {amount} by Apple Pay to the following number:", closing: "Include your order ID {order_id} in the notes, then upload your receipt." },

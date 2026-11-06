@@ -180,7 +180,7 @@ const ORDER = [
   (c) => `Checkout accepts Cash App, Apple Pay, Chime, crypto and gift cards. Choosing crypto or a gift card takes ${c.cryptoDisc}% off your total, and orders of $${c.free} or more after that discount ship free. A flat $${c.flat} fee applies to smaller orders, and the minimum order is $${c.min}.`,
 ];
 const SHIP = [
-  "Orders are processed within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by USPS or UPS. Because these are vapor products, an adult aged 21 or older must sign for delivery under the PACT Act, so make sure someone of age can receive the parcel.",
+  "Orders are processed within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. Because these are vapor products, an adult aged 21 or older must sign for delivery under the PACT Act, so make sure someone of age can receive the parcel.",
   "Your parcel leaves our Phoenix Stock Warehouse within 24 to 72 business hours and ships with a tracking number. Adult signature (21+) is required on delivery, as federal PACT Act rules require for vapor products, so please plan to be available or choose an address where an adult can sign.",
 ];
 const RETURN = [

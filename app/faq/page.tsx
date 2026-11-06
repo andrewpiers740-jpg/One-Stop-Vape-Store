@@ -6,7 +6,7 @@ import PageBanner from "@/src/components/PageBanner";
 
 export const metadata: Metadata = {
   title: `Frequently Asked Questions | ${SITE.name}`,
-  description: `Common questions regarding Nixodine formulations, PACT Act adult verification, tracked USPS/UPS shipping, crypto discounts, and wholesale options at ${SITE.name}.`,
+  description: `Common questions regarding Nixodine formulations, PACT Act adult verification, tracked regional-carrier shipping, crypto discounts, and wholesale options at ${SITE.name}.`,
   alternates: {
     canonical: `https://${SITE.domain}/faq/`,
   },
@@ -37,7 +37,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "Where do orders ship from and how long does delivery take?",
-        a: "All orders are processed and dispatched directly from our primary logistics facility in Phoenix, Arizona (4908 E McDowell Road STE 103). Orders confirmed before 2:00 PM MST typically ship the same business day via USPS or UPS with end-to-end tracking."
+        a: "All orders are processed and dispatched directly from our primary logistics facility in Phoenix, Arizona (4908 E McDowell Road STE 103). Orders confirmed before 2:00 PM MST typically ship the same business day via a regional carrier with end-to-end tracking."
       },
       {
         q: "What is your free shipping policy?",
@@ -129,7 +129,7 @@ const FAQ_SECTIONS = [
     icon: MessageSquare,
     items: [
       { q: "How can I reach customer support?", a: "Use the chat button at the bottom right of any page, message us on WhatsApp at +1 774-734-1372, call 774-734-1372 or email sales@onestopvapestore.com. Customer service hours are Monday to Friday, 8AM–5PM Arizona time." },
-      { q: "Where are you located?", a: "Our Stock Warehouse is at 4908 E McDowell Road STE 103, Phoenix, Arizona 85008. Orders ship from there by USPS and UPS." }
+      { q: "Where are you located?", a: "Our Stock Warehouse is at 4908 E McDowell Road STE 103, Phoenix, Arizona 85008. Orders ship from there by regional carriers." }
     ]
   }
 ];

@@ -27,7 +27,7 @@ Make sure your wallet holds enough ETH for both the payment amount and the gas f
 ## Confirmation
 We look for your transfer on the Ethereum network and match it to your order automatically, checking the address, the amount in dollars, the time and that the transaction has not already paid another order. A confirmed transfer sends you an email and moves the order to payment confirmed. Ethereum transactions usually confirm within a minute or a few minutes, depending on gas and network activity. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/) for the full list of checks.
 
-After payment is confirmed, the order enters processing. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by USPS or UPS. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+After payment is confirmed, the order enters processing. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## Native ETH only
 Send ETH itself on the Ethereum network. Do not send tokens such as USDT or USDC to the ETH address unless the payment window asks for that token, because the window is built to match the token you chose and recovery of a wrong token is not guaranteed. In the same way, do not send ETH on a different network, such as a layer-2 network or another chain that also uses the ETH name, because it will not arrive at our Ethereum address. If you are unsure, read [what is a crypto network](/blog/what-is-a-crypto-network/).
@@ -122,7 +122,7 @@ Yes. All supported cryptocurrencies save 10% on your order total. The discount i
 Transfers are fast, but because confirmation is manual, same-day matching depends on when you pay and on our business hours. If timing matters, choose Solana, Bitcoin or another network with automatic detection.
 
 ## After your payment is confirmed
-You receive an email and your order status updates. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by USPS or UPS. An adult aged 21 or older must sign on delivery. See [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/) and [how to track your order](/blog/how-to-track-your-order/).
+You receive an email and your order status updates. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/) and [how to track your order](/blog/how-to-track-your-order/).
 
 ## Alternatives
 Prefer automatic detection? Consider [Bitcoin](/blog/how-to-pay-with-bitcoin/), [Solana](/blog/pay-with-solana-sol/) or [USDT](/blog/usdt-erc20-vs-trc20-which-network/). All crypto payments use the [10% crypto discount](/blog/crypto-discount-how-it-works/). Browse [disposable vapes](/shop/disposables/) and [vape juice](/shop/vape-juice/). All products are for adults aged 21 and over, and nicotine is addictive.`,
@@ -155,7 +155,7 @@ Send SOL itself, the native coin. Solana also has many tokens, including stablec
 ## Detection and confirmation
 We look for an incoming SOL transfer matching your order value within the last few hours, checking the address, the dollar value of the amount, the time and that the transaction has not already paid another order. Solana finalizes quickly, so detection is usually within seconds to a couple of minutes. Once it confirms, we email you and the order moves forward. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/) for the full list of checks.
 
-After confirmation, the order enters processing. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by USPS or UPS. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+After confirmation, the order enters processing. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## Why people choose Solana
 - **Speed:** transfers usually confirm in seconds.
@@ -249,7 +249,7 @@ Look for Solana, SOL or SPL in the network list. If your wallet or exchange does
 Yes. Read [how to buy crypto with a card](/blog/how-to-buy-crypto-with-a-card/). Buy USDC, choose Solana as the network when you withdraw, and then send it to our address.
 
 ## After your payment is confirmed
-You receive an email, and your order status updates. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by USPS or UPS. An adult aged 21 or older must sign on delivery. See [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/) and [how to track your order](/blog/how-to-track-your-order/).
+You receive an email, and your order status updates. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/) and [how to track your order](/blog/how-to-track-your-order/).
 
 ## If your payment looks short
 If the status page shows underpaid, do not resend the full amount. A small shortfall is usually caused by an exchange fee being deducted from the amount. Contact us with your order reference and transaction hash, and we will tell you what is needed. See [underpaid messages](/blog/why-your-crypto-payment-shows-underpaid/). Browse the [disposable vapes](/shop/disposables/) range, and compare every option in [payment methods compared](/blog/payment-methods-compared/). All products are for adults aged 21 and over, and nicotine is addictive.`,
@@ -326,7 +326,7 @@ Yes. Gift cards also earn the 10% discount and avoid crypto altogether. See [how
 If you already have a verified account, a card purchase can be done in minutes. A first-time verification can take longer. Our confirmation after you send is usually quick on automatic networks, and then orders are processed within 24 to 72 business hours.
 
 ## After you pay
-Once your payment is confirmed you receive an email. We ship from our Phoenix, Arizona Stock Warehouse with tracking by USPS or UPS, and an adult aged 21 or older must sign on delivery. Compare all options in [payment methods compared](/blog/payment-methods-compared/). Browse [disposable vapes](/shop/disposables/) and [vape juice](/shop/vape-juice/). All products are for adults aged 21 and over, and nicotine is addictive.`,
+Once your payment is confirmed you receive an email. We ship from our Phoenix, Arizona Stock Warehouse with tracking by a regional carrier, and an adult aged 21 or older must sign on delivery. Compare all options in [payment methods compared](/blog/payment-methods-compared/). Browse [disposable vapes](/shop/disposables/) and [vape juice](/shop/vape-juice/). All products are for adults aged 21 and over, and nicotine is addictive.`,
 faq: [
 ["Do I need to own crypto to pay with it?", "No. You can buy it with a card or bank transfer from a provider such as MoonPay, Coinbase, Transak or Changelly and send it to the address in our payment window."],
 ["Which coin is easiest for beginners?", "A stablecoin such as USDC on Solana or USDT on Tron, because the amount is predictable and fees are low."],
@@ -356,7 +356,7 @@ Open the Apple Pay or Wallet flow you normally use for person-to-person payments
 Take a screenshot of the confirmation and upload it using the link in our email. The screenshot should show the amount, the recipient and the time. You can attach more than one image if needed, for example if the payment shows on two screens. Uploads are private and compressed so they load quickly. See [how to upload a payment screenshot](/blog/how-to-upload-a-payment-screenshot/) for what makes a good one.
 
 ## Confirmation
-We check our account, mark the order paid and email you. Orders then move into processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, followed by carrier delivery with tracking by USPS or UPS. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/) and [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/). You can follow each stage in [order status meanings](/blog/order-status-meanings/).
+We check our account, mark the order paid and email you. Orders then move into processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, followed by carrier delivery with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/) and [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/). You can follow each stage in [order status meanings](/blog/order-status-meanings/).
 
 ## Tips for a smooth order
 - **Pay within 24 hours.** Unpaid orders may be released so stock is not held indefinitely.
@@ -524,7 +524,7 @@ body: `We accept several payment methods at One Stop Vape Store, and each has tr
 - **Minimum order:** $100.
 - **Shipping:** free on orders of $200 or more after discount; otherwise a flat $15.
 - **Processing:** 24 to 72 business hours after payment is confirmed, from our Phoenix, Arizona Stock Warehouse.
-- **Delivery:** tracked USPS or UPS, with adult signature (21+) required.
+- **Delivery:** tracked a regional carrier, with adult signature (21+) required.
 - **Refunds:** back through the payment method used, less a 15% restocking fee, for eligible returns within 30 days. See [refund and return policy explained](/blog/refund-and-return-policy-explained/).
 - **Security:** payment details come only from our official email, our WhatsApp number or your private order page. We never ask for PINs, passwords or recovery phrases.
 
