@@ -44,7 +44,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
-              From flagship Geek Bar disposables and Nixodine alternatives to authentic nicotine salts. Fast tracked delivery nationwide from our Phoenix fulfillment hub.
+              From flagship Geek Bar disposables and Nixodine alternatives to authentic nicotine salts. Fast tracked delivery nationwide from our Phoenix Stock Warehouse.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
@@ -64,7 +64,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="pt-4 flex items-center gap-6 text-xs text-slate-500 font-medium">
+            <div className="pt-4 flex items-center gap-6 text-xs text-slate-600 font-medium">
               <span className="flex items-center gap-1.5"><ShieldCheck size={14} className="text-emerald-600" /> 100% Factory Authentic</span>
               <span className="flex items-center gap-1.5"><Zap size={14} className="text-emerald-600" /> 24hr Dispatch</span>
               <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-emerald-600" /> 21+ PACT Compliant</span>
@@ -173,7 +173,7 @@ export default function HomePage() {
           </div>
           <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter leading-none">Priority Logistics</h3>
           <p className="text-slate-600 text-sm leading-relaxed">
-            Dispatched from our Phoenix fulfillment hub within 24 hours. Tracked express shipping via USPS and UPS across the United States.
+            Dispatched from our Phoenix Stock Warehouse within 24 hours. Tracked express shipping via USPS and UPS across the United States.
           </p>
         </div>
 

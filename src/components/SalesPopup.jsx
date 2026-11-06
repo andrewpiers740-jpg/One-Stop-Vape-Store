@@ -52,9 +52,9 @@ export default function SalesPopup() {
       <div className="min-w-0 text-xs leading-snug">
         <p className="text-slate-600">A customer in <b className="text-slate-900">{s.state}</b> bought</p>
         <p className="truncate font-bold text-slate-900">{s.qty > 1 ? `${s.qty} × ` : ""}{s.slug ? <Link href={`/shop/${s.category}/${s.slug}/`} className="hover:text-emerald-600">{s.title}</Link> : s.title}</p>
-        <p className="text-[11px] text-slate-500">{ago(s.at)}</p>
+        <p className="text-[11px] text-slate-600">{ago(s.at)}</p>
       </div>
-      <button type="button" aria-label="Dismiss notification" onClick={() => { setDismissed(true); try { sessionStorage.setItem("osv-sales-dismissed", "1"); } catch { /* ignore */ } }} className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-700"><X size={14} /></button>
+      <button type="button" aria-label="Dismiss notification" onClick={() => { setDismissed(true); try { sessionStorage.setItem("osv-sales-dismissed", "1"); } catch { /* ignore */ } }} className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-700"><X size={14} /></button>
     </div>
   );
 }

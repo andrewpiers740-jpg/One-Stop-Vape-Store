@@ -24,7 +24,7 @@ export default function BlogList({ posts, activeCategory, page, pages, basePath 
           {page > 1 && <Link href={href(page - 1)} rel="prev" className={chip(false)}>← Prev</Link>}
           {nums.map((n, i) => (
             <React.Fragment key={n}>
-              {i > 0 && n - nums[i - 1] > 1 && <span className="px-1 text-slate-400">…</span>}
+              {i > 0 && n - nums[i - 1] > 1 && <span className="px-1 text-slate-600">…</span>}
               <Link href={href(n)} aria-current={n === page ? "page" : undefined} className={chip(n === page)}>{n}</Link>
             </React.Fragment>
           ))}

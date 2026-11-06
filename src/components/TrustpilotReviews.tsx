@@ -46,7 +46,7 @@ const REVIEWS: Review[] = [
     name: "David R.",
     location: "Tampa, FL",
     title: "Wholesale tier pricing and unmatched customer care",
-    comment: "We supply our local Florida shops with bulk hardware from One Stop Vape. Ordering through WhatsApp and email invoices is fast, and orders always leave their fulfillment hub within 24 hours. Reliable partner since December 2022.",
+    comment: "We supply our local Florida shops with bulk hardware from One Stop Vape. Ordering through WhatsApp and email invoices is fast, and orders always leave the Stock Warehouse within 24 hours. Reliable partner since December 2022.",
     rating: 5,
     date: "November 04, 2025",
     category: "wholesale",
@@ -156,12 +156,12 @@ export default function TrustpilotReviews() {
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-10 border-b border-slate-200">
           <div className="flex flex-col gap-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trust/10 border border-trust/20 text-trust text-[10px] font-black uppercase tracking-[0.2em] w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-trust/10 border border-trust/20 text-trust-dark text-[10px] font-black uppercase tracking-[0.2em] w-fit">
               <ShieldCheck size={12} />
               <span>Verified Customer Proof • Since Dec 2022</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-none">
-              Trustpilot <span className="text-trust">Reviews</span>
+              Trustpilot <span className="text-trust-dark">Reviews</span>
             </h2>
             <p className="text-slate-600 text-sm md:text-base max-w-xl leading-relaxed">
               Real feedback from adult customers across the United States. {SITE.legalName} d/b/a {SITE.name} has maintained a 4.9-star average since our establishment in December 2022.
@@ -173,7 +173,7 @@ export default function TrustpilotReviews() {
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-black text-slate-900 tracking-tight">TrustScore</span>
-                <span className="px-2 py-0.5 rounded bg-trust text-white font-black text-xs uppercase">4.9 / 5.0</span>
+                <span className="px-2 py-0.5 rounded bg-trust-dark text-white font-black text-xs uppercase">4.9 / 5.0</span>
               </div>
               <div className="flex items-center gap-1 mt-2 text-trust">
                 {[0, 1, 2, 3, 4].map((i) => (
@@ -186,9 +186,9 @@ export default function TrustpilotReviews() {
             </div>
             <div className="hidden sm:block w-px h-16 bg-slate-200" />
             <div className="text-center sm:text-left">
-              <span className="text-xs uppercase font-black tracking-widest text-trust">Status</span>
+              <span className="text-xs uppercase font-black tracking-widest text-trust-dark">Status</span>
               <p className="text-sm font-bold text-slate-900 mt-0.5">Excellent Rating</p>
-              <p className="text-[10px] text-slate-500">Established Dec 2022</p>
+              <p className="text-[10px] text-slate-600">Established Dec 2022</p>
             </div>
           </div>
         </div>
@@ -207,7 +207,7 @@ export default function TrustpilotReviews() {
               onClick={() => setActiveFilter(pill.id)}
               className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeFilter === pill.id
-                  ? "bg-trust text-white shadow-lg shadow-trust/20 font-black"
+                  ? "bg-trust-dark text-white shadow-lg shadow-trust/20 font-black"
                   : "bg-slate-100 border border-slate-200 text-slate-600 hover:border-slate-300 hover:text-slate-900"
               }`}
             >
@@ -234,7 +234,7 @@ export default function TrustpilotReviews() {
                     ))}
                   </div>
                   {rev.verified && (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-trust bg-trust/10 px-2 py-0.5 rounded-full border border-trust/20">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-trust-dark bg-trust/10 px-2 py-0.5 rounded-full border border-trust/20">
                       <CheckCircle size={10} />
                       <span>Verified Buyer</span>
                     </span>
@@ -242,7 +242,7 @@ export default function TrustpilotReviews() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base font-black text-slate-900 tracking-tight leading-snug group-hover:text-trust transition-colors">
+                <h3 className="text-base font-black text-slate-900 tracking-tight leading-snug group-hover:text-trust-dark transition-colors">
                   &ldquo;{rev.title}&rdquo;
                 </h3>
 
@@ -256,11 +256,11 @@ export default function TrustpilotReviews() {
               <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
                 <div>
                   <p className="font-bold text-slate-900 tracking-tight">{rev.name}</p>
-                  <p className="text-[11px] text-slate-500">{rev.location}</p>
+                  <p className="text-[11px] text-slate-600">{rev.location}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] text-slate-500 block font-mono">{rev.date}</span>
-                  <span className="text-[9px] uppercase tracking-widest text-trust font-bold">{rev.categoryLabel}</span>
+                  <span className="text-[10px] text-slate-600 block font-mono">{rev.date}</span>
+                  <span className="text-[9px] uppercase tracking-widest text-trust-dark font-bold">{rev.categoryLabel}</span>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function TrustpilotReviews() {
           <div className="flex items-center gap-4 shrink-0">
             <a
               href={`https://wa.me/${SITE.contact.whatsapp}`}
-              className="px-8 py-4 bg-trust hover:bg-trust text-white font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 text-xs shadow-lg shadow-trust/20"
+              className="px-8 py-4 bg-trust-dark hover:bg-trust-dark text-white font-black uppercase tracking-widest rounded-full transition-all duration-300 flex items-center gap-2 text-xs shadow-lg shadow-trust/20"
             >
               <MessageSquare size={14} />
               <span>Ask Our Team</span>

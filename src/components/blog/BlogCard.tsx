@@ -17,13 +17,13 @@ export default function BlogCard({ post, priority = false }: { post: BlogPost; p
       <div className="flex flex-1 flex-col gap-3 p-6">
         <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest">
           <Link href={`/blog/category/${post.categorySlug}/`} className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-emerald-600 hover:bg-emerald-500/20">{post.category}</Link>
-          <span className="flex items-center gap-1 text-slate-500"><Clock size={11} /> {post.readMinutes} min</span>
+          <span className="flex items-center gap-1 text-slate-600"><Clock size={11} /> {post.readMinutes} min</span>
         </div>
         <h3 className="text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-emerald-600">
           <Link href={`/blog/${post.slug}/`}>{post.title}</Link>
         </h3>
         <p className="line-clamp-3 text-sm leading-relaxed text-slate-600">{post.summary}</p>
-        <time dateTime={post.date} className="mt-auto pt-2 text-[11px] font-bold uppercase tracking-widest text-slate-400">{fmtDate(post.date)}</time>
+        <time dateTime={post.date} className="mt-auto pt-2 text-[11px] font-bold uppercase tracking-widest text-slate-600">{fmtDate(post.date)}</time>
       </div>
     </article>
   );

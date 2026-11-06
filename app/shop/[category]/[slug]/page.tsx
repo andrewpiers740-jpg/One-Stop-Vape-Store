@@ -6,7 +6,10 @@ import products from "@/src/data/products.json";
 import SmartImage from "@/src/components/SmartImage";
 import StarRating from "@/src/components/StarRating";
 import WishlistButton from "@/src/components/WishlistButton";
-import AddToCartButton from "@/src/components/AddToCartButton";
+import VariantBuy from "@/src/components/VariantBuy";
+import { productOffers } from "@/lib/schema";
+import { productFaq } from "@/lib/productFaq";
+import PaymentLogos from "@/src/components/PaymentLogos";
 import PostBody from "@/src/components/blog/PostBody";
 import longDescriptions from "@/src/data/product-descriptions.json";
 import { notFound } from "next/navigation";
@@ -45,6 +48,11 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const product = (products as any[]).find(p => p.slug === slug);
   if (!product) notFound();
 
+  const rawContent = (longDescriptions as Record<string, any>)[product.slug];
+  const content: { body?: string; short?: string; faq?: { q: string; a: string }[] } = typeof rawContent === "string" ? { body: rawContent } : rawContent || {};
+  const faq = content.faq && content.faq.length === 10 ? content.faq : productFaq(product);
+  const shortDesc = content.short || product.description;
+
   const relatedProducts = (products as any[])
     .filter(p => p.brand === product.brand && p.slug !== product.slug)
     .slice(0, 4);
@@ -57,25 +65,18 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
     "@type": "Product",
     "name": product.title,
     "image": [product.image],
-    "description": product.description,
+    "description": shortDesc,
     "sku": product.id,
     "brand": {
       "@type": "Brand",
       "name": product.brand
     },
     ...(product.rating && product.reviewsCount ? { aggregateRating: { "@type": "AggregateRating", ratingValue: String(product.rating), reviewCount: String(product.reviewsCount) } } : {}),
-    "offers": {
-      "@type": "Offer",
-      "url": `https://${SITE.domain}/shop/${product.category}/${product.slug}/`,
-      "priceCurrency": SITE.contact.currency.code,
-      "price": String(product.price),
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": SITE.legalName
-      }
-    }
+    "offers": productOffers(product),
+    "category": product.category,
   };
+
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -112,12 +113,16 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         
         {/* Left: Gallery with pure white container */}
         <div className="flex flex-col gap-6 sticky top-24">
-          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2">
+          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-2">
             <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
             <ChevronRight size={10} />
             <Link href={`/shop/${product.category}/`} className="hover:text-emerald-600 transition-colors capitalize">{product.category.replace('-', ' ')}</Link>
@@ -147,7 +152,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <div className="flex flex-col gap-3 border-b border-slate-200 pb-8">
             <div className="flex items-center justify-between">
               <span className="text-xs font-black uppercase tracking-[0.2em] text-emerald-600">{product.brand}</span>
-              <span className="text-[10px] font-bold text-slate-500 font-mono">SKU: {product.id}</span>
+              <span className="text-[10px] font-bold text-slate-600 font-mono">SKU: {product.id}</span>
             </div>
             
             <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase leading-tight">
@@ -157,43 +162,38 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
             {/* 5-Star Rating Component */}
             <div className="flex items-center gap-3 mt-1">
               <StarRating rating={product.rating} reviewsCount={product.reviewsCount} size="sm" />
-              <span className="text-slate-400">•</span>
+              <span className="text-slate-600">•</span>
               <span className="text-xs text-slate-600">Verified Authentic Inventory</span>
             </div>
+            <p className="mt-2 text-base leading-relaxed text-slate-700">{shortDesc}</p>
 
-            <div className="flex items-center gap-4 mt-3">
-              <p className="text-3xl md:text-4xl font-black text-slate-900 font-mono tabular-nums">{product.priceDisplay}</p>
-              <span className="px-3 py-1 rounded bg-emerald-500/10 text-emerald-600 text-[10px] font-black uppercase tracking-widest border border-emerald-500/20">
-                In Stock & Ready to Ship
-              </span>
-            </div>
           </div>
 
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Device Specifications</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-slate-600">Device Specifications</span>
               <div className="grid grid-cols-2 gap-3">
                 {product.nicotine && (
                   <div className="p-4 rounded-xl bg-slate-100/40 border border-slate-200">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5">Strength / Formulation</p>
+                    <p className="text-[10px] text-slate-600 uppercase font-bold mb-0.5">Strength / Formulation</p>
                     <p className="text-sm font-bold text-slate-900">{product.nicotine}</p>
                   </div>
                 )}
                 {(product as any).packSize && (
                   <div className="p-4 rounded-xl bg-slate-100/40 border border-slate-200">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5">Packaging Size</p>
+                    <p className="text-[10px] text-slate-600 uppercase font-bold mb-0.5">Packaging Size</p>
                     <p className="text-sm font-bold text-slate-900">{(product as any).packSize}</p>
                   </div>
                 )}
                 {(product as any).flavor && (
                   <div className="p-4 rounded-xl bg-slate-100/40 border border-slate-200">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5">Flavor Profile</p>
+                    <p className="text-[10px] text-slate-600 uppercase font-bold mb-0.5">Flavor Profile</p>
                     <p className="text-sm font-bold text-slate-900">{(product as any).flavor}</p>
                   </div>
                 )}
                 {product.puffs && (
                   <div className="p-4 rounded-xl bg-slate-100/40 border border-slate-200">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold mb-0.5">Puff Capacity</p>
+                    <p className="text-[10px] text-slate-600 uppercase font-bold mb-0.5">Puff Capacity</p>
                     <p className="text-sm font-bold text-slate-900">{product.puffs}</p>
                   </div>
                 )}
@@ -202,7 +202,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
             {/* CTAs */}
             <div className="flex flex-col gap-3 mt-2">
-              <AddToCartButton product={{ slug: product.slug, title: product.title, brand: product.brand, category: product.category, price: product.price, image: product.image }} />
+              <VariantBuy product={{ slug: product.slug, title: product.title, brand: product.brand, category: product.category, price: product.price, image: product.image, nicotine: product.nicotine, packSize: (product as any).packSize, rawPrice: product.rawPrice }} stockLabel="In Stock & Ready to Ship" />
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -214,8 +214,9 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               </a>
 
               <WishlistButton product={product} />
+              <PaymentLogos className="pt-1" />
 
-              <p className="text-[10px] text-slate-500 text-center uppercase font-bold tracking-widest pt-2">
+              <p className="text-[10px] text-slate-600 text-center uppercase font-bold tracking-widest pt-2">
                 Min. Order ${SITE.order.minOrder} • {SITE.order.cryptoDiscount}% Crypto Discount • Free Shipping over ${SITE.order.freeShippingThreshold}
               </p>
             </div>
@@ -223,9 +224,9 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
           {/* Product Description */}
           <div className="flex flex-col gap-4 py-8 border-y border-slate-200">
-            <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600">Product Overview</h3>
+            <h2 className="text-xs font-black uppercase tracking-widest text-emerald-700">Product Overview</h2>
             <div className="text-slate-600 text-sm leading-relaxed space-y-4">
-              {(longDescriptions as Record<string, string>)[product.slug] ? <PostBody body={(longDescriptions as Record<string, string>)[product.slug]} inlineImages={[]} /> : <p className="whitespace-pre-line">{product.description}</p>}
+              {content.body ? <PostBody body={content.body} inlineImages={[]} /> : <p className="whitespace-pre-line">{product.description}</p>}
               <ul className="space-y-2 pt-2">
                 <li className="flex items-start gap-2.5 text-xs text-slate-700">
                   <Check size={14} className="text-emerald-600 mt-0.5 shrink-0" />
@@ -251,7 +252,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               </div>
               <div>
                 <p className="text-xs font-bold text-slate-900 uppercase tracking-tight">Express Shipping</p>
-                <p className="text-[10px] text-slate-500">Tracked USPS/UPS</p>
+                <p className="text-[10px] text-slate-600">Tracked USPS/UPS</p>
               </div>
             </div>
 
@@ -261,13 +262,25 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               </div>
               <div>
                 <p className="text-xs font-bold text-slate-900 uppercase tracking-tight">Verified Dealer</p>
-                <p className="text-[10px] text-slate-500">Since Dec 2022</p>
+                <p className="text-[10px] text-slate-600">Since Dec 2022</p>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+
+      <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-4xl">
+        <h2 id="faq-heading" className="mb-6 text-2xl font-black uppercase tracking-tighter text-slate-900 md:text-3xl">Frequently asked questions</h2>
+        <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+          {faq.map((f) => (
+            <details key={f.q} className="group p-5">
+              <summary className="cursor-pointer list-none text-base font-bold text-slate-900 marker:hidden"><h3 className="inline">{f.q}</h3></summary>
+              <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (

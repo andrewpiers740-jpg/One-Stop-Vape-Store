@@ -37,10 +37,10 @@ export default function StarRating({ rating, reviewsCount, size = "sm", showCoun
       {has ? (
         <>
           <span className="font-mono text-[11px] font-bold tracking-tight text-slate-700">{rating!.toFixed(1)}</span>
-          {showCount && <span className="text-[10px] font-medium text-slate-500">({reviewsCount})</span>}
+          {showCount && <span className="text-[10px] font-medium text-slate-600">({reviewsCount})</span>}
         </>
       ) : (
-        showCount && <span className="text-[10px] font-medium text-slate-500">No reviews yet</span>
+        showCount && <span className="text-[10px] font-medium text-slate-600">No reviews yet</span>
       )}
     </div>
   );

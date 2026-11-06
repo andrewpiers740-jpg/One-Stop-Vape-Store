@@ -21,7 +21,7 @@ export default function ShopPage() {
       <div className="max-w-[1440px] mx-auto px-6 py-12 flex flex-col gap-12 text-slate-900">
       
       <div className="flex flex-col gap-4">
-        <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+        <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600">
           <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
           <span>/</span>
           <span className="text-slate-600">Shop All</span>
@@ -41,7 +41,7 @@ export default function ShopPage() {
                 <li key={cat.slug}>
                   <Link href={`/shop/${cat.slug}/`} className="text-sm text-slate-600 hover:text-emerald-600 transition-colors flex items-center justify-between group py-1">
                     <span>{cat.name}</span>
-                    <span className="text-[10px] text-slate-500 group-hover:text-emerald-600 transition-colors font-mono font-bold">
+                    <span className="text-[10px] text-slate-600 group-hover:text-emerald-600 transition-colors font-mono font-bold">
                       {(products as any[]).filter((p: any) => p.category === cat.slug).length}
                     </span>
                   </Link>

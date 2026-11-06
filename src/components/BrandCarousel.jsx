@@ -1,52 +1,44 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import { BRANDS } from "@/src/config/site";
+import logos from "@/src/data/brand-logos.json";
 
-// Helper to slugify brand names for logo file lookup
-const getBrandSlug = (brand) => brand.toLowerCase().replace(/\s+/g, '-');
-
+// Brand logos are the brands' own marks, fetched from their websites by scripts/brand-logos.mjs into /public/logos.
+// A brand with no logo on file shows its name as a clean text mark instead of a broken image.
 export default function BrandCarousel() {
-  // Double the list for smooth continuous marquee effect
-  const marqueeBrands = [...BRANDS, ...BRANDS];
+  // Brands with a logo first, then the rest; the list is doubled for a seamless marquee.
+  const ordered = [...BRANDS].sort((a, b) => Number(!!logos[b]) - Number(!!logos[a]));
+  const marquee = [...ordered, ...ordered];
 
   return (
-    <div className="w-full py-16 bg-white overflow-hidden">
-      <h2 className="text-center text-xs font-black text-slate-600 uppercase tracking-[0.3em] mb-12">Trusted Brands</h2>
+    <div className="w-full overflow-hidden bg-white py-16">
+      <h2 className="mb-12 text-center text-xs font-black uppercase tracking-[0.3em] text-slate-600">Trusted Brands</h2>
       <div className="relative flex overflow-hidden">
         <motion.div
-          className="flex gap-16 items-center"
+          className="flex items-center gap-12"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 30,
-            ease: "linear",
-            repeat: Infinity,
-          }}
+          transition={{ duration: 45, ease: "linear", repeat: Infinity }}
         >
-          {marqueeBrands.map((brand, i) => (
-            <Link
-              key={`${brand}-${i}`}
-              href={`/shop?brand=${encodeURIComponent(brand)}`}
-              className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-            >
-              {/* NOTE: Please place logo images in public/logos/ with the filename <brand-slug>.png */}
-              <div className="relative w-32 h-16 flex items-center justify-center">
-                 <Image 
-                    src={`/logos/${getBrandSlug(brand)}.png`} 
-                    alt={brand}
-                    fill
-                    className="object-contain"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `<span class="font-bold text-slate-500 text-xs">${brand}</span>`;
-                    }}
-                 />
-              </div>
-            </Link>
-          ))}
+          {marquee.map((brand, i) => {
+            const logo = logos[brand];
+            return (
+              <Link
+                key={`${brand}-${i}`}
+                href={`/shop?brand=${encodeURIComponent(brand)}`}
+                aria-label={`Shop ${brand}`}
+                className="flex h-20 w-40 flex-shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 transition-shadow hover:shadow-md"
+              >
+                {logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={logo.src} alt={brand} width={140} height={52} className="max-h-12 w-auto max-w-full object-contain" />
+                ) : (
+                  <span className="text-center text-sm font-black uppercase tracking-wide text-slate-700">{brand}</span>
+                )}
+              </Link>
+            );
+          })}
         </motion.div>
       </div>
     </div>

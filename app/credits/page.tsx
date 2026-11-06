@@ -30,11 +30,11 @@ export default function CreditsPage() {
         {list.map(([name, v]) => (
           <li key={name} className="flex justify-between gap-4 border-b border-slate-200 py-2">
             <a href={`${v.url}?utm_source=one_stop_vape_store&utm_medium=referral`} target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-emerald-600">{name}</a>
-            <span className="text-slate-400">{v.n} photo{v.n === 1 ? "" : "s"}</span>
+            <span className="text-slate-600">{v.n} photo{v.n === 1 ? "" : "s"}</span>
           </li>
         ))}
       </ul>
-      <p className="mt-10 text-xs text-slate-400">Product images and brand names are the property of their respective owners.</p>
+      <p className="mt-10 text-xs text-slate-600">Product images and brand names are the property of their respective owners.</p>
     </div>
   );
 }

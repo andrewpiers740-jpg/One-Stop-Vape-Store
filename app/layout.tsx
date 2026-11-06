@@ -5,6 +5,7 @@ import Footer from "@/src/components/Footer";
 import AnnouncementBar from "@/src/components/AnnouncementBar";
 import AgeGateModal from "@/src/components/AgeGateModal";
 import SalesPopup from "@/src/components/SalesPopup";
+import SupportChat from "@/src/components/SupportChat";
 import JsonLd from "@/src/components/JsonLd";
 import { CartProvider } from "@/src/components/CartProvider";
 import "./globals.css";
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <AgeGateModal />
           <SalesPopup />
+          <SupportChat />
         </CartProvider>
         <JsonLd />
       </body>

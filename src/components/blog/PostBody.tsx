@@ -32,7 +32,7 @@ function Figure({ img }: { img: BlogImage }) {
     <figure className="my-10 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
       <Image src={img.src} alt={img.alt} width={img.w} height={img.h} loading="lazy" sizes="(min-width:896px) 896px, 100vw" className="aspect-[3/2] w-full object-cover" />
       {img.by && (
-        <figcaption className="px-4 py-2 text-[11px] text-slate-500">
+        <figcaption className="px-4 py-2 text-[11px] text-slate-600">
           Photo by <a href={`${img.byUrl}?utm_source=one_stop_vape_store&utm_medium=referral`} target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">{img.by}</a> on{" "}
           <a href="https://unsplash.com/?utm_source=one_stop_vape_store&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">Unsplash</a>
         </figcaption>

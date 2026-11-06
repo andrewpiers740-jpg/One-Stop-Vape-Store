@@ -50,10 +50,10 @@ export function CopyField({ label, value }: { label: string; value: string }) {
   return (
     <button type="button" onClick={copy} className="group flex w-full items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-emerald-500/60" aria-label={`Copy ${label}`}>
       <span className="min-w-0">
-        <span className="block text-[10px] font-black uppercase tracking-widest text-slate-500 group-hover:text-emerald-600">{label}</span>
+        <span className="block text-[10px] font-black uppercase tracking-widest text-slate-600 group-hover:text-emerald-600">{label}</span>
         <span className="block break-all font-mono text-sm font-bold text-zinc-100">{value}</span>
       </span>
-      <span className="flex shrink-0 items-center gap-1.5 text-xs font-bold text-slate-500 group-hover:text-emerald-600">
+      <span className="flex shrink-0 items-center gap-1.5 text-xs font-bold text-slate-600 group-hover:text-emerald-600">
         {done ? <><Check size={16} className="text-emerald-600" /> Copied</> : <><Copy size={16} /> Tap to copy</>}
       </span>
     </button>
@@ -127,7 +127,7 @@ export function ProofUploader({ id, token, kind, onDone }: { id: string; token: 
     </div>
   );
 
-  const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:outline-none";
+  const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-500 focus:border-emerald-500 focus:outline-none";
   return (
     <form onSubmit={submit} className="flex flex-col gap-4">
       {isGift && (
@@ -169,7 +169,7 @@ export function ProofUploader({ id, token, kind, onDone }: { id: string; token: 
       <button disabled={busy} className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 py-4 text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-emerald-500/25 hover:bg-emerald-400 disabled:opacity-50">
         {busy ? <><Loader2 size={16} className="animate-spin" /> Sending…</> : <>{isGift ? "Send gift card details" : "Send proof of payment"}</>}
       </button>
-      <p className="flex items-center gap-2 text-[11px] text-slate-500"><ShieldCheck size={14} /> Only people with your private link can see this page.</p>
+      <p className="flex items-center gap-2 text-[11px] text-slate-600"><ShieldCheck size={14} /> Only people with your private link can see this page.</p>
     </form>
   );
 }

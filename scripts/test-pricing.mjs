@@ -20,3 +20,24 @@ assert.equal(resolvePaymentMethod("giftcard-apple").discount, 10);
 assert.equal(resolvePaymentMethod("giftcard-bogus"), null);
 assert.equal(resolvePaymentMethod("cashapp").discount, 0);
 console.log("pricing: all assertions passed (item $" + item.price + ")");
+
+// --- variants: price + label come from the server catalogue, never from the browser ---
+{
+  const { getVariantGroups } = await import("../lib/variants.js");
+  const vp = p.find((x) => /,/.test(x.nicotine || "") && /,/.test(x.packSize || "") && / - /.test(x.rawPrice));
+  const groups = getVariantGroups(vp);
+  assert.ok(groups.length === 2, "strength + pack groups present");
+  const [lo, hi] = [...vp.rawPrice.matchAll(/\$([\d.]+)/g)].map((m) => parseFloat(m[1]));
+  const packs = groups.find((g) => g.id === "pack").options;
+  const strengths = groups.find((g) => g.id === "strength").options;
+  const one = (variant, qty) => priceOrder([{ slug: vp.slug, qty, variant, price: 0.01 }], 0);
+  const big = one({ strength: strengths[strengths.length - 1].value, pack: packs[packs.length - 1].value }, Math.ceil(100 / hi) + 1);
+  assert.ok(big.ok && big.lines[0].price === hi, `last pack priced at the range top: ${JSON.stringify(big)}`);
+  assert.ok(big.lines[0].title.includes(strengths[strengths.length - 1].value), "title carries the chosen strength");
+  const small = one({ strength: strengths[0].value, pack: packs[0].value }, Math.ceil(100 / lo) + 1);
+  assert.ok(small.ok && small.lines[0].price === lo, "first pack priced at the range bottom");
+  assert.equal(one({ strength: "99mg" }, 20).ok, false, "unknown strength rejected");
+  const none = one(undefined, Math.ceil(100 / lo) + 1);
+  assert.ok(none.ok && none.lines[0].variant.strength === strengths[0].value, "missing variant defaults to the first option");
+}
+console.log("variant pricing OK");

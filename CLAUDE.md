@@ -27,3 +27,9 @@ React/Next.js ecommerce vape store, Vercel, deployed via GitHub.
 - Blog is data: edit `content/blog/*.mjs`, then `npm run blog`. Banned wording (safe, healthy, cure, risk-free, ...) fails the build.
 - Do not invent reviews, ratings, sales popups or statistics. Only real, attributable social proof.
 - Images are local WebP in `public/images`; the Next image optimizer is off (`images.unoptimized`).
+
+## Variants, logos, imagery (added)
+- Product options (strength, packaging size) come from `lib/variants.js` (derived from `nicotine` / `packSize` / the price range). The server re-prices every cart line from it. Real supplier prices for options go in `src/data/variant-prices.json` (`{ "<slug>": { "5 Pack": 27.99 } }`) and override the derived ones. Never guess an option price.
+- Brand logos: `node scripts/brand-logos.mjs` fetches them from the brands' own sites into `public/logos/` + `src/data/brand-logos.json`; brands without one show a text mark.
+- Payment logos live in `public/images/payments/` and render via `src/components/PaymentLogos.tsx` (footer + product page).
+- Category tiles for vape-juice / nic-pouches / nixodine and all blog images are composed from product photos: `node scripts/images-tiles.mjs`, `node scripts/images-blog-products.mjs` (then `npm run blog`).

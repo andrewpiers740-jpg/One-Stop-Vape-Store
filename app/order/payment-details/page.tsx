@@ -6,7 +6,7 @@ import { money, paymentTermsLines } from "@/lib/order";
 
 function Inner() {
   const { id, token, data, error, loading } = usePortalOrder();
-  if (loading) return <p className="text-slate-500">Loading your payment details…</p>;
+  if (loading) return <p className="text-slate-600">Loading your payment details…</p>;
   if (error || !data) return <p role="alert" className="rounded-2xl border border-red-200 bg-red-50 p-6 text-red-700">{error || "Order not found."}</p>;
   const o = data.order;
   const confirmUrl = `/order/confirm-payment/?id=${encodeURIComponent(id)}&token=${encodeURIComponent(token)}`;
@@ -23,8 +23,8 @@ function Inner() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-        <div><p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Order</p><p className="font-mono text-xl font-black text-slate-900">{o.orderNumber}</p></div>
-        <div className="text-right"><p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Amount due</p><p className="font-mono text-2xl font-black text-emerald-600">{money(o.total)}</p></div>
+        <div><p className="text-[10px] font-black uppercase tracking-widest text-slate-600">Order</p><p className="font-mono text-xl font-black text-slate-900">{o.orderNumber}</p></div>
+        <div className="text-right"><p className="text-[10px] font-black uppercase tracking-widest text-slate-600">Amount due</p><p className="font-mono text-2xl font-black text-emerald-600">{money(o.total)}</p></div>
       </div>
       <StatusPill status={o.status} />
       {data.opening && <p className="text-sm text-slate-700">{data.opening}</p>}
@@ -43,7 +43,7 @@ export default function PaymentDetailsPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
       <h1 className="mb-8 text-3xl font-black uppercase tracking-tighter text-slate-900 sm:text-4xl">Payment details</h1>
-      <Suspense fallback={<p className="text-slate-500">Loading…</p>}><Inner /></Suspense>
+      <Suspense fallback={<p className="text-slate-600">Loading…</p>}><Inner /></Suspense>
     </div>
   );
 }

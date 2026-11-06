@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ShoppingCart, Check, Minus, Plus } from "lucide-react";
 import { useCart } from "@/src/components/CartProvider";
 
-type P = { slug: string; title: string; brand?: string; category?: string; price: number; image?: string };
+type P = { slug: string; title: string; brand?: string; category?: string; price: number; image?: string; variant?: { strength?: string; pack?: string }; variantLabel?: string };
 
 // Quantity stepper + "Add to cart". `compact` is the product-tile variant; the default is the product-page variant.
 export default function AddToCartButton({ product, compact = false }: { product: P; compact?: boolean }) {

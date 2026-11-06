@@ -113,7 +113,7 @@ export default function CryptoPayModal({ open, token, network, totalLabel, amoun
 
         <div className="flex justify-center">
           <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-3">
-            {qrSrc ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={qrSrc} alt={`${token.name} wallet QR code`} width={176} height={176} className="h-full w-full object-contain" /> : <span className="text-xs text-slate-500">Loading QR…</span>}
+            {qrSrc ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={qrSrc} alt={`${token.name} wallet QR code`} width={176} height={176} className="h-full w-full object-contain" /> : <span className="text-xs text-slate-600">Loading QR…</span>}
           </div>
         </div>
 

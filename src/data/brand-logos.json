@@ -1,0 +1,78 @@
+{
+ "Lost Mary": {
+  "src": "/logos/lost-mary.webp",
+  "source": "lostmary.com"
+ },
+ "RAZ": {
+  "src": "/logos/raz.webp",
+  "source": "raz-vape.com"
+ },
+ "Pod Juice": {
+  "src": "/logos/pod-juice.webp",
+  "source": "podjuice.com"
+ },
+ "Pod Salt": {
+  "src": "/logos/pod-salt.webp",
+  "source": "podsalt.com"
+ },
+ "HorizonTech": {
+  "src": "/logos/horizontech.webp",
+  "source": "horizontech.com"
+ },
+ "Mr Fog": {
+  "src": "/logos/mr-fog.webp",
+  "source": "mrfogvape.com"
+ },
+ "EB Create": {
+  "src": "/logos/eb-create.webp",
+  "source": "ebcreate.com"
+ },
+ "Cloud Nurdz": {
+  "src": "/logos/cloud-nurdz.webp",
+  "source": "cloudnurdz.com"
+ },
+ "Juice Head": {
+  "src": "/logos/juice-head.webp",
+  "source": "juicehead.co"
+ },
+ "Monster Labs": {
+  "src": "/logos/monster-labs.webp",
+  "source": "monstervapelabs.com"
+ },
+ "ZYN": {
+  "src": "/logos/zyn.webp",
+  "source": "zyn.com"
+ },
+ "American Ice": {
+  "src": "/logos/american-ice.webp",
+  "source": "americanice.com"
+ },
+ "LUCY": {
+  "src": "/logos/lucy.webp",
+  "source": "lucy.co"
+ },
+ "NOAT": {
+  "src": "/logos/noat.webp",
+  "source": "noat.com"
+ },
+ "Parfflo": {
+  "src": "/logos/parfflo.webp",
+  "source": "parfflo.com"
+ },
+ "Rifbar": {
+  "src": "/logos/rifbar.webp",
+  "source": "rifbar.com"
+ },
+ "Rinnbar": {
+  "src": "/logos/rinnbar.webp",
+  "source": "rinnbar.com"
+ },
+ "Geek Bar": {
+  "src": "/logos/geek-bar.webp",
+  "source": "geekbar.com"
+ },
+ "Foger": {
+  "src": "/logos/foger.webp",
+  "source": "fogervape.com"
+ }
+}

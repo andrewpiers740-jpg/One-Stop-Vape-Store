@@ -77,8 +77,8 @@ export default function WishlistClient() {
   if (items.length === 0) {
     return (
       <div className="max-w-2xl mx-auto px-6 py-24 text-center flex flex-col items-center gap-6">
-        <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-500">
-          <Heart size={36} className="text-slate-400" />
+        <div className="w-20 h-20 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600">
+          <Heart size={36} className="text-slate-600" />
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">Your Wishlist is Empty</h1>
@@ -103,7 +103,7 @@ export default function WishlistClient() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 border-b border-slate-200">
         <div className="flex flex-col gap-2">
-          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600">
             <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-600">Wishlist</span>
@@ -118,7 +118,7 @@ export default function WishlistClient() {
 
         <button
           onClick={clearAll}
-          className="text-xs text-slate-500 hover:text-red-700 transition-colors flex items-center gap-1.5 self-start sm:self-end font-bold uppercase tracking-wider"
+          className="text-xs text-slate-600 hover:text-red-700 transition-colors flex items-center gap-1.5 self-start sm:self-end font-bold uppercase tracking-wider"
         >
           <Trash2 size={14} />
           <span>Clear Wishlist</span>
@@ -155,7 +155,7 @@ export default function WishlistClient() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{item.brand}</span>
+                  <span className="text-[10px] text-slate-600 uppercase font-black tracking-widest">{item.brand}</span>
                   <Link
                     href={`/shop/${item.category}/${item.slug}/`}
                     className="text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors line-clamp-1 tracking-tight"

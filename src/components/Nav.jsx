@@ -96,12 +96,12 @@ export default function Nav() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search products, brands..." 
-                className="w-full bg-slate-100 text-slate-700 placeholder-slate-400 text-xs py-2 pl-3.5 pr-8 rounded-full border border-slate-200 focus:outline-none focus:border-emerald-500 transition-colors"
+                className="w-full bg-slate-100 text-slate-700 placeholder-slate-500 text-xs py-2 pl-3.5 pr-8 rounded-full border border-slate-200 focus:outline-none focus:border-emerald-500 transition-colors"
               />
               <button 
                 type="submit" 
                 aria-label="Submit search"
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-emerald-600 transition-colors"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-600 hover:text-emerald-600 transition-colors"
               >
                 <Search size={14} />
               </button>

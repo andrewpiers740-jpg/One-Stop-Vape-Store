@@ -5,7 +5,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 
 const base = "w-full rounded-xl border border-slate-200 bg-slate-100 px-4 py-4 text-slate-900 outline-none transition-all focus:border-emerald-500";
-const lbl = "ml-1 text-[10px] font-black uppercase tracking-widest text-slate-500";
+const lbl = "ml-1 text-[10px] font-black uppercase tracking-widest text-slate-600";
 
 export default function EnquiryForm({ type }: { type: "contact" | "wholesale" }) {
   const router = useRouter();

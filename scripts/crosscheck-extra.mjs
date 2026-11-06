@@ -67,7 +67,7 @@ const cats = ["vape-juice", "coils-pods", "disposables", "vape-kits", "vaporizer
 ok("Every category has a tile and a banner", cats.every((c) => si.tiles[c] && si.banners[c] && fs.existsSync("public" + si.tiles[c].src) && fs.existsSync("public" + si.banners[c].src)));
 const pages = ["shop", "blog", "about", "contact", "faq", "help", "shipping", "refunds", "privacy", "terms", "pact-act", "fda-disclaimer", "california-privacy", "wholesale", "search", "wishlist", "account"];
 ok("Every main page has a banner", pages.every((p) => si.banners[p] && fs.existsSync("public" + si.banners[p].src)));
-const withBanner = (f) => /<PageBanner/.test(read(f));
+const withBanner = (f) => /<PageBanner|<LegalPage/.test(read(f));
 const pageFiles = ["shipping", "about", "faq", "refunds", "privacy", "blog", "search", "account", "help", "terms", "pact-act", "fda-disclaimer", "california-privacy", "contact", "wholesale", "shop", "wishlist"].map((p) => `app/${p}/page.tsx`);
 ok("PageBanner rendered on every main page", pageFiles.every(withBanner), pageFiles.filter((f) => !withBanner(f)).join(", "));
 ok("PageBanner on category pages", withBanner("app/shop/[category]/page.tsx"));
@@ -77,12 +77,21 @@ const posts = JSON.parse(read("src/data/blog-posts.json"));
 ok("200 blog posts", posts.length === 200, `found ${posts.length}`);
 ok("Unique slugs", new Set(posts.map((p) => p.slug)).size === posts.length);
 ok("Every post has 4 images that exist", posts.every((p) => p.images.length === 4 && p.images.every((i) => fs.existsSync("public" + i.src))), `${posts.filter((p) => p.images.length !== 4).length} posts without 4 images`);
-ok("Every blog image has alt text and credit", posts.every((p) => p.images.every((i) => i.alt && i.by)));
+ok("Every blog image has alt text and a credit (or is built from our own product photos)", posts.every((p) => p.images.every((i) => i.alt && (i.by || i.own))));
 const allImgs = posts.flatMap((p) => p.images.map((i) => i.src));
 ok("No blog image file reused", new Set(allImgs).size === allImgs.length);
 const BANNED = [/\bsafe\b/i, /\bsafer\b/i, /\bhealthy\b/i, /non-toxic/i, /therapeutic/i, /quit smoking/i, /\bcure[sd]?\b/i, /risk-free/i];
 ok("Blog text passes banned-term scan", posts.every((p) => !BANNED.some((re) => re.test(p.title + p.summary + p.body + JSON.stringify(p.faq)))));
 ok("Summaries are 100-160 chars", posts.every((p) => p.summary.length >= 100 && p.summary.length <= 160), posts.filter((p) => p.summary.length < 100 || p.summary.length > 160).map((p) => p.slug).join(", "));
+
+// Brand logos, payment logos, variants
+const bl = JSON.parse(read("src/data/brand-logos.json"));
+ok("Brand logo files exist for every manifest entry", Object.values(bl).every((l) => fs.existsSync("public" + l.src)));
+ok("Brand carousel uses real logos (>= 15 brands)", Object.keys(bl).length >= 15, `only ${Object.keys(bl).length}`);
+ok("Payment logo files exist", ["applepay", "cashapp", "bitcoin", "tether", "razer"].every((n) => fs.existsSync(`public/images/payments/${n}.svg`)));
+ok("Footer and product page show payment logos", /PaymentLogos/.test(read("src/components/Footer.jsx")) && /PaymentLogos/.test(read("app/shop/[category]/[slug]/page.tsx")));
+ok("Variant prices are resolved server-side", /resolveVariant/.test(read("lib/catalog.js")));
+ok("No dark footer behind dark text", !/bg-[#09090b]/.test(read("src/components/Footer.jsx")));
 
 // Fabricated social proof
 const sp = read("src/components/SalesPopup.jsx");

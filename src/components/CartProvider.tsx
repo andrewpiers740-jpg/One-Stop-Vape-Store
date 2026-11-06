@@ -1,15 +1,22 @@
 "use client";
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-export type CartItem = { slug: string; title: string; brand?: string; category?: string; price: number; qty: number; image?: string };
+export type Variant = { strength?: string; pack?: string };
+export type CartItem = { slug: string; title: string; brand?: string; category?: string; price: number; qty: number; image?: string; variant?: Variant; variantLabel?: string };
+// One cart line per product + chosen options (12mg and 15mg of the same flavour are separate lines).
+export const itemKey = (i: { slug: string; variant?: Variant }) => {
+  const v = i.variant || {};
+  const s = Object.keys(v).sort().map((k) => k + "=" + (v as Record<string, string>)[k]).join("&");
+  return s ? i.slug + "?" + s : i.slug;
+};
 type Ctx = {
   items: CartItem[];
   count: number;
   subtotal: number;
   ready: boolean;
   add: (p: Omit<CartItem, "qty">, qty?: number) => void;
-  setQty: (slug: string, qty: number) => void;
-  remove: (slug: string) => void;
+  setQty: (key: string, qty: number) => void;
+  remove: (key: string) => void;
   clear: () => void;
 };
 
@@ -47,13 +54,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const add = useCallback((p: Omit<CartItem, "qty">, qty = 1) => {
     setItems((cur) => {
-      const found = cur.find((i) => i.slug === p.slug);
-      if (found) return cur.map((i) => (i.slug === p.slug ? { ...i, qty: Math.min(99, i.qty + qty) } : i));
+      const k = itemKey(p);
+      const found = cur.find((i) => itemKey(i) === k);
+      if (found) return cur.map((i) => (itemKey(i) === k ? { ...i, qty: Math.min(99, i.qty + qty) } : i));
       return [...cur, { ...p, qty: Math.min(99, qty) }];
     });
   }, []);
-  const setQty = useCallback((slug: string, qty: number) => setItems((cur) => cur.map((i) => (i.slug === slug ? { ...i, qty: Math.max(1, Math.min(99, qty)) } : i))), []);
-  const remove = useCallback((slug: string) => setItems((cur) => cur.filter((i) => i.slug !== slug)), []);
+  const setQty = useCallback((key: string, qty: number) => setItems((cur) => cur.map((i) => (itemKey(i) === key ? { ...i, qty: Math.max(1, Math.min(99, qty)) } : i))), []);
+  const remove = useCallback((key: string) => setItems((cur) => cur.filter((i) => itemKey(i) !== key)), []);
   const clear = useCallback(() => setItems([]), []);
 
   const value = useMemo<Ctx>(

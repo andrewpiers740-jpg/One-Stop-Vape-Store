@@ -22,7 +22,7 @@ export default function WholesalePage() {
             Bulk Supply. <br />
             <span className="text-emerald-600">Unrivaled Scale.</span>
           </h1>
-          <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
+          <p className="text-slate-600 text-lg leading-relaxed max-w-xl">
             One Stop Vape Store provides volume-based pricing for registered retailers and distributors. From master cases of Geek Bar Pulse X to bulk nicotine salt supplies, we are your primary terminal for verified authentic hardware.
           </p>
           <div className="flex flex-col gap-4">

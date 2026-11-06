@@ -55,10 +55,18 @@ ${more.map((x) => `- [${x.title.replace(/[\[\]]/g, "")}](/shop/${x.category}/${x
 
 Suggested structure (adapt, don't copy): an opening paragraph about the item; "## Flavor and experience" (only what the name/data supports); "## Specifications" (bullets from the data only); "## Who it suits"; "## Using and caring for it" (general guidance for this device/liquid type); "## Ordering, payment and delivery" (crypto and gift cards get 10% off, orders of $200+ after discount ship free, adult signature required, orders over $100 minimum); closing line about nicotine and 21+.
 
+The page also needs a SHORT DESCRIPTION (1–2 benefit-led sentences, 120–160 characters, no markdown) and EXACTLY 10 FAQ pairs about this product (what it is, flavor/experience, strength and size options, how to use and charge or refill it, what is in the box, storage and care, shipping and adult signature, payment options and the 10% crypto and gift-card savings, returns, and how to choose between options). Each answer is 35–70 words, uses only the DATA and store policies above, and makes no health claims. Do not repeat the description verbatim in the FAQ.
+
 Return ONLY:
+<short>...</short>
 <description>
 ...markdown...
-</description>`;
+</description>
+<faq>
+Q: ...?
+A: ...
+(10 pairs)
+</faq>`;
 }
 
 function blogPrompt(p) {
@@ -129,14 +137,16 @@ async function generate(kind, item) {
   const isProd = kind === "products";
   const prompt = isProd ? productPrompt(item) : blogPrompt(item);
   const min = isProd ? 400 : 1500;
-  let text = await callClaude(RULES, prompt, isProd ? 2200 : 6000);
-  let out = isProd ? { body: grab(text, "description") } : { body: grab(text, "body"), faq: parseFaq(text) };
+  let text = await callClaude(RULES, prompt, isProd ? 3600 : 6000);
+  let out = isProd ? { body: grab(text, "description"), short: grab(text, "short"), faq: parseFaq(text) } : { body: grab(text, "body"), faq: parseFaq(text) };
   let v = validate(out.body, { minWords: min, ctx, minLinks: isProd ? 3 : 6 });
   if (!v.ok) { // one corrective retry with the exact problems
-    text = await callClaude(RULES, `${prompt}\n\nYour previous attempt failed validation:\n- ${v.errors.join("\n- ")}\nRewrite the whole piece fixing every problem. Previous attempt:\n${text}`, isProd ? 2200 : 6000);
-    out = isProd ? { body: grab(text, "description") } : { body: grab(text, "body"), faq: parseFaq(text) };
+    text = await callClaude(RULES, `${prompt}\n\nYour previous attempt failed validation:\n- ${v.errors.join("\n- ")}\nRewrite the whole piece fixing every problem. Previous attempt:\n${text}`, isProd ? 3600 : 6000);
+    out = isProd ? { body: grab(text, "description"), short: grab(text, "short"), faq: parseFaq(text) } : { body: grab(text, "body"), faq: parseFaq(text) };
     v = validate(out.body, { minWords: min, ctx, minLinks: isProd ? 3 : 6 });
   }
+  if (isProd && out.faq.length !== 10) v = { ...v, ok: false, errors: [...v.errors, `needs exactly 10 FAQ items, got ${out.faq.length}`] };
+  if (isProd && (!out.short || out.short.length < 80 || out.short.length > 200)) v = { ...v, ok: false, errors: [...v.errors, "short description must be 120–160 characters"] };
   if (!isProd && out.faq.length < 3) v = { ...v, ok: false, errors: [...v.errors, "needs at least 3 FAQ items"] };
   return { ...out, words: v.words, ok: v.ok, errors: v.errors, mock: MOCK, model: MOCK ? "mock" : MODEL, at: new Date().toISOString() };
 }
@@ -192,7 +202,7 @@ function merge() {
     if (!fs.existsSync(f)) continue;
     const g = JSON.parse(fs.readFileSync(f, "utf8"));
     if (!g.ok || g.mock) { skipped++; continue; }
-    descs[p.slug] = g.body; pm++;
+    descs[p.slug] = { body: g.body, short: g.short, faq: g.faq }; pm++;
   }
   fs.writeFileSync(descFile, JSON.stringify(descs));
   for (const p of posts) { // blog bodies are applied by scripts/build-blog.mjs from content/generated/blog

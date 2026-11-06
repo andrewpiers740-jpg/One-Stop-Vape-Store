@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Bitcoin, Gift, Smartphone, Banknote, CreditCard, Lock, MessageCircle, AlertCircle } from "lucide-react";
-import { useCart } from "@/src/components/CartProvider";
+import { useCart, itemKey } from "@/src/components/CartProvider";
 import { SITE } from "@/src/config/site";
 import { getToken, getNetwork } from "@/src/config/wallets";
 import { getGiftCard } from "@/src/config/giftcards";
@@ -16,20 +16,20 @@ import { waOrderLink } from "@/lib/whatsapp";
 
 type Kind = "crypto" | "giftcard" | "cashapp" | "applepay" | "chime";
 const METHODS: { id: Kind; label: string; sub: string; icon: React.ElementType }[] = [
+  { id: "cashapp", label: "Cash App", sub: "Pay with Cashapp", icon: Banknote },
+  { id: "applepay", label: "Apple Pay", sub: "Pay with Apple", icon: Smartphone },
+  { id: "chime", label: "Chime", sub: "Pay securely with chime", icon: CreditCard },
   { id: "crypto", label: "Cryptocurrency", sub: `BTC · USDT · USDC · ETH · BNB · SOL — save ${SITE.order.cryptoDiscount}%`, icon: Bitcoin },
   { id: "giftcard", label: "Gift cards", sub: `Apple · Razer · Paysafe · Sephora · Macy's — save ${SITE.order.giftCardDiscount}%`, icon: Gift },
-  { id: "cashapp", label: "Cash App", sub: "We send you the $Cashtag", icon: Banknote },
-  { id: "applepay", label: "Apple Pay", sub: "We send you the number", icon: Smartphone },
-  { id: "chime", label: "Chime", sub: "We send you the payment details", icon: CreditCard },
 ];
 
-const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-400 focus:border-emerald-500 focus:outline-none";
+const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder-slate-500 focus:border-emerald-500 focus:outline-none";
 const labelCls = "mb-1 block text-xs font-bold uppercase tracking-widest text-slate-600";
 
 export default function CheckoutClient() {
   const router = useRouter();
   const { items, subtotal, clear, ready } = useCart();
-  const [kind, setKind] = React.useState<Kind>("crypto");
+  const [kind, setKind] = React.useState<Kind>("cashapp");
   const [pay, setPay] = React.useState({ token: "", network: "" });
   const [giftCard, setGiftCard] = React.useState("");
   const [f, setF] = React.useState({ name: "", email: "", phone: "", line1: "", line2: "", city: "", state: "", zip: "", notes: "", website: "" });
@@ -81,7 +81,7 @@ export default function CheckoutClient() {
           formName: "order", channel, ref: ref || undefined, _t: startedAt.current, website: f.website, ageConfirmed: age,
           customer: { name: f.name, email: f.email, phone: f.phone },
           address: { line1: f.line1, line2: f.line2, city: f.city, state: f.state, zip: f.zip },
-          items: items.map((i) => ({ slug: i.slug, qty: i.qty })),
+          items: items.map((i) => ({ slug: i.slug, qty: i.qty, variant: i.variant })),
           paymentMethod: method, cryptoNetwork: pay.network, notes: f.notes,
         }),
       });
@@ -110,7 +110,7 @@ export default function CheckoutClient() {
     setCryptoOpen(true);
   };
 
-  if (!ready) return <p className="text-slate-500">Loading…</p>;
+  if (!ready) return <p className="text-slate-600">Loading…</p>;
   if (!items.length) {
     return (
       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center">
@@ -160,7 +160,7 @@ export default function CheckoutClient() {
           {kind === "crypto" && (
             <div className="rounded-2xl border border-slate-200 bg-slate-100/50 p-4">
               <CryptoTokenPicker pay={pay} onChange={setPay} onReady={() => openCrypto(true)} />
-              <p className="mt-3 text-xs text-slate-500">Pick a token and the payment window opens with the wallet address, QR code and a live quote. Your payment is detected automatically.</p>
+              <p className="mt-3 text-xs text-slate-600">Pick a token and the payment window opens with the wallet address, QR code and a live quote. Your payment is detected automatically.</p>
             </div>
           )}
           {kind === "giftcard" && (
@@ -179,9 +179,9 @@ export default function CheckoutClient() {
         <h2 className="text-sm font-black uppercase tracking-widest text-emerald-600">Your order</h2>
         <ul className="flex max-h-72 flex-col gap-3 overflow-y-auto pr-1">
           {items.map((i) => (
-            <li key={i.slug} className="flex items-center gap-3">
+            <li key={itemKey(i)} className="flex items-center gap-3">
               <div className="h-14 w-14 shrink-0 rounded-lg bg-white p-1.5"><SmartImage src={i.image || ""} alt={i.title} className="h-full w-full object-contain" /></div>
-              <div className="min-w-0 flex-1"><p className="line-clamp-2 text-xs font-bold text-slate-900">{i.title}</p><p className="text-[11px] text-slate-500">Qty {i.qty}</p></div>
+              <div className="min-w-0 flex-1"><p className="line-clamp-2 text-xs font-bold text-slate-900">{i.title}</p><p className="text-[11px] text-slate-600">Qty {i.qty}</p></div>
               <span className="font-mono text-xs font-bold">{money(i.price * i.qty)}</span>
             </li>
           ))}
@@ -210,7 +210,7 @@ export default function CheckoutClient() {
             <button type="button" disabled={loading} onClick={() => placeOrder("whatsapp")} className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-500/60 py-3.5 text-xs font-black uppercase tracking-widest text-emerald-600 hover:bg-emerald-500/10 disabled:opacity-50"><MessageCircle size={14} />Place order &amp; message us on WhatsApp</button>
           </>
         )}
-        <p className="text-center text-[11px] text-slate-500">Min. order {money(SITE.order.minOrder)} · free shipping over {money(SITE.order.freeShippingThreshold)} after discount</p>
+        <p className="text-center text-[11px] text-slate-600">Min. order {money(SITE.order.minOrder)} · free shipping over {money(SITE.order.freeShippingThreshold)} after discount</p>
       </aside>
 
       <CryptoPayModal

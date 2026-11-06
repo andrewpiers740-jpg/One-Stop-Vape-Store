@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="flex flex-col gap-4 max-w-3xl">
         <p className="text-emerald-600 text-[10px] font-black uppercase tracking-[0.3em]">Support Hub</p>
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase leading-none">Get in Touch</h1>
-        <p className="text-slate-500 text-lg leading-relaxed">
+        <p className="text-slate-600 text-lg leading-relaxed">
           Need assistance with an order or have a question about our collections? Our team is available 10am - 6pm Arizona time (MST) to help.
         </p>
       </div>
@@ -33,25 +33,25 @@ export default function ContactPage() {
                   <MessageSquare size={24} />
                 </div>
                 <div>
-                  <p className="text-xs font-black uppercase text-slate-500 mb-0.5">WhatsApp</p>
+                  <p className="text-xs font-black uppercase text-slate-600 mb-0.5">WhatsApp</p>
                   <p className="text-lg font-bold text-slate-900 tracking-tight">Live Chat Support</p>
                 </div>
               </a>
               <a href={`mailto:${SITE.contact.email}`} className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-white group-hover:text-black transition-all duration-300">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-xs font-black uppercase text-slate-500 mb-0.5">Email</p>
+                  <p className="text-xs font-black uppercase text-slate-600 mb-0.5">Email</p>
                   <p className="text-lg font-bold text-slate-900 tracking-tight">{SITE.contact.email}</p>
                 </div>
               </a>
               <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">
+                <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-xs font-black uppercase text-slate-500 mb-0.5">Location</p>
+                  <p className="text-xs font-black uppercase text-slate-600 mb-0.5">Location</p>
                   <p className="text-lg font-bold text-slate-900 tracking-tight">{SITE.contact.location}</p>
                 </div>
               </div>
@@ -60,10 +60,10 @@ export default function ContactPage() {
 
           <div className="p-8 rounded-3xl bg-slate-100/30 border border-slate-200">
             <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-4">Response Time</h3>
-            <p className="text-slate-500 text-sm leading-relaxed mb-4">
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
               We typically respond to all inquiries within 1-2 business hours during operating times.
             </p>
-            <p className="text-slate-400 text-xs font-mono">
+            <p className="text-slate-600 text-xs font-mono">
               MON - FRI: 10AM - 6PM ARIZONA (MST)<br />
               SAT - SUN: CLOSED
             </p>

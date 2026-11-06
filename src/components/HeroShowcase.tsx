@@ -51,7 +51,7 @@ export default function HeroShowcase() {
       onFocus={() => setHover(true)}
       onBlur={() => setHover(false)}
     >
-      <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-emerald-500/10">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-2xl shadow-emerald-500/10">
         {slides.map((s, n) => {
           const active = n === i;
           return (
@@ -90,14 +90,14 @@ export default function HeroShowcase() {
               onClick={() => go(n)}
               className="group flex h-6 w-8 items-center justify-center"
             >
-              <span className={`h-1.5 rounded-full transition-all ${n === i ? "w-8 bg-emerald-400" : "w-4 bg-zinc-700 group-hover:bg-zinc-500"}`} />
+              <span className={`h-1.5 rounded-full transition-all ${n === i ? "w-8 bg-emerald-400" : "w-4 bg-slate-300 group-hover:bg-slate-400"}`} />
             </button>
           ))}
         </div>
         <div className="flex items-center gap-1">
-          <button onClick={() => go(i - 1)} aria-label="Previous slide" className="flex h-11 w-11 items-center justify-center rounded-full text-zinc-400 hover:bg-zinc-900 hover:text-white"><ChevronLeft size={18} /></button>
-          <button onClick={() => setPaused((p) => !p)} aria-label={paused ? "Start automatic slide change" : "Pause automatic slide change"} className="flex h-11 w-11 items-center justify-center rounded-full text-zinc-400 hover:bg-zinc-900 hover:text-white">{paused ? <Play size={16} /> : <Pause size={16} />}</button>
-          <button onClick={() => go(i + 1)} aria-label="Next slide" className="flex h-11 w-11 items-center justify-center rounded-full text-zinc-400 hover:bg-zinc-900 hover:text-white"><ChevronRight size={18} /></button>
+          <button onClick={() => go(i - 1)} aria-label="Previous slide" className="flex h-11 w-11 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900"><ChevronLeft size={18} /></button>
+          <button onClick={() => setPaused((p) => !p)} aria-label={paused ? "Start automatic slide change" : "Pause automatic slide change"} className="flex h-11 w-11 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900">{paused ? <Play size={16} /> : <Pause size={16} />}</button>
+          <button onClick={() => go(i + 1)} aria-label="Next slide" className="flex h-11 w-11 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900"><ChevronRight size={18} /></button>
         </div>
       </div>
       <p className="sr-only" aria-live={paused || hover ? "polite" : "off"}>{slides[i].title}</p>

@@ -19,7 +19,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What is Nixodine and how does it compare to standard nicotine?",
-        a: "Nixodine is a patented, non-tobacco alternative compound precision-engineered to replicate the absorption curve, throat feel, and sensory satisfaction of traditional nicotine salts. It is clean, neutral in taste, and delivers maximum flavor fidelity across modern high-puff hardware."
+        a: "Nixodine is a non-tobacco alternative compound precision-engineered to replicate the absorption curve, throat feel, and sensory satisfaction of traditional nicotine salts. It is clean, neutral in taste, and delivers maximum flavor fidelity across modern high-puff hardware."
       },
       {
         q: "Are Nixodine devices compatible with standard charging cables?",
@@ -69,7 +69,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What payment methods are supported?",
-        a: "We support major digital payment methods including Cryptocurrency (Bitcoin BTC, Tether USDT, Ethereum ETH, Solana SOL, Tron TRX), Apple Pay, Cashapp, Chime, and major digital Gift Cards."
+        a: "We support major digital payment methods including Cryptocurrency (Bitcoin BTC, Tether USDT, Ethereum ETH, Solana SOL, USDC, BNB), Apple Pay, Cashapp, Chime, and major digital Gift Cards."
       },
       {
         q: "How does the 10% Crypto discount work?",
@@ -90,12 +90,50 @@ const FAQ_SECTIONS = [
         a: "Yes. SV3 LLC partners with vape retailers and distributor networks across North America. Visit our dedicated Wholesale Inquiry page or chat with our B2B sales desk on WhatsApp to unlock volume master-case tier pricing."
       },
       {
-        q: "Are all products guaranteed 100% authentic?",
-        a: "Yes. We source exclusively through authorized manufacturer distribution channels. Every device, coil, and liquid features intact factory seals, serial codes, and scannable verification labels."
+        q: "Are your products genuine?",
+        a: "We source from manufacturer and authorized distribution channels. Every device, coil, and liquid features intact factory seals, serial codes, and scannable verification labels."
       }
+    ]
+  },{
+    title: "Ordering & Your Account",
+    icon: Box,
+    items: [
+      { q: "How do I place an order?", a: "Add products to your cart, choose a strength or pack size where options are shown, then check out. Confirm you are 21+, pick a payment method and submit. We email your order number and a private link to follow your order." },
+      { q: "Do I need an account to buy?", a: "No. You can check out as a guest. Your cart and wishlist are saved in your browser, and each order email contains a private link to that order." },
+      { q: "Can I change or cancel my order?", a: "Contact us as soon as possible with your order number. Orders that have not shipped can be changed or cancelled." },
+      { q: "How do I choose between strengths and pack sizes?", a: "Options appear above the Add to Cart button on product pages that offer them. The price updates when you select a different pack size, and your selection is shown in the cart and on your order." },
+      { q: "How do I use the wishlist?", a: "Select Save to Wishlist on any product. Your wishlist is stored on your device so you can come back to it later, and you can move items to your cart from the wishlist page." }
+    ]
+  },
+  {
+    title: "Products & Nicotine",
+    icon: Sparkles,
+    items: [
+      { q: "What is the difference between disposables, pods and e-liquid?", a: "Disposables are ready to use and are replaced when empty. Pods and coils are replacement parts for refillable systems. E-liquid is the flavored liquid you add to a compatible device." },
+      { q: "What do the nicotine strengths mean?", a: "Strength is the amount of nicotine, shown in mg or as a percentage (for example 50mg is 5%). Nicotine is addictive and these products are for adult use only. Read the label and, if you are unsure, ask a healthcare professional." },
+      { q: "Do you sell nicotine pouches?", a: "Yes. Our Nicotine Pouches category lists cans by brand and flavor, with strength and pack size options where available." },
+      { q: "How should I store my products?", a: "Keep devices and e-liquid in a cool, dry place away from direct sunlight, out of reach of children and pets, and charge devices only with the supplied or a standard USB-C cable." }
+    ]
+  },
+  {
+    title: "Returns, Refunds & Damaged Items",
+    icon: ShieldCheck,
+    items: [
+      { q: "What is your return policy?", a: "Contact us within 30 days of purchase. Unopened items in original packaging can be returned or exchanged. Opened or used e-liquid, devices and accessories cannot be returned. A 15% restocking fee applies to refunds. See the Returns & Refund Policy for full details." },
+      { q: "What if my parcel arrives damaged or wrong?", a: "Email your order number and photos of the parcel and items to sales@onestopvapestore.com. We will arrange a replacement or resolution." },
+      { q: "How do I start a return?", a: "Contact us first to receive an RMA form. Returns without an RMA cannot be guaranteed a refund or exchange." }
+    ]
+  },
+  {
+    title: "Contact & Support",
+    icon: MessageSquare,
+    items: [
+      { q: "How can I reach customer support?", a: "Use the chat button at the bottom right of any page, message us on WhatsApp at +1 774-734-1372, call 774-734-1372 or email sales@onestopvapestore.com. Customer service hours are Monday to Friday, 8AM–5PM Arizona time." },
+      { q: "Where are you located?", a: "Our Stock Warehouse is at 4908 E McDowell Road STE 103, Phoenix, Arizona 85008. Orders ship from there by USPS and UPS." }
     ]
   }
 ];
+
 
 export default function FAQPage() {
   const allFaqs = FAQ_SECTIONS.flatMap(s => s.items);

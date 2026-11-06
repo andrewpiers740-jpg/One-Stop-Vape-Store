@@ -9,7 +9,7 @@ export default function NotFound() {
         <h1 className="text-9xl font-black text-zinc-900 leading-none">404</h1>
         <p className="text-2xl font-black text-slate-900 uppercase tracking-tighter -mt-8">Terminal Offline</p>
       </div>
-      <p className="text-slate-500 max-w-xs mx-auto text-sm leading-relaxed">
+      <p className="text-slate-600 max-w-xs mx-auto text-sm leading-relaxed">
         The requested resource could not be found or has been moved to a different sector.
       </p>
       <Link 

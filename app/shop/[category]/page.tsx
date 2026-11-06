@@ -68,7 +68,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       {/* Category Hero Header */}
       <section className="bg-slate-50 border-b border-slate-200 py-16">
         <div className="max-w-[1440px] mx-auto px-6">
-          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-6">
+          <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 mb-6">
             <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
             <ChevronRight size={10} />
             <Link href="/shop" className="hover:text-emerald-600 transition-colors">Shop</Link>
@@ -83,7 +83,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <p className="text-slate-600 text-base md:text-lg max-w-3xl leading-relaxed">
               {category.description}
             </p>
-            <div className="flex items-center gap-4 text-xs font-mono text-slate-500 mt-2">
+            <div className="flex items-center gap-4 text-xs font-mono text-slate-600 mt-2">
               <span className="text-emerald-600 font-bold">{categoryProducts.length} Products Available</span>
               <span>•</span>
               <span>100% Authentic Factory Sealed</span>
@@ -117,7 +117,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                     }`}
                   >
                     <span>{c.name}</span>
-                    <span className="text-[10px] font-mono text-slate-500">
+                    <span className="text-[10px] font-mono text-slate-600">
                       {(productsData as Product[]).filter(p => p.category === c.slug).length}
                     </span>
                   </Link>
@@ -127,7 +127,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
             {/* Brands in this Category */}
             <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
-              <h4 className="text-[11px] font-black uppercase tracking-widest text-slate-500">Brands in {category.name}</h4>
+              <h4 className="text-[11px] font-black uppercase tracking-widest text-slate-600">Brands in {category.name}</h4>
               <div className="flex flex-wrap gap-1.5">
                 {sortedBrands.slice(0, 16).map(brand => (
                   <span key={brand} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-[10px] font-bold uppercase border border-slate-200">
@@ -141,7 +141,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           {/* Product Feed by Brand */}
           <main className="flex-grow flex flex-col gap-16">
             {sortedBrands.length === 0 ? (
-              <div className="py-24 text-center text-slate-500">
+              <div className="py-24 text-center text-slate-600">
                 No products found in this category.
               </div>
             ) : (
@@ -149,7 +149,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <section key={brand} className="flex flex-col gap-6">
                   <div className="flex items-center gap-4">
                     <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900">{brand}</h2>
-                    <span className="text-xs font-mono text-slate-500">({groupedByBrand[brand].length} items)</span>
+                    <span className="text-xs font-mono text-slate-600">({groupedByBrand[brand].length} items)</span>
                     <div className="flex-grow h-px bg-slate-100" />
                   </div>
 

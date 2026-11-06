@@ -1,4 +1,6 @@
 import { SITE } from "@/src/config/site";
+import { merchantReturnPolicy } from "@/lib/schema";
+import products from "@/src/data/products.json";
 
 export default function JsonLd({ type = "Store", data = {} }) {
   const base = {
@@ -18,12 +20,14 @@ export default function JsonLd({ type = "Store", data = {} }) {
       "addressCountry": "US"
     },
     "url": `https://${SITE.domain}/`,
-    "logo": `https://${SITE.domain}/logo.png`,
+    "logo": `https://${SITE.domain}/brand/icon-512.png`,
+    "image": `https://${SITE.domain}/brand/icon-512.png`,
+    "hasMerchantReturnPolicy": merchantReturnPolicy(),
     "email": SITE.contact.email,
     "telephone": `+1-${SITE.contact.phone}`,
     "sameAs": [],
     "areaServed": ["United States"],
-    "numberOfItems": 2515,
+    "numberOfItems": products.length,
     "priceRange": "$$",
     "brand": { "@type": "Brand", "name": "One Stop Vape Store" },
     "makesOffer": {

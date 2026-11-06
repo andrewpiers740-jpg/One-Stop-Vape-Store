@@ -9,7 +9,7 @@ import { MessageCircle } from "lucide-react";
 
 function Inner() {
   const { id, token, data, error, loading, reload } = usePortalOrder();
-  if (loading) return <p className="text-slate-500">Loading your order…</p>;
+  if (loading) return <p className="text-slate-600">Loading your order…</p>;
   if (error || !data) return <p role="alert" className="rounded-2xl border border-red-200 bg-red-50 p-6 text-red-700">{error || "Order not found."}</p>;
   const o = data.order;
   const kind = o.paymentKind as string;
@@ -20,7 +20,7 @@ function Inner() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-5">
         <div>
-          <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Order</p>
+          <p className="text-[10px] font-black uppercase tracking-widest text-slate-600">Order</p>
           <p className="font-mono text-xl font-black text-slate-900">{o.orderNumber}</p>
         </div>
         <div className="text-right">
@@ -36,7 +36,7 @@ function Inner() {
             <CopyField label={`Send (${o.cryptoToken})`} value={`${o.cryptoAmount} ${o.cryptoToken}`} />
             <CopyField label={`Network`} value={o.cryptoNetwork} />
             <CopyField label="Wallet address" value={o.cryptoAddress} />
-            <p className="text-xs text-slate-500">Amount shown was quoted when you ordered; a payment within a small tolerance of {money(o.total)} is accepted. Use exactly the network above.</p>
+            <p className="text-xs text-slate-600">Amount shown was quoted when you ordered; a payment within a small tolerance of {money(o.total)} is accepted. Use exactly the network above.</p>
           </section>
           <CryptoStatus id={id} token={token} order={o} onConfirmed={reload} />
         </>
@@ -80,7 +80,7 @@ export default function ConfirmPaymentPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
       <h1 className="mb-8 text-3xl font-black uppercase tracking-tighter text-slate-900 sm:text-4xl">Payment &amp; order status</h1>
-      <Suspense fallback={<p className="text-slate-500">Loading…</p>}><Inner /></Suspense>
+      <Suspense fallback={<p className="text-slate-600">Loading…</p>}><Inner /></Suspense>
     </div>
   );
 }

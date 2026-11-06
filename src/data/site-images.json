@@ -1,152 +1,152 @@
 {
- "hero": [
-  {
-   "src": "/images/hero/hero-1-one-stop-shop.webp",
-   "alt": "A wall of vape devices and e-liquids in a well-stocked vape shop"
+  "hero": [
+    {
+      "src": "/images/hero/hero-1-one-stop-shop.webp",
+      "alt": "A wall of vape devices and e-liquids in a well-stocked vape shop"
+    },
+    {
+      "src": "/images/hero/hero-2-vapor-clouds.webp",
+      "alt": "Adult exhaling a thick vapor cloud against a black background"
+    },
+    {
+      "src": "/images/hero/hero-3-flavor-clouds.webp",
+      "alt": "Swirling blue and magenta smoke representing e-liquid flavor"
+    },
+    {
+      "src": "/images/hero/hero-4-disposable-pods.webp",
+      "alt": "Rows of slim disposable vape pods on a dark surface"
+    },
+    {
+      "src": "/images/hero/hero-5-premium-eliquid.webp",
+      "alt": "Bottles of premium e-liquid lined up on a white table"
+    }
+  ],
+  "banners": {
+    "shop": {
+      "src": "/images/banners/shop.webp",
+      "alt": "Blue vapor swirling on a dark background"
+    },
+    "blog": {
+      "src": "/images/banners/blog.webp",
+      "alt": "Wisps of blue smoke on black"
+    },
+    "about": {
+      "src": "/images/banners/about.webp",
+      "alt": "Soft blue smoke curls"
+    },
+    "contact": {
+      "src": "/images/banners/contact.webp",
+      "alt": "Blue vapor trails"
+    },
+    "faq": {
+      "src": "/images/banners/faq.webp",
+      "alt": "Abstract blue smoke"
+    },
+    "help": {
+      "src": "/images/banners/help.webp",
+      "alt": "Blue smoke ribbon"
+    },
+    "shipping": {
+      "src": "/images/banners/shipping.webp",
+      "alt": "Streaming blue vapor"
+    },
+    "refunds": {
+      "src": "/images/banners/refunds.webp",
+      "alt": "Calm blue smoke"
+    },
+    "privacy": {
+      "src": "/images/banners/privacy.webp",
+      "alt": "Dark blue vapor"
+    },
+    "terms": {
+      "src": "/images/banners/terms.webp",
+      "alt": "Blue smoke swirl"
+    },
+    "pact-act": {
+      "src": "/images/banners/pact-act.webp",
+      "alt": "Rising blue smoke"
+    },
+    "fda-disclaimer": {
+      "src": "/images/banners/fda-disclaimer.webp",
+      "alt": "Wispy blue smoke"
+    },
+    "california-privacy": {
+      "src": "/images/banners/california-privacy.webp",
+      "alt": "Blue smoke curve"
+    },
+    "wholesale": {
+      "src": "/images/banners/wholesale.webp",
+      "alt": "Bold blue smoke plume"
+    },
+    "search": {
+      "src": "/images/banners/search.webp",
+      "alt": "Light blue smoke trails"
+    },
+    "wishlist": {
+      "src": "/images/banners/wishlist.webp",
+      "alt": "Blue smoke drift"
+    },
+    "account": {
+      "src": "/images/banners/account.webp",
+      "alt": "Blue vapor wisp"
+    },
+    "vape-juice": {
+      "src": "/images/banners/vape-juice.webp",
+      "alt": "Slices of colorful citrus fruit representing e-liquid flavors"
+    },
+    "coils-pods": {
+      "src": "/images/banners/coils-pods.webp",
+      "alt": "Vape accessories, pods and bottles on a table"
+    },
+    "disposables": {
+      "src": "/images/banners/disposables.webp",
+      "alt": "A modern pod device with colorful bokeh lights"
+    },
+    "vape-kits": {
+      "src": "/images/banners/vape-kits.webp",
+      "alt": "A vape starter kit resting on dark volcanic rock"
+    },
+    "vaporizers": {
+      "src": "/images/banners/vaporizers.webp",
+      "alt": "A metal box-mod vaporizer on weathered wood"
+    },
+    "nic-pouches": {
+      "src": "/images/banners/nic-pouches.webp",
+      "alt": "Dark green mint leaves"
+    },
+    "nixodine": {
+      "src": "/images/banners/nixodine.webp",
+      "alt": "Electric blue neon light bars in the dark"
+    }
   },
-  {
-   "src": "/images/hero/hero-2-vapor-clouds.webp",
-   "alt": "Adult exhaling a thick vapor cloud against a black background"
-  },
-  {
-   "src": "/images/hero/hero-3-flavor-clouds.webp",
-   "alt": "Swirling blue and magenta smoke representing e-liquid flavor"
-  },
-  {
-   "src": "/images/hero/hero-4-disposable-pods.webp",
-   "alt": "Rows of slim disposable vape pods on a dark surface"
-  },
-  {
-   "src": "/images/hero/hero-5-premium-eliquid.webp",
-   "alt": "Bottles of premium e-liquid lined up on a white table"
+  "tiles": {
+    "vape-juice": {
+      "src": "/images/categories/vape-juice.webp",
+      "alt": "Bottles of e-liquid from four different brands"
+    },
+    "coils-pods": {
+      "src": "/images/categories/coils-pods.webp",
+      "alt": "Hands refilling a vape pod"
+    },
+    "disposables": {
+      "src": "/images/categories/disposables.webp",
+      "alt": "A disposable pod device held in an open hand"
+    },
+    "vape-kits": {
+      "src": "/images/categories/vape-kits.webp",
+      "alt": "A box-mod vape kit on a wooden table"
+    },
+    "vaporizers": {
+      "src": "/images/categories/vaporizers.webp",
+      "alt": "A rack of vaporizer pens and cartridges"
+    },
+    "nic-pouches": {
+      "src": "/images/categories/nic-pouches.webp",
+      "alt": "Cans of nicotine pouches from four different brands"
+    },
+    "nixodine": {
+      "src": "/images/categories/nixodine.webp",
+      "alt": "Nixodine products from the catalogue"
+    }
   }
- ],
- "banners": {
-  "shop": {
-   "src": "/images/banners/shop.webp",
-   "alt": "Blue vapor swirling on a dark background"
-  },
-  "blog": {
-   "src": "/images/banners/blog.webp",
-   "alt": "Wisps of blue smoke on black"
-  },
-  "about": {
-   "src": "/images/banners/about.webp",
-   "alt": "Soft blue smoke curls"
-  },
-  "contact": {
-   "src": "/images/banners/contact.webp",
-   "alt": "Blue vapor trails"
-  },
-  "faq": {
-   "src": "/images/banners/faq.webp",
-   "alt": "Abstract blue smoke"
-  },
-  "help": {
-   "src": "/images/banners/help.webp",
-   "alt": "Blue smoke ribbon"
-  },
-  "shipping": {
-   "src": "/images/banners/shipping.webp",
-   "alt": "Streaming blue vapor"
-  },
-  "refunds": {
-   "src": "/images/banners/refunds.webp",
-   "alt": "Calm blue smoke"
-  },
-  "privacy": {
-   "src": "/images/banners/privacy.webp",
-   "alt": "Dark blue vapor"
-  },
-  "terms": {
-   "src": "/images/banners/terms.webp",
-   "alt": "Blue smoke swirl"
-  },
-  "pact-act": {
-   "src": "/images/banners/pact-act.webp",
-   "alt": "Rising blue smoke"
-  },
-  "fda-disclaimer": {
-   "src": "/images/banners/fda-disclaimer.webp",
-   "alt": "Wispy blue smoke"
-  },
-  "california-privacy": {
-   "src": "/images/banners/california-privacy.webp",
-   "alt": "Blue smoke curve"
-  },
-  "wholesale": {
-   "src": "/images/banners/wholesale.webp",
-   "alt": "Bold blue smoke plume"
-  },
-  "search": {
-   "src": "/images/banners/search.webp",
-   "alt": "Light blue smoke trails"
-  },
-  "wishlist": {
-   "src": "/images/banners/wishlist.webp",
-   "alt": "Blue smoke drift"
-  },
-  "account": {
-   "src": "/images/banners/account.webp",
-   "alt": "Blue vapor wisp"
-  },
-  "vape-juice": {
-   "src": "/images/banners/vape-juice.webp",
-   "alt": "Slices of colorful citrus fruit representing e-liquid flavors"
-  },
-  "coils-pods": {
-   "src": "/images/banners/coils-pods.webp",
-   "alt": "Vape accessories, pods and bottles on a table"
-  },
-  "disposables": {
-   "src": "/images/banners/disposables.webp",
-   "alt": "A modern pod device with colorful bokeh lights"
-  },
-  "vape-kits": {
-   "src": "/images/banners/vape-kits.webp",
-   "alt": "A vape starter kit resting on dark volcanic rock"
-  },
-  "vaporizers": {
-   "src": "/images/banners/vaporizers.webp",
-   "alt": "A metal box-mod vaporizer on weathered wood"
-  },
-  "nic-pouches": {
-   "src": "/images/banners/nic-pouches.webp",
-   "alt": "Dark green mint leaves"
-  },
-  "nixodine": {
-   "src": "/images/banners/nixodine.webp",
-   "alt": "Electric blue neon light bars in the dark"
-  }
- },
- "tiles": {
-  "vape-juice": {
-   "src": "/images/categories/vape-juice.webp",
-   "alt": "Dragon fruit and blood orange halves"
-  },
-  "coils-pods": {
-   "src": "/images/categories/coils-pods.webp",
-   "alt": "Hands refilling a vape pod"
-  },
-  "disposables": {
-   "src": "/images/categories/disposables.webp",
-   "alt": "A disposable pod device held in an open hand"
-  },
-  "vape-kits": {
-   "src": "/images/categories/vape-kits.webp",
-   "alt": "A box-mod vape kit on a wooden table"
-  },
-  "vaporizers": {
-   "src": "/images/categories/vaporizers.webp",
-   "alt": "A rack of vaporizer pens and cartridges"
-  },
-  "nic-pouches": {
-   "src": "/images/categories/nic-pouches.webp",
-   "alt": "Fresh bright mint leaves"
-  },
-  "nixodine": {
-   "src": "/images/categories/nixodine.webp",
-   "alt": "Streaks of cyan neon light"
-  }
- }
 }

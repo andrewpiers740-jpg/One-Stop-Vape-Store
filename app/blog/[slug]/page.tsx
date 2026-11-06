@@ -67,14 +67,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
         <header className="mb-10 flex flex-col gap-5">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-500">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600">
             <Link href="/" className="hover:text-emerald-600">Home</Link><ChevronRight size={10} />
             <Link href="/blog/" className="hover:text-emerald-600">Blog</Link><ChevronRight size={10} />
             <Link href={`/blog/category/${post.categorySlug}/`} className="truncate text-slate-600 hover:text-emerald-600">{post.category}</Link>
           </nav>
           <h1 className="text-3xl font-black leading-[1.08] tracking-tighter text-slate-900 md:text-5xl">{post.title}</h1>
           <p className="border-l-4 border-emerald-500 py-1 pl-5 text-lg italic leading-relaxed text-slate-700">{post.summary}</p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-xs font-medium text-slate-500">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-xs font-medium text-slate-600">
             <span className="font-bold text-emerald-600">{SITE.name} Editorial</span>
             <time dateTime={post.date}>{fmtDate(post.date)}</time>
             <span className="flex items-center gap-1.5"><Clock size={12} /> {post.readMinutes} min read</span>
@@ -84,7 +84,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {hero && (
           <figure className="mb-12 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
             <Image src={hero.src} alt={hero.alt} width={hero.w} height={hero.h} priority sizes="(min-width:896px) 896px, 100vw" className="aspect-video w-full object-cover" />
-            {hero.by && <figcaption className="px-4 py-2 text-[11px] text-slate-500">Photo by <a href={`${hero.byUrl}?utm_source=one_stop_vape_store&utm_medium=referral`} target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">{hero.by}</a> on <a href="https://unsplash.com/?utm_source=one_stop_vape_store&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">Unsplash</a></figcaption>}
+            {hero.by && <figcaption className="px-4 py-2 text-[11px] text-slate-600">Photo by <a href={`${hero.byUrl}?utm_source=one_stop_vape_store&utm_medium=referral`} target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">{hero.by}</a> on <a href="https://unsplash.com/?utm_source=one_stop_vape_store&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">Unsplash</a></figcaption>}
           </figure>
         )}
 
@@ -104,7 +104,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </section>
         )}
 
-        <p className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-xs leading-relaxed text-slate-500">
+        <p className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-xs leading-relaxed text-slate-600">
           {SITE.compliance.disclaimer} This article is general information for adults, not medical or legal advice. Product laws differ by state and city — check the rules where you live before you buy.
         </p>
 
