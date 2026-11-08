@@ -93,7 +93,7 @@ If you want a general explanation of why networks matter, read [what is a crypto
 ## How confirmation works for BNB
 Some networks, such as Bitcoin, Ethereum and Solana, are matched to orders automatically by reading public blockchain data. BNB Smart Chain payments are currently confirmed by our team after you upload a screenshot on the status page, so allow a little extra time during business hours compared with automatic networks. To help us confirm quickly, include a clear screenshot of the transaction and, if you can, paste the transaction hash into the status page. The hash is a long string of characters your wallet or exchange shows after you send.
 
-Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. If you pay outside those hours, expect the check the next business morning. After confirmation, the order enters processing, which takes 24 to 72 business hours before it ships. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/) for how automatic and manual checks differ, and [how to upload a payment screenshot](/blog/how-to-upload-a-payment-screenshot/) for what makes a good screenshot.
+Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. If you pay outside those hours, expect the check the next business morning. After confirmation, the order enters processing, which takes 24 to 72 business hours before it ships. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/) for how automatic and manual checks differ, and [how to upload a payment screenshot](/blog/how-to-upload-a-payment-screenshot/) for what makes a good screenshot.
 
 ## Check the fee and minimum
 Exchanges set their own withdrawal minimums and fees, and these are separate from the network fee. Before you send, check the minimum withdrawal for BNB on BNB Smart Chain and the fee the exchange charges. Make sure the net amount arriving equals the amount shown in our window. If the exchange deducts its fee from the amount you enter, add the fee on top so the full amount arrives. BNB Smart Chain fees are usually very small, which is one of the reasons people like the network.
@@ -393,7 +393,7 @@ Please send one payment per order with the right order ID in each note, because 
 Yes, before you pay. Contact us with your order number and we will switch it and send the right details.
 
 ### How fast is confirmation?
-Usually quick during business hours once you have uploaded your screenshot. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time.
+Usually quick during business hours once you have uploaded your screenshot. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time.
 
 ## More options
 Read the [Cash App](/blog/cash-app-payments-guide/) and [Chime](/blog/chime-payments-guide/) guides, or compare everything in [payment methods compared](/blog/payment-methods-compared/). Browse [vape juice](/shop/vape-juice/) and [disposable vapes](/shop/disposables/). All products are for adults aged 21 and over, and nicotine is addictive.`,
@@ -464,7 +464,7 @@ Yes, before you pay. Contact us with your order number and we will switch the me
 Use whichever account is in your name, and make sure the name and order ID are clear so we can match the payment. If someone else pays for you, tell us so we can match it.
 
 ### How fast is confirmation?
-Usually quick during business hours once you have uploaded your screenshot. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time.
+Usually quick during business hours once you have uploaded your screenshot. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time.
 
 ## Other choices
 Compare with [Cash App](/blog/cash-app-payments-guide/), [Apple Pay](/blog/apple-pay-payments-guide/) and the discounted crypto and gift card options in [the 10% discount guide](/blog/crypto-discount-how-it-works/). Browse [disposable vapes](/shop/disposables/) and [vape juice](/shop/vape-juice/). All products are for adults aged 21 and over, and nicotine is addictive.`,

@@ -58,7 +58,7 @@ Familiar flavors such as strawberry, watermelon and mint are easy starting point
 - **Processing:** 24 to 72 business hours.
 - **Delivery:** adult signature, 21+.
 - **Returns:** 30 days with an RMA, unopened items only, 15% restocking fee.
-- **Contact:** Monday to Friday, 8AM to 5PM Arizona time.
+- **Contact:** Monday to Saturday, 9AM to 7PM Pacific Standard Time.
 
 ## If your question is not here
 Ask us. Use the support chat, the [contact page](/contact/), WhatsApp, phone or email, and include your order ID if it concerns an order. We will answer plainly, and we will tell you if we do not know.

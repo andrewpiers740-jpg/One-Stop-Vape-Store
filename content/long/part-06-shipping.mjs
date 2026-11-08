@@ -25,7 +25,7 @@ How you pay depends on the method:
 Pay within 24 hours of ordering, because unpaid orders may be released so stock is not held indefinitely.
 
 ## Step 5: we confirm your payment
-Crypto on most networks is matched automatically. Other methods are checked by a team member, which is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. When your payment is confirmed you receive an email and your order status changes to payment confirmed. Orders may also be reviewed for accuracy and security, and if yours is under review we will contact you the same day.
+Crypto on most networks is matched automatically. Other methods are checked by a team member, which is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. When your payment is confirmed you receive an email and your order status changes to payment confirmed. Orders may also be reviewed for accuracy and security, and if yours is under review we will contact you the same day.
 
 ## Step 6: processing and dispatch
 Orders have a processing time of 24 to 72 business hours, and most ship within 48 hours. Business days are Monday to Friday, and we do not process orders on weekends or federal holidays; your order continues processing the next business day. When your order ships you receive a tracking email with the carrier and tracking number. Tracking can take some time to start updating after the label is created. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/) and [how to track your order](/blog/how-to-track-your-order/).
@@ -43,7 +43,7 @@ Your private order page shows a status at each stage: awaiting payment, payment 
 Contact us as early as you can with your order ID. Before the order is processing we can often update flavors, quantities and the address. After it is handed to the carrier we cannot. See [how to change or cancel an order](/blog/how-to-change-or-cancel-an-order/).
 
 ## Where to get help
-Use the support chat on any page, the [contact page](/contact/), WhatsApp, phone or email. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. Include your order ID. If a confirmation email does not arrive, read [order confirmation emails not arriving](/blog/order-confirmation-email-not-arriving/). See [how to contact support](/blog/how-to-contact-support/).
+Use the support chat on any page, the [contact page](/contact/), WhatsApp, phone or email. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. Include your order ID. If a confirmation email does not arrive, read [order confirmation emails not arriving](/blog/order-confirmation-email-not-arriving/). See [how to contact support](/blog/how-to-contact-support/).
 
 ## Returns, refunds and problems
 Returns must be arranged within 30 days of purchase, and opened or used e-liquid, devices and accessories cannot be returned. Refunds go back through the payment method the payment was received through, less a 15% restocking fee. Puffco products do not qualify for refunds or exchanges. If a parcel arrives damaged, photograph the items and the invoice straight away and email us. Read [refund and return policy explained](/blog/refund-and-return-policy-explained/) and [damaged or missing items](/blog/damaged-or-missing-items-what-to-do/).
@@ -455,7 +455,7 @@ Pay within 24 hours of ordering, because unpaid orders may be released so stock 
 We emailed or messaged you the details. Pay the exact amount, add your order ID in the note and upload your receipt. If you have not received the details, check spam and the email address you entered, and contact us if they do not arrive. See [order confirmation emails not arriving](/blog/order-confirmation-email-not-arriving/).
 
 ## Proof submitted
-You uploaded a screenshot, a transaction hash or gift card details. A team member is reviewing it, normally within business hours, Monday to Friday, 8AM to 5PM Arizona time. You do not need to do anything unless we contact you. If you uploaded the wrong image or need to add information, tell us and upload again. See [how to upload a payment screenshot](/blog/how-to-upload-a-payment-screenshot/).
+You uploaded a screenshot, a transaction hash or gift card details. A team member is reviewing it, normally within business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. You do not need to do anything unless we contact you. If you uploaded the wrong image or need to add information, tell us and upload again. See [how to upload a payment screenshot](/blog/how-to-upload-a-payment-screenshot/).
 
 ## Payment detected on-chain
 For crypto, a transfer is visible on the network but not fully confirmed yet. This is automatic, and no action is needed unless it stays that way for a long time. The time depends on the network: Solana and Tron are usually quick, Ethereum and BNB Smart Chain take a few minutes, and Bitcoin often needs a block confirmation of around ten minutes. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/). If the status shows underpaid instead, see [why your crypto payment shows underpaid](/blog/why-your-crypto-payment-shows-underpaid/).
@@ -565,7 +565,7 @@ Often yes before processing, as long as the order stays above the $100 minimum. 
 Contact us right away. Because crypto transfers are final, we explain how a refund is returned, in the coin used, less the 15% restocking fee where it applies.
 
 ### What if I do not get a reply?
-Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. Message again on WhatsApp or by phone, and include your order ID.
+Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. Message again on WhatsApp or by phone, and include your order ID.
 
 ## Related reading
 See [how ordering works](/blog/how-ordering-works/) and [how to contact support](/blog/how-to-contact-support/). Browse [vape juice](/shop/vape-juice/) and [disposable vapes](/shop/disposables/). All products are for adults aged 21 and over, and nicotine is addictive.`,

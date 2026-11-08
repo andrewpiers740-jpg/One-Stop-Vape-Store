@@ -20,6 +20,7 @@ export const SITE = {
     phone: "774-734-1372",
     whatsapp: "17747341372",
     whatsappDisplay: "+1 774-734-1372",
+    hours: "Monday to Saturday, 9:00 AM to 7:00 PM Pacific Standard Time",
     location: "4908 E McDowell Road STE 103, Phoenix, Arizona 85008",
     country: "US",
     currency: {

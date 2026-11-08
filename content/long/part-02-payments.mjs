@@ -241,7 +241,7 @@ The private page lets you copy each detail with one tap and upload your receipt 
 Each method has its own quirks. The guides for [Cash App](/blog/cash-app-payments-guide/), [Apple Pay](/blog/apple-pay-payments-guide/) and [Chime](/blog/chime-payments-guide/) cover the details.
 
 ## How long should the message take?
-During business hours we usually send details within minutes. Outside business hours, or when order volume is high, it may take longer, but you will receive them. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. If you place an order at night, expect the message in the morning. You can check the status of your order at any time from the private link in your order email; see [order status meanings](/blog/order-status-meanings/).
+During business hours we usually send details within minutes. Outside business hours, or when order volume is high, it may take longer, but you will receive them. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. If you place an order at night, expect the message in the morning. You can check the status of your order at any time from the private link in your order email; see [order status meanings](/blog/order-status-meanings/).
 
 ## If nothing arrives
 Work through this short list:

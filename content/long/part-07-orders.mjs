@@ -21,7 +21,7 @@ Make sure the address on your order is correct, including apartment, suite and u
 If tracking shows delivered but you do not have the parcel, call the carrier with your tracking number. Ask where and when it was delivered, who signed and whether a photo or signature is on file. Because signature is required, a delivered status should have a signature record. Check with neighbors, building staff and others at the address, because someone may have signed on your behalf where the carrier allows it. If the carrier cannot account for the parcel, tell us what you learned.
 
 ## 6. Contact us
-If the estimated window has passed, email, message or call us with your order ID. Business contact options are on the [contact page](/contact/), and customer service hours are Monday to Friday, 8AM to 5PM Arizona time. Include your order ID, the tracking number, the carrier name, the date you expected delivery and what you have already checked. We will look at the order and the tracking, contact the carrier where that helps and tell you what we find. A short, complete message gets the quickest answer.
+If the estimated window has passed, email, message or call us with your order ID. Business contact options are on the [contact page](/contact/), and customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. Include your order ID, the tracking number, the carrier name, the date you expected delivery and what you have already checked. We will look at the order and the tracking, contact the carrier where that helps and tell you what we find. A short, complete message gets the quickest answer.
 
 ## What if the tracking never started?
 A label that was created but never scanned means the carrier has not yet taken the parcel into its network. Sometimes that is a delay of a day or two. If it has been longer than that, tell us, and we will check with the carrier. It is not something you can fix at your end, but telling us promptly helps.
@@ -93,7 +93,7 @@ Before you do anything else, photograph the evidence. Take pictures of the outsi
 Compare each item to the invoice. Tick off each product, option and quantity. For missing items, note exactly which products are absent, including the flavor, strength and pack size. For wrong items, note what you received and what you ordered. The invoice lists your order ID and the items, so it is the reference we both use. If you ordered several products, check each one, because a missing item is easy to overlook when the box looks full.
 
 ## Email us promptly
-Send the photos and your order ID to our support email, or use the [contact page](/contact/). You can also message us on WhatsApp or call during business hours, Monday to Friday, 8AM to 5PM Arizona time, but email is best for photos. Tell us what you expected and what you found. A message that includes the order ID, the tracking number, the date of delivery, a clear description of the problem and the photos lets us act without asking follow-up questions. Contact us on the day you receive the parcel if you can, because prompt reports are easier to resolve.
+Send the photos and your order ID to our support email, or use the [contact page](/contact/). You can also message us on WhatsApp or call during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time, but email is best for photos. Tell us what you expected and what you found. A message that includes the order ID, the tracking number, the date of delivery, a clear description of the problem and the photos lets us act without asking follow-up questions. Contact us on the day you receive the parcel if you can, because prompt reports are easier to resolve.
 
 ### A message that works
 "Order OSV-XXXXXX, delivered on [date]. The box arrived crushed on one side and two bottles of [product] are leaking. Photos attached: outside of the box, the label, the invoice and each bottle. I have kept the packaging."
@@ -235,7 +235,7 @@ faq: [
 body: `We offer several ways to reach our team, and each suits a different need. Some are best for quick questions, others for photos and written records, others for urgent problems. This guide explains each channel, when to use it, what to include in your message so we can help quickly, our customer service hours, what to check before you contact us and how to avoid scams that imitate support. It is written for adults aged 21 and over.
 
 ## Our hours
-Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. Messages sent outside those hours are answered on the next business day, and we do not process orders on weekends or federal holidays. Arizona does not observe daylight saving time, so during US summer the Arizona time matches Pacific time, and during winter it matches Mountain time. If you are in the east, remember the time difference when you plan a call.
+Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. Messages sent outside those hours are answered on the next business day, and we do not process orders on weekends or federal holidays. Arizona does not observe daylight saving time, so during US summer the Arizona time matches Pacific time, and during winter it matches Mountain time. If you are in the east, remember the time difference when you plan a call.
 
 ## The support chat
 On every page of the website, a chat button at the bottom right opens a support panel with quick answers to common questions and one-tap ways to contact us by WhatsApp, phone or email. If live chat is enabled, a Live chat button appears too. It is the fastest route to the right channel from wherever you are on the site.
@@ -302,7 +302,7 @@ Give us the name, email and approximate time and amount of the order, and we wil
 
 Browse [vape juice](/shop/vape-juice/) and [disposable vapes](/shop/disposables/). All products are for adults aged 21 and over, and nicotine is addictive.`,
 faq: [
-["What are your customer service hours?", "Monday to Friday, 8AM to 5PM Arizona time. Messages outside those hours are answered the next business day."],
+["What are your customer service hours?", "Monday to Saturday, 9AM to 7PM Pacific Standard Time. Messages outside those hours are answered the next business day."],
 ["How can I contact you?", "Through the support chat on any page, WhatsApp at +1 774-734-1372, email at sales@onestopvapestore.com, phone at 774-734-1372 or the contact form."],
 ["What should I include in my message?", "Your order ID, the email on the order, a clear description, and photos, screenshots or tracking numbers where relevant."],
 ["Which channel is best for damage?", "Email with photos, so we have a written record."],
@@ -350,7 +350,7 @@ For anything that needs a formal record, such as a damage claim or a return, fol
 You still need an email address, because confirmations, tracking and your private link go there. Delivery still needs an adult aged 21 or older to sign. The minimum order, the free-shipping rule, the 10% discount for crypto and gift cards and the returns policy are the same as for any order. See [how ordering works](/blog/how-ordering-works/).
 
 ## Hours and response
-WhatsApp messages are answered during our customer service hours, Monday to Friday, 8AM to 5PM Arizona time. If you message us outside those hours, we reply on the next business day. Your order is saved on the site either way, and you can follow it from your private page. Automatic crypto payments continue to be matched outside business hours.
+WhatsApp messages are answered during our customer service hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. If you message us outside those hours, we reply on the next business day. Your order is saved on the site either way, and you can follow it from your private page. Automatic crypto payments continue to be matched outside business hours.
 
 ## Common problems
 ### WhatsApp does not open
@@ -385,7 +385,7 @@ faq: [
 ["Can I send screenshots in chat?", "Yes, with your order ID, but uploading on the private order page is easier to track."],
 ["Is the price different on WhatsApp?", "No. The price and discounts depend on your cart and payment method, not the channel."],
 ["How do I know it is really you?", "Only trust the official number on our contact page. We never ask for passwords, PINs, recovery phrases or payments to personal numbers."],
-["When do you reply?", "During customer service hours, Monday to Friday, 8AM to 5PM Arizona time. Messages outside those hours are answered the next business day."],
+["When do you reply?", "During customer service hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. Messages outside those hours are answered the next business day."],
 ]
 },
 
@@ -414,7 +414,7 @@ Add our order email address to your contacts or trusted senders list. Many provi
 If you placed an order via WhatsApp, we can send details there. Your confirmation page also has a private link that you can bookmark, so you do not depend on the email to reach your order. If you still have that page open, copy the link before you close it. The page shows the status, the amount due and payment instructions where relevant. See [how to track your order](/blog/how-to-track-your-order/).
 
 ## 7. Contact us
-Reach us through the [contact page](/contact/) with your order ID, or with the time and amount of your order and the name you used. We can resend the confirmation, the payment details or the private link. Our customer service hours are Monday to Friday, 8AM to 5PM Arizona time. See [how to contact support](/blog/how-to-contact-support/).
+Reach us through the [contact page](/contact/) with your order ID, or with the time and amount of your order and the name you used. We can resend the confirmation, the payment details or the private link. Our customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. See [how to contact support](/blog/how-to-contact-support/).
 
 ## For payment-detail emails
 These come after you order for Cash App, Apple Pay, Chime and gift cards. They are sent as soon as the order is saved, usually within minutes in business hours, but they can take longer outside those hours. If the first email arrived but the payment-detail email did not, check the same places, and then contact us. See [how payment details reach you](/blog/how-payment-details-reach-you/). Do not pay until you have received details from us, and never pay to details sent by anyone else.

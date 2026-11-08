@@ -433,7 +433,7 @@ Use the checklist in [how to choose a Nixodine device](/blog/how-to-choose-a-nix
 Retailers can ask through our [wholesale page](/wholesale/). See the [wholesale ordering guide](/blog/wholesale-ordering-guide/).
 
 ## Where can I get help?
-Use the support chat on any page, the [contact page](/contact/), WhatsApp, phone or email. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time.
+Use the support chat on any page, the [contact page](/contact/), WhatsApp, phone or email. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time.
 
 ## Browse
 See [Nixodine products](/shop/nixodine/). All products are for adults aged 21 and over.`,

@@ -20,7 +20,7 @@ export default function ContactPage() {
         <p className="text-emerald-600 text-[10px] font-black uppercase tracking-[0.3em]">Support Hub</p>
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase leading-none">Get in Touch</h1>
         <p className="text-slate-600 text-lg leading-relaxed">
-          Need assistance with an order or have a question about our collections? Our team is available 10am - 6pm Arizona time (MST) to help.
+          Need assistance with an order or have a question about our collections? Our team is available Monday to Saturday, 9:00 AM to 7:00 PM Pacific Standard Time, to help.
         </p>
       </div>
 
@@ -65,8 +65,8 @@ export default function ContactPage() {
               We typically respond to all inquiries within 1-2 business hours during operating times.
             </p>
             <p className="text-slate-600 text-xs font-mono">
-              MON - FRI: 10AM - 6PM ARIZONA (MST)<br />
-              SAT - SUN: CLOSED
+              MON - SAT: 9AM - 7PM PACIFIC (PST)<br />
+              SUN: CLOSED
             </p>
           </div>
         </div>

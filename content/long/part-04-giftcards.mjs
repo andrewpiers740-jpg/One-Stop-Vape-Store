@@ -1,6 +1,6 @@
 // Long-form (1,500+ words) rewrites of the Gift Card Payments guides, batch 4. Applied by scripts/apply-long.mjs.
 const AFTER = (card) => `## What happens after you upload
-Once you submit your ${card} details, we check the card and its balance and match it to your order. When we have verified it, we mark your order as paid and email you a confirmation. Verification is a manual check by our team, so it takes longer than crypto, which is matched automatically on most networks, and it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. After your payment is confirmed, the order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It then ships with tracking by a regional carrier, and an adult aged 21 or older must sign on delivery and may be asked to show photo ID. You can follow each stage from the private link in your order email, and the meaning of each status is explained in [order status meanings](/blog/order-status-meanings/).`;
+Once you submit your ${card} details, we check the card and its balance and match it to your order. When we have verified it, we mark your order as paid and email you a confirmation. Verification is a manual check by our team, so it takes longer than crypto, which is matched automatically on most networks, and it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. After your payment is confirmed, the order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It then ships with tracking by a regional carrier, and an adult aged 21 or older must sign on delivery and may be asked to show photo ID. You can follow each stage from the private link in your order email, and the meaning of each status is explained in [order status meanings](/blog/order-status-meanings/).`;
 
 const WORKED = (card, cart, discount, product, ship, total, note) => `## A worked example
 Suppose your cart is $${cart}. Paying with a gift card applies the 10% discount of $${discount}, so the product total is $${product}. ${ship} The amount due is $${total}. ${note} You buy a ${card} card for the amount due, upload the code and receipt through your private link and wait for our confirmation. The discount is calculated on the product subtotal and shown in your order summary before you place the order, so you always know the exact figure. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/) for more examples, including how free shipping is measured after the discount.`;
@@ -74,7 +74,7 @@ faq: [
 ["Which gift cards do you accept?", "Apple, Razer Gold, Paysafe (paysafecard), Sephora and Macy's."],
 ["Do gift cards get a discount?", "Yes. Gift card payments save 10% on your product subtotal, the same as cryptocurrency."],
 ["What if the card amount does not match exactly?", "Buy the next amount up and tell us in the notes, and we will review the difference with you."],
-["How long does verification take?", "A team member checks each card, so it is slower than automatic crypto matching. It is quickest in business hours, Monday to Friday, 8AM to 5PM Arizona time."],
+["How long does verification take?", "A team member checks each card, so it is slower than automatic crypto matching. It is quickest in business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time."],
 ["Is it a problem to buy from a marketplace seller?", "Yes. Buy only from the brand's own site or a reputable retailer, because discounted cards may be stolen or already used."],
 ["Where do refunds go?", "Back through the payment method the payment was received through, less the 15% restocking fee where it applies."],
 ]
@@ -137,7 +137,7 @@ faq: [
 ["What if the exact amount is not available?", "Buy the next amount up and tell us in the notes, and we will review it with you."],
 ["Do Apple cards get the 10% discount?", "Yes. Gift card payments save 10% on your product subtotal."],
 ["What should I upload?", "The code, a screenshot or photo of the card email and your purchase receipt."],
-["How long does verification take?", "A team member checks each card, so it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time."],
+["How long does verification take?", "A team member checks each card, so it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time."],
 ]
 },
 
@@ -160,7 +160,7 @@ Open the private upload link from our order email. Enter the PIN in the code box
 Razer Gold is sold in set values. If you cannot match the exact amount, buy the next higher value and note the difference in the notes. We will review it with you. If the amount due is larger than the maximum for one PIN, buy two or more and upload them all. Please do not buy a much larger PIN than you need, because we cannot return unused balance to you.
 
 ${"" }## What happens after you upload
-We check the PIN and its value and match it to your order. This is a manual check by our team, so it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. When it is verified, we mark the order as paid and email you. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, and ships with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+We check the PIN and its value and match it to your order. This is a manual check by our team, so it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. When it is verified, we mark the order as paid and email you. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, and ships with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## A worked example
 Suppose your cart is $260. Paying with a gift card applies the 10% discount of $26.00, so the product total is $234.00. Because that is above $200, shipping is free, and the amount due is $234.00. Razer Gold PINs come in fixed values, so you might buy a $200 PIN and a $50 PIN and upload both, tell us the total is $250, and we review the $16 difference with you. For comparison, the same cart paid by Chime has no discount and totals $260.00. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/).
@@ -225,7 +225,7 @@ Use the private link in our order email. Enter the PIN, add a photo of the vouch
 Vouchers come in fixed amounts. If you cannot match the amount exactly, buy the next amount up and tell us in the notes so we can review it with you. If the amount due is larger than a single voucher, buy two or more and upload all the PINs. Please do not buy more than you need, because we cannot return unused balance to you.
 
 ## What happens after you upload
-We check the PIN and its balance and match it to your order. This is a manual check by our team, so it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. When it is verified, we mark the order as paid and email you a confirmation. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, and ships with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+We check the PIN and its balance and match it to your order. This is a manual check by our team, so it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. When it is verified, we mark the order as paid and email you a confirmation. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse, and ships with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## A worked example
 Suppose your cart is $150. Paying with a gift card applies the 10% discount of $15.00, so the product total is $135.00. Because that is under $200, the flat $15 shipping fee applies, and the amount due is $150.00. At a store you might buy a $100 voucher and a $50 voucher, which together equal the amount due. You upload both PINs and your receipts through the private link, and we verify them. For comparison, the same cart paid by Cash App has no discount and totals $165.00. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/).
@@ -287,7 +287,7 @@ Use the private order link from our email. Enter both the number and the PIN in 
 Gift card denominations are fixed. If the amount due is not available, buy the nearest higher amount and tell us in the notes. We will review the difference with you. If the amount due is larger than the maximum for a single card, buy two or more and upload them all. Please do not buy a much larger card than you need, because we cannot return unused balance to you.
 
 ## What happens next
-We verify the balance and mark your order as paid. This is a manual check by our team, so it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. You receive a confirmation email and your order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It then ships with tracking by a regional carrier, and an adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+We verify the balance and mark your order as paid. This is a manual check by our team, so it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. You receive a confirmation email and your order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It then ships with tracking by a regional carrier, and an adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## A worked example
 Suppose your cart is $120. Paying with a gift card applies the 10% discount of $12.00, so the product total is $108.00. Because that is under $200, the flat $15 shipping fee applies, and the amount due is $123.00. Sephora e-gift cards are offered in set amounts, so you might buy a $125 card and tell us in the notes. You upload the number, PIN and receipt through the private link. For comparison, the same cart paid by Apple Pay has no discount and totals $135.00. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/) for how the free-shipping line works.
@@ -330,7 +330,7 @@ faq: [
 ["What if the amount is not offered?", "Buy the nearest higher amount and tell us in the notes."],
 ["Does it earn the 10% discount?", "Yes. Gift card payments save 10% on your product subtotal."],
 ["Should I use the card first?", "No. Do not spend any balance, or the card cannot be verified for the full amount."],
-["How long does verification take?", "A team member checks each card, so it is quickest in business hours, Monday to Friday, 8AM to 5PM Arizona time."],
+["How long does verification take?", "A team member checks each card, so it is quickest in business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time."],
 ]
 },
 
@@ -353,7 +353,7 @@ If the amount you want is not offered, buy the next amount up and tell us in the
 Do not use the card in-store or online yourself. Do not share it with anyone other than through our private link. Never post a number or PIN in a public chat or on social media, and ignore messages that ask you to pay with a gift card outside our order. Learn more in [gift card code security tips](/blog/gift-card-code-security-tips/).
 
 ## After we verify
-We confirm the balance, mark the order paid and email you. This is a manual check by our team, so it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It ships with tracking by a regional carrier according to the [shipping policy](/shipping/), and an adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
+We confirm the balance, mark the order paid and email you. This is a manual check by our team, so it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. The order then enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse. It ships with tracking by a regional carrier according to the [shipping policy](/shipping/), and an adult aged 21 or older must sign on delivery. See [order status meanings](/blog/order-status-meanings/) and [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/).
 
 ## A worked example
 Suppose your cart is $200. Paying with a gift card applies the 10% discount of $20.00, so the product total is $180.00. Because that is under $200, the flat $15 shipping fee applies, and the amount due is $195.00. Macy's e-gift cards are offered in set amounts, so you might buy a $200 card and tell us in the notes. You upload the number, PIN and receipt through the private link. For comparison, the same cart paid by Chime has no discount, but because $200 meets the free-shipping threshold, the total is $200.00. The comparison shows why it helps to check the order summary: the gift card is still $5.00 cheaper, even though shipping is added. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/).
@@ -389,7 +389,7 @@ faq: [
 ["What if the amount is not offered?", "Buy the next amount up and tell us in the notes so we can review it."],
 ["Does it earn the 10% discount?", "Yes. Gift card payments save 10% on your product subtotal."],
 ["Should I use the card first?", "No. Do not use any balance, in-store or online."],
-["How long does verification take?", "A team member checks each card, so it is quickest in business hours, Monday to Friday, 8AM to 5PM Arizona time."],
+["How long does verification take?", "A team member checks each card, so it is quickest in business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time."],
 ]
 },
 
@@ -468,7 +468,7 @@ body: `Both gift card and cryptocurrency payments earn a 10% discount at One Sto
 Both methods save 10% on your product subtotal, applied automatically at checkout. Shipping is added after the discount, and free shipping applies to orders of $200 or more after the discount. That means the saving does not depend on the method you choose, only on your order. See [the 10% crypto and gift card discount](/blog/crypto-discount-how-it-works/) for worked examples. The differences are in how you pay.
 
 ## Speed
-Crypto on a fast network can be confirmed within minutes, and detection is automatic on most networks, so a payment can be matched even outside business hours. Gift cards depend on you buying the card and uploading the details, then us verifying them, which is a manual check done during business hours, Monday to Friday, 8AM to 5PM Arizona time. Typically crypto is quicker once you hold coins. Since orders begin processing only after payment is confirmed, a faster payment can mean an earlier dispatch. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/).
+Crypto on a fast network can be confirmed within minutes, and detection is automatic on most networks, so a payment can be matched even outside business hours. Gift cards depend on you buying the card and uploading the details, then us verifying them, which is a manual check done during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. Typically crypto is quicker once you hold coins. Since orders begin processing only after payment is confirmed, a faster payment can mean an earlier dispatch. See [how we detect your crypto payment](/blog/how-we-detect-your-crypto-payment/).
 
 ## Effort
 If you have never used crypto, setting up a wallet or an exchange account takes time, including identity verification on a regulated exchange, which can take from minutes to days. Gift cards can be bought in minutes from a familiar site, and many people have bought one before. See [how gift card payment works](/blog/how-gift-card-payment-works/) and [how to buy crypto with a card](/blog/how-to-buy-crypto-with-a-card/). If you already hold crypto, the effort is small: choose a coin, send and press the button.

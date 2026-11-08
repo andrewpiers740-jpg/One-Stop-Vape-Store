@@ -493,7 +493,7 @@ You can upload from a desktop as well. Transfer the screenshot to your computer,
 Add the transaction hash for crypto, the gift card code, and a short note if something is unusual. Notes that help include paying the difference for an underpaid order, buying a gift card in the next amount up, paying in two parts or paying from a different name. Short, clear notes save questions later.
 
 ## After you upload
-Your order status changes to proof submitted and our team reviews it. We match your proof to the payment, and when payment is confirmed you receive an email. Review is a manual step for gift cards and some other cases, and it is quickest during business hours, Monday to Friday, 8AM to 5PM Arizona time. See [how ordering works](/blog/how-ordering-works/) for timing and [order status meanings](/blog/order-status-meanings/) for what each status means. Once payment is confirmed, the order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse.
+Your order status changes to proof submitted and our team reviews it. We match your proof to the payment, and when payment is confirmed you receive an email. Review is a manual step for gift cards and some other cases, and it is quickest during business hours, Monday to Saturday, 9AM to 7PM Pacific Standard Time. See [how ordering works](/blog/how-ordering-works/) for timing and [order status meanings](/blog/order-status-meanings/) for what each status means. Once payment is confirmed, the order enters processing, which takes 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse.
 
 ## Keep it private
 Only the person with your order link can open the page, so do not share the link. Do not share your gift card code or PIN publicly or with anyone who contacts you unexpectedly. Your uploaded images are stored with your order and are used only to check your payment. Our [privacy policy](/privacy/) explains what we collect and how we use it. For gift card specifics, read [gift card code security tips](/blog/gift-card-code-security-tips/).
@@ -596,7 +596,7 @@ A stablecoin such as USDT or USDC, because the amount equals your dollar total. 
 Nothing. You receive an email, and your order status changes to payment confirmed. We process orders within 24 to 72 business hours at our Phoenix, Arizona Stock Warehouse and ship with tracking by a regional carrier. An adult aged 21 or older must sign on delivery. See [shipping times from Phoenix, Arizona](/blog/shipping-times-from-phoenix-arizona/) and [adult signature on delivery](/blog/adult-signature-on-delivery-what-to-expect/).
 
 ## Who can I ask for help?
-Use the [contact page](/contact/), message us on WhatsApp, call or email. Customer service hours are Monday to Friday, 8AM to 5PM Arizona time. Include your order reference and, if relevant, the transaction hash.
+Use the [contact page](/contact/), message us on WhatsApp, call or email. Customer service hours are Monday to Saturday, 9AM to 7PM Pacific Standard Time. Include your order reference and, if relevant, the transaction hash.
 
 ## Where can I read more?
 Browse the full set of payment guides in [payment methods compared](/blog/payment-methods-compared/), and start shopping with our [disposable vapes](/shop/disposables/) and [vape juice](/shop/vape-juice/). All products are for adults aged 21 and over, and nicotine is addictive.`,
