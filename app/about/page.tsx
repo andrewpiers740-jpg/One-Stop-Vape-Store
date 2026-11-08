@@ -1,44 +1,68 @@
 import React from "react";
+import Link from "next/link";
 import { SITE } from "@/src/config/site";
-import PageBanner from "@/src/components/PageBanner";
+import LegalPage from "@/src/components/LegalPage";
 
 export const metadata = {
-  title: "About Us | One Stop Vape Store",
-  description: "Learn more about One Stop Vape Store, our mission, story, and commitment to quality vaping products.",
+  title: `About Us | ${SITE.name}`,
+  description: `${SITE.name} is operated by ${SITE.legalName}, established December 2022, shipping adult-only vaping and nicotine products from Phoenix, Arizona. Our mission, values, what we sell and how we operate.`,
+  alternates: { canonical: `https://${SITE.domain}/about/` },
 };
 
 export default function AboutPage() {
   return (
-    <>
-      <PageBanner slug="about" label="About" />
-      <div className="max-w-4xl mx-auto px-6 py-24 prose ">
-      <h1><strong>About Us</strong></h1>
-      
-      <h2>Our Mission</h2>
-      <p>At {SITE.name}, our mission is to empower every vaping enthusiast with quality and diversity in product selection, backed by superior customer service.</p>
-      <p>We strive to be the definitive destination for all things related to vaping, from the novice to the connoisseur. We are committed to fostering a community that enlightens, educates, and entertains, while providing a platform for the finest vaping products in the industry.</p>
-      <p>Our products are intended for current smokers, vapers, and tobacco users. We have no interest in selling to minors, as the government underage use has proven an existential threat to our industry that threatens to deny adult vapers access to smoke and ash free alternatives.</p>
-      <p>At {SITE.name}, providing the quick shipping, the best vape products, and unmatched customer service is our priority.</p>
-
-      <h2>Our Story</h2>
-      <p>Our journey has been one of innovation and adaptability. As one of the top vaping brands in the US, we faced challenges when the PACT Act came into effect, changing the way nicotine products could be shipped.</p>
-      <p>However, we saw this as an opportunity to expand and evolve. By switching our focus to global markets, we were able to foster a new community of vapers with trusted products and pertinent vaping information.</p>
-      <p>We are happy to announce our continued presence in the US market, having established a robust shipping network, and we look forward to providing our customers with unmatched service and the best vaping hardware, e-liquids, accessories, vape mods, and disposable vapes on the market.</p>
-
-      <h2>Company Values</h2>
-      <ul>
-        <li><strong>Empowerment:</strong> Empowering our customers with the freedom to choose high-quality vaping products tailored to their unique preferences.</li>
-        <li><strong>Quality:</strong> Delivering excellence in every product, ensuring the highest standards of safety and satisfaction for our customers.</li>
-        <li><strong>Diversity:</strong> Celebrating the diverse tastes and preferences of our community with a wide range of products that cater to everyone.</li>
-        <li><strong>Education:</strong> Committed to educating our customers with the latest information and guidance to make informed choices about their vaping experience.</li>
-        <li><strong>Commitment:</strong> Dedicated to building lasting relationships through consistent, reliable service and a steadfast focus on customer satisfaction.</li>
-      </ul>
-
-      <h2>What We Provide</h2>
-      <p>At {SITE.name}, we pride ourselves on offering a curated collection of the best vape products. This includes replacement pods and coils for long-established and popular devices as well as cutting-edge vape pods and vape mods that cater to the tastes and preferences of our diverse clientele.</p>
-      <p>Our commitment to quality extends to providing the biggest names in vape juice as well as cutting-edge disposable vape devices. We meticulously select items that stand out for their innovation, reliability, and user satisfaction.</p>
-      <p>From beginner kits to advanced mods, every product is chosen to provide an exceptional vaping experience. Customers enjoy a seamless purchase process that ensures their favorite vaping essentials are delivered swiftly and efficiently, maintaining our standard of excellence.</p>
-    </div>
-    </>
+    <LegalPage
+      slug="about"
+      label="About"
+      h1="About One Stop Vape Store"
+      updated="November 8, 2026"
+      intro={
+        <>
+          <p>{SITE.name} is an online retailer of vaping and nicotine products for adults aged {SITE.compliance.ageThreshold} and over. We are operated by {SITE.legalName}, were established in December 2022 and ship from Phoenix, Arizona. This page explains what we stand for, what we sell, how an order works and what we do not do. Nicotine is addictive, and our products are for adults only.</p>
+          <p>For a longer introduction, read <Link href="/blog/about-one-stop-vape-store/">about One Stop Vape Store</Link>.</p>
+        </>
+      }
+      sections={[
+        { id: "mission", h2: "Our mission", body: (<>
+          <p>Our mission is to give adult vapers a wide choice of quality products, backed by good customer service. We want to be a dependable place to buy, from a first device to a repeat order, and to explain what we sell in plain language, from the beginner to the experienced user.</p>
+          <p>Our products are intended for current smokers, vapers and tobacco users. We have no interest in selling to minors. Underage use is a serious problem for our industry, and it threatens adult access to the products we sell. Quick shipping, a good range of products and dependable customer service are our priorities.</p>
+        </>) },
+        { id: "story", h2: "Our story", body: (<>
+          <p>{SITE.legalName} established {SITE.name} in December 2022, after the PACT Act changed how nicotine products can be shipped. We built our ordering and shipping around those rules from the start: adult signature on every delivery, labeled parcels, tax and licensing compliance and a network of regional carriers that handle these parcels. See our <Link href="/pact-act/">PACT Act FAQ</Link> and <Link href="/shipping/">shipping policy</Link>.</p>
+          <p>We have grown our catalog to more than 2,500 products, and we keep adding guides and policies so that customers can see how we work before they order.</p>
+        </>) },
+        { id: "values", h2: "Our values", body: (<>
+          <h3>Choice</h3>
+          <p>We offer a wide range of products so that adults can pick what suits their own preferences, with options such as strength and pack size on the product page.</p>
+          <h3>Quality</h3>
+          <p>We choose products from established brands, and we describe them accurately from their specifications.</p>
+          <h3>Diversity</h3>
+          <p>Our catalog covers disposables, e-liquids, kits, pods, nicotine pouches and more, because adults have different tastes.</p>
+          <h3>Education</h3>
+          <p>We publish guides on buying, payments, shipping, compliance, how devices work and troubleshooting, so that customers can make informed choices.</p>
+          <h3>Commitment</h3>
+          <p>We aim for consistent, reliable service and clear communication, and we stand behind our published policies.</p>
+        </>) },
+        { id: "provide", h2: "What we provide", body: (<>
+          <p>Our catalog includes <Link href="/shop/disposables/">disposable vapes</Link>, <Link href="/shop/vape-juice/">vape juice</Link> and nicotine salts, <Link href="/shop/vape-kits/">vape kits</Link>, <Link href="/shop/vaporizers/">vaporizers</Link>, <Link href="/shop/coils-pods/">replacement pods and coils</Link>, <Link href="/shop/nic-pouches/">nicotine pouches</Link> and <Link href="/shop/nixodine/">Nixodine devices</Link>. We also supply registered retailers through our <Link href="/wholesale/">wholesale</Link> program.</p>
+          <p>Orders are processed in 24 to 72 business hours and delivered by regional carrier with adult signature. We accept Cash App, Apple Pay, Chime, cryptocurrency and gift cards, with 10% off for cryptocurrency and gift card payments. The minimum order is ${SITE.order.minOrder}, and orders of ${SITE.order.freeShippingThreshold} or more after discount ship free.</p>
+        </>) },
+        { id: "compliance", h2: "Compliance and responsible sales", body: (<>
+          <p>We verify age at our age gate and on delivery, follow the PACT Act, and publish our <Link href="/terms/">terms</Link>, <Link href="/privacy/">privacy policy</Link>, <Link href="/refunds/">refund policy</Link> and <Link href="/fda-disclaimer/">FDA disclaimer</Link>. We cannot ship where the law does not allow it, and customers are responsible for knowing the rules where they live.</p>
+        </>) },
+        { id: "claims", h2: "What we do not do", body: (<>
+          <ul>
+            <li>We do not sell to anyone under {SITE.compliance.ageThreshold}.</li>
+            <li>We do not make health claims, and we do not say any product treats or prevents any condition.</li>
+            <li>We do not invent reviews, ratings or statistics.</li>
+            <li>We do not ask for card numbers, passwords, private keys or seed phrases in messages.</li>
+          </ul>
+        </>) },
+        { id: "contact", h2: "Where to find us", body: (<>
+          <p>{SITE.legalName}, doing business as {SITE.name}<br />{SITE.contact.location}</p>
+          <p>Email <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>, call <a href={`tel:+1${SITE.contact.phone.replace(/\D/g, "")}`}>{SITE.contact.phone}</a> or use our <Link href="/contact/">contact page</Link>.</p>
+        </>) },
+      ]}
+    />
   );
 }

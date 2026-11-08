@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import EnquiryForm from "@/src/components/EnquiryForm";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
@@ -74,6 +75,21 @@ export default function ContactPage() {
           <EnquiryForm type="contact" />
         </div>
       </div>
+
+      <section className="max-w-4xl text-slate-800 leading-relaxed">
+        <h2 className="mb-4 border-b border-slate-200 pb-2 text-2xl font-black tracking-tight text-slate-900">How to get help quickly</h2>
+        <p className="mb-4">The fastest way to get a useful answer is to include the right details in your first message. For an order question, send your order ID, the product name and a short description of what you need. For a faulty or damaged item, add clear photos or a short video. For a question before you buy, tell us the product, the option you are considering and your state.</p>
+        <h3 className="mt-6 text-lg font-black text-slate-900">What we can help with</h3>
+        <ul className="ml-5 mt-2 list-disc space-y-1.5">
+          <li>Order status, payment details and tracking.</li>
+          <li>Product questions: strength, pack size, puff count, compatibility.</li>
+          <li>Shipping, adult signature and delivery problems.</li>
+          <li>Returns and RMA requests. See our <Link className="text-brand-700 underline" href="/refunds/">refund policy</Link>.</li>
+          <li>Wholesale inquiries. See our <Link className="text-brand-700 underline" href="/wholesale/">wholesale page</Link>.</li>
+        </ul>
+        <h3 className="mt-6 text-lg font-black text-slate-900">What we will never ask for</h3>
+        <p className="mt-2">We never ask for card numbers, passwords, private keys or seed phrases in messages. If someone claiming to be us asks for these, do not reply, and tell us. Our products are for adults aged 21 and over, and we make no health claims. For other answers, see the <Link className="text-brand-700 underline" href="/faq/">FAQ</Link>, the <Link className="text-brand-700 underline" href="/help/">help center</Link> and <Link className="text-brand-700 underline" href="/shipping/">shipping policy</Link>.</p>
+      </section>
 
     </div>
     </>
