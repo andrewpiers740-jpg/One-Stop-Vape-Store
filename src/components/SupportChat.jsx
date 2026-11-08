@@ -8,7 +8,8 @@ import { SITE } from "@/src/config/site";
 // Bottom-right support launcher on every public page. Quick answers + one-tap contact (WhatsApp, call, email).
 // tawk.to live chat is loaded when NEXT_PUBLIC_TAWK_PROPERTY_ID (and optionally NEXT_PUBLIC_TAWK_WIDGET_ID) are set;
 // its own bubble is hidden and opened from the "Live chat" button below so visitors see a single chat control.
-const TAWK_PROPERTY = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID;
+// The property ID is public (it appears in the embed script), so it is safe to default it here; env vars still override it.
+const TAWK_PROPERTY = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID || "6aee0250bd971a42d4e3811e";
 const TAWK_WIDGET = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID || "default";
 
 const QUICK = [
