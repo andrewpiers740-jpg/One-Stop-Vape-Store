@@ -34,7 +34,7 @@ export default function ShippingPage() {
         </>) },
         { id: "processing", h2: "Order processing", body: (<>
           <ul>
-            <li>All orders have a processing time of 24 to 72 business hours. Most orders ship within 48 hours.</li>
+            <li>All orders have a processing time of 24 to 72 business hours. Most orders ship within 48 hours, and orders confirmed before 2:00 PM MST typically ship the same business day.</li>
             <li>Orders ship with a signature required on delivery, with photo ID showing that the recipient is {SITE.compliance.ageThreshold} or over, as federal law requires.</li>
             <li>All shipping times are counted in business days, Monday to Friday.</li>
             <li>Orders may be reviewed to confirm security and accuracy. If your order is under review, we will contact you the same day.</li>
