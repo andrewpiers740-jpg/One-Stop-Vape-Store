@@ -30,6 +30,9 @@ export const SITE = {
     }
   },
   
+  // tawk.to live chat. The property ID is public (it is in the embed script). Kept here so a mistyped env var cannot break chat.
+  tawk: { propertyId: "6aee0250bd971a42d4e3811e", widgetId: "default" },
+
   order: {
     minOrder: 100,
     freeShippingThreshold: 200,
