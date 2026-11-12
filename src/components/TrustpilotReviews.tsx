@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Star, CheckCircle, ShieldCheck, ThumbsUp, MessageSquare } from "lucide-react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Star, CheckCircle, ShieldCheck, MessageSquare, ChevronLeft, ChevronRight, Pause, Play, Quote } from "lucide-react";
 import { SITE } from "@/src/config/site";
 
 interface Review {
@@ -139,17 +139,86 @@ const REVIEWS: Review[] = [
   }
 ];
 
+const AUTOPLAY_MS = 6000;
+
+// Offset of slide i from the active slide, wrapped so the carousel loops (e.g. -2 ... +2).
+function offsetOf(i: number, active: number, n: number) {
+  let d = i - active;
+  if (d > n / 2) d -= n;
+  if (d < -n / 2) d += n;
+  return d;
+}
+
+function Stars({ size }: { size: number }) {
+  return (
+    <div className="flex items-center gap-1" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <div key={i} className="flex items-center justify-center rounded bg-trust text-white" style={{ width: size + 9, height: size + 9 }}>
+          <Star size={size} className="fill-white text-white" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function TrustpilotReviews() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [active, setActive] = useState(0);
+  const [playing, setPlaying] = useState(true);
+  const [hold, setHold] = useState(false); // hover / focus / dragging pause
+  const [reduced, setReduced] = useState(false);
+  const [wide, setWide] = useState(true);
+  const drag = useRef<{ x: number; id: number } | null>(null);
 
-  const filteredReviews = activeFilter === "all"
-    ? REVIEWS
-    : REVIEWS.filter(r => r.category === activeFilter);
+  const filteredReviews = activeFilter === "all" ? REVIEWS : REVIEWS.filter((r) => r.category === activeFilter);
+  const n = filteredReviews.length;
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const wq = window.matchMedia("(min-width: 768px)");
+    const sync = () => { setReduced(mq.matches); setWide(wq.matches); };
+    sync();
+    mq.addEventListener("change", sync);
+    wq.addEventListener("change", sync);
+    return () => { mq.removeEventListener("change", sync); wq.removeEventListener("change", sync); };
+  }, []);
+
+  const go = useCallback((delta: number) => setActive((a) => (n ? (a + delta + n) % n : 0)), [n]);
+
+  const auto = playing && !hold && !reduced && n > 1;
+  useEffect(() => {
+    if (!auto) return;
+    const t = window.setTimeout(() => go(1), AUTOPLAY_MS);
+    return () => window.clearTimeout(t);
+  }, [auto, active, go]);
+
+  const pickFilter = (id: string) => { setActiveFilter(id); setActive(0); };
+
+  const onPointerDown = (e: React.PointerEvent) => { drag.current = { x: e.clientX, id: e.pointerId }; setHold(true); };
+  const onPointerUp = (e: React.PointerEvent) => {
+    const d = drag.current;
+    drag.current = null;
+    setHold(false);
+    if (!d) return;
+    const dx = e.clientX - d.x;
+    if (Math.abs(dx) > 45) go(dx < 0 ? 1 : -1);
+  };
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    if (e.key === "Home") { e.preventDefault(); setActive(0); }
+    if (e.key === "End") { e.preventDefault(); setActive(n - 1); }
+  };
+
+  const step = wide ? 56 : 62; // % of card width between neighbouring slides
+  const reach = wide ? 2 : 1; // how many slides each side stay visible
 
   return (
-    <section className="bg-slate-50 py-24 border-t border-slate-200 w-full relative overflow-hidden">
+    <section className="bg-slate-50 py-24 border-t border-slate-200 w-full relative overflow-hidden" aria-labelledby="tp-heading">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-trust/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-[1440px] mx-auto px-6 relative z-10 flex flex-col gap-12">
 
       <div className="max-w-[1440px] mx-auto px-6 relative z-10 flex flex-col gap-16">
         
@@ -160,7 +229,7 @@ export default function TrustpilotReviews() {
               <ShieldCheck size={12} />
               <span>Verified Customer Proof • Since Dec 2022</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-none">
+            <h2 id="tp-heading" className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-none">
               Trustpilot <span className="text-trust-dark">Reviews</span>
             </h2>
             <p className="text-slate-600 text-sm md:text-base max-w-xl leading-relaxed">
@@ -203,8 +272,10 @@ export default function TrustpilotReviews() {
             { id: "wholesale", label: "Wholesale & Bulk" }
           ].map((pill) => (
             <button
+              type="button"
               key={pill.id}
-              onClick={() => setActiveFilter(pill.id)}
+              onClick={() => pickFilter(pill.id)}
+              aria-pressed={activeFilter === pill.id}
               className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                 activeFilter === pill.id
                   ? "bg-trust-dark text-white shadow-lg shadow-trust/20 font-black"
@@ -216,55 +287,112 @@ export default function TrustpilotReviews() {
           ))}
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredReviews.map((rev) => (
-            <div
-              key={rev.id}
-              className="p-8 rounded-3xl bg-slate-100/40 border border-slate-200/80 hover:border-trust/40 transition-all duration-300 flex flex-col justify-between gap-6 group hover:bg-slate-100/60"
-            >
-              <div className="flex flex-col gap-4">
-                {/* Top Row: Stars + Verified Badge */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-trust">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-5 h-5 rounded bg-trust flex items-center justify-center text-white">
-                        <Star size={11} className="fill-white text-white" />
+        {/* Review slider: 3D coverflow, auto-plays, pauses on hover/focus/drag, swipe + keyboard + buttons */}
+        <div
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Customer reviews"
+          className="flex flex-col gap-6"
+          onMouseEnter={() => setHold(true)}
+          onMouseLeave={() => setHold(false)}
+          onFocus={() => setHold(true)}
+          onBlur={() => setHold(false)}
+        >
+          <div
+            className="relative mx-auto h-[430px] w-full max-w-[1100px] touch-pan-y select-none rounded-3xl outline-none focus-visible:ring-2 focus-visible:ring-trust-dark focus-visible:ring-offset-4 md:h-[400px]"
+            style={{ perspective: "1400px" }}
+            tabIndex={0}
+            onKeyDown={onKeyDown}
+            onPointerDown={onPointerDown}
+            onPointerUp={onPointerUp}
+            onPointerCancel={() => { drag.current = null; setHold(false); }}
+            aria-live={auto ? "off" : "polite"}
+          >
+            {filteredReviews.map((rev, i) => {
+              const d = offsetOf(i, active, n);
+              const ad = Math.abs(d);
+              const visible = ad <= reach;
+              const isActive = d === 0;
+              const transform = reduced
+                ? `translateX(calc(-50% + ${d * 105}%))`
+                : `translateX(calc(-50% + ${d * step}%)) translateZ(${-ad * 140}px) rotateY(${-d * 22}deg) scale(${1 - ad * 0.1})`;
+              return (
+                <div
+                  key={rev.id}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`Review ${i + 1} of ${n}`}
+                  aria-hidden={!isActive}
+                  onClick={() => { if (!isActive && visible) setActive(i); }}
+                  className={`absolute left-1/2 top-0 h-full w-[min(84vw,420px)] ${reduced ? "" : "transition-[transform,opacity,filter] duration-700 ease-[cubic-bezier(.22,1,.36,1)]"} ${isActive ? "" : "cursor-pointer"}`}
+                  style={{ transform, opacity: visible ? (isActive ? 1 : Math.max(0.2, 0.5 - (ad - 1) * 0.2)) : 0, zIndex: 20 - ad, filter: isActive ? "none" : "saturate(.7)", pointerEvents: visible ? "auto" : "none" }}
+                >
+                  <article className={`relative flex h-full flex-col justify-between gap-5 overflow-hidden rounded-3xl border bg-white p-7 md:p-8 ${isActive ? "border-trust/50 shadow-2xl shadow-trust/20" : "border-slate-200 shadow-lg"}`}>
+                    <Quote size={72} aria-hidden="true" className="pointer-events-none absolute -right-2 -top-2 rotate-180 text-trust/10" />
+                    <div className="relative flex flex-col gap-4">
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <Stars size={14} />
+                          <span className="sr-only">{rev.rating} out of 5 stars</span>
+                        </div>
+                        {rev.verified && (
+                          <span className="inline-flex items-center gap-1 rounded-full border border-trust/20 bg-trust/10 px-2 py-0.5 text-[10px] font-bold text-trust-dark">
+                            <CheckCircle size={10} aria-hidden="true" />
+                            <span>Verified Buyer</span>
+                          </span>
+                        )}
                       </div>
-                    ))}
-                  </div>
-                  {rev.verified && (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-trust-dark bg-trust/10 px-2 py-0.5 rounded-full border border-trust/20">
-                      <CheckCircle size={10} />
-                      <span>Verified Buyer</span>
-                    </span>
-                  )}
+                      <h3 className="text-lg font-black leading-snug tracking-tight text-slate-900">&ldquo;{rev.title}&rdquo;</h3>
+                      <p className="text-sm leading-relaxed text-slate-600 line-clamp-6">{rev.comment}</p>
+                    </div>
+                    <div className="relative flex items-center justify-between gap-3 border-t border-slate-200/70 pt-4 text-xs">
+                      <div className="flex items-center gap-3">
+                        <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-trust-dark text-sm font-black text-white">{rev.name.charAt(0)}</span>
+                        <div>
+                          <p className="font-bold tracking-tight text-slate-900">{rev.name}</p>
+                          <p className="text-[11px] text-slate-600">{rev.location}</p>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <span className="block font-mono text-[10px] text-slate-600">{rev.date}</span>
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-trust-dark">{rev.categoryLabel}</span>
+                      </div>
+                    </div>
+                  </article>
                 </div>
+              );
+            })}
+          </div>
 
-                {/* Title */}
-                <h3 className="text-base font-black text-slate-900 tracking-tight leading-snug group-hover:text-trust-dark transition-colors">
-                  &ldquo;{rev.title}&rdquo;
-                </h3>
-
-                {/* Comment */}
-                <p className="text-slate-600 text-sm leading-relaxed line-clamp-4">
-                  {rev.comment}
-                </p>
+          {/* Controls */}
+          {n > 1 && (
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex items-center gap-3">
+                <button type="button" onClick={() => go(-1)} aria-label="Previous review" className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition hover:border-trust-dark hover:text-trust-dark">
+                  <ChevronLeft size={20} aria-hidden="true" />
+                </button>
+                <div className="flex max-w-[60vw] flex-wrap items-center justify-center gap-1">
+                  {filteredReviews.map((rev, i) => (
+                    <button key={rev.id} type="button" onClick={() => setActive(i)} aria-label={`Show review ${i + 1} of ${n}`} aria-current={i === active} className="group flex h-6 w-6 items-center justify-center">
+                      <span className={`block h-2 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-trust-dark" : "w-2 bg-slate-300 group-hover:bg-slate-400"}`} />
+                    </button>
+                  ))}
+                </div>
+                <button type="button" onClick={() => go(1)} aria-label="Next review" className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition hover:border-trust-dark hover:text-trust-dark">
+                  <ChevronRight size={20} aria-hidden="true" />
+                </button>
+                {!reduced && (
+                  <button type="button" onClick={() => setPlaying((p) => !p)} aria-label={playing ? "Pause automatic slideshow" : "Play automatic slideshow"} className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-800 transition hover:border-trust-dark hover:text-trust-dark">
+                    {playing ? <Pause size={16} aria-hidden="true" /> : <Play size={16} aria-hidden="true" />}
+                  </button>
+                )}
               </div>
-
-              {/* Author & Date Footer */}
-              <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
-                <div>
-                  <p className="font-bold text-slate-900 tracking-tight">{rev.name}</p>
-                  <p className="text-[11px] text-slate-600">{rev.location}</p>
-                </div>
-                <div className="text-right">
-                  <span className="text-[10px] text-slate-600 block font-mono">{rev.date}</span>
-                  <span className="text-[9px] uppercase tracking-widest text-trust-dark font-bold">{rev.categoryLabel}</span>
-                </div>
+              <div className="h-1 w-48 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
+                {auto && <div key={`${active}-${activeFilter}`} className="h-full origin-left rounded-full bg-trust-dark" style={{ animation: `tp-progress ${AUTOPLAY_MS}ms linear forwards` }} />}
               </div>
+              <p className="text-xs text-slate-600" aria-hidden="true">{active + 1} / {n} &middot; swipe, drag or use the arrow keys</p>
             </div>
-          ))}
+          )}
         </div>
 
         {/* Bottom Banner */}
@@ -283,6 +411,8 @@ export default function TrustpilotReviews() {
             </a>
           </div>
         </div>
+
+      </div>
 
       </div>
     </section>

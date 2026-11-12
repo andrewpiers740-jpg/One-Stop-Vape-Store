@@ -1,10 +1,12 @@
 import React from "react";
 import PageBanner from "@/src/components/PageBanner";
+import FaqAccordion from "@/src/components/FaqAccordion";
+import OpenDetailsOnHash from "@/src/components/OpenDetailsOnHash";
 
 // Shared shell for policy / information pages: banner, exactly one <h1>, then <h2> sections with optional <h3> sub-sections.
 export type Section = { id: string; h2: string; body: React.ReactNode };
 
-export default function LegalPage({ slug, label, h1, updated, intro, sections, toc = true }: { slug: string; label: string; h1: string; updated?: string; intro: React.ReactNode; sections: Section[]; toc?: boolean }) {
+export default function LegalPage({ slug, label, h1, updated, intro, sections, toc = true, accordion = false }: { slug: string; label: string; h1: string; updated?: string; intro: React.ReactNode; sections: Section[]; toc?: boolean; accordion?: boolean }) {
   return (
     <>
       <PageBanner slug={slug} label={label} />
@@ -20,7 +22,12 @@ export default function LegalPage({ slug, label, h1, updated, intro, sections, t
             </ol>
           </nav>
         )}
-        {sections.map((s) => (
+        {accordion ? (
+          <>
+            <OpenDetailsOnHash />
+            <FaqAccordion items={sections.map((s) => ({ id: s.id, q: s.h2, a: <div className="space-y-4">{s.body}</div> }))} />
+          </>
+        ) : sections.map((s) => (
           <section key={s.id} id={s.id} className="mb-10 scroll-mt-28">
             <h2 className="mb-4 border-b border-slate-200 pb-2 text-2xl font-black tracking-tight text-slate-900">{s.h2}</h2>
             <div className="space-y-4 leading-relaxed [&_a]:text-brand-700 [&_a]:underline [&_h3]:mt-6 [&_h3]:text-lg [&_h3]:font-black [&_h3]:text-slate-900 [&_li]:ml-5 [&_li]:list-disc [&_li]:pl-1 [&_ul]:space-y-1.5">{s.body}</div>

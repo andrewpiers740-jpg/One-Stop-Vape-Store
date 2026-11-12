@@ -1,3 +1,4 @@
+import FaqAccordion from "@/src/components/FaqAccordion";
 import React from "react";
 import { Metadata } from "next";
 import { SITE } from "@/src/config/site";
@@ -187,22 +188,7 @@ export default function FAQPage() {
                 <h2 className="text-xl font-black uppercase tracking-tight text-slate-900">{section.title}</h2>
               </div>
 
-              <div className="flex flex-col gap-4">
-                {section.items.map((item, iIdx) => (
-                  <div
-                    key={iIdx}
-                    className="p-6 md:p-8 rounded-2xl bg-slate-100/40 border border-slate-200/80 hover:border-emerald-500/30 transition-all duration-300"
-                  >
-                    <h3 className="text-base font-bold text-slate-900 mb-3 flex items-start gap-3">
-                      <span className="text-emerald-600 font-mono text-xs mt-1 shrink-0">0{iIdx + 1}.</span>
-                      <span>{item.q}</span>
-                    </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                      {item.a}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <FaqAccordion numbered items={section.items.map((item) => ({ q: item.q, a: item.a }))} />
             </div>
           );
         })}

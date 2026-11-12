@@ -15,6 +15,7 @@ export default function PactActPage() {
       slug="pact-act"
       label="PACT Act"
       h1="PACT Act FAQ"
+      accordion
       updated="November 8, 2026"
       intro={
         <>

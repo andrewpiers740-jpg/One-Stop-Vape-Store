@@ -1,3 +1,4 @@
+import FaqAccordion from "@/src/components/FaqAccordion";
 import React from "react";
 import ProductCard from "@/src/components/ProductCard";
 import Link from "next/link";
@@ -93,14 +94,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {post.faq.length > 0 && (
           <section aria-labelledby="faq" className="mt-14">
             <h2 id="faq" className="mb-4 text-2xl font-black tracking-tight text-emerald-600 md:text-3xl">Frequently asked questions</h2>
-            <div className="divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-slate-50">
-              {post.faq.map((f) => (
-                <div key={f.q} className="p-6">
-                  <h3 className="text-lg font-bold text-slate-900">{f.q}</h3>
-                  <p className="mt-2 leading-relaxed text-slate-600">{f.a}</p>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={post.faq.map((f) => ({ q: f.q, a: f.a }))} />
           </section>
         )}
 

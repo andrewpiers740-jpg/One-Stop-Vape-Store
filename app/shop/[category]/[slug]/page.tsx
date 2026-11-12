@@ -1,3 +1,4 @@
+import FaqAccordion from "@/src/components/FaqAccordion";
 import React from "react";
 import ProductCard from "@/src/components/ProductCard";
 import Link from "next/link";
@@ -272,14 +273,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
       <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-4xl">
         <h2 id="faq-heading" className="mb-6 text-2xl font-black uppercase tracking-tighter text-slate-900 md:text-3xl">Frequently asked questions</h2>
-        <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
-          {faq.map((f) => (
-            <details key={f.q} className="group p-5">
-              <summary className="cursor-pointer list-none text-base font-bold text-slate-900 marker:hidden"><h3 className="inline">{f.q}</h3></summary>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.a}</p>
-            </details>
-          ))}
-        </div>
+        <FaqAccordion items={faq.map((f) => ({ q: f.q, a: f.a }))} />
       </section>
 
       {/* Related Products */}
