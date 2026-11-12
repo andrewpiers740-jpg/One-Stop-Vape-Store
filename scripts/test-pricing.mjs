@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 const { priceOrder, resolvePaymentMethod } = await import("../lib/catalog.js");
 const p = JSON.parse((await import("node:fs")).readFileSync("src/data/products.json", "utf8"));
-const item = p.find((x) => x.price >= 20 && x.price < 30);
+const item = p.find((x) => x.price >= 24.69 && x.price < 27.78); // ~$25: 9 units clear $200 after a 10% discount, 8 do not
 const q = (n, m = 0) => priceOrder([{ slug: item.slug, qty: n, price: 0.01 }], m);
 assert.equal(q(1).ok, false, "below minimum rejected");
 const a = q(5); // 5 x ~25 = ~125 -> under 200 -> shipping 15

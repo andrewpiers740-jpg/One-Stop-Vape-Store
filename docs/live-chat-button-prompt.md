@@ -3,6 +3,15 @@ Build a floating support chat button on this Next.js (App Router) + Tailwind pro
 ## What it is
 A round button fixed to the bottom-right of every public page. Clicking it opens a small support panel above it. The panel holds a greeting, three expandable quick-answer topics, and one-tap contact buttons: tawk.to live chat, WhatsApp, Call and Email. The tawk.to widget's own bubble is hidden, and the panel's "Live chat" button opens the tawk.to window, so visitors only ever see one chat control.
 
+## Online status dot
+The "Live chat" button (the full-width brand-coloured button at the top of the contact buttons) has a blinking green dot at its right end, to show the team is online:
+- A 10px (`h-2.5 w-2.5`) solid green dot (`bg-green-500`, with a thin `ring-2 ring-white/70`) sits inside the button, 16px from its right edge (`right-4`) and vertically centred (`top-1/2 -translate-y-1/2`).
+- Behind it is a pulsing ring (`animate-ping`, `bg-green-400`, `opacity-75`) that gives the blink.
+- The pulse is turned off for visitors who prefer reduced motion (`motion-reduce:animate-none`).
+- The dot is decorative (`aria-hidden="true"`). Screen readers hear a hidden `<span className="sr-only"> (online)</span>` after the label instead.
+- The button itself is `relative` so the dot can be positioned inside it.
+- The dot is always green while the button is visible. The button only appears once tawk.to has loaded. Do not add any availability logic unless I ask for it.
+
 ## Requirements
 1. Create `src/components/SupportChat.jsx` as a client component (`"use client"`), using `lucide-react` icons (MessageCircle, X, Phone, Mail, HelpCircle, Truck, CreditCard, Headset), `next/link` and `usePathname`.
 2. Render `<SupportChat />` once in `app/layout.tsx`, inside the body after the page content. Add no other chat widget or floating button.
@@ -105,7 +114,7 @@ export default function SupportChat() {
               ))}
             </ul>
             <div className="grid grid-cols-2 gap-2 border-t border-slate-200 pt-3">
-              {tawkReady && <button type="button" onClick={openTawk} className="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 py-2.5 text-sm font-black text-white hover:bg-brand-600"><MessageCircle size={16} />Live chat</button>}
+              {tawkReady && <button type="button" onClick={openTawk} className="relative col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 py-2.5 text-sm font-black text-white hover:bg-brand-600"><MessageCircle size={16} />Live chat<span className="sr-only"> (online)</span><span aria-hidden="true" className="absolute right-4 top-1/2 flex h-2.5 w-2.5 -translate-y-1/2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75 motion-reduce:animate-none" /><span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white/70" /></span></button>}
               <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 py-2.5 text-sm font-bold text-slate-800 hover:border-brand-500"><MessageCircle size={16} />WhatsApp</a>
               <a href={tel} className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 py-2.5 text-sm font-bold text-slate-800 hover:border-brand-500"><Phone size={16} />Call</a>
               <a href={`mailto:${SITE.contact.email}`} className="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 py-2.5 text-sm font-bold text-slate-800 hover:border-brand-500"><Mail size={16} />{SITE.contact.email}</a>
@@ -128,6 +137,7 @@ Ask me for the tawk.to property ID (the part after `embed.tawk.to/`) and widget 
 - The button shows on every public page and is absent on `/admin`.
 - The panel opens and closes, and the topics expand.
 - "Live chat" appears after tawk.to loads, and opens the tawk.to window without a second bubble showing.
+- The green dot sits at the right end of the "Live chat" button, vertically centred, and blinks (and does not animate when reduced motion is on).
 - WhatsApp, Call and Email links are correct.
 - No horizontal scroll at 380px width, and no CSP violations in the console.
 - The build, typecheck and project crosscheck pass.
