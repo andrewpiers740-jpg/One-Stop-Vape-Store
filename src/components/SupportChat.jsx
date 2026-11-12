@@ -10,6 +10,7 @@ import { SITE } from "@/src/config/site";
 // its own bubble is hidden and opened from the "Live chat" button below so visitors see a single chat control.
 const TAWK_PROPERTY = SITE.tawk.propertyId;
 const TAWK_WIDGET = SITE.tawk.widgetId;
+const tawk = { injected: false, loaded: false, started: false }; // survives route changes
 
 const QUICK = [
   { icon: Truck, q: "Where is my order?", a: "Orders ship within 24–72 business hours with tracking by email. Use the private link in your order email to see its status.", href: "/shipping/" },
@@ -25,10 +26,13 @@ export default function SupportChat() {
 
   React.useEffect(() => {
     if (!TAWK_PROPERTY || pathname?.startsWith("/admin")) return;
-    if (window.Tawk_API && window.Tawk_API.hideWidget) { setTawkReady(true); return; }
+    if (tawk.loaded) { setTawkReady(true); return; }
+    if (tawk.injected) return;
+    tawk.injected = true;
     window.Tawk_API = window.Tawk_API || {};
+    // autoStart off: the tawk.to bubble is never drawn on page load; it only starts when the visitor taps "Live chat".
+    window.Tawk_API.autoStart = false;
     window.Tawk_LoadStart = new Date();
-    window.Tawk_API.onLoad = () => { try { window.Tawk_API.hideWidget(); } catch { /* ignore */ } setTawkReady(true); };
     window.Tawk_API.onChatMaximized = () => setOpen(false);
     window.Tawk_API.onChatMinimized = () => { try { window.Tawk_API.hideWidget(); } catch { /* ignore */ } };
     const s = document.createElement("script");
@@ -36,13 +40,33 @@ export default function SupportChat() {
     s.src = `https://embed.tawk.to/${TAWK_PROPERTY}/${TAWK_WIDGET}`;
     s.charset = "UTF-8";
     s.setAttribute("crossorigin", "*");
+    s.onload = () => { tawk.loaded = true; setTawkReady(true); };
     document.head.appendChild(s);
   }, [pathname]);
 
   if (pathname?.startsWith("/admin")) return null;
   const wa = `https://wa.me/${SITE.contact.whatsapp}?text=${encodeURIComponent(`Hi ${SITE.name}, I have a question.`)}`;
   const tel = `tel:+1${SITE.contact.phone.replace(/\D/g, "")}`;
-  const openTawk = () => { try { window.Tawk_API.showWidget(); window.Tawk_API.maximize(); } catch { /* ignore */ } };
+  const openTawk = () => {
+    const api = window.Tawk_API;
+    if (!api) return;
+    // tawk.to ignores maximize() until its window has finished loading, so retry for a few seconds.
+    const reveal = () => {
+      let tries = 0;
+      const tick = () => {
+        try { api.showWidget(); api.maximize(); } catch { /* ignore */ }
+        let done = false;
+        try { done = Boolean(api.isChatMaximized && api.isChatMaximized()); } catch { /* ignore */ }
+        if (!done && ++tries < 10) window.setTimeout(tick, 500);
+      };
+      tick();
+    };
+    if (tawk.started) { reveal(); return; }
+    tawk.started = true;
+    api.onLoad = reveal;
+    try { api.start({ showWidget: true }); } catch { /* ignore */ }
+    reveal();
+  };
 
   return (
     <div className="fixed bottom-4 right-4 z-40 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
