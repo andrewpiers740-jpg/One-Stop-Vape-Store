@@ -161,6 +161,28 @@ const mcp = {
 fs.mkdirSync(path.join(root, "public/.well-known/mcp"), { recursive: true });
 fs.writeFileSync(path.join(root, "public/.well-known/mcp/server-card.json"), JSON.stringify(mcp, null, 2));
 
+
+// --- 6b. OAuth / OIDC / ACP / UCP discovery (public site: no auth, live read-only commerce endpoints) ---
+const D = `https://${SITE.domain}`;
+const wkw = (f, o) => fs.writeFileSync(path.join(root, "public/.well-known", f), JSON.stringify(o, null, 2));
+wkw("oauth-protected-resource", { resource: D, resource_name: `${SITE.name} Public Catalog`, authorization_servers: [], scopes_supported: [], bearer_methods_supported: [], resource_documentation: `${D}/auth.md`, resource_policy_uri: `${D}/terms/`, note: "All catalog resources are public. No OAuth tokens are required." });
+wkw("openid-configuration", { issuer: D, public_site: true, note: `${SITE.name} does not operate an OpenID Connect provider.`, authorization_endpoint: null, token_endpoint: null, userinfo_endpoint: null, jwks_uri: null, scopes_supported: [], response_types_supported: [], grant_types_supported: [], subject_types_supported: [], id_token_signing_alg_values_supported: [] });
+wkw("acp.json", { protocol: { name: "acp", version: "0.1.0" }, name: SITE.name, description: SITE.description, api_base_url: D, homepage: D, transports: ["https"], capabilities: { services: ["product-catalog", "blog", "faq", "wholesale"], ordering: "human-assisted", catalog_endpoint: `${D}/api/acp/catalog`, currency: SITE.contact.currency.code, minimum_order: SITE.order.minOrder, free_shipping_threshold: SITE.order.freeShippingThreshold }, contact: { email: SITE.contact.email, whatsapp: `https://wa.me/${SITE.contact.whatsapp}` }, legal: { age_restriction: "21+", product_type: "nicotine products" } });
+wkw("ucp", { ucp: "1.0", protocol_version: "1.0", spec: "https://ucp.dev/specification/overview/", schema: "https://ucp.dev/schema/v1.json", site: D, name: SITE.name, description: SITE.description, services: [{ id: "product-catalog", type: "catalog", url: `${D}/shop/` }, { id: "ucp-services", type: "commerce", url: `${D}/api/ucp/services`, description: "Read-only; orders are completed by a human" }], capabilities: ["browse", "inquiry", "content"], endpoints: { catalog: `${D}/api/products`, mcp: `${D}/api/mcp`, api_catalog: `${D}/.well-known/api-catalog`, llms_txt: `${D}/llms.txt` }, currency: SITE.contact.currency.code, legal: { age_restriction: "21+", product_type: "nicotine products" } });
+
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cdn.jsdelivr.net",
+  "style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data: https://*.tawk.to https://fonts.gstatic.com",
+  "connect-src 'self' https://*.tawk.to wss://*.tawk.to",
+  "frame-src 'self' https://*.tawk.to",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'"
+].join("; ");
 // --- 7. vercel.json ---
 const vercel = {
   "$schema": "https://openapi.vercel.sh/vercel.json",
@@ -173,7 +195,8 @@ const vercel = {
       { key: "X-Content-Type-Options", value: "nosniff" },
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
-      { key: "Link", value: "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\"" }
+      { key: "Content-Security-Policy-Report-Only", value: CSP },
+      { key: "Link", value: "</.well-known/openid-configuration>; rel=\"openid-configuration\", </.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\"" }
     ]},
     { source: "/.well-known/api-catalog", headers: [{ key: "Content-Type", value: "application/linkset+json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/agent-skills/index.json", headers: [{ key: "Content-Type", value: "application/json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },

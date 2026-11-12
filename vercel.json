@@ -22,8 +22,12 @@
           "value": "geolocation=(), microphone=(), camera=()"
         },
         {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com; img-src 'self' data: blob: https:; font-src 'self' data: https://*.tawk.to https://fonts.gstatic.com; connect-src 'self' https://*.tawk.to wss://*.tawk.to; frame-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        },
+        {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\""
+          "value": "</.well-known/openid-configuration>; rel=\"openid-configuration\", </.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\""
         }
       ]
     },

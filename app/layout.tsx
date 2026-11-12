@@ -10,13 +10,15 @@ import JsonLd from "@/src/components/JsonLd";
 import { CartProvider } from "@/src/components/CartProvider";
 import "./globals.css";
 
+const META_DESCRIPTION = "Shop premium disposable vapes, nixodine, nicotine salts, pouches and pod systems. Fast US shipping from Phoenix, Arizona. Adults 21+ only.";
+
 export const metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
-  description: SITE.description,
+  description: META_DESCRIPTION,
   metadataBase: new URL(`https://${SITE.domain}`),
   openGraph: {
     title: SITE.name,
-    description: SITE.description,
+    description: META_DESCRIPTION,
     url: `https://${SITE.domain}`,
     siteName: SITE.name,
     locale: "en_US",
@@ -25,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: SITE.name,
-    description: SITE.description,
+    description: META_DESCRIPTION,
   },
   robots: {
     index: true,

@@ -1,0 +1,14 @@
+{
+  "issuer": "https://www.onestopvapestore.com",
+  "public_site": true,
+  "note": "One Stop Vape Store does not operate an OpenID Connect provider.",
+  "authorization_endpoint": null,
+  "token_endpoint": null,
+  "userinfo_endpoint": null,
+  "jwks_uri": null,
+  "scopes_supported": [],
+  "response_types_supported": [],
+  "grant_types_supported": [],
+  "subject_types_supported": [],
+  "id_token_signing_alg_values_supported": []
+}
