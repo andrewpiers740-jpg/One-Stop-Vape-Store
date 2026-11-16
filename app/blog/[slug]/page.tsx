@@ -105,7 +105,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {prods.length > 0 && (
           <section aria-labelledby="shop-related" className="mt-14">
             <h2 id="shop-related" className="mb-6 text-2xl font-black tracking-tight text-slate-900">Shop related products</h2>
-            <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4">
               {prods.map((p) => (
                 <ProductCard key={p.slug} product={p} />
               ))}

@@ -56,7 +56,7 @@ export default function SearchPage() {
               Found {results.length} results for &ldquo;{query}&rdquo;
             </p>
             {results.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-5 lg:gap-6">
                 {results.map((prod: any) => (
                   <ProductCard key={prod.slug} product={prod} />
                 ))}

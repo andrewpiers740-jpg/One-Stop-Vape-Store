@@ -153,7 +153,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                     <div className="flex-grow h-px bg-slate-100" />
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 xl:grid-cols-4 xl:gap-6">
                     {groupedByBrand[brand].map((prod) => (
                       <ProductCard key={prod.slug} product={prod} />
                     ))}

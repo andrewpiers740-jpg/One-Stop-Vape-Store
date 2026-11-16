@@ -132,12 +132,12 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           </nav>
 
           {/* Pure white background card */}
-          <div className="aspect-square rounded-3xl bg-white border border-zinc-200/80 flex items-center justify-center p-8 md:p-12 overflow-hidden shadow-xl">
+          <div className="aspect-square rounded-3xl bg-white border border-zinc-200/80 flex items-center justify-center p-3 sm:p-8 md:p-10 overflow-hidden shadow-xl">
             <SmartImage 
               src={product.image} 
               alt={product.title} 
               priority={true}
-              className="w-full h-full object-contain hover:scale-105 transition-transform duration-700" 
+              className="w-full h-full object-contain transition-transform duration-700 motion-reduce:transition-none [@media(hover:hover)]:hover:scale-105" 
             />
           </div>
           
@@ -284,7 +284,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
             <h2 className="text-2xl md:text-4xl font-black tracking-tighter text-slate-900 uppercase">More from {product.brand}</h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4 lg:gap-6">
             {relatedProducts.map((p: any) => (
               <ProductCard key={p.slug} product={p} />
             ))}

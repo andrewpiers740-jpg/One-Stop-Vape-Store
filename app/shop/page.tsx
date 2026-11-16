@@ -64,7 +64,7 @@ export default function ShopPage() {
 
         {/* Product Grid */}
         <div className="flex-grow flex flex-col gap-12">
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 xl:grid-cols-4 xl:gap-6">
             {displayProducts.map((prod: any) => (
               <ProductCard key={prod.slug} product={prod} />
             ))}

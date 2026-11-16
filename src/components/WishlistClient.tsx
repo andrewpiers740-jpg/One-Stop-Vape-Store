@@ -126,7 +126,7 @@ export default function WishlistClient() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
         {items.map((item) => {
           const waUrl = `https://wa.me/${SITE.contact.whatsapp}?text=${encodeURIComponent(
             `Hi ${SITE.name}, I would like to order: ${item.title} (${item.priceDisplay}) from my wishlist.`
@@ -139,11 +139,11 @@ export default function WishlistClient() {
             >
               <div className="flex flex-col gap-4">
                 {/* Pure white background card for image */}
-                <div className="aspect-square rounded-2xl bg-white border border-zinc-200/80 p-6 flex items-center justify-center relative overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500">
+                <div className="aspect-square rounded-2xl bg-white border border-zinc-200/80 p-3 sm:p-5 flex items-center justify-center relative overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500">
                   <SmartImage
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain [@media(hover:hover)]:group-hover:scale-105 transition-transform motion-reduce:transition-none duration-500"
                   />
                   <button
                     onClick={() => removeItem(item.slug)}

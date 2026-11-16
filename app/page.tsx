@@ -122,7 +122,7 @@ export default function HomePage() {
             <div className="w-16 h-1 bg-emerald-500 mt-2" />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4 lg:gap-6">
             {featuredProducts.map((prod: any) => (
               <ProductCard key={prod.slug} product={prod} />
             ))}
