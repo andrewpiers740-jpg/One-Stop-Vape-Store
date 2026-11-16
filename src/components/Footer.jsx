@@ -95,9 +95,6 @@ export default function Footer() {
               <li>
                 <Link href="/fda-disclaimer" className="hover:text-emerald-600 transition-colors">FDA Disclaimer</Link>
               </li>
-              <li>
-                <Link href="/credits" className="hover:text-emerald-600 transition-colors">Photo Credits</Link>
-              </li>
             </ul>
           </div>
 
