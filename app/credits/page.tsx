@@ -1,6 +1,7 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
 import credits from "@/src/data/image-credits.json";
+import PageBanner from "@/src/components/PageBanner";
 
 export const metadata = {
   title: `Photo Credits | ${SITE.name}`,
@@ -20,6 +21,8 @@ export default function CreditsPage() {
   }
   const list = [...byPhotographer.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   return (
+    <>
+    <PageBanner slug="about" label="Photo credits" />
     <div className="mx-auto max-w-4xl px-6 py-20 text-slate-900">
       <h1 className="mb-4 text-4xl font-black uppercase tracking-tighter">Photo credits</h1>
       <p className="mb-10 text-slate-600">
@@ -36,5 +39,6 @@ export default function CreditsPage() {
       </ul>
       <p className="mt-10 text-xs text-slate-600">Product images and brand names are the property of their respective owners.</p>
     </div>
+    </>
   );
 }

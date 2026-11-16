@@ -12,6 +12,7 @@ import { productOffers } from "@/lib/schema";
 import { productFaq } from "@/lib/productFaq";
 import PaymentLogos from "@/src/components/PaymentLogos";
 import PostBody from "@/src/components/blog/PostBody";
+import PageBanner from "@/src/components/PageBanner";
 import { notFound } from "next/navigation";
 import { Check, MessageSquare, ShieldCheck, Truck, ChevronRight } from "lucide-react";
 
@@ -105,6 +106,8 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   };
 
   return (
+    <>
+    <PageBanner slug={product.category} label={product.brand || product.title} />
     <div className="max-w-[1440px] mx-auto px-6 py-12 flex flex-col gap-20 text-slate-900">
       <script
         type="application/ld+json"
@@ -293,5 +296,6 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
       )}
 
     </div>
+    </>
   );
 }

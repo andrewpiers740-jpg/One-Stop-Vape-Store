@@ -79,3 +79,13 @@
 }
 
 @keyframes tp-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Home hero brand slider */
+@keyframes hb-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes hb-rise { from { opacity: 0; transform: translate3d(0, 18px, 0); } to { opacity: 1; transform: none; } }
+@keyframes hb-pop { from { opacity: 0; transform: translate3d(0, 60px, 0) scale(0.85); } to { opacity: 1; transform: none; } }
+@keyframes hb-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+.hb-rise { animation: hb-rise 650ms cubic-bezier(.2,.8,.2,1) both; }
+.hb-pop { animation: hb-pop 800ms cubic-bezier(.2,.8,.2,1) both, hb-float 5s ease-in-out infinite; }
+.hb-float { animation: hb-float 5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .hb-rise, .hb-pop, .hb-float { animation: none !important; } }

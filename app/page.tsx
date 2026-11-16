@@ -10,9 +10,33 @@ import CategoryBlock from "@/src/components/CategoryBlock";
 import BrandCarousel from "@/src/components/BrandCarousel";
 import StarRating from "@/src/components/StarRating";
 import TrustpilotReviews from "@/src/components/TrustpilotReviews";
-import HeroShowcase from "@/src/components/HeroShowcase";
+import HeroBrandSlider, { HeroSlide } from "@/src/components/HeroBrandSlider";
+import { brandBySlug, getCollection, collectionsOf, hrefOf, brandHref } from "@/lib/collections";
 import siteImages from "@/src/data/site-images.json";
 import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Sparkles } from "lucide-react";
+
+// Hero slides: the five brands with the widest range in stock, each with three real product photos.
+const HERO_BRANDS: { slug: string; kicker: string; blurb: string; from1: string; to1: string; glow: string }[] = [
+  { slug: "geek-bar", kicker: "Top brand · Disposables", blurb: "Pulse, Pulse X and CLR: the biggest range of Geek Bar devices, in Single and 5 Pack.", from1: "#7a1c0d", to1: "#ff6a1a", glow: "#ffb347" },
+  { slug: "lost-mary", kicker: "Top brand · Disposables & kits", blurb: "MT15000, MT35000 Turbo, VIZ and Nera: every popular Lost Mary flavor.", from1: "#7a5200", to1: "#f5b800", glow: "#fff3a6" },
+  { slug: "foger", kicker: "Top brand · Pods & kits", blurb: "Switch Pro and Bit: pods, kits and disposables with Single and 5 Pack pricing.", from1: "#2a1466", to1: "#8a3ffc", glow: "#d3b8ff" },
+  { slug: "fifty-bar", kicker: "Top brand · 20K disposables", blurb: "Fifty Bar 20K, Hidden Hills and Fruitia collabs, ready to ship from Phoenix.", from1: "#06432a", to1: "#14c46a", glow: "#a8ffd0" },
+  { slug: "raz", kicker: "Top brand · Disposables", blurb: "LTX 25000, TN9000 and RX 50K, plus RAZ x Pod Juice e-liquids.", from1: "#5c0d33", to1: "#ff3d85", glow: "#ffb0cf" },
+];
+function heroSlides(): HeroSlide[] {
+  return HERO_BRANDS.flatMap((h) => {
+    const b = brandBySlug[h.slug];
+    const col = getCollection("disposables", h.slug);
+    if (!b || !col) return [];
+    const list = col.products;
+    const pick = [0, Math.floor(list.length / 3), Math.floor((2 * list.length) / 3)].map((ix) => list[ix]).filter(Boolean);
+    const lines = collectionsOf("disposables", "line").filter((l) => l.products.every((p: any) => brandBySlug[h.slug].label.toLowerCase().split(" ")[0] === String(p.brand).toLowerCase().split(" ")[0])).slice(0, 3).map((l) => ({ label: l.label, href: hrefOf(l) }));
+    return [{
+      brand: b.label, href: brandHref(b.slug), count: b.count, from: Math.min(...list.map((p: any) => p.price)), kicker: h.kicker, blurb: h.blurb, from1: h.from1, to1: h.to1, glow: h.glow,
+      products: pick.map((p: any) => ({ title: p.title, image: p.image, href: `/shop/${p.category}/${p.slug}/`, price: p.price })), lines,
+    }];
+  });
+}
 
 export default function HomePage() {
   // Get flagship products (Geek Bar, Lost Mary, Nixodine)
@@ -71,7 +95,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <HeroShowcase />
+          <HeroBrandSlider slides={heroSlides()} />
 
         </div>
       </section>

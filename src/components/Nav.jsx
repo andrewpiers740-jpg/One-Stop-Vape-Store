@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useMemo, useSyncExternalStore } from "react";
 import { SITE } from "@/src/config/site";
-import { Search, ShoppingBag, Menu, X, User, Heart, ChevronDown, ArrowRight, Plus } from "lucide-react";
+import { ShoppingBag, Menu, X, User, Heart, ChevronDown, ArrowRight, Plus } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCart } from "@/src/components/CartProvider";
+import SearchBox from "@/src/components/SearchBox";
 
 function subscribeWishlist(callback) {
   window.addEventListener("storage", callback);
@@ -74,7 +74,6 @@ function MegaPanel({ menu, onNavigate }) {
 export default function Nav({ menu: MEGA = {} }) {
   const { count: cartCount } = useCart();
   const [isOpen, setIsOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const [openMenu, setOpenMenu] = useState(null); // desktop mega menu (category slug)
   const [mobileSub, setMobileSub] = useState(null); // mobile accordion (category slug)
   const closeTimer = React.useRef(null);
@@ -86,7 +85,6 @@ export default function Nav({ menu: MEGA = {} }) {
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, []);
-  const router = useRouter();
 
   const rawWishlist = useSyncExternalStore(
     subscribeWishlist,
@@ -102,14 +100,6 @@ export default function Nav({ menu: MEGA = {} }) {
       return 0;
     }
   }, [rawWishlist]);
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-      setIsOpen(false);
-    }
-  };
 
   const navItems = [
     { name: "Wholesale", href: "/wholesale" },
@@ -143,28 +133,10 @@ export default function Nav({ menu: MEGA = {} }) {
             />
           </Link>
 
-          {/* Search Bar (Shifted slightly to the left) */}
-          <form 
-            onSubmit={handleSearchSubmit} 
-            className="flex-1 max-w-[200px] sm:max-w-[260px] md:max-w-[320px] ml-2 sm:ml-4 mr-auto"
-          >
-            <div className="relative w-full">
-              <input 
-                type="text" 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search products, brands..." 
-                className="w-full bg-slate-100 text-slate-700 placeholder-slate-500 text-xs py-2 pl-3.5 pr-8 rounded-full border border-slate-200 focus:outline-none focus:border-emerald-500 transition-colors"
-              />
-              <button 
-                type="submit" 
-                aria-label="Submit search"
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-600 hover:text-emerald-600 transition-colors"
-              >
-                <Search size={14} />
-              </button>
-            </div>
-          </form>
+          {/* Search bar with live suggestions */}
+          <div className="flex-1 max-w-[200px] sm:max-w-[260px] md:max-w-[340px] ml-2 sm:ml-4 mr-auto">
+            <SearchBox variant="nav" />
+          </div>
 
           {/* Action Icons: Wishlist, My Account, Cart, Mobile Toggle */}
           <div className="flex items-center gap-1 sm:gap-2 shrink-0">

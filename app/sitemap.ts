@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/wholesale",
     "/faq",
-    "/search",
     "/terms",
     "/privacy",
     "/california-privacy",

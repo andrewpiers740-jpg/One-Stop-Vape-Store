@@ -8,39 +8,44 @@ const products = JSON.parse(fs.readFileSync("src/data/products.json", "utf8"));
 const si = JSON.parse(fs.readFileSync("src/data/site-images.json", "utf8"));
 const credits = JSON.parse(fs.readFileSync("src/data/image-credits.json", "utf8"));
 
+// Every category tile shows the category's four best-stocked brands (by product count), one real product photo each.
 const TILES = {
-  "vape-juice": { alt: "Bottles of e-liquid from four different brands", pick: (p) => /ejuice|e-juice|eliquid|salts|juice/i.test(p.title) },
-  "nic-pouches": { alt: "Cans of nicotine pouches from four different brands", pick: () => true },
-  nixodine: { alt: "Nixodine products from the catalogue", pick: () => true },
+  "vape-juice": { label: "Bottles of e-liquid", pick: (p) => /ejuice|e-juice|eliquid|e-liquid|juice/i.test(p.title) },
+  "coils-pods": { label: "Replacement pods", pick: () => true },
+  disposables: { label: "Disposable vapes", pick: () => true },
+  "vape-kits": { label: "Vape and pod kits", pick: () => true },
+  vaporizers: { label: "Vaporizers and accessories", pick: () => true },
+  "nic-pouches": { label: "Cans of nicotine pouches", pick: () => true },
+  nixodine: { label: "Nixodine products", pick: () => true },
 };
 // One row of four cards in the upper half: the tile's title and blurb are overlaid on the lower half on the site.
-const W = 1200, H = 900, G = 28, CARD = 262;
+const W = 1200, H = 900, G = 28, CARD = 262, CARD_H = 430;
 const X0 = (W - (CARD * 4 + G * 3)) / 2;
 
 for (const [slug, cfg] of Object.entries(TILES)) {
-  const seen = new Set();
+  const inCat = products.filter((x) => x.category === slug && x.inStock !== false && cfg.pick(x) && x.brand && !/^new product$/i.test(x.brand) && fs.existsSync("public" + x.image));
+  const counts = {};
+  inCat.forEach((x) => (counts[x.brand] = (counts[x.brand] || 0) + 1));
   const chosen = [];
-  for (const p of products.filter((x) => x.category === slug && x.inStock !== false && cfg.pick(x))) {
-    if (seen.has(p.brand) || !fs.existsSync("public" + p.image)) continue;
-    seen.add(p.brand); chosen.push(p);
-    if (chosen.length === 4) break;
+  for (const brand of Object.keys(counts).sort((x, y) => counts[y] - counts[x]).slice(0, 4)) {
+    chosen.push(inCat.filter((x) => x.brand === brand).sort((x, y) => x.title.localeCompare(y.title))[0]);
   }
   if (chosen.length < 4) { for (const p of products.filter((x) => x.category === slug && !chosen.includes(x))) { chosen.push(p); if (chosen.length === 4) break; } }
   const layers = [];
   for (let i = 0; i < 4; i++) {
-    const x = Math.round(X0 + i * (CARD + G)), y = 150;
-    const card = await sharp({ create: { width: Math.round(CARD), height: Math.round(CARD), channels: 4, background: "#ffffff" } })
-      .composite([{ input: await sharp("public" + chosen[i].image).resize(Math.round(CARD - 40), Math.round(CARD - 40), { fit: "contain", background: "#ffffff" }).toBuffer(), left: 20, top: 20 }])
+    const x = Math.round(X0 + i * (CARD + G)), y = 56;
+    const card = await sharp({ create: { width: Math.round(CARD), height: CARD_H, channels: 4, background: "#ffffff" } })
+      .composite([{ input: await sharp(await sharp("public" + chosen[i].image).trim({ threshold: 14 }).toBuffer()).resize(Math.round(CARD - 44), CARD_H - 64, { fit: "contain", background: "#ffffff" }).toBuffer(), left: 20, top: 20 }])
       .png().toBuffer();
-    const rounded = await sharp(card).composite([{ input: Buffer.from(`<svg width="${Math.round(CARD)}" height="${Math.round(CARD)}"><rect width="100%" height="100%" rx="28" ry="28"/></svg>`), blend: "dest-in" }]).png().toBuffer();
-    const shadow = await sharp({ create: { width: Math.round(CARD), height: Math.round(CARD), channels: 4, background: { r: 15, g: 23, b: 42, alpha: 0.18 } } })
-      .composite([{ input: Buffer.from(`<svg width="${Math.round(CARD)}" height="${Math.round(CARD)}"><rect width="100%" height="100%" rx="28" ry="28"/></svg>`), blend: "dest-in" }]).blur(14).png().toBuffer();
+    const rounded = await sharp(card).composite([{ input: Buffer.from(`<svg width="${Math.round(CARD)}" height="${CARD_H}"><rect width="100%" height="100%" rx="28" ry="28"/></svg>`), blend: "dest-in" }]).png().toBuffer();
+    const shadow = await sharp({ create: { width: Math.round(CARD), height: CARD_H, channels: 4, background: { r: 15, g: 23, b: 42, alpha: 0.18 } } })
+      .composite([{ input: Buffer.from(`<svg width="${Math.round(CARD)}" height="${CARD_H}"><rect width="100%" height="100%" rx="28" ry="28"/></svg>`), blend: "dest-in" }]).blur(14).png().toBuffer();
     layers.push({ input: shadow, left: x, top: y + 10 }, { input: rounded, left: x, top: y });
   }
   const bg = Buffer.from(`<svg width="${W}" height="${H}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d1ecff"/><stop offset="1" stop-color="#eaf6ff"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/></svg>`);
   const out = `public/images/categories/${slug}.webp`;
   await sharp(bg).composite(layers).webp({ quality: 82 }).toFile(out);
-  si.tiles[slug] = { ...si.tiles[slug], src: `/images/categories/${slug}.webp`, alt: cfg.alt };
+  si.tiles[slug] = { ...si.tiles[slug], src: `/images/categories/${slug}.webp`, alt: `${cfg.label} from ${chosen.slice(0, -1).map((p) => p.brand).join(", ")} and ${chosen[chosen.length - 1].brand}` };
   delete credits[`/images/categories/${slug}.webp`];
   console.log(slug, chosen.map((p) => p.brand).join(" | "), (fs.statSync(out).size / 1024) | 0, "KB");
 }

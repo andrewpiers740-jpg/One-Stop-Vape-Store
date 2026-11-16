@@ -122,31 +122,31 @@
   "tiles": {
     "vape-juice": {
       "src": "/images/categories/vape-juice.webp",
-      "alt": "Bottles of e-liquid from four different brands"
+      "alt": "Bottles of e-liquid from Pod Juice, Monster Labs, Juice Head and Coastal Clouds"
     },
     "coils-pods": {
       "src": "/images/categories/coils-pods.webp",
-      "alt": "Hands refilling a vape pod"
+      "alt": "Replacement pods from Off Stamp, Smok, Caliburn and Geekvape"
     },
     "disposables": {
       "src": "/images/categories/disposables.webp",
-      "alt": "A disposable pod device held in an open hand"
+      "alt": "Disposable vapes from Geek Bar, Lost Mary, Foger and Fifty Bar"
     },
     "vape-kits": {
       "src": "/images/categories/vape-kits.webp",
-      "alt": "A box-mod vape kit on a wooden table"
+      "alt": "Vape and pod kits from Foger, Pod Salt, Mi-Pod and Off Stamp"
     },
     "vaporizers": {
       "src": "/images/categories/vaporizers.webp",
-      "alt": "A rack of vaporizer pens and cartridges"
+      "alt": "Vaporizers and accessories from Puffco, Dr Dabber, PAX and Lookah"
     },
     "nic-pouches": {
       "src": "/images/categories/nic-pouches.webp",
-      "alt": "Cans of nicotine pouches from four different brands"
+      "alt": "Cans of nicotine pouches from ZYN, LUCY, NOAT and ZIMO"
     },
     "nixodine": {
       "src": "/images/categories/nixodine.webp",
-      "alt": "Nixodine products from the catalogue"
+      "alt": "Nixodine products from NIX Liquids, Geek Labs, Rinnbar and Rifbar"
     }
   }
 }

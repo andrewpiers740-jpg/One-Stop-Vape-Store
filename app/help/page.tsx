@@ -34,7 +34,7 @@ export default function HelpCenterPage() {
           <h3>Cryptocurrency (save {SITE.order.cryptoDiscount}%)</h3>
           <p>Choose BTC, USDT, USDC, ETH, BNB or SOL. We show the exact amount, address and QR code, and we detect your payment on the blockchain. Need to buy crypto first? The payment window links to a trusted buying service.</p>
           <h3>Gift cards (save {SITE.order.giftCardDiscount}%)</h3>
-          <p>Apple, Razer, Paysafe, Sephora and Macy's gift cards are accepted. We send a buy link and instructions for uploading your card details securely.</p>
+          <p>Apple, Razer, Paysafe, Sephora and Macy&apos;s gift cards are accepted. We send a buy link and instructions for uploading your card details securely.</p>
         </>) },
         { id: "shipping", h2: "Shipping and delivery", body: (<>
           <h3>How long does delivery take?</h3>
