@@ -5,7 +5,6 @@ import { Search, ShoppingBag, Menu, X, User, Heart, ChevronDown, ArrowRight, Plu
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/src/components/CartProvider";
-import MEGA from "@/src/data/mega-menu.json";
 
 function subscribeWishlist(callback) {
   window.addEventListener("storage", callback);
@@ -72,7 +71,7 @@ function MegaPanel({ menu, onNavigate }) {
   );
 }
 
-export default function Nav() {
+export default function Nav({ menu: MEGA = {} }) {
   const { count: cartCount } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");

@@ -1,6 +1,7 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
 import Nav from "@/src/components/Nav";
+import { megaMenu } from "@/lib/collections";
 import Footer from "@/src/components/Footer";
 import AnnouncementBar from "@/src/components/AnnouncementBar";
 import AgeGateModal from "@/src/components/AgeGateModal";
@@ -61,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-slate-900 antialiased min-h-screen flex flex-col font-sans">
         <CartProvider>
           <AnnouncementBar />
-          <Nav />
+          <Nav menu={megaMenu()} />
           <main className="flex-grow">
             {children}
           </main>

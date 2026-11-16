@@ -18,7 +18,6 @@ Disallow: /api/crypto/
 Disallow: /api/crypto-rate/
 Disallow: /cart/
 Disallow: /checkout/
-Disallow: /browse/
 Sitemap: https://${SITE.domain}/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no

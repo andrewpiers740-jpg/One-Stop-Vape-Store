@@ -67,7 +67,7 @@ const cats = ["vape-juice", "coils-pods", "disposables", "vape-kits", "vaporizer
 ok("Every category has a tile and a banner", cats.every((c) => si.tiles[c] && si.banners[c] && fs.existsSync("public" + si.tiles[c].src) && fs.existsSync("public" + si.banners[c].src)));
 const pages = ["shop", "blog", "about", "contact", "faq", "help", "shipping", "refunds", "privacy", "terms", "pact-act", "fda-disclaimer", "california-privacy", "wholesale", "search", "wishlist", "account"];
 ok("Every main page has a banner", pages.every((p) => si.banners[p] && fs.existsSync("public" + si.banners[p].src)));
-const withBanner = (f) => /<PageBanner|<LegalPage/.test(read(f));
+const withBanner = (f) => /<PageBanner|<LegalPage|<CatalogListing/.test(read(f));
 const pageFiles = ["shipping", "about", "faq", "refunds", "privacy", "blog", "search", "account", "help", "terms", "pact-act", "fda-disclaimer", "california-privacy", "contact", "wholesale", "shop", "wishlist"].map((p) => `app/${p}/page.tsx`);
 ok("PageBanner rendered on every main page", pageFiles.every(withBanner), pageFiles.filter((f) => !withBanner(f)).join(", "));
 ok("PageBanner on category pages", withBanner("app/shop/[category]/page.tsx"));
