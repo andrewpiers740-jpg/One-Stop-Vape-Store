@@ -11,6 +11,7 @@
     "clean": "next clean",
     "crosscheck": "node scripts/crosscheck.mjs && node scripts/crosscheck-extra.mjs",
     "gen": "node scripts/gen-agent-files.mjs",
+    "menu": "node scripts/gen-menu.mjs",
     "blog": "node scripts/build-blog.mjs",
     "images:products": "node scripts/images-products.mjs",
     "images:curated": "node scripts/images-curated.mjs",

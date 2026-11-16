@@ -1,0 +1,889 @@
+{
+ "vape-juice": {
+  "name": "Vape Juice",
+  "href": "/shop/vape-juice/",
+  "total": 747,
+  "side": [],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 10,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "Pod Juice",
+      "href": "/browse/?category=vape-juice&brand=Pod+Juice",
+      "count": 170
+     },
+     {
+      "label": "Monster Labs",
+      "href": "/browse/?category=vape-juice&brand=Monster+Labs",
+      "count": 110
+     },
+     {
+      "label": "Cloud Nurdz",
+      "href": "/browse/?category=vape-juice&brand=Cloud+Nurdz",
+      "count": 90
+     },
+     {
+      "label": "Coastal Clouds",
+      "href": "/browse/?category=vape-juice&brand=Coastal+Clouds",
+      "count": 71
+     },
+     {
+      "label": "Juice Head",
+      "href": "/browse/?category=vape-juice&brand=Juice+Head",
+      "count": 65
+     },
+     {
+      "label": "7Daze",
+      "href": "/browse/?category=vape-juice&brand=7Daze",
+      "count": 36
+     },
+     {
+      "label": "Pod Salt",
+      "href": "/browse/?category=vape-juice&brand=Pod+Salt",
+      "count": 33
+     },
+     {
+      "label": "Naked100",
+      "href": "/browse/?category=vape-juice&brand=Naked100",
+      "count": 24
+     },
+     {
+      "label": "Specialty",
+      "href": "/browse/?category=vape-juice&brand=Specialty",
+      "count": 24
+     },
+     {
+      "label": "I Love Salts",
+      "href": "/browse/?category=vape-juice&brand=I+Love+Salts",
+      "count": 21
+     },
+     {
+      "label": "Beard Vape Co",
+      "href": "/browse/?category=vape-juice&brand=Beard+Vape+Co",
+      "count": 20
+     },
+     {
+      "label": "Air Factory",
+      "href": "/browse/?category=vape-juice&brand=Air+Factory",
+      "count": 18
+     },
+     {
+      "label": "VaporLax",
+      "href": "/browse/?category=vape-juice&brand=VaporLax",
+      "count": 18
+     },
+     {
+      "label": "Suicide Bunny",
+      "href": "/browse/?category=vape-juice&brand=Suicide+Bunny",
+      "count": 15
+     },
+     {
+      "label": "RAZ",
+      "href": "/browse/?category=vape-juice&brand=RAZ",
+      "count": 13
+     },
+     {
+      "label": "Urban Tale",
+      "href": "/browse/?category=vape-juice&brand=Urban+Tale",
+      "count": 12
+     },
+     {
+      "label": "TWIST",
+      "href": "/browse/?category=vape-juice&brand=TWIST",
+      "count": 5
+     },
+     {
+      "label": "Mad Hatter",
+      "href": "/browse/?category=vape-juice&brand=Mad+Hatter",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "title": "Shop by type",
+    "links": [
+     {
+      "label": "Free Base E-Liquid",
+      "href": "/browse/?category=vape-juice&sub=freebase-sub-ohm"
+     },
+     {
+      "label": "Nicotine Salts E-Liquid",
+      "href": "/browse/?category=vape-juice&sub=salt-nicotine-e-liquid"
+     },
+     {
+      "label": "Custard Monster",
+      "href": "/browse/?category=vape-juice&q=custard+monster"
+     },
+     {
+      "label": "Jam Monster",
+      "href": "/browse/?category=vape-juice&q=jam+monster"
+     },
+     {
+      "label": "Fruit Monster",
+      "href": "/browse/?category=vape-juice&q=fruit+monster"
+     },
+     {
+      "label": "Menthol E-Liquid",
+      "href": "/browse/?category=vape-juice&q=menthol"
+     },
+     {
+      "label": "Tobacco E-Liquid",
+      "href": "/browse/?category=vape-juice&q=tobacco"
+     },
+     {
+      "label": "Nixodine Juice",
+      "href": "/browse/?category=nixodine"
+     }
+    ]
+   }
+  ]
+ },
+ "coils-pods": {
+  "name": "Coils & Pods",
+  "href": "/shop/coils-pods/",
+  "total": 41,
+  "side": [
+   {
+    "label": "Replacement Pods",
+    "href": "/browse/?category=coils-pods&sub=replacement-pods"
+   },
+   {
+    "label": "Pods & Coils",
+    "href": "/browse/?category=coils-pods&sub=coils-pods"
+   }
+  ],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 10,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "Off Stamp",
+      "href": "/browse/?category=coils-pods&brand=Off+Stamp",
+      "count": 21
+     },
+     {
+      "label": "Smok",
+      "href": "/browse/?category=coils-pods&brand=Smok",
+      "count": 13
+     },
+     {
+      "label": "Caliburn",
+      "href": "/browse/?category=coils-pods&brand=Caliburn",
+      "count": 3
+     },
+     {
+      "label": "Geekvape",
+      "href": "/browse/?category=coils-pods&brand=Geekvape",
+      "count": 2
+     },
+     {
+      "label": "Vinci",
+      "href": "/browse/?category=coils-pods&brand=Vinci",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "title": "Shop by product line",
+    "links": [
+     {
+      "label": "Off Stamp Classic Cube",
+      "href": "/browse/?category=coils-pods&q=classic+cube"
+     },
+     {
+      "label": "Off Stamp Ice Cube",
+      "href": "/browse/?category=coils-pods&q=ice+cube"
+     },
+     {
+      "label": "Smok Nord",
+      "href": "/browse/?category=coils-pods&q=nord"
+     },
+     {
+      "label": "Smok Novo",
+      "href": "/browse/?category=coils-pods&q=novo"
+     },
+     {
+      "label": "Caliburn Pods",
+      "href": "/browse/?category=coils-pods&brand=Caliburn"
+     }
+    ]
+   }
+  ]
+ },
+ "disposables": {
+  "name": "Disposable Vapes",
+  "href": "/shop/disposables/",
+  "total": 1141,
+  "side": [],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 10,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "Geek Bar",
+      "href": "/browse/?category=disposables&brand=Geek+Bar",
+      "count": 197
+     },
+     {
+      "label": "Lost Mary",
+      "href": "/browse/?category=disposables&brand=Lost+Mary",
+      "count": 156
+     },
+     {
+      "label": "Foger",
+      "href": "/browse/?category=disposables&brand=Foger",
+      "count": 111
+     },
+     {
+      "label": "UT / FLUM",
+      "href": "/browse/?category=disposables&brand=UT%2CUT+Bar%2CFLUM",
+      "count": 110
+     },
+     {
+      "label": "Fifty Bar",
+      "href": "/browse/?category=disposables&brand=Fifty+Bar",
+      "count": 107
+     },
+     {
+      "label": "RAZ",
+      "href": "/browse/?category=disposables&brand=RAZ",
+      "count": 87
+     },
+     {
+      "label": "EBCREATE",
+      "href": "/browse/?category=disposables&brand=EBCREATE",
+      "count": 40
+     },
+     {
+      "label": "Rifbar",
+      "href": "/browse/?category=disposables&brand=Rifbar",
+      "count": 39
+     },
+     {
+      "label": "Horizontech",
+      "href": "/browse/?category=disposables&brand=Horizontech%2CHorizonTech",
+      "count": 32
+     },
+     {
+      "label": "Off Stamp",
+      "href": "/browse/?category=disposables&brand=Off+Stamp",
+      "count": 31
+     },
+     {
+      "label": "Mr Fog",
+      "href": "/browse/?category=disposables&brand=Mr+Fog",
+      "count": 28
+     },
+     {
+      "label": "VaporLax",
+      "href": "/browse/?category=disposables&brand=VaporLax",
+      "count": 27
+     },
+     {
+      "label": "Rinnbar",
+      "href": "/browse/?category=disposables&brand=Rinnbar",
+      "count": 25
+     },
+     {
+      "label": "Fume",
+      "href": "/browse/?category=disposables&brand=Fume",
+      "count": 24
+     },
+     {
+      "label": "Breeze",
+      "href": "/browse/?category=disposables&brand=Breeze",
+      "count": 19
+     },
+     {
+      "label": "Oilio",
+      "href": "/browse/?category=disposables&brand=Oilio",
+      "count": 19
+     },
+     {
+      "label": "X-Posed",
+      "href": "/browse/?category=disposables&brand=X-Posed",
+      "count": 19
+     },
+     {
+      "label": "FASTA",
+      "href": "/browse/?category=disposables&brand=FASTA",
+      "count": 17
+     },
+     {
+      "label": "Shot Caller",
+      "href": "/browse/?category=disposables&brand=Shot+Caller",
+      "count": 17
+     },
+     {
+      "label": "Loon",
+      "href": "/browse/?category=disposables&brand=Loon",
+      "count": 16
+     },
+     {
+      "label": "Float",
+      "href": "/browse/?category=disposables&brand=Float",
+      "count": 12
+     },
+     {
+      "label": "Juice Head",
+      "href": "/browse/?category=disposables&brand=Juice+Head",
+      "count": 8
+     }
+    ]
+   },
+   {
+    "title": "Shop by product line",
+    "limit": 11,
+    "links": [
+     {
+      "label": "Fifty Bar 20K",
+      "href": "/browse/?category=disposables&brand=Fifty+Bar&q=20k"
+     },
+     {
+      "label": "Foger Switch Pro",
+      "href": "/browse/?category=disposables&brand=Foger&q=switch+pro"
+     },
+     {
+      "label": "Foger Bit 35K",
+      "href": "/browse/?category=disposables&brand=Foger&q=bit+35k"
+     },
+     {
+      "label": "Geek Bar Pulse X 25K",
+      "href": "/browse/?category=disposables&brand=Geek+Bar&q=pulse+x+25k"
+     },
+     {
+      "label": "Geek Bar Pulse X2 50K",
+      "href": "/browse/?category=disposables&brand=Geek+Bar&q=pulse+x+2+50k"
+     },
+     {
+      "label": "Geek Bar Pulse (all editions)",
+      "href": "/browse/?category=disposables&brand=Geek+Bar&q=pulse"
+     },
+     {
+      "label": "Lost Mary MT35000 Turbo",
+      "href": "/browse/?category=disposables&brand=Lost+Mary&q=mt35"
+     },
+     {
+      "label": "Lost Mary MT15000 Turbo",
+      "href": "/browse/?category=disposables&brand=Lost+Mary&q=mt15000"
+     },
+     {
+      "label": "Lost Mary VIZ 55K",
+      "href": "/browse/?category=disposables&brand=Lost+Mary&q=viz"
+     },
+     {
+      "label": "RAZ LTX 25000",
+      "href": "/browse/?category=disposables&brand=RAZ&q=ltx"
+     },
+     {
+      "label": "RAZ TN9000",
+      "href": "/browse/?category=disposables&brand=RAZ&q=tn9000"
+     },
+     {
+      "label": "UT Bar 50K",
+      "href": "/browse/?category=disposables&brand=UT%2CUT+Bar%2CFLUM&q=50k"
+     },
+     {
+      "label": "EBCREATE BC Pro 40K",
+      "href": "/browse/?category=disposables&brand=EBCREATE&q=bc+pro+40k"
+     },
+     {
+      "label": "EBCREATE BC5000",
+      "href": "/browse/?category=disposables&brand=EBCREATE&q=bc5000"
+     },
+     {
+      "label": "FASTA Alien 51K",
+      "href": "/browse/?category=disposables&brand=FASTA&q=alien"
+     },
+     {
+      "label": "Horizontech 100K",
+      "href": "/browse/?category=disposables&brand=Horizontech%2CHorizonTech&q=100k"
+     },
+     {
+      "label": "Oilio Platypus 50K",
+      "href": "/browse/?category=disposables&brand=Oilio"
+     }
+    ]
+   },
+   {
+    "title": "Shop by flavor",
+    "links": [
+     {
+      "label": "Banana Vapes",
+      "href": "/browse/?category=disposables&q=banana"
+     },
+     {
+      "label": "Blue Razz Vapes",
+      "href": "/browse/?category=disposables&q=blue+razz"
+     },
+     {
+      "label": "Cherry Vapes",
+      "href": "/browse/?category=disposables&q=cherry"
+     },
+     {
+      "label": "Clear Vapes",
+      "href": "/browse/?category=disposables&q=clear"
+     },
+     {
+      "label": "Mango Vapes",
+      "href": "/browse/?category=disposables&q=mango"
+     },
+     {
+      "label": "Grape Vapes",
+      "href": "/browse/?category=disposables&q=grape"
+     },
+     {
+      "label": "Lush Ice Vapes",
+      "href": "/browse/?category=disposables&q=lush+ice"
+     },
+     {
+      "label": "Mint Vapes",
+      "href": "/browse/?category=disposables&q=mint"
+     },
+     {
+      "label": "Strawberry Vapes",
+      "href": "/browse/?category=disposables&q=strawberry"
+     },
+     {
+      "label": "Tobacco Vapes",
+      "href": "/browse/?category=disposables&q=tobacco"
+     },
+     {
+      "label": "Watermelon Vapes",
+      "href": "/browse/?category=disposables&q=watermelon"
+     },
+     {
+      "label": "Peach Vapes",
+      "href": "/browse/?category=disposables&q=peach"
+     },
+     {
+      "label": "Lemon Vapes",
+      "href": "/browse/?category=disposables&q=lemon"
+     },
+     {
+      "label": "Pineapple Vapes",
+      "href": "/browse/?category=disposables&q=pineapple"
+     },
+     {
+      "label": "Apple Vapes",
+      "href": "/browse/?category=disposables&q=apple"
+     }
+    ]
+   },
+   {
+    "title": "Shop by strength",
+    "links": [
+     {
+      "label": "Nicotine Free Disposable Vapes",
+      "href": "/browse/?category=disposables&strength=none"
+     },
+     {
+      "label": "Nicotine Disposable Vapes",
+      "href": "/browse/?category=disposables&strength=has"
+     }
+    ]
+   }
+  ]
+ },
+ "vape-kits": {
+  "name": "Vape Kits",
+  "href": "/shop/vape-kits/",
+  "total": 252,
+  "side": [
+   {
+    "label": "All Vape Kits",
+    "href": "/browse/?category=vape-kits"
+   },
+   {
+    "label": "Pod System Vapes",
+    "href": "/browse/?category=vape-kits&sub=pod-kits"
+   },
+   {
+    "label": "Vape Kits & Mods",
+    "href": "/browse/?category=vape-kits&sub=vape-kits"
+   }
+  ],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 10,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "Foger",
+      "href": "/browse/?category=vape-kits&brand=Foger",
+      "count": 80
+     },
+     {
+      "label": "Pod Salt",
+      "href": "/browse/?category=vape-kits&brand=Pod+Salt",
+      "count": 57
+     },
+     {
+      "label": "Mi-Pod",
+      "href": "/browse/?category=vape-kits&brand=Mi-Pod",
+      "count": 28
+     },
+     {
+      "label": "Off Stamp",
+      "href": "/browse/?category=vape-kits&brand=Off+Stamp",
+      "count": 24
+     },
+     {
+      "label": "X-Posed",
+      "href": "/browse/?category=vape-kits&brand=X-Posed",
+      "count": 20
+     },
+     {
+      "label": "Lost Mary",
+      "href": "/browse/?category=vape-kits&brand=Lost+Mary",
+      "count": 10
+     },
+     {
+      "label": "Smok",
+      "href": "/browse/?category=vape-kits&brand=Smok",
+      "count": 10
+     },
+     {
+      "label": "Caliburn",
+      "href": "/browse/?category=vape-kits&brand=Caliburn",
+      "count": 7
+     },
+     {
+      "label": "Geekvape",
+      "href": "/browse/?category=vape-kits&brand=Geekvape",
+      "count": 5
+     },
+     {
+      "label": "Voopoo",
+      "href": "/browse/?category=vape-kits&brand=Voopoo",
+      "count": 3
+     },
+     {
+      "label": "FASTA",
+      "href": "/browse/?category=vape-kits&brand=FASTA",
+      "count": 2
+     },
+     {
+      "label": "Oxbar",
+      "href": "/browse/?category=vape-kits&brand=Oxbar",
+      "count": 2
+     },
+     {
+      "label": "Vaporesso",
+      "href": "/browse/?category=vape-kits&brand=Vaporesso",
+      "count": 2
+     },
+     {
+      "label": "Suorin",
+      "href": "/browse/?category=vape-kits&brand=Suorin",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "title": "Shop by product line",
+    "links": [
+     {
+      "label": "Foger Switch Pro Kit",
+      "href": "/browse/?category=vape-kits&brand=Foger"
+     },
+     {
+      "label": "Pod Salt Onyx Cloud X",
+      "href": "/browse/?category=vape-kits&brand=Pod+Salt&q=onyx"
+     },
+     {
+      "label": "Pod Salt Hit 40K",
+      "href": "/browse/?category=vape-kits&brand=Pod+Salt&q=hit+40k"
+     },
+     {
+      "label": "Pod Salt Air 40K",
+      "href": "/browse/?category=vape-kits&brand=Pod+Salt&q=air+40k"
+     },
+     {
+      "label": "Off Stamp X-Cube Kit",
+      "href": "/browse/?category=vape-kits&brand=Off+Stamp"
+     },
+     {
+      "label": "X-Posed 35K Kit",
+      "href": "/browse/?category=vape-kits&brand=X-Posed"
+     },
+     {
+      "label": "Mi-Pod Pro",
+      "href": "/browse/?category=vape-kits&brand=Mi-Pod"
+     },
+     {
+      "label": "Lost Mary Nera Fullview",
+      "href": "/browse/?category=vape-kits&brand=Lost+Mary"
+     },
+     {
+      "label": "Smok Nord & Novo",
+      "href": "/browse/?category=vape-kits&brand=Smok"
+     },
+     {
+      "label": "Caliburn",
+      "href": "/browse/?category=vape-kits&brand=Caliburn"
+     }
+    ]
+   },
+   {
+    "title": "Shop by type",
+    "links": [
+     {
+      "label": "Pod Kits",
+      "href": "/browse/?category=vape-kits&sub=pod-kits"
+     },
+     {
+      "label": "Vape Kits",
+      "href": "/browse/?category=vape-kits&sub=vape-kits"
+     },
+     {
+      "label": "Nixodine Pods",
+      "href": "/browse/?category=nixodine"
+     }
+    ]
+   }
+  ]
+ },
+ "vaporizers": {
+  "name": "Vaporizers",
+  "href": "/shop/vaporizers/",
+  "total": 94,
+  "side": [],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 10,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "Puffco",
+      "href": "/browse/?category=vaporizers&brand=Puffco",
+      "count": 43
+     },
+     {
+      "label": "Dr Dabber",
+      "href": "/browse/?category=vaporizers&brand=Dr+Dabber",
+      "count": 24
+     },
+     {
+      "label": "PAX",
+      "href": "/browse/?category=vaporizers&brand=PAX",
+      "count": 15
+     },
+     {
+      "label": "CCELL",
+      "href": "/browse/?category=vaporizers&brand=CCELL",
+      "count": 4
+     },
+     {
+      "label": "Lookah",
+      "href": "/browse/?category=vaporizers&brand=Lookah",
+      "count": 4
+     },
+     {
+      "label": "Cartisan",
+      "href": "/browse/?category=vaporizers&brand=Cartisan",
+      "count": 3
+     },
+     {
+      "label": "S6XTH SENSE",
+      "href": "/browse/?category=vaporizers&brand=S6XTH+SENSE",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "title": "Shop by type",
+    "links": [
+     {
+      "label": "Puffco Devices",
+      "href": "/browse/?category=vaporizers&brand=Puffco&q=peak%2Cproxy%2Cpivot%2Cplus"
+     },
+     {
+      "label": "Puffco Accessories",
+      "href": "/browse/?category=vaporizers&brand=Puffco&q=glass%2Cchamber%2Catomizer%2Ccap%2Cbag%2Ccase%2Cpack%2Cbowl"
+     },
+     {
+      "label": "Puffco Water Pipes",
+      "href": "/browse/?category=vaporizers&brand=Puffco&q=pipe%2Cbub%2Cwizard%2Crecycler%2Ccupsy%2Cbudsy%2Cripple"
+     },
+     {
+      "label": "Vaporizer Batteries",
+      "href": "/browse/?category=vaporizers&q=battery"
+     },
+     {
+      "label": "Glass & Chambers",
+      "href": "/browse/?category=vaporizers&q=glass%2Cchamber"
+     }
+    ]
+   }
+  ]
+ },
+ "nic-pouches": {
+  "name": "Nicotine Pouches",
+  "href": "/shop/nic-pouches/",
+  "total": 78,
+  "side": [],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 12,
+    "twoCols": true,
+    "links": [
+     {
+      "label": "ZYN",
+      "href": "/browse/?category=nic-pouches&brand=ZYN",
+      "count": 24
+     },
+     {
+      "label": "LUCY",
+      "href": "/browse/?category=nic-pouches&brand=LUCY",
+      "count": 13
+     },
+     {
+      "label": "NOAT",
+      "href": "/browse/?category=nic-pouches&brand=NOAT",
+      "count": 10
+     },
+     {
+      "label": "ZIMO",
+      "href": "/browse/?category=nic-pouches&brand=ZIMO",
+      "count": 9
+     },
+     {
+      "label": "AMMO",
+      "href": "/browse/?category=nic-pouches&brand=AMMO",
+      "count": 6
+     },
+     {
+      "label": "Alp Drifter",
+      "href": "/browse/?category=nic-pouches&brand=Alp+Drifter",
+      "count": 5
+     },
+     {
+      "label": "Juice Head",
+      "href": "/browse/?category=nic-pouches&brand=Juice+Head",
+      "count": 5
+     },
+     {
+      "label": "American Ice",
+      "href": "/browse/?category=nic-pouches&brand=American+Ice",
+      "count": 3
+     },
+     {
+      "label": "Sesh",
+      "href": "/browse/?category=nic-pouches&brand=Sesh",
+      "count": 3
+     }
+    ]
+   }
+  ]
+ },
+ "nixodine": {
+  "name": "Nixodine",
+  "href": "/shop/nixodine/",
+  "total": 162,
+  "side": [],
+  "columns": [
+   {
+    "title": "Shop by brand",
+    "limit": 12,
+    "twoCols": false,
+    "links": [
+     {
+      "label": "NIX Liquids",
+      "href": "/browse/?category=nixodine&brand=NIX+Liquids",
+      "count": 28
+     },
+     {
+      "label": "Geek Labs",
+      "href": "/browse/?category=nixodine&brand=Geek+Labs",
+      "count": 23
+     },
+     {
+      "label": "Rinnbar",
+      "href": "/browse/?category=nixodine&brand=Rinnbar",
+      "count": 20
+     },
+     {
+      "label": "Lost Mary",
+      "href": "/browse/?category=nixodine&brand=Lost+Mary",
+      "count": 15
+     },
+     {
+      "label": "Rifbar",
+      "href": "/browse/?category=nixodine&brand=Rifbar",
+      "count": 15
+     },
+     {
+      "label": "Hotbox",
+      "href": "/browse/?category=nixodine&brand=Hotbox",
+      "count": 14
+     },
+     {
+      "label": "Hookah Labs",
+      "href": "/browse/?category=nixodine&brand=Hookah+Labs",
+      "count": 11
+     },
+     {
+      "label": "YOVO",
+      "href": "/browse/?category=nixodine&brand=YOVO",
+      "count": 10
+     },
+     {
+      "label": "Fifty Bar",
+      "href": "/browse/?category=nixodine&brand=Fifty+Bar",
+      "count": 9
+     },
+     {
+      "label": "Juice Head",
+      "href": "/browse/?category=nixodine&brand=Juice+Head",
+      "count": 9
+     },
+     {
+      "label": "Parfflo",
+      "href": "/browse/?category=nixodine&brand=Parfflo",
+      "count": 8
+     }
+    ]
+   },
+   {
+    "title": "Shop by type",
+    "links": [
+     {
+      "label": "Nixodine Disposables",
+      "href": "/browse/?category=nixodine&q=k"
+     },
+     {
+      "label": "Fifty Bar 20K (Nixodine)",
+      "href": "/browse/?category=nixodine&brand=Fifty+Bar"
+     },
+     {
+      "label": "Lost Mary MT35K Turbo (Nixodine)",
+      "href": "/browse/?category=nixodine&brand=Lost+Mary"
+     },
+     {
+      "label": "Nixodine E-Liquids (100 mL)",
+      "href": "/browse/?category=nixodine&brand=NIX+Liquids"
+     },
+     {
+      "label": "Rinnbar 50K Nixodine",
+      "href": "/browse/?category=nixodine&brand=Rinnbar"
+     },
+     {
+      "label": "Hookah Labs",
+      "href": "/browse/?category=nixodine&brand=Hookah+Labs"
+     }
+    ]
+   }
+  ]
+ }
+}
