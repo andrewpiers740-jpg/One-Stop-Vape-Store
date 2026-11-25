@@ -1,4 +1,9 @@
 import { NextResponse } from 'next/server';
+import imageMap from './src/data/image-map.json';
+
+// Renamed image files: old image URLs 308-redirect to the new keyword file names. Done here, not in vercel.json,
+// because Vercel caps a deployment at 2,048 routes and these are 1,000+ one-to-one rules.
+const IMAGE_REDIRECTS = new Map(Object.entries(imageMap));
 
 /**
  * Markdown negotiation (agents): serve the llms.txt summary at "/" only when the client
@@ -22,6 +27,8 @@ function prefersMarkdownOverHtml(accept) {
 }
 
 export function middleware(request) {
+  const moved = IMAGE_REDIRECTS.get(request.nextUrl.pathname);
+  if (moved) return NextResponse.redirect(new URL(moved, request.url), 308);
   const accept = request.headers.get('accept') || '';
   if (request.nextUrl.pathname === '/' && prefersMarkdownOverHtml(accept)) {
     return NextResponse.rewrite(new URL('/llms.txt', request.url));
@@ -30,5 +37,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/'],
+  matcher: ['/', '/images/:path*'],
 };

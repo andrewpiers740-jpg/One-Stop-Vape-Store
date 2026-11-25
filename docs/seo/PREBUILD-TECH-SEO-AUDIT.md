@@ -90,7 +90,7 @@ How to fix: set the hero image alt in each post in `content/blog/*.mjs` to start
 
 ## 6. Before deploy
 1. Build from a clean tree, then run `node scripts/gen-agent-files.mjs` and `node scripts/crosscheck.mjs`.
-2. Redirects: `src/data/redirects.json` has 993 entries against Vercel's limit of about 1,024, so leave room before adding more. Image redirects (1,090) live in `vercel.json` and only work on Vercel, so test them on a preview deployment.
+2. Route limit: Vercel allows at most 2,048 routes (redirects, rewrites, headers) per deployment. The first push failed with 2,156. Page redirects (993 plus 11 rewrites) stay in `src/data/redirects.json`; the 1,090 old-image redirects now run in `middleware.js` from `src/data/image-map.json`, so `vercel.json` holds only headers. Total is about 1,070 routes, leaving about 970 spare. Test an old image URL on the preview to confirm it redirects.
 3. Redirects are 308, not 301. Search engines treat them the same.
 4. Review weak keyword slugs now that they are permanent, for example `/brands/pod-salt-reddit/`.
 5. Run PageSpeed Insights on the Vercel preview for Core Web Vitals and TTFB (rule 20). Local timings are not meaningful.

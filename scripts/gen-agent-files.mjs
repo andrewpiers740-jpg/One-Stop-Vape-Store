@@ -213,12 +213,10 @@ const CSP = [
   "frame-ancestors 'self'"
 ].join("; ");
 // --- 7. vercel.json ---
-// renamed image files (file names = primary keyword): old image URLs 301 to the new ones
-const imageMap = fs.existsSync("src/data/image-map.json") ? JSON.parse(fs.readFileSync("src/data/image-map.json", "utf8")) : {};
+// renamed-image redirects live in middleware.js (src/data/image-map.json), not here: Vercel allows max 2,048 routes per deployment
 const vercel = {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   // apex -> www is configured in Vercel (Project > Domains); a www -> apex rule here would loop, so there is none.
-  redirects: Object.entries(imageMap).map(([source, destination]) => ({ source, destination, permanent: true })),
   headers: [
     { source: "/((?!_next|favicon.ico).*)", headers: [
       { key: "X-Frame-Options", value: "SAMEORIGIN" },
