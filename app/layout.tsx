@@ -40,6 +40,7 @@ export const metadata = {
   },
   alternates: {
     canonical: "./",
+    languages: { "en-US": "./", "x-default": "./" },
   },
   other: {
     "google-site-verification": SITE.gscVerification,

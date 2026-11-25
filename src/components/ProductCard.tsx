@@ -4,13 +4,14 @@ import SmartImage from "@/src/components/SmartImage";
 import StarRating from "@/src/components/StarRating";
 import AddToCartButton from "@/src/components/AddToCartButton";
 import { getVariantGroups } from "@/lib/variants";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 type P = { slug: string; title: string; brand?: string; category: string; price: number; priceDisplay?: string; image: string; badge?: string; nicotine?: string; packSize?: string; rawPrice?: string; rating?: number; reviewsCount?: number };
 
 // One tile for every product grid on the site: white image frame, brand, title, rating, price, and a working
 // quantity stepper + "Add to cart" button. The links and the buy controls are siblings (no interactive nesting).
 export default function ProductCard({ product: p, showBadge = true }: { product: P; showBadge?: boolean }) {
-  const href = `/shop/${p.category}/${p.slug}/`;
+  const href = productHref(p);
   const hasOptions = getVariantGroups(p as any).length > 0;
   return (
     <article className="group flex h-full flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-2.5 transition-all sm:rounded-3xl sm:p-3.5 duration-300 hover:border-emerald-500/50 hover:shadow-lg">
@@ -24,9 +25,9 @@ export default function ProductCard({ product: p, showBadge = true }: { product:
       </Link>
       <div className="flex flex-1 flex-col gap-1 px-1">
         <span className="truncate text-[10px] font-black uppercase tracking-widest text-slate-600">{p.brand}</span>
-        <h3 className="line-clamp-2 min-h-[2.5rem] text-sm font-bold leading-tight tracking-tight text-slate-900">
+        <p className="line-clamp-2 min-h-[2.5rem] text-sm font-bold leading-tight tracking-tight text-slate-900">
           <Link href={href} className="hover:text-emerald-600">{p.title}</Link>
-        </h3>
+        </p>
         <StarRating rating={p.rating} reviewsCount={p.reviewsCount} size="xs" />
         <div className="mt-1 flex items-baseline justify-between gap-2">
           <p className="font-mono text-base font-bold tabular-nums text-emerald-700">{p.priceDisplay || `$${p.price.toFixed(2)}`}</p>

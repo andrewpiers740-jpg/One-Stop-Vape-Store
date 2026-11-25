@@ -195,7 +195,7 @@ export default function CheckoutClient() {
 
         <label className="flex cursor-pointer items-start gap-3 text-xs text-slate-700">
           <input type="checkbox" checked={age} onChange={(e) => setAge(e.target.checked)} className="mt-0.5 h-5 w-5 shrink-0 accent-[#0b6dff]" />
-          <span>I confirm I am {SITE.compliance.ageThreshold}+ and will sign for delivery. I accept the <Link href="/terms" className="underline">terms</Link> and <Link href="/refunds" className="underline">refund policy</Link>.</span>
+          <span>I confirm I am {SITE.compliance.ageThreshold}+ and will sign for delivery. I accept the <Link href="/terms-of-service" className="underline">terms</Link> and <Link href="/refund-and-return-policy" className="underline">refund policy</Link>.</span>
         </label>
 
         {error && !cryptoOpen && <p role="alert" className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 p-3 text-xs text-red-700"><AlertCircle size={14} className="mt-0.5 shrink-0" />{error}</p>}

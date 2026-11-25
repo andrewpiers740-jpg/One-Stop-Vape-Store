@@ -1,117 +1,9 @@
 {
-  "//images/hero/hero-1-one-stop-shop.webp": {
-    "id": "hVcmxpYg1Gc",
-    "by": "E-Liquids UK",
-    "byUrl": "https://unsplash.com/@eliquidsuk",
-    "page": "https://unsplash.com/photos/man-in-black-long-sleeve-shirt-holding-black-dslr-camera-hVcmxpYg1Gc"
-  },
-  "//images/hero/hero-2-vapor-clouds.webp": {
-    "id": "4TcUM4qz9Dc",
-    "by": "Quinten de Graaf",
-    "byUrl": "https://unsplash.com/@quinten149",
-    "page": "https://unsplash.com/photos/man-smoking-with-black-background-4TcUM4qz9Dc"
-  },
-  "//images/hero/hero-3-flavor-clouds.webp": {
-    "id": "pazM9TQJ2Ck",
-    "by": "Ruvim Noga",
-    "byUrl": "https://unsplash.com/@ruvimnogaphoto",
-    "page": "https://unsplash.com/photos/blue-red-and-black-smoke-digital-wallpaper-pazM9TQJ2Ck"
-  },
-  "//images/hero/hero-4-disposable-pods.webp": {
-    "id": "PYOgYPnNYO0",
-    "by": "Romain B",
-    "byUrl": "https://unsplash.com/@myblu",
-    "page": "https://unsplash.com/photos/a-close-up-of-a-pink-pen-on-a-black-surface-PYOgYPnNYO0"
-  },
-  "//images/hero/hero-5-premium-eliquid.webp": {
-    "id": "7Fofd92SXak",
-    "by": "Sierra Alpha Juliet",
-    "byUrl": "https://unsplash.com/@mrhz",
-    "page": "https://unsplash.com/photos/a-table-topped-with-lots-of-different-types-of-electronic-devices-7Fofd92SXak"
-  },
-  "//images/banners/shop.webp": {
-    "id": "qIZMt-o2RIk",
-    "by": "Pawel Czerwinski",
-    "byUrl": "https://unsplash.com/@pawel_czerwinski",
-    "page": "https://unsplash.com/photos/a-blue-and-black-background-with-wavy-lines-qIZMt-o2RIk"
-  },
-  "//images/banners/blog.webp": {
-    "id": "ohQinqTl_DE",
-    "by": "Max Kleinen",
-    "byUrl": "https://unsplash.com/@hirmin",
-    "page": "https://unsplash.com/photos/blue-smoke-on-black-background-ohQinqTl_DE"
-  },
-  "//images/banners/about.webp": {
-    "id": "jypIYXtYw8c",
-    "by": "MJH SHIKDER",
-    "byUrl": "https://unsplash.com/@mjh_shikder",
-    "page": "https://unsplash.com/photos/a-blue-abstract-background-with-wavy-shapes-jypIYXtYw8c"
-  },
-  "//images/banners/contact.webp": {
-    "id": "Lx6shBsd22Y",
-    "by": "Олег Мороз",
-    "byUrl": "https://unsplash.com/@tengyart",
-    "page": "https://unsplash.com/photos/a-cloud-of-smoke-Lx6shBsd22Y"
-  },
-  "//images/banners/faq.webp": {
-    "id": "08Jff84I-sA",
-    "by": "Shreyansh Mishra",
-    "byUrl": "https://unsplash.com/@shreyansh_mishra",
-    "page": "https://unsplash.com/photos/swirling-blue-abstract-art-with-dark-shadows-08Jff84I-sA"
-  },
-  "//images/banners/help.webp": {
-    "id": "usUR2Jfl2N8",
-    "by": "Anton Kraev",
-    "byUrl": "https://unsplash.com/@antohakraev",
-    "page": "https://unsplash.com/photos/blue-and-white-smoke-illustration-usUR2Jfl2N8"
-  },
-  "//images/banners/shipping.webp": {
-    "id": "b1RPuThmbA8",
-    "by": "engin akyurt",
-    "byUrl": "https://unsplash.com/@enginakyurt",
-    "page": "https://unsplash.com/photos/a-close-up-of-a-fetus-b1RPuThmbA8"
-  },
-  "//images/banners/refunds.webp": {
-    "id": "slpTDuenYeM",
-    "by": "Albert Bleeker",
-    "byUrl": "https://unsplash.com/@ableeker66",
-    "page": "https://unsplash.com/photos/blue-ray-of-light-slpTDuenYeM"
-  },
-  "//images/banners/privacy.webp": {
-    "id": "PSKEtP7nFRg",
-    "by": "Nihal Demirci",
-    "byUrl": "https://unsplash.com/@nihaldemirci",
-    "page": "https://unsplash.com/photos/a-black-background-with-blue-smoke-coming-out-of-it-PSKEtP7nFRg"
-  },
-  "//images/banners/terms.webp": {
-    "id": "pmXy_shBCmU",
-    "by": "Marek Piwnicki",
-    "byUrl": "https://unsplash.com/@marekpiwnicki",
-    "page": "https://unsplash.com/photos/blue-smoke-wisp-on-black-pmXy_shBCmU"
-  },
-  "//images/banners/pact-act.webp": {
-    "id": "hWwwr-jQDKE",
-    "by": "Nihal Demirci",
-    "byUrl": "https://unsplash.com/@nihaldemirci",
-    "page": "https://unsplash.com/photos/smoke-graphic-hWwwr-jQDKE"
-  },
   "//images/banners/fda-disclaimer.webp": {
     "id": "7dpWnjeEEVs",
     "by": "Nihal Demirci",
     "byUrl": "https://unsplash.com/@nihaldemirci",
     "page": "https://unsplash.com/photos/smoke-illustration-7dpWnjeEEVs"
-  },
-  "//images/banners/california-privacy.webp": {
-    "id": "h2ag8i7qFNg",
-    "by": "Marek Piwnicki",
-    "byUrl": "https://unsplash.com/@marekpiwnicki",
-    "page": "https://unsplash.com/photos/blue-and-white-smoke-illustration-h2ag8i7qFNg"
-  },
-  "//images/banners/wholesale.webp": {
-    "id": "t_V3OcTVFPk",
-    "by": "Marek Piwnicki",
-    "byUrl": "https://unsplash.com/@marekpiwnicki",
-    "page": "https://unsplash.com/photos/a-blue-smoke-texture-on-a-black-background-t_V3OcTVFPk"
   },
   "//images/banners/search.webp": {
     "id": "rKwXm0mySfE",
@@ -131,42 +23,6 @@
     "byUrl": "https://unsplash.com/@marekpiwnicki",
     "page": "https://unsplash.com/photos/white-smoke-in-black-background-nk-JDYs5XJk"
   },
-  "//images/banners/vape-juice.webp": {
-    "id": "jBDQwPaCGI0",
-    "by": "Wouter Meijering",
-    "byUrl": "https://unsplash.com/@woetah",
-    "page": "https://unsplash.com/photos/assorted-sliced-limes-jBDQwPaCGI0"
-  },
-  "//images/categories/vape-juice.webp": {
-    "id": "atzWFItRHy8",
-    "by": "Brooke Lark",
-    "byUrl": "https://unsplash.com/@brookelark",
-    "page": "https://unsplash.com/photos/flatlay-photography-of-citrus-and-dragon-atzWFItRHy8"
-  },
-  "//images/banners/coils-pods.webp": {
-    "id": "OdqmOsUgNwk",
-    "by": "Antonin FELS",
-    "byUrl": "https://unsplash.com/@antoninvape",
-    "page": "https://unsplash.com/photos/red-box-mod-vape-beside-e-juice-bottles-OdqmOsUgNwk"
-  },
-  "//images/categories/coils-pods.webp": {
-    "id": "sq5lAdfyC5s",
-    "by": "Vaporesso",
-    "byUrl": "https://unsplash.com/@vaporesso",
-    "page": "https://unsplash.com/photos/person-holding-silver-flip-lighter-sq5lAdfyC5s"
-  },
-  "//images/banners/disposables.webp": {
-    "id": "1AR9kNZ6jMI",
-    "by": "Sierra Alpha Juliet",
-    "byUrl": "https://unsplash.com/@mrhz",
-    "page": "https://unsplash.com/photos/a-close-up-of-two-electronic-devices-on-a-table-1AR9kNZ6jMI"
-  },
-  "//images/categories/disposables.webp": {
-    "id": "Oa0Fb-HVbLQ",
-    "by": "Elsa Olofsson",
-    "byUrl": "https://unsplash.com/@elsaolofsson",
-    "page": "https://unsplash.com/photos/a-person-holding-a-cell-phone-Oa0Fb-HVbLQ"
-  },
   "//images/banners/vape-kits.webp": {
     "id": "M8CrCzlS78Y",
     "by": "Vaporesso",
@@ -179,40 +35,184 @@
     "byUrl": "https://unsplash.com/@vaporesso",
     "page": "https://unsplash.com/photos/black-box-mod-on-brown-wooden-table-jQSgioaqhpM"
   },
-  "//images/banners/vaporizers.webp": {
+  "//images/banners/e-cigarettes-for-sale-online.webp": {
+    "id": "qIZMt-o2RIk",
+    "by": "Pawel Czerwinski",
+    "byUrl": "https://unsplash.com/@pawel_czerwinski",
+    "page": "https://unsplash.com/photos/a-blue-and-black-background-with-wavy-lines-qIZMt-o2RIk"
+  },
+  "//images/banners/best-vape-brands.webp": {
+    "id": "ohQinqTl_DE",
+    "by": "Max Kleinen",
+    "byUrl": "https://unsplash.com/@hirmin",
+    "page": "https://unsplash.com/photos/blue-smoke-on-black-background-ohQinqTl_DE"
+  },
+  "//images/banners/vape-stores-online-cheap.webp": {
+    "id": "jypIYXtYw8c",
+    "by": "MJH SHIKDER",
+    "byUrl": "https://unsplash.com/@mjh_shikder",
+    "page": "https://unsplash.com/photos/a-blue-abstract-background-with-wavy-shapes-jypIYXtYw8c"
+  },
+  "//images/banners/vape-store-open.webp": {
+    "id": "Lx6shBsd22Y",
+    "by": "Олег Мороз",
+    "byUrl": "https://unsplash.com/@tengyart",
+    "page": "https://unsplash.com/photos/a-cloud-of-smoke-Lx6shBsd22Y"
+  },
+  "//images/banners/where-can-i-buy-disposable-vapes.webp": {
+    "id": "08Jff84I-sA",
+    "by": "Shreyansh Mishra",
+    "byUrl": "https://unsplash.com/@shreyansh_mishra",
+    "page": "https://unsplash.com/photos/swirling-blue-abstract-art-with-dark-shadows-08Jff84I-sA"
+  },
+  "//images/banners/where-do-you-buy-vapes.webp": {
+    "id": "usUR2Jfl2N8",
+    "by": "Anton Kraev",
+    "byUrl": "https://unsplash.com/@antohakraev",
+    "page": "https://unsplash.com/photos/blue-and-white-smoke-illustration-usUR2Jfl2N8"
+  },
+  "//images/banners/free-vapes-with-free-shipping.webp": {
+    "id": "b1RPuThmbA8",
+    "by": "engin akyurt",
+    "byUrl": "https://unsplash.com/@enginakyurt",
+    "page": "https://unsplash.com/photos/a-close-up-of-a-fetus-b1RPuThmbA8"
+  },
+  "//images/banners/refund-and-return-policy.webp": {
+    "id": "slpTDuenYeM",
+    "by": "Albert Bleeker",
+    "byUrl": "https://unsplash.com/@ableeker66",
+    "page": "https://unsplash.com/photos/blue-ray-of-light-slpTDuenYeM"
+  },
+  "//images/banners/privacy-policy.webp": {
+    "id": "PSKEtP7nFRg",
+    "by": "Nihal Demirci",
+    "byUrl": "https://unsplash.com/@nihaldemirci",
+    "page": "https://unsplash.com/photos/a-black-background-with-blue-smoke-coming-out-of-it-PSKEtP7nFRg"
+  },
+  "//images/banners/terms-of-service.webp": {
+    "id": "pmXy_shBCmU",
+    "by": "Marek Piwnicki",
+    "byUrl": "https://unsplash.com/@marekpiwnicki",
+    "page": "https://unsplash.com/photos/blue-smoke-wisp-on-black-pmXy_shBCmU"
+  },
+  "//images/banners/pact-act-faq.webp": {
+    "id": "hWwwr-jQDKE",
+    "by": "Nihal Demirci",
+    "byUrl": "https://unsplash.com/@nihaldemirci",
+    "page": "https://unsplash.com/photos/smoke-graphic-hWwwr-jQDKE"
+  },
+  "//images/banners/california-privacy-notice.webp": {
+    "id": "h2ag8i7qFNg",
+    "by": "Marek Piwnicki",
+    "byUrl": "https://unsplash.com/@marekpiwnicki",
+    "page": "https://unsplash.com/photos/blue-and-white-smoke-illustration-h2ag8i7qFNg"
+  },
+  "//images/banners/bulk-vapes-for-sale.webp": {
+    "id": "t_V3OcTVFPk",
+    "by": "Marek Piwnicki",
+    "byUrl": "https://unsplash.com/@marekpiwnicki",
+    "page": "https://unsplash.com/photos/a-blue-smoke-texture-on-a-black-background-t_V3OcTVFPk"
+  },
+  "//images/banners/best-vape-juice.webp": {
+    "id": "jBDQwPaCGI0",
+    "by": "Wouter Meijering",
+    "byUrl": "https://unsplash.com/@woetah",
+    "page": "https://unsplash.com/photos/assorted-sliced-limes-jBDQwPaCGI0"
+  },
+  "//images/banners/coil-for-vape.webp": {
+    "id": "OdqmOsUgNwk",
+    "by": "Antonin FELS",
+    "byUrl": "https://unsplash.com/@antoninvape",
+    "page": "https://unsplash.com/photos/red-box-mod-vape-beside-e-juice-bottles-OdqmOsUgNwk"
+  },
+  "//images/banners/popular-disposable-vape-brands.webp": {
+    "id": "1AR9kNZ6jMI",
+    "by": "Sierra Alpha Juliet",
+    "byUrl": "https://unsplash.com/@mrhz",
+    "page": "https://unsplash.com/photos/a-close-up-of-two-electronic-devices-on-a-table-1AR9kNZ6jMI"
+  },
+  "//images/banners/best-vaporizers.webp": {
     "id": "6jLWY4myaOw",
     "by": "Dovpo Offical",
     "byUrl": "https://unsplash.com/@dovpo",
     "page": "https://unsplash.com/photos/an-electronic-device-sitting-on-top-of-a-wooden-bench-6jLWY4myaOw"
   },
-  "//images/categories/vaporizers.webp": {
-    "id": "3_OGgbdPIdA",
-    "by": "CDC",
-    "byUrl": "https://unsplash.com/@cdc",
-    "page": "https://unsplash.com/photos/grey-vape-lot-3_OGgbdPIdA"
-  },
-  "//images/banners/nic-pouches.webp": {
+  "//images/banners/best-nicotine-pouches.webp": {
     "id": "SOz6YQcC_5c",
     "by": "Marko Blažević",
     "byUrl": "https://unsplash.com/@kerber",
     "page": "https://unsplash.com/photos/shallow-focus-photography-of-green-plant-SOz6YQcC_5c"
   },
-  "//images/categories/nic-pouches.webp": {
-    "id": "vJVPnu3mp1o",
-    "by": "Carlos Machado",
-    "byUrl": "https://unsplash.com/@kkmachado",
-    "page": "https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-vJVPnu3mp1o"
-  },
-  "//images/banners/nixodine.webp": {
+  "//images/banners/best-nicotine-free-vape.webp": {
     "id": "VgROGebCi80",
     "by": "ryan baker",
     "byUrl": "https://unsplash.com/@neonekko",
     "page": "https://unsplash.com/photos/blue-and-black-light-digital-wallpaper-VgROGebCi80"
   },
-  "//images/categories/nixodine.webp": {
+  "//images/categories/best-vape-juice.webp": {
+    "id": "atzWFItRHy8",
+    "by": "Brooke Lark",
+    "byUrl": "https://unsplash.com/@brookelark",
+    "page": "https://unsplash.com/photos/flatlay-photography-of-citrus-and-dragon-atzWFItRHy8"
+  },
+  "//images/categories/coil-for-vape.webp": {
+    "id": "sq5lAdfyC5s",
+    "by": "Vaporesso",
+    "byUrl": "https://unsplash.com/@vaporesso",
+    "page": "https://unsplash.com/photos/person-holding-silver-flip-lighter-sq5lAdfyC5s"
+  },
+  "//images/categories/popular-disposable-vape-brands.webp": {
+    "id": "Oa0Fb-HVbLQ",
+    "by": "Elsa Olofsson",
+    "byUrl": "https://unsplash.com/@elsaolofsson",
+    "page": "https://unsplash.com/photos/a-person-holding-a-cell-phone-Oa0Fb-HVbLQ"
+  },
+  "//images/categories/best-vaporizers.webp": {
+    "id": "3_OGgbdPIdA",
+    "by": "CDC",
+    "byUrl": "https://unsplash.com/@cdc",
+    "page": "https://unsplash.com/photos/grey-vape-lot-3_OGgbdPIdA"
+  },
+  "//images/categories/best-nicotine-pouches.webp": {
+    "id": "vJVPnu3mp1o",
+    "by": "Carlos Machado",
+    "byUrl": "https://unsplash.com/@kkmachado",
+    "page": "https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-vJVPnu3mp1o"
+  },
+  "//images/categories/best-nicotine-free-vape.webp": {
     "id": "j0i8M-2aTPE",
     "by": "madeleine craine",
     "byUrl": "https://unsplash.com/@crainecreative",
     "page": "https://unsplash.com/photos/timelapse-photo-of-blue-lights-j0i8M-2aTPE"
+  },
+  "//images/hero/cheap-vaping-1.webp": {
+    "id": "hVcmxpYg1Gc",
+    "by": "E-Liquids UK",
+    "byUrl": "https://unsplash.com/@eliquidsuk",
+    "page": "https://unsplash.com/photos/man-in-black-long-sleeve-shirt-holding-black-dslr-camera-hVcmxpYg1Gc"
+  },
+  "//images/hero/cheap-vaping-2.webp": {
+    "id": "4TcUM4qz9Dc",
+    "by": "Quinten de Graaf",
+    "byUrl": "https://unsplash.com/@quinten149",
+    "page": "https://unsplash.com/photos/man-smoking-with-black-background-4TcUM4qz9Dc"
+  },
+  "//images/hero/cheap-vaping-3.webp": {
+    "id": "pazM9TQJ2Ck",
+    "by": "Ruvim Noga",
+    "byUrl": "https://unsplash.com/@ruvimnogaphoto",
+    "page": "https://unsplash.com/photos/blue-red-and-black-smoke-digital-wallpaper-pazM9TQJ2Ck"
+  },
+  "//images/hero/cheap-vaping-4.webp": {
+    "id": "PYOgYPnNYO0",
+    "by": "Romain B",
+    "byUrl": "https://unsplash.com/@myblu",
+    "page": "https://unsplash.com/photos/a-close-up-of-a-pink-pen-on-a-black-surface-PYOgYPnNYO0"
+  },
+  "//images/hero/cheap-vaping-5.webp": {
+    "id": "7Fofd92SXak",
+    "by": "Sierra Alpha Juliet",
+    "byUrl": "https://unsplash.com/@mrhz",
+    "page": "https://unsplash.com/photos/a-table-topped-with-lots-of-different-types-of-electronic-devices-7Fofd92SXak"
   }
 }

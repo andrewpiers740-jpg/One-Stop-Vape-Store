@@ -11,21 +11,55 @@ Disallow: /api/crypto/
 Disallow: /api/crypto-rate/
 Disallow: /cart/
 Disallow: /checkout/
+Disallow: /account/
+Disallow: /wishlist/
+Disallow: /search/
 Sitemap: https://www.onestopvapestore.com/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-# AI crawlers — welcome to index product and content pages
+# AI model-training crawlers: not allowed to train on this content
 User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# AI search and answer crawlers: allowed to index and cite product and content pages
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -38,12 +72,6 @@ User-agent: Amazonbot
 Allow: /
 
 User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Google-Extended
 Allow: /
 
 User-agent: Meta-ExternalAgent

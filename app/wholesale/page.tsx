@@ -4,11 +4,16 @@ import { SITE } from "@/src/config/site";
 import EnquiryForm from "@/src/components/EnquiryForm";
 import { BadgeCheck, Building2, Globe2, Mail, MessageSquare, Scale } from "lucide-react";
 import PageBanner from "@/src/components/PageBanner";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 export const metadata = {
-  title: `Wholesale & B2B Inquiries | ${SITE.name}`,
-  description: `Volume pricing for registered adult-only retailers: disposables, e-liquids, pods and nicotine pouches shipped from Phoenix, Arizona. How to apply, what to prepare and what we need from your business.`,
-  alternates: { canonical: `https://${SITE.domain}/wholesale/` },
+  title: staticTitle("/wholesale/", `Wholesale & B2B Inquiries | ${SITE.name}`),
+  description: staticMeta("/wholesale/", `Volume pricing for registered adult-only retailers: disposables, e-liquids, pods and nicotine pouches shipped from Phoenix, Arizona. How to apply, what to prepare and what we need from your business.`),
+  keywords: seoEntry("/wholesale/") ? keywordsString(seoEntry("/wholesale/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/wholesale/")}` },
 };
 
 const steps = [
@@ -19,18 +24,19 @@ const steps = [
 ];
 
 export default function WholesalePage() {
+  const copy = staticCopy("/wholesale/");
   return (
     <>
-      <PageBanner slug="wholesale" label="Wholesale" />
+      <PageBanner slug="wholesale" label="Wholesale" alt={copy?.alt} />
       <div className="flex flex-col gap-24 py-12 pb-24">
 
       <section className="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="flex flex-col gap-8">
           <p className="text-emerald-700 text-[10px] font-black uppercase tracking-[0.3em]">Business Solutions</p>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase leading-[0.9]">
-            Wholesale for <br />
-            <span className="text-emerald-700">Adult-Only Retailers</span>
+            {copy ? staticH1("/wholesale/", "Wholesale for Adult-Only Retailers") : "Wholesale for Adult-Only Retailers"}
           </h1>
+          {copy && <p className="text-slate-900 text-lg font-medium leading-relaxed max-w-xl">{copy.lead}</p>}
           <p className="text-slate-700 text-lg leading-relaxed max-w-xl">
             {SITE.name} supplies registered vape shops and other adult-only retailers with volume pricing across our catalog of disposables, e-liquids, nicotine salts, pods and nicotine pouches. Tell us what you sell and what you need, and we will reply with availability and a written quote.
           </p>
@@ -84,11 +90,11 @@ export default function WholesalePage() {
         </ul>
 
         <h2 className="mb-4 mt-12 border-b border-slate-200 pb-2 text-2xl font-black tracking-tight text-slate-900">Pricing, payment and shipping</h2>
-        <p className="mb-4">Volume pricing depends on the product and the quantity, so there is no single published wholesale list. Browse our <Link className="text-brand-700 underline" href="/shop/disposables/">disposable vapes</Link> and <Link className="text-brand-700 underline" href="/shop/vape-juice/">vape juice</Link>, build a list and send it to us. We confirm the total in writing, and explain whether any discount applies, before you pay.</p>
-        <p className="mb-4">Wholesale orders can use the payment methods we accept: Cash App, Apple Pay, Chime, cryptocurrency and gift cards. Large amounts are best handled with a quote, because some methods have transfer limits. Orders ship with adult signature on delivery, and transit follows the estimates in our <Link className="text-brand-700 underline" href="/shipping/">shipping policy</Link>: processing in 24 to 72 business hours, then about 3 to 7 business days to Arizona, Nevada, Washington and Idaho and about 11 to 18 to the eastern half of the US.</p>
+        <p className="mb-4">Volume pricing depends on the product and the quantity, so there is no single published wholesale list. Browse our <Link className="text-brand-700 underline" href="/shop/popular-disposable-vape-brands/">disposable vapes</Link> and <Link className="text-brand-700 underline" href="/shop/best-vape-juice/">vape juice</Link>, build a list and send it to us. We confirm the total in writing, and explain whether any discount applies, before you pay.</p>
+        <p className="mb-4">Wholesale orders can use the payment methods we accept: Cash App, Apple Pay, Chime, cryptocurrency and gift cards. Large amounts are best handled with a quote, because some methods have transfer limits. Orders ship with adult signature on delivery, and transit follows the estimates in our <Link className="text-brand-700 underline" href="/free-vapes-with-free-shipping/">shipping policy</Link>: processing in 24 to 72 business hours, then about 3 to 7 business days to Arizona, Nevada, Washington and Idaho and about 11 to 18 to the eastern half of the US.</p>
 
         <h2 className="mb-4 mt-12 border-b border-slate-200 pb-2 text-2xl font-black tracking-tight text-slate-900">Your responsibilities as a reseller</h2>
-        <p className="mb-4">As a retailer, you are responsible for your own licensing, taxes and age checks: verify the age of every customer, display required warnings, store products responsibly and follow local rules on flavors, packaging and advertising. Our <Link className="text-brand-700 underline" href="/refunds/">refund policy</Link> applies to wholesale orders unless your quote says otherwise. See <Link className="text-brand-700 underline" href="/blog/wholesale-ordering-guide/">the wholesale ordering guide</Link> and <Link className="text-brand-700 underline" href="/pact-act/">our PACT Act FAQ</Link>.</p>
+        <p className="mb-4">As a retailer, you are responsible for your own licensing, taxes and age checks: verify the age of every customer, display required warnings, store products responsibly and follow local rules on flavors, packaging and advertising. Our <Link className="text-brand-700 underline" href="/refund-and-return-policy/">refund policy</Link> applies to wholesale orders unless your quote says otherwise. See <Link className="text-brand-700 underline" href="/blog/vanse-bar-vape/">the wholesale ordering guide</Link> and <Link className="text-brand-700 underline" href="/pact-act-faq/">our PACT Act FAQ</Link>.</p>
         <p className="text-sm text-slate-700">We make no health claims. Nicotine is addictive, and our products are for adults only.</p>
       </section>
 
@@ -109,6 +115,7 @@ export default function WholesalePage() {
          </div>
       </section>
 
+      {copy && <SeoContent copy={copy} path="/wholesale/" />}
     </div>
     </>
   );

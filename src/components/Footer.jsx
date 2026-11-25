@@ -48,16 +48,16 @@ export default function Footer() {
                 <Link href="/blog" className="hover:text-emerald-600 transition-colors">Blog</Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-emerald-600 transition-colors">About Us</Link>
+                <Link href="/vape-stores-online-cheap" className="hover:text-emerald-600 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-emerald-600 transition-colors">Contact Us</Link>
+                <Link href="/vape-store-open" className="hover:text-emerald-600 transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link href="/help" className="hover:text-emerald-600 transition-colors">Help Center</Link>
+                <Link href="/where-do-you-buy-vapes" className="hover:text-emerald-600 transition-colors">Help Center</Link>
               </li>
               <li>
-                <Link href="/wholesale" className="hover:text-emerald-600 transition-colors">Wholesale Inquiry</Link>
+                <Link href="/bulk-vapes-for-sale" className="hover:text-emerald-600 transition-colors">Wholesale Inquiry</Link>
               </li>
               <li>
                 <Link href="/pages/wishlist" className="hover:text-emerald-600 transition-colors flex items-center gap-1.5">
@@ -66,7 +66,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-emerald-600 transition-colors">FAQ</Link>
+                <Link href="/where-can-i-buy-disposable-vapes" className="hover:text-emerald-600 transition-colors">FAQ</Link>
               </li>
             </ul>
           </div>
@@ -78,19 +78,19 @@ export default function Footer() {
             </h3>
             <ul className="flex flex-col gap-2.5 text-sm text-slate-600">
               <li>
-                <Link href="/privacy" className="hover:text-emerald-600 transition-colors">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="hover:text-emerald-600 transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-emerald-600 transition-colors">Terms of Service</Link>
+                <Link href="/terms-of-service" className="hover:text-emerald-600 transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/shipping" className="hover:text-emerald-600 transition-colors">Shipping Policy</Link>
+                <Link href="/free-vapes-with-free-shipping" className="hover:text-emerald-600 transition-colors">Shipping Policy</Link>
               </li>
               <li>
-                <Link href="/pact-act" className="hover:text-emerald-600 transition-colors">Pact Act FAQ</Link>
+                <Link href="/pact-act-faq" className="hover:text-emerald-600 transition-colors">Pact Act FAQ</Link>
               </li>
               <li>
-                <Link href="/refunds" className="hover:text-emerald-600 transition-colors">Returns & Refund Policy</Link>
+                <Link href="/refund-and-return-policy" className="hover:text-emerald-600 transition-colors">Returns & Refund Policy</Link>
               </li>
               <li>
                 <Link href="/fda-disclaimer" className="hover:text-emerald-600 transition-colors">FDA Disclaimer</Link>
@@ -160,6 +160,21 @@ export default function Footer() {
           </div>
 
         </div>
+
+        <nav aria-label="Social profiles" className="mb-8 flex flex-col items-center gap-2 md:items-start">
+          <p className="text-[10px] font-black uppercase tracking-widest text-slate-600">Follow {SITE.name}</p>
+          <ul className="flex flex-wrap justify-center gap-2 md:justify-start">
+            {SITE.sameAs.map((u) => {
+              const host = new URL(u).hostname.replace(/^www./, "");
+              const label = ({ "tiktok.com": "TikTok", "pin.it": "Pinterest", "facebook.com": "Facebook", "reddit.com": "Reddit", "instagram.com": "Instagram", "threads.com": "Threads", "x.com": "X", "t.me": "Telegram" })[host] || host;
+              return (
+                <li key={u}>
+                  <a href={u} target="_blank" rel="me noopener noreferrer" aria-label={`${SITE.name} on ${label}`} className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 transition-colors hover:bg-emerald-500 hover:text-white">{label}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
 
         <PaymentLogos className="mb-8 flex flex-col items-center gap-1 md:items-start" heading="Payment methods accepted" />
 

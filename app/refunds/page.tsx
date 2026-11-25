@@ -2,16 +2,21 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import LegalPage from "@/src/components/LegalPage";
+import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
 
 export const metadata = {
-  title: `Refund and Return Policy | ${SITE.name}`,
-  description: `How returns, exchanges and refunds work at ${SITE.name}: 30-day window, RMA, 15% restocking fee, refunds to the original payment method, and items we cannot accept.`,
-  alternates: { canonical: `https://${SITE.domain}/refunds/` },
+  title: staticTitle("/refunds/", `Refund and Return Policy | ${SITE.name}`),
+  description: staticMeta("/refunds/", `How returns, exchanges and refunds work at ${SITE.name}: 30-day window, RMA, 15% restocking fee, refunds to the original payment method, and items we cannot accept.`),
+  keywords: seoEntry("/refunds/") ? keywordsString(seoEntry("/refunds/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/refunds/")}` },
 };
 
 export default function ReturnsPage() {
   return (
     <LegalPage
+      path="/refunds/"
       slug="refunds"
       label="Refunds"
       h1="Refund and Return Policy"
@@ -19,7 +24,7 @@ export default function ReturnsPage() {
       intro={
         <>
           <p>If something is wrong with your order, we want to sort it out clearly and quickly. This page explains how returns, exchanges and refunds work at {SITE.name}, what we can and cannot accept back, how refunds are paid and how to start a return. Please read it before you order. Products are for adults aged {SITE.compliance.ageThreshold} and over, and nicotine is addictive.</p>
-          <p>A shorter summary is in our guide <Link href="/blog/refund-and-return-policy-explained/">refund and return policy explained</Link>, and shipping-related rules are in our <Link href="/shipping/">shipping policy</Link>.</p>
+          <p>A shorter summary is in our guide <Link href="/blog/geek-bar-prices/">refund and return policy explained</Link>, and shipping-related rules are in our <Link href="/free-vapes-with-free-shipping/">shipping policy</Link>.</p>
         </>
       }
       sections={[
@@ -61,11 +66,11 @@ export default function ReturnsPage() {
           </ol>
         </>) },
         { id: "damaged", h2: "Damaged, lost or incorrect orders", body: (<>
-          <p>If your package arrives damaged, take photos of the items and the invoice straight away and email them to us, and we will reorder the damaged items for you. For lost or stolen packages and Guide package protection, see our <Link href="/shipping/">shipping policy</Link>. If you received the wrong item, contact us with your order ID and photos.</p>
+          <p>If your package arrives damaged, take photos of the items and the invoice straight away and email them to us, and we will reorder the damaged items for you. For lost or stolen packages and Guide package protection, see our <Link href="/free-vapes-with-free-shipping/">shipping policy</Link>. If you received the wrong item, contact us with your order ID and photos.</p>
         </>) },
         { id: "address", h2: "Return mailing address and contact", body: (<>
           <p>Onestopvapestore.com<br />Attention: Returns<br />4908 E McDowell Road STE 103<br />Phoenix, Arizona 85008</p>
-          <p>Email <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a> or call <a href={`tel:+1${SITE.contact.phone.replace(/\D/g, "")}`}>1-{SITE.contact.phone}</a>. Support hours are on our <Link href="/contact/">contact page</Link>.</p>
+          <p>Email <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a> or call <a href={`tel:+1${SITE.contact.phone.replace(/\D/g, "")}`}>1-{SITE.contact.phone}</a>. Support hours are on our <Link href="/vape-store-open/">contact page</Link>.</p>
         </>) },
       ]}
     />

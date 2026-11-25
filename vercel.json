@@ -1,6 +1,5457 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/images/products/aloe-grape-cloud-nurdz-ejuice.webp",
+      "destination": "/images/products/cloud-nurdz-watermelon-berry.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/iced-aloe-mango-cloud-salts.webp",
+      "destination": "/images/products/where-to-buy-cloud-nurdz.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/iced-blue-raspberry-lemon-cloud-nurdz-e-juice.webp",
+      "destination": "/images/products/fumi-cloud-nurdz.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/berry-rush-air-factory-salt.webp",
+      "destination": "/images/products/air-factory-blue-razz.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-berries-e-juice.webp",
+      "destination": "/images/products/just-reds-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-berries-iced-e-juice.webp",
+      "destination": "/images/products/reds-salt.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-berries-iced-salts.webp",
+      "destination": "/images/products/reds-apple-ejuice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-berries-salts.webp",
+      "destination": "/images/products/reds-apple-salt.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-fruit-mix-e-juice.webp",
+      "destination": "/images/products/reds-apple-salt-nic.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-fruit-mix-iced-e-juice.webp",
+      "destination": "/images/products/reds-apple-watermelon-salt-nic.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-fruit-mix-iced-salts.webp",
+      "destination": "/images/products/funky-republic-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/reds-apple-fruit-mix-salts.webp",
+      "destination": "/images/products/atomic-9.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-pod-juice-x-raz-ltx-edition-30ml.webp",
+      "destination": "/images/products/raz-pod-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/hawaiian-blue-raz-x-pod-juice-punch-edition-100ml.webp",
+      "destination": "/images/products/jewel-mint-diamond.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/hawaiian-blue-raz-x-pod-juice-punch-edition-salts.webp",
+      "destination": "/images/products/pod-juice-jewel-tobacco.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/virginia-tobacco-pod-juice-salts.webp",
+      "destination": "/images/products/jewel-mint-emerald-pod-juice-virginia-tobacco-pod-juice-salts.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/crisp-menthol-naked-100-menthol-ejuice.webp",
+      "destination": "/images/products/naked-100-hawaiian-pog-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-kiwi-batch-raz-x-pod-juice-30ml.webp",
+      "destination": "/images/products/razz-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raz-batch-raz-x-pod-juice-30ml.webp",
+      "destination": "/images/products/best-raz-vape-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raspberry-freeze-iced-coastal-clouds-100ml.webp",
+      "destination": "/images/products/coastal-clouds-e-liquid.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/straw-razz-melon-beard-vape-co-the-one-100ml.webp",
+      "destination": "/images/products/raz-ltx-25k-zero-nicotine.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/tobacco-breeze-pro.webp",
+      "destination": "/images/products/best-breeze-pro-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/berry-bliss-fume-pro-30k.webp",
+      "destination": "/images/products/fume-pro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pink-lemonade-berry-geek-bar-clr-50k.webp",
+      "destination": "/images/products/geek-bar-clr-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-bull-geek-bar-pulse-x-2-50k-bull-edition.webp",
+      "destination": "/images/products/pulse-geek-bar-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dualicious-geek-bar-pulse-x-25k-thermal-edition.webp",
+      "destination": "/images/products/geek-bar-pulse-x-flavor.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peach-lemonade-geek-bar-pulse-thermal-edition.webp",
+      "destination": "/images/products/buy-geek-bar-pulse-x.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/fcuking-fab-geek-bar-pulse-patriot-edition.webp",
+      "destination": "/images/products/where-to-buy-geek-bar-pulse-x.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/drop-sour-savers-geek-bar-pulse-savers-edition.webp",
+      "destination": "/images/products/geek-bar-pulse-x-price-in-store.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-jam-geek-bar-pulse-x-25k-jam-edition.webp",
+      "destination": "/images/products/all-geek-bar-pulse-x-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/tobacco-geek-bar-pulse.webp",
+      "destination": "/images/products/geek-bar-pulse-vs-pulse-x.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/grape-slush-geek-bar-pulse-x-25k-slush-edition.webp",
+      "destination": "/images/products/geekbar-pulse-x-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-ice-geek-bar-pulse-zero-nicotine.webp",
+      "destination": "/images/products/geek-bar-pulse-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/frozen-white-grape-geek-bar-pulse-frozen-edition.webp",
+      "destination": "/images/products/geek-bar-x-pulse-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/banana-taffy-freeze-geek-bar-pulse-x.webp",
+      "destination": "/images/products/geek-bar-x-pulse-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cola-slush-horizontech-100k-slush-series.webp",
+      "destination": "/images/products/horizontech-vape-100k.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-strawberry-juice-head-30k.webp",
+      "destination": "/images/products/juice-head-pouches-vs-zyn.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/baja-splash-lost-mary-mt35000-turbo-zero-nicotine.webp",
+      "destination": "/images/products/mt35000-lost-mary.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-apple-ice-lost-mary-viz-55k.webp",
+      "destination": "/images/products/best-lost-mary-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-jam-lost-mary-mt15000-turbo.webp",
+      "destination": "/images/products/lost-mary-mt35k-turbo.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/miami-mint-lost-mary-mt35k-20mg.webp",
+      "destination": "/images/products/best-lost-mary-flavours.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-ice-lost-mary-nera-fullview-kit.webp",
+      "destination": "/images/products/lost-mary-nera-70k-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pure-lost-mary-mt15000-turbo-saturday.webp",
+      "destination": "/images/products/lost-mary-turbo-35k.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/acai-berry-storm-ice-lost-mary-mt15000-turbo-friday.webp",
+      "destination": "/images/products/lost-mary-mt15000-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/wildberry-baja-splash-lost-mary-mt15000-turbo-thursday.webp",
+      "destination": "/images/products/lost-mary-mt35000-turbo-best-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/refresh-fcuking-fab-lost-mary-mt15000-turbo-wednesday.webp",
+      "destination": "/images/products/mt15000-turbo-lost-mary.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/hawaii-juice-lost-mary-mt15000-turbo-tuesday.webp",
+      "destination": "/images/products/lost-mary-turbo-flavors-35000.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/grape-jelly-lost-mary-mt15000-turbo-monday.webp",
+      "destination": "/images/products/lost-mary-turbo-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/ice-mr-fog-nova-blue-razz-steezy.webp",
+      "destination": "/images/products/mr-fog-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-apple-ice-mr-fog-nova.webp",
+      "destination": "/images/products/mr-fog-vape-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/classic-mr-fog-nova-mint-steezy.webp",
+      "destination": "/images/products/buy-mr-fog-online.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/rocket-freeze-off-stamp-x-cube-disposable-crystal.webp",
+      "destination": "/images/products/off-stamp-xcube.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-cupcake-off-stamp-disposable-crystal.webp",
+      "destination": "/images/products/off-stamp-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-cream-off-stamp-x-cube-kit.webp",
+      "destination": "/images/products/off-stamp-cube-battery.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/tropical-punch-off-stamp-x-cube-crystal-cube.webp",
+      "destination": "/images/products/off-stamp-sweet-cube.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-cream-off-stamp-classic-cube-replacement-pod.webp",
+      "destination": "/images/products/off-stamp-cube-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/forest-mint-off-stamp-ice-cube-replacement-pod.webp",
+      "destination": "/images/products/crystal-cube-off-stamp.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-lush-off-stamp-sweet-cube-replacement-pod.webp",
+      "destination": "/images/products/off-stamp-sweet-cube-battery.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-razz-raspberry-oilio-platypus-50k.webp",
+      "destination": "/images/products/raz-vue-50k-disposable-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pink-raz-rx-50k-dew-edition.webp",
+      "destination": "/images/products/raz-vue-50k-disposable-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/razzle-dazzle-raz-ltx-25000.webp",
+      "destination": "/images/products/raz-vape-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-watermelon-raz-ltx-25000-nicotine-free.webp",
+      "destination": "/images/products/raz-ltx-25k.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-raspberry-punch-raz-ltx-25000-holo-edition.webp",
+      "destination": "/images/products/raz-vapes-25000.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raz-gush-raz-ltx-25000-gush-edition.webp",
+      "destination": "/images/products/raz-ryl-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-razz-ice-raz-ltx-25000.webp",
+      "destination": "/images/products/raz-vape-pod.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raz-ice-raz-tn9000.webp",
+      "destination": "/images/products/raz-purse-vape-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raz-cotton-cloudz-raz-tn9000.webp",
+      "destination": "/images/products/raz-pod-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-pink-lemonade-rifbar-mixpro-sour.webp",
+      "destination": "/images/products/rifbar-mix-pro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/orange-passion-fruit-guava-rifbar-mixpro-sweet.webp",
+      "destination": "/images/products/rifbar-mixpro-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dragonfruit-lemonade-rifbar-mixpro-ice.webp",
+      "destination": "/images/products/rifbar-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-bliss-burst-rifbar-turbo-x-25k.webp",
+      "destination": "/images/products/rifbar-turbo-x.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-banana-ut-clear-tank-50k.webp",
+      "destination": "/images/products/ut-bar-pro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pina-colada-ut-clear-tank-50k.webp",
+      "destination": "/images/products/ut-bar-pro-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/orange-slushy-ut-clear-tank-50k.webp",
+      "destination": "/images/products/clear-flum-pebble.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-ut-50k-pink.webp",
+      "destination": "/images/products/flum-pebble.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-clear-ut-50k-black.webp",
+      "destination": "/images/products/flum-mello-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/super-mint-ut-bar-pro.webp",
+      "destination": "/images/products/best-ut-bar-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-clear-ut-50k-blue.webp",
+      "destination": "/images/products/flume-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/milky-ut-bar-10ml.webp",
+      "destination": "/images/products/ut-vape-bar.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pineapple-coconut-ut-bar.webp",
+      "destination": "/images/products/ut-puffs.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/ut-bar-sampler-pack.webp",
+      "destination": "/images/products/utbar-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blackberry-grape-ebcreate-bc-pro-40k.webp",
+      "destination": "/images/products/bc5000-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/fuji-cloudz-ebcreate-bc5000-thermal-ed.webp",
+      "destination": "/images/products/bc5000-vape-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/rinbo-cloudd-bc5000.webp",
+      "destination": "/images/products/elf-bar-bc-5000.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/miami-mint-bc5000.webp",
+      "destination": "/images/products/elf-bar-bc5000-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-bc5000.webp",
+      "destination": "/images/products/elfbar-bc5000-prices.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peach-berry-bc5000.webp",
+      "destination": "/images/products/bc5000-elf-bar.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-watermelon-bc5000.webp",
+      "destination": "/images/products/bc5000-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-ice-bc5000.webp",
+      "destination": "/images/products/vape-bc5000.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-pi-a-colada-bc5000.webp",
+      "destination": "/images/products/elf-bar-bc5000-where-to-buy.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-banana-bc5000.webp",
+      "destination": "/images/products/ebcreate-bc-pro-strawberry-blend.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peach-ice-bc5000.webp",
+      "destination": "/images/products/ebcreate-te6000-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-bubblegum-bc5000.webp",
+      "destination": "/images/products/ebcreate-40k.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pineapple-coconut-ice-bc5000.webp",
+      "destination": "/images/products/ebcreate-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/triple-berry-ice-bc5000.webp",
+      "destination": "/images/products/bc-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/tropical-spoal-bc5000.webp",
+      "destination": "/images/products/ebcreate-bc-pro-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/lemon-mint-bc5000.webp",
+      "destination": "/images/products/ebcreate-bcpro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-ice-bc5000.webp",
+      "destination": "/images/products/ebcreate-bc-pro-40k-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-mango-bc5000.webp",
+      "destination": "/images/products/ebcreate-vape-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-kiwi-bc5000.webp",
+      "destination": "/images/products/ebcreate-store-discount-code.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sakura-grape-bc5000.webp",
+      "destination": "/images/products/ebcreate-grape-twist.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cranberry-grape-bc5000.webp",
+      "destination": "/images/products/ebcreate-bc-pro-grape-twist.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peach-mango-watermelon-bc5000.webp",
+      "destination": "/images/products/ebcreate-discount-code.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/mango-peach-bc5000.webp",
+      "destination": "/images/products/where-to-buy-ebcreate.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-razz-ice-bc5000.webp",
+      "destination": "/images/products/ebcreate-clear-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/banana-ice-pod-salt-onyx-salts.webp",
+      "destination": "/images/products/onyx-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-raz-batch-raz-eliquid-100ml.webp",
+      "destination": "/images/products/raz-vape-refills.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/derailed-suicide-bunny-salts.webp",
+      "destination": "/images/products/suicide-bunny-mothers-milk.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/all-melon-naked-100-ejuice.webp",
+      "destination": "/images/products/naked-100-salt-nic-cuban.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/american-patriots-naked-100-ejuice.webp",
+      "destination": "/images/products/naked-cuban-blend.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blackberry-jam-monster-salt-vape-juice.webp",
+      "destination": "/images/products/tobacco-monster-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-jam-monster-ejuice.webp",
+      "destination": "/images/products/monster-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-jam-monster-salt-vape-juice.webp",
+      "destination": "/images/products/jam-monster-salt-nic.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cranberry-grape-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/custard-monster-vanilla.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/fizzy-cola-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/jam-monster-strawberry.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/groovin-aloe-grape-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/monster-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/jelly-bear-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/jam-monster-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/lit-lemon-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/monster-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/mango-madness-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/monster-jam-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pineapple-ice-pod-monster-salts-60ml.webp",
+      "destination": "/images/products/juice-monster-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/raspberry-jam-monster-ejuice-nicotine-free.webp",
+      "destination": "/images/products/fruit-monster-salts-mixed-berry.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/raspberry-jam-monster-salt-vape-juice.webp",
+      "destination": "/images/products/jam-monster-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/i-love-salts-blue-raspberry.webp",
+      "destination": "/images/products/i-love-salts-sweet-tobacco-i-love-salts-blue-raspberry.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/miami-mint-fasta-40k-disposable.webp",
+      "destination": "/images/products/fasta-burrst.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-apple-fasta-40k-kit.webp",
+      "destination": "/images/products/fasta-vape-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/fruitia-x-fifty-bar-20k-cherry-limeade.webp",
+      "destination": "/images/products/fifty-bar-vape-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/fruitia-x-fifty-bar-20k-mexican-mango.webp",
+      "destination": "/images/products/fifty-bar-x-fruitia.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-strawberry-melon-fifty-bar-20k-midnight-series.webp",
+      "destination": "/images/products/fruitia-fifty-bar.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cinnamon-funnel-cake-fifty-bar-20k-silver-series.webp",
+      "destination": "/images/products/fifty-bar-lava-blast.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/baja-mango-fifty-bar-20k-white-series.webp",
+      "destination": "/images/products/fiftybars.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pineapple-whip-fifty-bar-v2-white-series.webp",
+      "destination": "/images/products/best-fifty-bar-prices.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/sour-x-max-flum-pebble-christmas-edition.webp",
+      "destination": "/images/products/float-pebble-vs-flum-pebble.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blanco-grapefruit-flum-pebble.webp",
+      "destination": "/images/products/flum-pebble-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-rpm-4-pod.webp",
+      "destination": "/images/products/smok-rpm-5-quartz-coils.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-rpm-5-pod.webp",
+      "destination": "/images/products/best-vape-for-heavy-smoker.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-nord-6-pods.webp",
+      "destination": "/images/products/does-smok-nord-take-salt-nic.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/geekvape-h45-hero-2-pods.webp",
+      "destination": "/images/products/geekvape-zeus-tank.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-pods-clear-.webp",
+      "destination": "/images/products/smok-novo-master-box.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-2x-pods.webp",
+      "destination": "/images/products/smok-novo-pro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-5-pods.webp",
+      "destination": "/images/products/smok-novo-2x-replacement-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-3-pods.webp",
+      "destination": "/images/products/smok-deals.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-2-pods.webp",
+      "destination": "/images/products/og-sub-ohm-replacement-coil-1pc.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-4-pods.webp",
+      "destination": "/images/products/b-smokestack-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-4-mini-pods.webp",
+      "destination": "/images/products/smoke-shop-wholesale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/vinci-replacement-pod-0-8ohm.webp",
+      "destination": "/images/products/voopoo-vinci-s.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/caliburn-a2-pod-4pk.webp",
+      "destination": "/images/products/best-vape-juice-for-caliburn-a2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-nord-6-kit.webp",
+      "destination": "/images/products/smoking-wholesalers.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/uwell-caliburn-g4-pro-koko-kit.webp",
+      "destination": "/images/products/caliburn-g4-mini.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/uwell-caliburn-g4-pro-kit.webp",
+      "destination": "/images/products/caliburn-g4-classic.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-6-kit.webp",
+      "destination": "/images/products/smoktech-mag.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/uwell-caliburn-a3s-pod-kit.webp",
+      "destination": "/images/products/caliburn-g2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-5-kit.webp",
+      "destination": "/images/products/smoke-wholesaler.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-master-kit.webp",
+      "destination": "/images/products/smokers-wholesale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-master-box-kit.webp",
+      "destination": "/images/products/smok-parts.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-pro-kit.webp",
+      "destination": "/images/products/smok-atomizer.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/uwell-caliburn-gk2-vape-kit.webp",
+      "destination": "/images/products/caliburn-x.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/voopoo-drag-s2-kit.webp",
+      "destination": "/images/products/voopoo-drag-5-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-3.webp",
+      "destination": "/images/products/best-disposable-vape-for-heavy-smoker.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-2.webp",
+      "destination": "/images/products/smoke-shop-distributors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-4-mini.webp",
+      "destination": "/images/products/best-vapes-to-quit-smoking.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/smok-novo-4.webp",
+      "destination": "/images/products/smoking-accessories-wholesale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/vaporesso-xros-2.webp",
+      "destination": "/images/products/smok-vs-vaporesso.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/liberty-mi-pod-pro-.webp",
+      "destination": "/images/products/mipod-pro.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/caliburn-a3-kit.webp",
+      "destination": "/images/products/uwell-caliburn-g2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/oxbar-rrd-kit-pink.webp",
+      "destination": "/images/products/oxbar.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/oxbar-rrd-kit-cherry-pink.webp",
+      "destination": "/images/products/oxbar-astro-maze.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/vinci-pod-kit.webp",
+      "destination": "/images/products/voopoo-vrizz-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/silver-scales-mi-pod-2-0.webp",
+      "destination": "/images/products/mi-pod-discount-code.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/caliburn-ak2-pod-kit.webp",
+      "destination": "/images/products/caliburn-g-pods.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go-glass-attachment.webp",
+      "destination": "/images/products/dr-dabber-switch-2-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go-carb-cap.webp",
+      "destination": "/images/products/dr-dabber-ghost-2-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go-base-extender.webp",
+      "destination": "/images/products/dr-dabber-hot-knife.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go-sapphire-plus-insert.webp",
+      "destination": "/images/products/dr-dabber-cartridges-specials.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go-quartz-insert.webp",
+      "destination": "/images/products/dr-dabber-switch-2-spinner-cap.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-go.webp",
+      "destination": "/images/products/dr-dabber-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-xs-glass-attachment.webp",
+      "destination": "/images/products/dr-dabber-swtich.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-xs-carb-cap.webp",
+      "destination": "/images/products/dr-dabber-switch-2-best-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-xs-echamber.webp",
+      "destination": "/images/products/dr-dabber-switch-2-buy.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-xs.webp",
+      "destination": "/images/products/dr-dabber-switch2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-four-raised-mouthpiece.webp",
+      "destination": "/images/products/pax-four-vaporizer.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-four-flat-mouthpiece.webp",
+      "destination": "/images/products/pax-vaporizer-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-four-grip-sleeve.webp",
+      "destination": "/images/products/pax-4-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-four.webp",
+      "destination": "/images/products/pax-3-vaporizer-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-tour-bag.webp",
+      "destination": "/images/products/dr-dabber-xs-price.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-iso-snaps.webp",
+      "destination": "/images/products/dr-dabber-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-drop.webp",
+      "destination": "/images/products/e-dabber.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-ghost-2-glass-mouthpiece.webp",
+      "destination": "/images/products/dr-dabber-switch-2-joystick.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-ghost-2-mouthpiece.webp",
+      "destination": "/images/products/dr-dabber-switch-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-ghost-2-echamber.webp",
+      "destination": "/images/products/dr-dabber-switch-2-on-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-ghost-2.webp",
+      "destination": "/images/products/dr-dabber-light-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/dr-dabber-switch-2-incycler-attachment.webp",
+      "destination": "/images/products/xs-dr-dabber.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cartisan-veil-bar-pro-evo.webp",
+      "destination": "/images/products/cartisan-pro-pen-neo.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cartisan-the-inspector.webp",
+      "destination": "/images/products/cartisan-inspector.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/cartisan-pro-pen-neo-900.webp",
+      "destination": "/images/products/cartisan-veil-bar-pro-manual.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-proxy-ryan-fitt-recycler-glass.webp",
+      "destination": "/images/products/puffco-pivot-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak-pro-link.webp",
+      "destination": "/images/products/used-puffco-peak.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow-raised-mouthpiece.webp",
+      "destination": "/images/products/pax-plus-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow-flat-mouthpiece.webp",
+      "destination": "/images/products/the-pax-era.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-mini-2.webp",
+      "destination": "/images/products/pax-plus-accessories.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/new-puffco-proxy-wizard.webp",
+      "destination": "/images/products/puffco-peak-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/new-puffco-proxy-3d-chamber.webp",
+      "destination": "/images/products/puffco-3dxl-spinner-cap.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/new-puffco-proxy.webp",
+      "destination": "/images/products/puffco-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow-grip-sleeve.webp",
+      "destination": "/images/products/pax-era-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow-water-pipe-adapter-2.webp",
+      "destination": "/images/products/pax-weed-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow-charging-dock.webp",
+      "destination": "/images/products/pax-plus-vaporizer-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-flow.webp",
+      "destination": "/images/products/pax-2-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-pivot-travel-case.webp",
+      "destination": "/images/products/puffco-travel-pack.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-pivot-3d-chamber.webp",
+      "destination": "/images/products/puffco-pivot-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-pivot-vaporizer.webp",
+      "destination": "/images/products/green-puffco-pivot.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blue-tie-dye-lookah-bear-battery-limited-edition.webp",
+      "destination": "/images/products/lookah-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/lookah-zero-battery.webp",
+      "destination": "/images/products/lookah-python-concentrate-vape-kit.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-puck-press.webp",
+      "destination": "/images/products/pax-plus-vaporizer-complete-kit.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-plus-starter-kit.webp",
+      "destination": "/images/products/pax-3-vaporizer-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/pax-stash-tube.webp",
+      "destination": "/images/products/pax-2-vaporizer-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-proxy-ripple.webp",
+      "destination": "/images/products/puffco-deals.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak-pro-oculus-carb-cap-with-tether.webp",
+      "destination": "/images/products/puffco-peak-dry-tops.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak-pro-joystick-cap.webp",
+      "destination": "/images/products/puffco-pivot-joystick.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak-pro-2-0-glass.webp",
+      "destination": "/images/products/puffco-peak-pro-charging-dock.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-proxy-joystick-cap.webp",
+      "destination": "/images/products/puffco-vapes-specials.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-proxy-travel-bag.webp",
+      "destination": "/images/products/puffco-cartridges-deals.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-cupsy.webp",
+      "destination": "/images/products/puffco-on-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-budsy.webp",
+      "destination": "/images/products/puffco-vapes-deals.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-journey-bag.webp",
+      "destination": "/images/products/cheap-puffco.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-glass.webp",
+      "destination": "/images/products/chamber-puffco-peak.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-travel-glass.webp",
+      "destination": "/images/products/puffco-peak-on-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-travel-glass.webp",
+      "destination": "/images/products/best-concentrate-for-puffco-peak.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-power-dock.webp",
+      "destination": "/images/products/puffco-new-peak-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-ryan-fitt-recycler-glass-2-0.webp",
+      "destination": "/images/products/puffco-peak-cheap.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/proxy-ball-cap.webp",
+      "destination": "/images/products/where-to-buy-puffco.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/proxy-flower-bowl.webp",
+      "destination": "/images/products/puffco-pieces.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/proxy-travel-pack.webp",
+      "destination": "/images/products/puffco-sales.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/proxy-travel-pipe.webp",
+      "destination": "/images/products/puffco-plus-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/proxy-droplet.webp",
+      "destination": "/images/products/pine-puffco-pivot.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-travel-pack-ball-cap.webp",
+      "destination": "/images/products/new-puffco-peak-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/new-puffco-peak-pro.webp",
+      "destination": "/images/products/puffco-peak-pro-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-plus-chamber.webp",
+      "destination": "/images/products/puffco-plus-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-plus-battery.webp",
+      "destination": "/images/products/puffco-pivot-plus.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak-atomizer.webp",
+      "destination": "/images/products/dry-top-for-puffco-peak.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-bowl-3pk.webp",
+      "destination": "/images/products/puffco-by-alchemist.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/peak-pro-3d-chamber.webp",
+      "destination": "/images/products/puffco-pivot-cheap.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-hot-knife.webp",
+      "destination": "/images/products/puffco-stores.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-plus-kit.webp",
+      "destination": "/images/products/pivot-puffco-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-proxy-kit.webp",
+      "destination": "/images/products/puffco-pivot-skins.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/puffco-peak.webp",
+      "destination": "/images/products/puffco-pivots.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/ccell-rizo-battery.webp",
+      "destination": "/images/products/ccell-vape-battery.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/ccell-palm-battery-limited-editions.webp",
+      "destination": "/images/products/ccell-palm-battery-ccell-palm-battery-limited-editions.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/ccell-palm-battery.webp",
+      "destination": "/images/products/ccell-510-battery.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/wintergreen-blast-zyn-ultra-pouches.webp",
+      "destination": "/images/products/zyn-cinnamon-pouches.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/black-cherry-zyn-pouches.webp",
+      "destination": "/images/products/lucy-pouches-vs-zyn.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/mojito-zyn-after-dark.webp",
+      "destination": "/images/products/best-zyn-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/espresso-martini-zyn-pouches-after-dark-series.webp",
+      "destination": "/images/products/snus-vs-zyn.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/clear-lucy-pouches.webp",
+      "destination": "/images/products/lucy-nicotine-pouches-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/mint-lucy-breakers-pouches.webp",
+      "destination": "/images/products/lucy-breakers-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/raspberry-zimo-pouches.webp",
+      "destination": "/images/products/zimo-nicotine-pouches-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/watermelon-strawberry-mint-juice-head-ztn-pouches.webp",
+      "destination": "/images/products/where-to-buy-juice-head-pouches.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-banana-juice-head-iflex-50k-nixodine.webp",
+      "destination": "/images/products/juice-head-flex-freeze-50k-review.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/white-peach-raspberry-juice-head-iflex-50k.webp",
+      "destination": "/images/products/juice-head-50k-disposable.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/baja-splash-lost-mary-35k-turbo-nixodine.webp",
+      "destination": "/images/products/lost-mary-35k-flavors.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/strawberry-ice-hotbox-elite-50k.webp",
+      "destination": "/images/products/hotbox-elite.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/products/blueberry-watermelon-hotbox-elite-box-50k.webp",
+      "destination": "/images/products/puff-labs-hotbox-elite.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-disposable-vape-1.webp",
+      "destination": "/images/blog/lost-mary-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-disposable-vape-2.webp",
+      "destination": "/images/blog/lost-mary-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-disposable-vape-3.webp",
+      "destination": "/images/blog/lost-mary-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-disposable-vape-4.webp",
+      "destination": "/images/blog/lost-mary-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/disposable-vs-pod-vs-box-mod-1.webp",
+      "destination": "/images/blog/pod-systems-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/disposable-vs-pod-vs-box-mod-2.webp",
+      "destination": "/images/blog/pod-systems-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/disposable-vs-pod-vs-box-mod-3.webp",
+      "destination": "/images/blog/pod-systems-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/disposable-vs-pod-vs-box-mod-4.webp",
+      "destination": "/images/blog/pod-systems-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puff-count-explained-1.webp",
+      "destination": "/images/blog/vapes-with-the-most-puffs-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puff-count-explained-2.webp",
+      "destination": "/images/blog/vapes-with-the-most-puffs-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puff-count-explained-3.webp",
+      "destination": "/images/blog/vapes-with-the-most-puffs-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puff-count-explained-4.webp",
+      "destination": "/images/blog/vapes-with-the-most-puffs-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-strength-guide-1.webp",
+      "destination": "/images/blog/nicotine-50-mg-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-strength-guide-2.webp",
+      "destination": "/images/blog/nicotine-50-mg-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-strength-guide-3.webp",
+      "destination": "/images/blog/nicotine-50-mg-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-strength-guide-4.webp",
+      "destination": "/images/blog/nicotine-50-mg-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-salts-vs-freebase-1.webp",
+      "destination": "/images/blog/salt-nic-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-salts-vs-freebase-2.webp",
+      "destination": "/images/blog/salt-nic-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-salts-vs-freebase-3.webp",
+      "destination": "/images/blog/salt-nic-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-salts-vs-freebase-4.webp",
+      "destination": "/images/blog/salt-nic-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pg-vg-ratio-explained-1.webp",
+      "destination": "/images/blog/pg-vs-vg-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pg-vg-ratio-explained-2.webp",
+      "destination": "/images/blog/pg-vs-vg-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pg-vg-ratio-explained-3.webp",
+      "destination": "/images/blog/pg-vs-vg-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pg-vg-ratio-explained-4.webp",
+      "destination": "/images/blog/pg-vs-vg-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/first-vape-kit-guide-1.webp",
+      "destination": "/images/blog/salt-nic-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/first-vape-kit-guide-2.webp",
+      "destination": "/images/blog/salt-nic-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/first-vape-kit-guide-3.webp",
+      "destination": "/images/blog/salt-nic-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/first-vape-kit-guide-4.webp",
+      "destination": "/images/blog/salt-nic-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rechargeable-vs-non-rechargeable-disposables-1.webp",
+      "destination": "/images/blog/vape-pen-rechargeable-battery-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rechargeable-vs-non-rechargeable-disposables-2.webp",
+      "destination": "/images/blog/vape-pen-rechargeable-battery-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rechargeable-vs-non-rechargeable-disposables-3.webp",
+      "destination": "/images/blog/vape-pen-rechargeable-battery-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rechargeable-vs-non-rechargeable-disposables-4.webp",
+      "destination": "/images/blog/vape-pen-rechargeable-battery-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dual-mesh-vs-single-mesh-coils-1.webp",
+      "destination": "/images/blog/mesh-coil-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dual-mesh-vs-single-mesh-coils-2.webp",
+      "destination": "/images/blog/mesh-coil-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dual-mesh-vs-single-mesh-coils-3.webp",
+      "destination": "/images/blog/mesh-coil-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dual-mesh-vs-single-mesh-coils-4.webp",
+      "destination": "/images/blog/mesh-coil-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-pod-vape-and-how-to-choose-1.webp",
+      "destination": "/images/blog/vape-with-refillable-pods-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-pod-vape-and-how-to-choose-2.webp",
+      "destination": "/images/blog/vape-with-refillable-pods-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-pod-vape-and-how-to-choose-3.webp",
+      "destination": "/images/blog/vape-with-refillable-pods-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-pod-vape-and-how-to-choose-4.webp",
+      "destination": "/images/blog/vape-with-refillable-pods-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sub-ohm-vs-mouth-to-lung-1.webp",
+      "destination": "/images/blog/vaping-tanks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sub-ohm-vs-mouth-to-lung-2.webp",
+      "destination": "/images/blog/vaping-tanks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sub-ohm-vs-mouth-to-lung-3.webp",
+      "destination": "/images/blog/vaping-tanks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sub-ohm-vs-mouth-to-lung-4.webp",
+      "destination": "/images/blog/vaping-tanks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-an-e-liquid-label-1.webp",
+      "destination": "/images/blog/liquid-salt-nic-50mg-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-an-e-liquid-label-2.webp",
+      "destination": "/images/blog/liquid-salt-nic-50mg-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-an-e-liquid-label-3.webp",
+      "destination": "/images/blog/liquid-salt-nic-50mg-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-an-e-liquid-label-4.webp",
+      "destination": "/images/blog/liquid-salt-nic-50mg-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-bottle-sizes-30ml-60ml-100ml-1.webp",
+      "destination": "/images/blog/bottles-of-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-bottle-sizes-30ml-60ml-100ml-2.webp",
+      "destination": "/images/blog/bottles-of-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-bottle-sizes-30ml-60ml-100ml-3.webp",
+      "destination": "/images/blog/bottles-of-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-bottle-sizes-30ml-60ml-100ml-4.webp",
+      "destination": "/images/blog/bottles-of-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-compare-vape-prices-per-puff-1.webp",
+      "destination": "/images/blog/foger-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-compare-vape-prices-per-puff-2.webp",
+      "destination": "/images/blog/foger-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-compare-vape-prices-per-puff-3.webp",
+      "destination": "/images/blog/foger-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-compare-vape-prices-per-puff-4.webp",
+      "destination": "/images/blog/foger-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/bulk-buying-vapes-save-money-1.webp",
+      "destination": "/images/blog/geek-bar-flavors-ranked-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/bulk-buying-vapes-save-money-2.webp",
+      "destination": "/images/blog/geek-bar-flavors-ranked-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/bulk-buying-vapes-save-money-3.webp",
+      "destination": "/images/blog/geek-bar-flavors-ranked-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/bulk-buying-vapes-save-money-4.webp",
+      "destination": "/images/blog/geek-bar-flavors-ranked-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pick-replacement-coils-and-pods-1.webp",
+      "destination": "/images/blog/replacement-vape-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pick-replacement-coils-and-pods-2.webp",
+      "destination": "/images/blog/replacement-vape-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pick-replacement-coils-and-pods-3.webp",
+      "destination": "/images/blog/replacement-vape-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pick-replacement-coils-and-pods-4.webp",
+      "destination": "/images/blog/replacement-vape-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/screen-vs-no-screen-disposable-vapes-1.webp",
+      "destination": "/images/blog/menthol-disposable-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/screen-vs-no-screen-disposable-vapes-2.webp",
+      "destination": "/images/blog/menthol-disposable-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/screen-vs-no-screen-disposable-vapes-3.webp",
+      "destination": "/images/blog/menthol-disposable-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/screen-vs-no-screen-disposable-vapes-4.webp",
+      "destination": "/images/blog/menthol-disposable-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adjustable-airflow-explained-1.webp",
+      "destination": "/images/blog/vape-mod-kit-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adjustable-airflow-explained-2.webp",
+      "destination": "/images/blog/vape-mod-kit-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adjustable-airflow-explained-3.webp",
+      "destination": "/images/blog/vape-mod-kit-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adjustable-airflow-explained-4.webp",
+      "destination": "/images/blog/vape-mod-kit-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-travel-1.webp",
+      "destination": "/images/blog/fogger-battery-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-travel-2.webp",
+      "destination": "/images/blog/fogger-battery-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-travel-3.webp",
+      "destination": "/images/blog/fogger-battery-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-travel-4.webp",
+      "destination": "/images/blog/fogger-battery-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-disposable-vapes-for-flavor-lovers-1.webp",
+      "destination": "/images/blog/flavors-of-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-disposable-vapes-for-flavor-lovers-2.webp",
+      "destination": "/images/blog/flavors-of-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-disposable-vapes-for-flavor-lovers-3.webp",
+      "destination": "/images/blog/flavors-of-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-disposable-vapes-for-flavor-lovers-4.webp",
+      "destination": "/images/blog/flavors-of-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-beginners-21-plus-1.webp",
+      "destination": "/images/blog/beginner-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-beginners-21-plus-2.webp",
+      "destination": "/images/blog/beginner-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-beginners-21-plus-3.webp",
+      "destination": "/images/blog/beginner-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/best-vapes-for-beginners-21-plus-4.webp",
+      "destination": "/images/blog/beginner-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pay-with-bitcoin-1.webp",
+      "destination": "/images/blog/geek-vape-z-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pay-with-bitcoin-2.webp",
+      "destination": "/images/blog/geek-vape-z-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pay-with-bitcoin-3.webp",
+      "destination": "/images/blog/geek-vape-z-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-pay-with-bitcoin-4.webp",
+      "destination": "/images/blog/geek-vape-z-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/usdt-erc20-vs-trc20-which-network-1.webp",
+      "destination": "/images/blog/buy-vapes-with-usdt-erc20-or-trc20-checkout-guide-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/usdt-erc20-vs-trc20-which-network-2.webp",
+      "destination": "/images/blog/buy-vapes-with-usdt-erc20-or-trc20-checkout-guide-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/usdt-erc20-vs-trc20-which-network-3.webp",
+      "destination": "/images/blog/buy-vapes-with-usdt-erc20-or-trc20-checkout-guide-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/usdt-erc20-vs-trc20-which-network-4.webp",
+      "destination": "/images/blog/buy-vapes-with-usdt-erc20-or-trc20-checkout-guide-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-usdc-on-solana-1.webp",
+      "destination": "/images/blog/lost-mary-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-usdc-on-solana-2.webp",
+      "destination": "/images/blog/lost-mary-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-usdc-on-solana-3.webp",
+      "destination": "/images/blog/lost-mary-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-usdc-on-solana-4.webp",
+      "destination": "/images/blog/lost-mary-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-ethereum-eth-1.webp",
+      "destination": "/images/blog/buy-vapes-with-ethereum-eth-how-to-pay-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-ethereum-eth-2.webp",
+      "destination": "/images/blog/buy-vapes-with-ethereum-eth-how-to-pay-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-ethereum-eth-3.webp",
+      "destination": "/images/blog/buy-vapes-with-ethereum-eth-how-to-pay-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-ethereum-eth-4.webp",
+      "destination": "/images/blog/buy-vapes-with-ethereum-eth-how-to-pay-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-bnb-smart-chain-1.webp",
+      "destination": "/images/blog/fifty-bar-disposable-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-bnb-smart-chain-2.webp",
+      "destination": "/images/blog/fifty-bar-disposable-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-bnb-smart-chain-3.webp",
+      "destination": "/images/blog/fifty-bar-disposable-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-bnb-smart-chain-4.webp",
+      "destination": "/images/blog/fifty-bar-disposable-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-solana-sol-1.webp",
+      "destination": "/images/blog/juice-head-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-solana-sol-2.webp",
+      "destination": "/images/blog/juice-head-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-solana-sol-3.webp",
+      "destination": "/images/blog/juice-head-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-solana-sol-4.webp",
+      "destination": "/images/blog/juice-head-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-buy-crypto-with-a-card-1.webp",
+      "destination": "/images/blog/geek-bar-flavor-chart-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-buy-crypto-with-a-card-2.webp",
+      "destination": "/images/blog/geek-bar-flavor-chart-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-buy-crypto-with-a-card-3.webp",
+      "destination": "/images/blog/geek-bar-flavor-chart-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-buy-crypto-with-a-card-4.webp",
+      "destination": "/images/blog/geek-bar-flavor-chart-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-crypto-network-1.webp",
+      "destination": "/images/blog/what-is-a-crypto-network-and-why-does-it-matter-when-you-pay-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-crypto-network-2.webp",
+      "destination": "/images/blog/what-is-a-crypto-network-and-why-does-it-matter-when-you-pay-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-crypto-network-3.webp",
+      "destination": "/images/blog/what-is-a-crypto-network-and-why-does-it-matter-when-you-pay-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-crypto-network-4.webp",
+      "destination": "/images/blog/what-is-a-crypto-network-and-why-does-it-matter-when-you-pay-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-discount-how-it-works-1.webp",
+      "destination": "/images/blog/svopp-pod-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-discount-how-it-works-2.webp",
+      "destination": "/images/blog/svopp-pod-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-discount-how-it-works-3.webp",
+      "destination": "/images/blog/svopp-pod-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-discount-how-it-works-4.webp",
+      "destination": "/images/blog/svopp-pod-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-we-detect-your-crypto-payment-1.webp",
+      "destination": "/images/blog/how-we-detect-your-crypto-payment-automatically-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-we-detect-your-crypto-payment-2.webp",
+      "destination": "/images/blog/how-we-detect-your-crypto-payment-automatically-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-we-detect-your-crypto-payment-3.webp",
+      "destination": "/images/blog/how-we-detect-your-crypto-payment-automatically-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-we-detect-your-crypto-payment-4.webp",
+      "destination": "/images/blog/how-we-detect-your-crypto-payment-automatically-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/send-crypto-from-an-exchange-to-a-wallet-1.webp",
+      "destination": "/images/blog/salt-nic-pod-systems-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/send-crypto-from-an-exchange-to-a-wallet-2.webp",
+      "destination": "/images/blog/salt-nic-pod-systems-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/send-crypto-from-an-exchange-to-a-wallet-3.webp",
+      "destination": "/images/blog/salt-nic-pod-systems-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/send-crypto-from-an-exchange-to-a-wallet-4.webp",
+      "destination": "/images/blog/salt-nic-pod-systems-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/scan-wallet-qr-code-and-copy-address-1.webp",
+      "destination": "/images/blog/lost-mary-mo5000-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/scan-wallet-qr-code-and-copy-address-2.webp",
+      "destination": "/images/blog/lost-mary-mo5000-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/scan-wallet-qr-code-and-copy-address-3.webp",
+      "destination": "/images/blog/lost-mary-mo5000-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/scan-wallet-qr-code-and-copy-address-4.webp",
+      "destination": "/images/blog/lost-mary-mo5000-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-network-fees-explained-1.webp",
+      "destination": "/images/blog/crypto-network-fees-explained-gas-sats-and-why-they-vary-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-network-fees-explained-2.webp",
+      "destination": "/images/blog/crypto-network-fees-explained-gas-sats-and-why-they-vary-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-network-fees-explained-3.webp",
+      "destination": "/images/blog/crypto-network-fees-explained-gas-sats-and-why-they-vary-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-network-fees-explained-4.webp",
+      "destination": "/images/blog/crypto-network-fees-explained-gas-sats-and-why-they-vary-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sent-crypto-on-the-wrong-network-1.webp",
+      "destination": "/images/blog/fifty-bar-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sent-crypto-on-the-wrong-network-2.webp",
+      "destination": "/images/blog/fifty-bar-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sent-crypto-on-the-wrong-network-3.webp",
+      "destination": "/images/blog/fifty-bar-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/sent-crypto-on-the-wrong-network-4.webp",
+      "destination": "/images/blog/fifty-bar-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-your-crypto-payment-shows-underpaid-1.webp",
+      "destination": "/images/blog/geek-bar-delivery-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-your-crypto-payment-shows-underpaid-2.webp",
+      "destination": "/images/blog/geek-bar-delivery-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-your-crypto-payment-shows-underpaid-3.webp",
+      "destination": "/images/blog/geek-bar-delivery-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-your-crypto-payment-shows-underpaid-4.webp",
+      "destination": "/images/blog/geek-bar-delivery-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cash-app-payments-guide-1.webp",
+      "destination": "/images/blog/buy-vapes-with-cash-app-how-to-pay-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cash-app-payments-guide-2.webp",
+      "destination": "/images/blog/buy-vapes-with-cash-app-how-to-pay-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cash-app-payments-guide-3.webp",
+      "destination": "/images/blog/buy-vapes-with-cash-app-how-to-pay-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cash-app-payments-guide-4.webp",
+      "destination": "/images/blog/buy-vapes-with-cash-app-how-to-pay-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-pay-payments-guide-1.webp",
+      "destination": "/images/blog/fogger-juice-pods-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-pay-payments-guide-2.webp",
+      "destination": "/images/blog/fogger-juice-pods-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-pay-payments-guide-3.webp",
+      "destination": "/images/blog/fogger-juice-pods-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-pay-payments-guide-4.webp",
+      "destination": "/images/blog/fogger-juice-pods-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/chime-payments-guide-1.webp",
+      "destination": "/images/blog/buy-vapes-with-chime-how-to-pay-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/chime-payments-guide-2.webp",
+      "destination": "/images/blog/buy-vapes-with-chime-how-to-pay-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/chime-payments-guide-3.webp",
+      "destination": "/images/blog/buy-vapes-with-chime-how-to-pay-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/chime-payments-guide-4.webp",
+      "destination": "/images/blog/buy-vapes-with-chime-how-to-pay-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-payment-details-reach-you-1.webp",
+      "destination": "/images/blog/blue-raspberry-geek-bar-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-payment-details-reach-you-2.webp",
+      "destination": "/images/blog/blue-raspberry-geek-bar-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-payment-details-reach-you-3.webp",
+      "destination": "/images/blog/blue-raspberry-geek-bar-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-payment-details-reach-you-4.webp",
+      "destination": "/images/blog/blue-raspberry-geek-bar-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/payment-methods-compared-1.webp",
+      "destination": "/images/blog/buy-vapes-online-payment-methods-compared-crypto-gift-card-cash-app-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/payment-methods-compared-2.webp",
+      "destination": "/images/blog/buy-vapes-online-payment-methods-compared-crypto-gift-card-cash-app-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/payment-methods-compared-3.webp",
+      "destination": "/images/blog/buy-vapes-online-payment-methods-compared-crypto-gift-card-cash-app-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/payment-methods-compared-4.webp",
+      "destination": "/images/blog/buy-vapes-online-payment-methods-compared-crypto-gift-card-cash-app-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-upload-a-payment-screenshot-1.webp",
+      "destination": "/images/blog/lost-mary-flavours-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-upload-a-payment-screenshot-2.webp",
+      "destination": "/images/blog/lost-mary-flavours-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-upload-a-payment-screenshot-3.webp",
+      "destination": "/images/blog/lost-mary-flavours-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-upload-a-payment-screenshot-4.webp",
+      "destination": "/images/blog/lost-mary-flavours-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-gift-card-payment-works-1.webp",
+      "destination": "/images/blog/vapes-like-geek-bar-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-gift-card-payment-works-2.webp",
+      "destination": "/images/blog/vapes-like-geek-bar-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-gift-card-payment-works-3.webp",
+      "destination": "/images/blog/vapes-like-geek-bar-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-gift-card-payment-works-4.webp",
+      "destination": "/images/blog/vapes-like-geek-bar-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-apple-gift-card-1.webp",
+      "destination": "/images/blog/geek-bar-bulk-buy-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-apple-gift-card-2.webp",
+      "destination": "/images/blog/geek-bar-bulk-buy-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-apple-gift-card-3.webp",
+      "destination": "/images/blog/geek-bar-bulk-buy-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-apple-gift-card-4.webp",
+      "destination": "/images/blog/geek-bar-bulk-buy-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-razer-gold-1.webp",
+      "destination": "/images/blog/best-salt-pod-system-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-razer-gold-2.webp",
+      "destination": "/images/blog/best-salt-pod-system-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-razer-gold-3.webp",
+      "destination": "/images/blog/best-salt-pod-system-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-razer-gold-4.webp",
+      "destination": "/images/blog/best-salt-pod-system-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-paysafecard-1.webp",
+      "destination": "/images/blog/buy-vapes-with-paysafecard-how-to-pay-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-paysafecard-2.webp",
+      "destination": "/images/blog/buy-vapes-with-paysafecard-how-to-pay-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-paysafecard-3.webp",
+      "destination": "/images/blog/buy-vapes-with-paysafecard-how-to-pay-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-paysafecard-4.webp",
+      "destination": "/images/blog/buy-vapes-with-paysafecard-how-to-pay-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-sephora-gift-card-1.webp",
+      "destination": "/images/blog/buy-vapes-with-a-gift-card-how-to-pay-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-sephora-gift-card-2.webp",
+      "destination": "/images/blog/buy-vapes-with-a-gift-card-how-to-pay-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-sephora-gift-card-3.webp",
+      "destination": "/images/blog/buy-vapes-with-a-gift-card-how-to-pay-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-sephora-gift-card-4.webp",
+      "destination": "/images/blog/buy-vapes-with-a-gift-card-how-to-pay-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-macys-gift-card-1.webp",
+      "destination": "/images/blog/lost-mary-mint-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-macys-gift-card-2.webp",
+      "destination": "/images/blog/lost-mary-mint-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-macys-gift-card-3.webp",
+      "destination": "/images/blog/lost-mary-mint-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pay-with-macys-gift-card-4.webp",
+      "destination": "/images/blog/lost-mary-mint-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-code-security-tips-1.webp",
+      "destination": "/images/blog/gift-card-code-security-tips-avoiding-scams-when-you-pay-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-code-security-tips-2.webp",
+      "destination": "/images/blog/gift-card-code-security-tips-avoiding-scams-when-you-pay-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-code-security-tips-3.webp",
+      "destination": "/images/blog/gift-card-code-security-tips-avoiding-scams-when-you-pay-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-code-security-tips-4.webp",
+      "destination": "/images/blog/gift-card-code-security-tips-avoiding-scams-when-you-pay-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-vs-crypto-which-is-better-1.webp",
+      "destination": "/images/blog/blue-geek-bar-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-vs-crypto-which-is-better-2.webp",
+      "destination": "/images/blog/blue-geek-bar-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-vs-crypto-which-is-better-3.webp",
+      "destination": "/images/blog/blue-geek-bar-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/gift-card-vs-crypto-which-is-better-4.webp",
+      "destination": "/images/blog/blue-geek-bar-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-ordering-works-1.webp",
+      "destination": "/images/blog/geek-bar-uber-eats-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-ordering-works-2.webp",
+      "destination": "/images/blog/geek-bar-uber-eats-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-ordering-works-3.webp",
+      "destination": "/images/blog/geek-bar-uber-eats-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-ordering-works-4.webp",
+      "destination": "/images/blog/geek-bar-uber-eats-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/minimum-order-and-free-shipping-explained-1.webp",
+      "destination": "/images/blog/vapes-free-shipping-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/minimum-order-and-free-shipping-explained-2.webp",
+      "destination": "/images/blog/vapes-free-shipping-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/minimum-order-and-free-shipping-explained-3.webp",
+      "destination": "/images/blog/vapes-free-shipping-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/minimum-order-and-free-shipping-explained-4.webp",
+      "destination": "/images/blog/vapes-free-shipping-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-times-from-phoenix-arizona-1.webp",
+      "destination": "/images/blog/vape-flavors-lost-mary-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-times-from-phoenix-arizona-2.webp",
+      "destination": "/images/blog/vape-flavors-lost-mary-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-times-from-phoenix-arizona-3.webp",
+      "destination": "/images/blog/vape-flavors-lost-mary-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-times-from-phoenix-arizona-4.webp",
+      "destination": "/images/blog/vape-flavors-lost-mary-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-track-your-order-1.webp",
+      "destination": "/images/blog/pod-juice-clear-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-track-your-order-2.webp",
+      "destination": "/images/blog/pod-juice-clear-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-track-your-order-3.webp",
+      "destination": "/images/blog/pod-juice-clear-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-track-your-order-4.webp",
+      "destination": "/images/blog/pod-juice-clear-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-signature-on-delivery-what-to-expect-1.webp",
+      "destination": "/images/blog/vape-delivery-california-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-signature-on-delivery-what-to-expect-2.webp",
+      "destination": "/images/blog/vape-delivery-california-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-signature-on-delivery-what-to-expect-3.webp",
+      "destination": "/images/blog/vape-delivery-california-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-signature-on-delivery-what-to-expect-4.webp",
+      "destination": "/images/blog/vape-delivery-california-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/discreet-packaging-what-to-expect-1.webp",
+      "destination": "/images/blog/discreet-vape-shipping-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/discreet-packaging-what-to-expect-2.webp",
+      "destination": "/images/blog/discreet-vape-shipping-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/discreet-packaging-what-to-expect-3.webp",
+      "destination": "/images/blog/discreet-vape-shipping-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/discreet-packaging-what-to-expect-4.webp",
+      "destination": "/images/blog/discreet-vape-shipping-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-status-meanings-1.webp",
+      "destination": "/images/blog/geek-bar-pulse-com-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-status-meanings-2.webp",
+      "destination": "/images/blog/geek-bar-pulse-com-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-status-meanings-3.webp",
+      "destination": "/images/blog/geek-bar-pulse-com-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-status-meanings-4.webp",
+      "destination": "/images/blog/geek-bar-pulse-com-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-or-cancel-an-order-1.webp",
+      "destination": "/images/blog/how-to-change-or-cancel-an-order-before-it-ships-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-or-cancel-an-order-2.webp",
+      "destination": "/images/blog/how-to-change-or-cancel-an-order-before-it-ships-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-or-cancel-an-order-3.webp",
+      "destination": "/images/blog/how-to-change-or-cancel-an-order-before-it-ships-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-or-cancel-an-order-4.webp",
+      "destination": "/images/blog/how-to-change-or-cancel-an-order-before-it-ships-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-to-do-if-your-package-is-delayed-1.webp",
+      "destination": "/images/blog/fifty-bar-vape-review-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-to-do-if-your-package-is-delayed-2.webp",
+      "destination": "/images/blog/fifty-bar-vape-review-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-to-do-if-your-package-is-delayed-3.webp",
+      "destination": "/images/blog/fifty-bar-vape-review-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-to-do-if-your-package-is-delayed-4.webp",
+      "destination": "/images/blog/fifty-bar-vape-review-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/damaged-or-missing-items-what-to-do-1.webp",
+      "destination": "/images/blog/popular-geek-bar-flavours-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/damaged-or-missing-items-what-to-do-2.webp",
+      "destination": "/images/blog/popular-geek-bar-flavours-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/damaged-or-missing-items-what-to-do-3.webp",
+      "destination": "/images/blog/popular-geek-bar-flavours-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/damaged-or-missing-items-what-to-do-4.webp",
+      "destination": "/images/blog/popular-geek-bar-flavours-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/refund-and-return-policy-explained-1.webp",
+      "destination": "/images/blog/geek-bar-prices-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/refund-and-return-policy-explained-2.webp",
+      "destination": "/images/blog/geek-bar-prices-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/refund-and-return-policy-explained-3.webp",
+      "destination": "/images/blog/geek-bar-prices-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/refund-and-return-policy-explained-4.webp",
+      "destination": "/images/blog/geek-bar-prices-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-contact-support-1.webp",
+      "destination": "/images/blog/pod-juice-golden-custard-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-contact-support-2.webp",
+      "destination": "/images/blog/pod-juice-golden-custard-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-contact-support-3.webp",
+      "destination": "/images/blog/pod-juice-golden-custard-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-contact-support-4.webp",
+      "destination": "/images/blog/pod-juice-golden-custard-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ordering-via-whatsapp-1.webp",
+      "destination": "/images/blog/ordering-via-whatsapp-how-the-chat-option-works-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ordering-via-whatsapp-2.webp",
+      "destination": "/images/blog/ordering-via-whatsapp-how-the-chat-option-works-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ordering-via-whatsapp-3.webp",
+      "destination": "/images/blog/ordering-via-whatsapp-how-the-chat-option-works-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ordering-via-whatsapp-4.webp",
+      "destination": "/images/blog/ordering-via-whatsapp-how-the-chat-option-works-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-confirmation-email-not-arriving-1.webp",
+      "destination": "/images/blog/order-confirmation-email-not-arriving-try-these-fixes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-confirmation-email-not-arriving-2.webp",
+      "destination": "/images/blog/order-confirmation-email-not-arriving-try-these-fixes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-confirmation-email-not-arriving-3.webp",
+      "destination": "/images/blog/order-confirmation-email-not-arriving-try-these-fixes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/order-confirmation-email-not-arriving-4.webp",
+      "destination": "/images/blog/order-confirmation-email-not-arriving-try-these-fixes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/wholesale-ordering-guide-1.webp",
+      "destination": "/images/blog/vanse-bar-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/wholesale-ordering-guide-2.webp",
+      "destination": "/images/blog/vanse-bar-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/wholesale-ordering-guide-3.webp",
+      "destination": "/images/blog/vanse-bar-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/wholesale-ordering-guide-4.webp",
+      "destination": "/images/blog/vanse-bar-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-become-a-wholesale-customer-1.webp",
+      "destination": "/images/blog/lost-mary-20000-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-become-a-wholesale-customer-2.webp",
+      "destination": "/images/blog/lost-mary-20000-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-become-a-wholesale-customer-3.webp",
+      "destination": "/images/blog/lost-mary-20000-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-become-a-wholesale-customer-4.webp",
+      "destination": "/images/blog/lost-mary-20000-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-we-need-your-email-and-phone-1.webp",
+      "destination": "/images/blog/geek-bar-best-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-we-need-your-email-and-phone-2.webp",
+      "destination": "/images/blog/geek-bar-best-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-we-need-your-email-and-phone-3.webp",
+      "destination": "/images/blog/geek-bar-best-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-we-need-your-email-and-phone-4.webp",
+      "destination": "/images/blog/geek-bar-best-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-address-tips-1.webp",
+      "destination": "/images/blog/nic-salt-free-shipping-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-address-tips-2.webp",
+      "destination": "/images/blog/nic-salt-free-shipping-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-address-tips-3.webp",
+      "destination": "/images/blog/nic-salt-free-shipping-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/shipping-address-tips-4.webp",
+      "destination": "/images/blog/nic-salt-free-shipping-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/where-we-ship-and-where-we-do-not-1.webp",
+      "destination": "/images/blog/buy-vapes-online-where-we-ship-and-delivery-times-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/where-we-ship-and-where-we-do-not-2.webp",
+      "destination": "/images/blog/buy-vapes-online-where-we-ship-and-delivery-times-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/where-we-ship-and-where-we-do-not-3.webp",
+      "destination": "/images/blog/buy-vapes-online-where-we-ship-and-delivery-times-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/where-we-ship-and-where-we-do-not-4.webp",
+      "destination": "/images/blog/buy-vapes-online-where-we-ship-and-delivery-times-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-21-plus-age-verification-means-1.webp",
+      "destination": "/images/blog/best-geek-bar-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-21-plus-age-verification-means-2.webp",
+      "destination": "/images/blog/best-geek-bar-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-21-plus-age-verification-means-3.webp",
+      "destination": "/images/blog/best-geek-bar-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-21-plus-age-verification-means-4.webp",
+      "destination": "/images/blog/best-geek-bar-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pact-act-explained-for-vape-buyers-1.webp",
+      "destination": "/images/blog/top-foger-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pact-act-explained-for-vape-buyers-2.webp",
+      "destination": "/images/blog/top-foger-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pact-act-explained-for-vape-buyers-3.webp",
+      "destination": "/images/blog/top-foger-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pact-act-explained-for-vape-buyers-4.webp",
+      "destination": "/images/blog/top-foger-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fda-and-vaping-products-what-adults-should-know-1.webp",
+      "destination": "/images/blog/geek-bar-best-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fda-and-vaping-products-what-adults-should-know-2.webp",
+      "destination": "/images/blog/geek-bar-best-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fda-and-vaping-products-what-adults-should-know-3.webp",
+      "destination": "/images/blog/geek-bar-best-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fda-and-vaping-products-what-adults-should-know-4.webp",
+      "destination": "/images/blog/geek-bar-best-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/state-and-local-vape-laws-explained-1.webp",
+      "destination": "/images/blog/fogger-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/state-and-local-vape-laws-explained-2.webp",
+      "destination": "/images/blog/fogger-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/state-and-local-vape-laws-explained-3.webp",
+      "destination": "/images/blog/fogger-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/state-and-local-vape-laws-explained-4.webp",
+      "destination": "/images/blog/fogger-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-taxes-by-state-overview-1.webp",
+      "destination": "/images/blog/nic-salt-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-taxes-by-state-overview-2.webp",
+      "destination": "/images/blog/nic-salt-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-taxes-by-state-overview-3.webp",
+      "destination": "/images/blog/nic-salt-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-taxes-by-state-overview-4.webp",
+      "destination": "/images/blog/nic-salt-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/traveling-with-vapes-airline-rules-1.webp",
+      "destination": "/images/blog/small-refillable-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/traveling-with-vapes-airline-rules-2.webp",
+      "destination": "/images/blog/small-refillable-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/traveling-with-vapes-airline-rules-3.webp",
+      "destination": "/images/blog/small-refillable-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/traveling-with-vapes-airline-rules-4.webp",
+      "destination": "/images/blog/small-refillable-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lithium-battery-care-basics-for-vapes-1.webp",
+      "destination": "/images/blog/mtl-vape-devices-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lithium-battery-care-basics-for-vapes-2.webp",
+      "destination": "/images/blog/mtl-vape-devices-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lithium-battery-care-basics-for-vapes-3.webp",
+      "destination": "/images/blog/mtl-vape-devices-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lithium-battery-care-basics-for-vapes-4.webp",
+      "destination": "/images/blog/mtl-vape-devices-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-dispose-of-vapes-and-batteries-1.webp",
+      "destination": "/images/blog/vapes-brands-disposable-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-dispose-of-vapes-and-batteries-2.webp",
+      "destination": "/images/blog/vapes-brands-disposable-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-dispose-of-vapes-and-batteries-3.webp",
+      "destination": "/images/blog/vapes-brands-disposable-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-dispose-of-vapes-and-batteries-4.webp",
+      "destination": "/images/blog/vapes-brands-disposable-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/keeping-vapes-away-from-children-and-pets-1.webp",
+      "destination": "/images/blog/nic-salt-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/keeping-vapes-away-from-children-and-pets-2.webp",
+      "destination": "/images/blog/nic-salt-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/keeping-vapes-away-from-children-and-pets-3.webp",
+      "destination": "/images/blog/nic-salt-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/keeping-vapes-away-from-children-and-pets-4.webp",
+      "destination": "/images/blog/nic-salt-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-the-nicotine-warning-label-means-1.webp",
+      "destination": "/images/blog/best-geek-bar-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-the-nicotine-warning-label-means-2.webp",
+      "destination": "/images/blog/best-geek-bar-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-the-nicotine-warning-label-means-3.webp",
+      "destination": "/images/blog/best-geek-bar-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-the-nicotine-warning-label-means-4.webp",
+      "destination": "/images/blog/best-geek-bar-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/california-privacy-rights-explained-1.webp",
+      "destination": "/images/blog/vape-juice-california-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/california-privacy-rights-explained-2.webp",
+      "destination": "/images/blog/vape-juice-california-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/california-privacy-rights-explained-3.webp",
+      "destination": "/images/blog/vape-juice-california-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/california-privacy-rights-explained-4.webp",
+      "destination": "/images/blog/vape-juice-california-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-spot-counterfeit-vapes-1.webp",
+      "destination": "/images/blog/lost-mary-nera-pureview-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-spot-counterfeit-vapes-2.webp",
+      "destination": "/images/blog/lost-mary-nera-pureview-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-spot-counterfeit-vapes-3.webp",
+      "destination": "/images/blog/lost-mary-nera-pureview-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-spot-counterfeit-vapes-4.webp",
+      "destination": "/images/blog/lost-mary-nera-pureview-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-does-a-vape-work-1.webp",
+      "destination": "/images/blog/vape-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-does-a-vape-work-2.webp",
+      "destination": "/images/blog/vape-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-does-a-vape-work-3.webp",
+      "destination": "/images/blog/vape-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-does-a-vape-work-4.webp",
+      "destination": "/images/blog/vape-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parts-of-a-vape-glossary-1.webp",
+      "destination": "/images/blog/vape-coil-replacement-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parts-of-a-vape-glossary-2.webp",
+      "destination": "/images/blog/vape-coil-replacement-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parts-of-a-vape-glossary-3.webp",
+      "destination": "/images/blog/vape-coil-replacement-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parts-of-a-vape-glossary-4.webp",
+      "destination": "/images/blog/vape-coil-replacement-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-glossary-terms-a-to-z-1.webp",
+      "destination": "/images/blog/common-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-glossary-terms-a-to-z-2.webp",
+      "destination": "/images/blog/common-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-glossary-terms-a-to-z-3.webp",
+      "destination": "/images/blog/common-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-glossary-terms-a-to-z-4.webp",
+      "destination": "/images/blog/common-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mah-puffs-and-battery-life-how-they-relate-1.webp",
+      "destination": "/images/blog/longest-lasting-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mah-puffs-and-battery-life-how-they-relate-2.webp",
+      "destination": "/images/blog/longest-lasting-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mah-puffs-and-battery-life-how-they-relate-3.webp",
+      "destination": "/images/blog/longest-lasting-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mah-puffs-and-battery-life-how-they-relate-4.webp",
+      "destination": "/images/blog/longest-lasting-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-mesh-coil-1.webp",
+      "destination": "/images/blog/mesh-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-mesh-coil-2.webp",
+      "destination": "/images/blog/mesh-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-mesh-coil-3.webp",
+      "destination": "/images/blog/mesh-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-mesh-coil-4.webp",
+      "destination": "/images/blog/mesh-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-are-ohms-watts-and-volts-in-vaping-1.webp",
+      "destination": "/images/blog/sub-ohm-tanks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-are-ohms-watts-and-volts-in-vaping-2.webp",
+      "destination": "/images/blog/sub-ohm-tanks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-are-ohms-watts-and-volts-in-vaping-3.webp",
+      "destination": "/images/blog/sub-ohm-tanks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-are-ohms-watts-and-volts-in-vaping-4.webp",
+      "destination": "/images/blog/sub-ohm-tanks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-ingredients-explained-1.webp",
+      "destination": "/images/blog/salt-nicotine-vs-nicotine-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-ingredients-explained-2.webp",
+      "destination": "/images/blog/salt-nicotine-vs-nicotine-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-ingredients-explained-3.webp",
+      "destination": "/images/blog/salt-nicotine-vs-nicotine-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-ingredients-explained-4.webp",
+      "destination": "/images/blog/salt-nicotine-vs-nicotine-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-steeping-and-does-it-matter-1.webp",
+      "destination": "/images/blog/flavor-salt-nic-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-steeping-and-does-it-matter-2.webp",
+      "destination": "/images/blog/flavor-salt-nic-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-steeping-and-does-it-matter-3.webp",
+      "destination": "/images/blog/flavor-salt-nic-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-steeping-and-does-it-matter-4.webp",
+      "destination": "/images/blog/flavor-salt-nic-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/throat-hit-explained-1.webp",
+      "destination": "/images/blog/best-salt-nic-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/throat-hit-explained-2.webp",
+      "destination": "/images/blog/best-salt-nic-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/throat-hit-explained-3.webp",
+      "destination": "/images/blog/best-salt-nic-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/throat-hit-explained-4.webp",
+      "destination": "/images/blog/best-salt-nic-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-cooling-ice-flavors-work-1.webp",
+      "destination": "/images/blog/lush-ice-vape-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-cooling-ice-flavors-work-2.webp",
+      "destination": "/images/blog/lush-ice-vape-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-cooling-ice-flavors-work-3.webp",
+      "destination": "/images/blog/lush-ice-vape-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-cooling-ice-flavors-work-4.webp",
+      "destination": "/images/blog/lush-ice-vape-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/history-of-vaping-timeline-1.webp",
+      "destination": "/images/blog/pod-vape-systems-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/history-of-vaping-timeline-2.webp",
+      "destination": "/images/blog/pod-vape-systems-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/history-of-vaping-timeline-3.webp",
+      "destination": "/images/blog/pod-vape-systems-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/history-of-vaping-timeline-4.webp",
+      "destination": "/images/blog/pod-vape-systems-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-delivery-options-compared-1.webp",
+      "destination": "/images/blog/clew-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-delivery-options-compared-2.webp",
+      "destination": "/images/blog/clew-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-delivery-options-compared-3.webp",
+      "destination": "/images/blog/clew-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-delivery-options-compared-4.webp",
+      "destination": "/images/blog/clew-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-box-mod-1.webp",
+      "destination": "/images/blog/box-mod-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-box-mod-2.webp",
+      "destination": "/images/blog/box-mod-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-box-mod-3.webp",
+      "destination": "/images/blog/box-mod-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-a-box-mod-4.webp",
+      "destination": "/images/blog/box-mod-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-shelf-life-and-expiry-1.webp",
+      "destination": "/images/blog/nicotine-salt-e-liquid-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-shelf-life-and-expiry-2.webp",
+      "destination": "/images/blog/nicotine-salt-e-liquid-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-shelf-life-and-expiry-3.webp",
+      "destination": "/images/blog/nicotine-salt-e-liquid-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/e-liquid-shelf-life-and-expiry-4.webp",
+      "destination": "/images/blog/nicotine-salt-e-liquid-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-chasing-vs-flavor-chasing-1.webp",
+      "destination": "/images/blog/vienna-bliss-vape-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-chasing-vs-flavor-chasing-2.webp",
+      "destination": "/images/blog/vienna-bliss-vape-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-chasing-vs-flavor-chasing-3.webp",
+      "destination": "/images/blog/vienna-bliss-vape-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-chasing-vs-flavor-chasing-4.webp",
+      "destination": "/images/blog/vienna-bliss-vape-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/understanding-vape-device-indicator-lights-1.webp",
+      "destination": "/images/blog/best-vapes-with-display-screen-and-led-battery-indicator-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/understanding-vape-device-indicator-lights-2.webp",
+      "destination": "/images/blog/best-vapes-with-display-screen-and-led-battery-indicator-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/understanding-vape-device-indicator-lights-3.webp",
+      "destination": "/images/blog/best-vapes-with-display-screen-and-led-battery-indicator-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/understanding-vape-device-indicator-lights-4.webp",
+      "destination": "/images/blog/best-vapes-with-display-screen-and-led-battery-indicator-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/auto-draw-vs-button-fire-vapes-1.webp",
+      "destination": "/images/blog/auto-draw-vape-battery-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/auto-draw-vs-button-fire-vapes-2.webp",
+      "destination": "/images/blog/auto-draw-vape-battery-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/auto-draw-vs-button-fire-vapes-3.webp",
+      "destination": "/images/blog/auto-draw-vape-battery-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/auto-draw-vs-button-fire-vapes-4.webp",
+      "destination": "/images/blog/auto-draw-vape-battery-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/types-of-vaporizers-explained-1.webp",
+      "destination": "/images/blog/dr-dabber-vape-pen-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/types-of-vaporizers-explained-2.webp",
+      "destination": "/images/blog/dr-dabber-vape-pen-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/types-of-vaporizers-explained-3.webp",
+      "destination": "/images/blog/dr-dabber-vape-pen-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/types-of-vaporizers-explained-4.webp",
+      "destination": "/images/blog/dr-dabber-vape-pen-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-profiles-explained-1.webp",
+      "destination": "/images/blog/menthol-disposable-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-profiles-explained-2.webp",
+      "destination": "/images/blog/menthol-disposable-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-profiles-explained-3.webp",
+      "destination": "/images/blog/menthol-disposable-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-profiles-explained-4.webp",
+      "destination": "/images/blog/menthol-disposable-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-a-vape-product-page-1.webp",
+      "destination": "/images/blog/zero-nicotine-disposable-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-a-vape-product-page-2.webp",
+      "destination": "/images/blog/zero-nicotine-disposable-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-a-vape-product-page-3.webp",
+      "destination": "/images/blog/zero-nicotine-disposable-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-read-a-vape-product-page-4.webp",
+      "destination": "/images/blog/zero-nicotine-disposable-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-is-my-vape-not-hitting-1.webp",
+      "destination": "/images/blog/raz-vape-flavors-pods-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-is-my-vape-not-hitting-2.webp",
+      "destination": "/images/blog/raz-vape-flavors-pods-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-is-my-vape-not-hitting-3.webp",
+      "destination": "/images/blog/raz-vape-flavors-pods-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/why-is-my-vape-not-hitting-4.webp",
+      "destination": "/images/blog/raz-vape-flavors-pods-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-tastes-burnt-1.webp",
+      "destination": "/images/blog/vape-coils-replacement-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-tastes-burnt-2.webp",
+      "destination": "/images/blog/vape-coils-replacement-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-tastes-burnt-3.webp",
+      "destination": "/images/blog/vape-coils-replacement-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-tastes-burnt-4.webp",
+      "destination": "/images/blog/vape-coils-replacement-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-leaking-causes-and-fixes-1.webp",
+      "destination": "/images/blog/vape-pods-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-leaking-causes-and-fixes-2.webp",
+      "destination": "/images/blog/vape-pods-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-leaking-causes-and-fixes-3.webp",
+      "destination": "/images/blog/vape-pods-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-leaking-causes-and-fixes-4.webp",
+      "destination": "/images/blog/vape-pods-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-gurgling-sound-fix-1.webp",
+      "destination": "/images/blog/vape-ceramic-coil-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-gurgling-sound-fix-2.webp",
+      "destination": "/images/blog/vape-ceramic-coil-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-gurgling-sound-fix-3.webp",
+      "destination": "/images/blog/vape-ceramic-coil-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-gurgling-sound-fix-4.webp",
+      "destination": "/images/blog/vape-ceramic-coil-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-wont-charge-fixes-1.webp",
+      "destination": "/images/blog/cartridge-vape-battery-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-wont-charge-fixes-2.webp",
+      "destination": "/images/blog/cartridge-vape-battery-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-wont-charge-fixes-3.webp",
+      "destination": "/images/blog/cartridge-vape-battery-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-wont-charge-fixes-4.webp",
+      "destination": "/images/blog/cartridge-vape-battery-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-charge-a-disposable-1.webp",
+      "destination": "/images/blog/disposable-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-charge-a-disposable-2.webp",
+      "destination": "/images/blog/disposable-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-charge-a-disposable-3.webp",
+      "destination": "/images/blog/disposable-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-charge-a-disposable-4.webp",
+      "destination": "/images/blog/disposable-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-extend-vape-battery-life-1.webp",
+      "destination": "/images/blog/magnetic-vape-battery-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-extend-vape-battery-life-2.webp",
+      "destination": "/images/blog/magnetic-vape-battery-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-extend-vape-battery-life-3.webp",
+      "destination": "/images/blog/magnetic-vape-battery-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-extend-vape-battery-life-4.webp",
+      "destination": "/images/blog/magnetic-vape-battery-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-prime-a-new-coil-or-pod-1.webp",
+      "destination": "/images/blog/replacement-coil-for-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-prime-a-new-coil-or-pod-2.webp",
+      "destination": "/images/blog/replacement-coil-for-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-prime-a-new-coil-or-pod-3.webp",
+      "destination": "/images/blog/replacement-coil-for-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-prime-a-new-coil-or-pod-4.webp",
+      "destination": "/images/blog/replacement-coil-for-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-often-to-replace-coils-1.webp",
+      "destination": "/images/blog/geek-vape-p-replacement-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-often-to-replace-coils-2.webp",
+      "destination": "/images/blog/geek-vape-p-replacement-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-often-to-replace-coils-3.webp",
+      "destination": "/images/blog/geek-vape-p-replacement-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-often-to-replace-coils-4.webp",
+      "destination": "/images/blog/geek-vape-p-replacement-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-clean-a-vape-device-1.webp",
+      "destination": "/images/blog/freemax-vape-tank-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-clean-a-vape-device-2.webp",
+      "destination": "/images/blog/freemax-vape-tank-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-clean-a-vape-device-3.webp",
+      "destination": "/images/blog/freemax-vape-tank-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-clean-a-vape-device-4.webp",
+      "destination": "/images/blog/freemax-vape-tank-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-e-liquid-1.webp",
+      "destination": "/images/blog/liquid-salt-nic-terenak-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-e-liquid-2.webp",
+      "destination": "/images/blog/liquid-salt-nic-terenak-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-e-liquid-3.webp",
+      "destination": "/images/blog/liquid-salt-nic-terenak-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-e-liquid-4.webp",
+      "destination": "/images/blog/liquid-salt-nic-terenak-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-disposable-vapes-1.webp",
+      "destination": "/images/blog/most-popular-disposable-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-disposable-vapes-2.webp",
+      "destination": "/images/blog/most-popular-disposable-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-disposable-vapes-3.webp",
+      "destination": "/images/blog/most-popular-disposable-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-disposable-vapes-4.webp",
+      "destination": "/images/blog/most-popular-disposable-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-a-pod-or-coil-1.webp",
+      "destination": "/images/blog/replacement-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-a-pod-or-coil-2.webp",
+      "destination": "/images/blog/replacement-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-a-pod-or-coil-3.webp",
+      "destination": "/images/blog/replacement-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-change-a-pod-or-coil-4.webp",
+      "destination": "/images/blog/replacement-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-fading-fixes-1.webp",
+      "destination": "/images/blog/raz-ryl-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-fading-fixes-2.webp",
+      "destination": "/images/blog/raz-ryl-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-fading-fixes-3.webp",
+      "destination": "/images/blog/raz-ryl-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-flavor-fading-fixes-4.webp",
+      "destination": "/images/blog/raz-ryl-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dry-hits-explained-1.webp",
+      "destination": "/images/blog/best-vape-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dry-hits-explained-2.webp",
+      "destination": "/images/blog/best-vape-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dry-hits-explained-3.webp",
+      "destination": "/images/blog/best-vape-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dry-hits-explained-4.webp",
+      "destination": "/images/blog/best-vape-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-fill-a-pod-without-leaks-1.webp",
+      "destination": "/images/blog/vape-refillable-pod-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-fill-a-pod-without-leaks-2.webp",
+      "destination": "/images/blog/vape-refillable-pod-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-fill-a-pod-without-leaks-3.webp",
+      "destination": "/images/blog/vape-refillable-pod-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-fill-a-pod-without-leaks-4.webp",
+      "destination": "/images/blog/vape-refillable-pod-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-fires-by-itself-fixes-1.webp",
+      "destination": "/images/blog/plus-pods-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-fires-by-itself-fixes-2.webp",
+      "destination": "/images/blog/plus-pods-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-fires-by-itself-fixes-3.webp",
+      "destination": "/images/blog/plus-pods-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-fires-by-itself-fixes-4.webp",
+      "destination": "/images/blog/plus-pods-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-spitting-or-hot-vapor-fixes-1.webp",
+      "destination": "/images/blog/smok-vape-coils-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-spitting-or-hot-vapor-fixes-2.webp",
+      "destination": "/images/blog/smok-vape-coils-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-spitting-or-hot-vapor-fixes-3.webp",
+      "destination": "/images/blog/smok-vape-coils-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-spitting-or-hot-vapor-fixes-4.webp",
+      "destination": "/images/blog/smok-vape-coils-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouches-beginners-guide-1.webp",
+      "destination": "/images/blog/mint-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouches-beginners-guide-2.webp",
+      "destination": "/images/blog/mint-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouches-beginners-guide-3.webp",
+      "destination": "/images/blog/mint-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouches-beginners-guide-4.webp",
+      "destination": "/images/blog/mint-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-strengths-explained-1.webp",
+      "destination": "/images/blog/nicotine-pouch-alternative-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-strengths-explained-2.webp",
+      "destination": "/images/blog/nicotine-pouch-alternative-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-strengths-explained-3.webp",
+      "destination": "/images/blog/nicotine-pouch-alternative-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-strengths-explained-4.webp",
+      "destination": "/images/blog/nicotine-pouch-alternative-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-a-nicotine-pouch-1.webp",
+      "destination": "/images/blog/cleanest-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-a-nicotine-pouch-2.webp",
+      "destination": "/images/blog/cleanest-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-a-nicotine-pouch-3.webp",
+      "destination": "/images/blog/cleanest-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-a-nicotine-pouch-4.webp",
+      "destination": "/images/blog/cleanest-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-flavors-guide-1.webp",
+      "destination": "/images/blog/clean-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-flavors-guide-2.webp",
+      "destination": "/images/blog/clean-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-flavors-guide-3.webp",
+      "destination": "/images/blog/clean-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-flavors-guide-4.webp",
+      "destination": "/images/blog/clean-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pouches-vs-vapes-key-differences-1.webp",
+      "destination": "/images/blog/vapes-with-low-nicotine-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pouches-vs-vapes-key-differences-2.webp",
+      "destination": "/images/blog/vapes-with-low-nicotine-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pouches-vs-vapes-key-differences-3.webp",
+      "destination": "/images/blog/vapes-with-low-nicotine-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pouches-vs-vapes-key-differences-4.webp",
+      "destination": "/images/blog/vapes-with-low-nicotine-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-nicotine-pouches-1.webp",
+      "destination": "/images/blog/2one-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-nicotine-pouches-2.webp",
+      "destination": "/images/blog/2one-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-nicotine-pouches-3.webp",
+      "destination": "/images/blog/2one-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-store-nicotine-pouches-4.webp",
+      "destination": "/images/blog/2one-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-etiquette-and-travel-1.webp",
+      "destination": "/images/blog/lucy-capsule-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-etiquette-and-travel-2.webp",
+      "destination": "/images/blog/lucy-capsule-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-etiquette-and-travel-3.webp",
+      "destination": "/images/blog/lucy-capsule-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-etiquette-and-travel-4.webp",
+      "destination": "/images/blog/lucy-capsule-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-many-pouches-in-a-can-and-how-long-it-lasts-1.webp",
+      "destination": "/images/blog/metal-nicotine-pouch-can-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-many-pouches-in-a-can-and-how-long-it-lasts-2.webp",
+      "destination": "/images/blog/metal-nicotine-pouch-can-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-many-pouches-in-a-can-and-how-long-it-lasts-3.webp",
+      "destination": "/images/blog/metal-nicotine-pouch-can-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-many-pouches-in-a-can-and-how-long-it-lasts-4.webp",
+      "destination": "/images/blog/metal-nicotine-pouch-can-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-brands-compared-1.webp",
+      "destination": "/images/blog/strongest-nicotine-pouch-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-brands-compared-2.webp",
+      "destination": "/images/blog/strongest-nicotine-pouch-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-brands-compared-3.webp",
+      "destination": "/images/blog/strongest-nicotine-pouch-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nicotine-pouch-brands-compared-4.webp",
+      "destination": "/images/blog/strongest-nicotine-pouch-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-nixodine-1.webp",
+      "destination": "/images/blog/nixodine-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-nixodine-2.webp",
+      "destination": "/images/blog/nixodine-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-nixodine-3.webp",
+      "destination": "/images/blog/nixodine-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/what-is-nixodine-4.webp",
+      "destination": "/images/blog/nixodine-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-vs-nicotine-guide-1.webp",
+      "destination": "/images/blog/nicotine-vs-nixodine-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-vs-nicotine-guide-2.webp",
+      "destination": "/images/blog/nicotine-vs-nixodine-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-vs-nicotine-guide-3.webp",
+      "destination": "/images/blog/nicotine-vs-nixodine-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-vs-nicotine-guide-4.webp",
+      "destination": "/images/blog/nicotine-vs-nixodine-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-disposables-explained-1.webp",
+      "destination": "/images/blog/deep-purple-lost-mary-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-disposables-explained-2.webp",
+      "destination": "/images/blog/deep-purple-lost-mary-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-disposables-explained-3.webp",
+      "destination": "/images/blog/deep-purple-lost-mary-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-disposables-explained-4.webp",
+      "destination": "/images/blog/deep-purple-lost-mary-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-nixodine-device-1.webp",
+      "destination": "/images/blog/best-zero-nicotine-disposable-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-nixodine-device-2.webp",
+      "destination": "/images/blog/best-zero-nicotine-disposable-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-nixodine-device-3.webp",
+      "destination": "/images/blog/best-zero-nicotine-disposable-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-nixodine-device-4.webp",
+      "destination": "/images/blog/best-zero-nicotine-disposable-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-flavors-guide-1.webp",
+      "destination": "/images/blog/vape-flavors-watermelon-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-flavors-guide-2.webp",
+      "destination": "/images/blog/vape-flavors-watermelon-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-flavors-guide-3.webp",
+      "destination": "/images/blog/vape-flavors-watermelon-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-flavors-guide-4.webp",
+      "destination": "/images/blog/vape-flavors-watermelon-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-faq-1.webp",
+      "destination": "/images/blog/nicotine-free-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-faq-2.webp",
+      "destination": "/images/blog/nicotine-free-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-faq-3.webp",
+      "destination": "/images/blog/nicotine-free-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-faq-4.webp",
+      "destination": "/images/blog/nicotine-free-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-brands-compared-1.webp",
+      "destination": "/images/blog/lost-mary-cost-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-brands-compared-2.webp",
+      "destination": "/images/blog/lost-mary-cost-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-brands-compared-3.webp",
+      "destination": "/images/blog/lost-mary-cost-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-brands-compared-4.webp",
+      "destination": "/images/blog/lost-mary-cost-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-storage-and-use-tips-1.webp",
+      "destination": "/images/blog/zero-nic-disposable-vapes-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-storage-and-use-tips-2.webp",
+      "destination": "/images/blog/zero-nic-disposable-vapes-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-storage-and-use-tips-3.webp",
+      "destination": "/images/blog/zero-nic-disposable-vapes-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nixodine-storage-and-use-tips-4.webp",
+      "destination": "/images/blog/zero-nic-disposable-vapes-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/about-one-stop-vape-store-1.webp",
+      "destination": "/images/blog/geek-vape-tank-replacement-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/about-one-stop-vape-store-2.webp",
+      "destination": "/images/blog/geek-vape-tank-replacement-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/about-one-stop-vape-store-3.webp",
+      "destination": "/images/blog/geek-vape-tank-replacement-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/about-one-stop-vape-store-4.webp",
+      "destination": "/images/blog/geek-vape-tank-replacement-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-reputable-online-vape-store-1.webp",
+      "destination": "/images/blog/geek-vape-tank-glass-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-reputable-online-vape-store-2.webp",
+      "destination": "/images/blog/geek-vape-tank-glass-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-reputable-online-vape-store-3.webp",
+      "destination": "/images/blog/geek-vape-tank-glass-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-choose-a-reputable-online-vape-store-4.webp",
+      "destination": "/images/blog/geek-vape-tank-glass-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-store-faq-top-questions-1.webp",
+      "destination": "/images/blog/geek-bar-online-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-store-faq-top-questions-2.webp",
+      "destination": "/images/blog/geek-bar-online-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-store-faq-top-questions-3.webp",
+      "destination": "/images/blog/geek-bar-online-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vape-store-faq-top-questions-4.webp",
+      "destination": "/images/blog/geek-bar-online-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-vaper-etiquette-and-responsibility-1.webp",
+      "destination": "/images/blog/pod-devices-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-vaper-etiquette-and-responsibility-2.webp",
+      "destination": "/images/blog/pod-devices-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-vaper-etiquette-and-responsibility-3.webp",
+      "destination": "/images/blog/pod-devices-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/adult-vaper-etiquette-and-responsibility-4.webp",
+      "destination": "/images/blog/pod-devices-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-bar-vape-brand-guide-1.webp",
+      "destination": "/images/blog/popular-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-bar-vape-brand-guide-2.webp",
+      "destination": "/images/blog/popular-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-bar-vape-brand-guide-3.webp",
+      "destination": "/images/blog/popular-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-bar-vape-brand-guide-4.webp",
+      "destination": "/images/blog/popular-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lost-mary-vape-brand-guide-1.webp",
+      "destination": "/images/blog/vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lost-mary-vape-brand-guide-2.webp",
+      "destination": "/images/blog/vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lost-mary-vape-brand-guide-3.webp",
+      "destination": "/images/blog/vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lost-mary-vape-brand-guide-4.webp",
+      "destination": "/images/blog/vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raz-vape-brand-guide-1.webp",
+      "destination": "/images/blog/good-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raz-vape-brand-guide-2.webp",
+      "destination": "/images/blog/good-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raz-vape-brand-guide-3.webp",
+      "destination": "/images/blog/good-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raz-vape-brand-guide-4.webp",
+      "destination": "/images/blog/good-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/foger-vape-brand-guide-1.webp",
+      "destination": "/images/blog/vape-brand-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/foger-vape-brand-guide-2.webp",
+      "destination": "/images/blog/vape-brand-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/foger-vape-brand-guide-3.webp",
+      "destination": "/images/blog/vape-brand-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/foger-vape-brand-guide-4.webp",
+      "destination": "/images/blog/vape-brand-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fifty-bar-vape-brand-guide-1.webp",
+      "destination": "/images/blog/popular-nicotine-pouch-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fifty-bar-vape-brand-guide-2.webp",
+      "destination": "/images/blog/popular-nicotine-pouch-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fifty-bar-vape-brand-guide-3.webp",
+      "destination": "/images/blog/popular-nicotine-pouch-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/fifty-bar-vape-brand-guide-4.webp",
+      "destination": "/images/blog/popular-nicotine-pouch-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-juice-vape-brand-guide-1.webp",
+      "destination": "/images/blog/rechargeable-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-juice-vape-brand-guide-2.webp",
+      "destination": "/images/blog/rechargeable-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-juice-vape-brand-guide-3.webp",
+      "destination": "/images/blog/rechargeable-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-juice-vape-brand-guide-4.webp",
+      "destination": "/images/blog/rechargeable-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-salt-vape-brand-guide-1.webp",
+      "destination": "/images/blog/nic-salt-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-salt-vape-brand-guide-2.webp",
+      "destination": "/images/blog/nic-salt-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-salt-vape-brand-guide-3.webp",
+      "destination": "/images/blog/nic-salt-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pod-salt-vape-brand-guide-4.webp",
+      "destination": "/images/blog/nic-salt-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/horizontech-vape-brand-guide-1.webp",
+      "destination": "/images/blog/popular-vape-juice-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/horizontech-vape-brand-guide-2.webp",
+      "destination": "/images/blog/popular-vape-juice-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/horizontech-vape-brand-guide-3.webp",
+      "destination": "/images/blog/popular-vape-juice-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/horizontech-vape-brand-guide-4.webp",
+      "destination": "/images/blog/popular-vape-juice-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mr-fog-vape-brand-guide-1.webp",
+      "destination": "/images/blog/mr-fog-prices-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mr-fog-vape-brand-guide-2.webp",
+      "destination": "/images/blog/mr-fog-prices-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mr-fog-vape-brand-guide-3.webp",
+      "destination": "/images/blog/mr-fog-prices-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mr-fog-vape-brand-guide-4.webp",
+      "destination": "/images/blog/mr-fog-prices-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ebcreate-vape-brand-guide-1.webp",
+      "destination": "/images/blog/ebcreate-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ebcreate-vape-brand-guide-2.webp",
+      "destination": "/images/blog/ebcreate-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ebcreate-vape-brand-guide-3.webp",
+      "destination": "/images/blog/ebcreate-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ebcreate-vape-brand-guide-4.webp",
+      "destination": "/images/blog/ebcreate-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-nurdz-vape-brand-guide-1.webp",
+      "destination": "/images/blog/fruity-pebbles-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-nurdz-vape-brand-guide-2.webp",
+      "destination": "/images/blog/fruity-pebbles-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-nurdz-vape-brand-guide-3.webp",
+      "destination": "/images/blog/fruity-pebbles-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cloud-nurdz-vape-brand-guide-4.webp",
+      "destination": "/images/blog/fruity-pebbles-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coastal-clouds-vape-brand-guide-1.webp",
+      "destination": "/images/blog/banana-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coastal-clouds-vape-brand-guide-2.webp",
+      "destination": "/images/blog/banana-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coastal-clouds-vape-brand-guide-3.webp",
+      "destination": "/images/blog/banana-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coastal-clouds-vape-brand-guide-4.webp",
+      "destination": "/images/blog/banana-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/juice-head-vape-brand-guide-1.webp",
+      "destination": "/images/blog/zero-nic-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/juice-head-vape-brand-guide-2.webp",
+      "destination": "/images/blog/zero-nic-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/juice-head-vape-brand-guide-3.webp",
+      "destination": "/images/blog/zero-nic-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/juice-head-vape-brand-guide-4.webp",
+      "destination": "/images/blog/zero-nic-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/monster-labs-vape-brand-guide-1.webp",
+      "destination": "/images/blog/healthiest-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/monster-labs-vape-brand-guide-2.webp",
+      "destination": "/images/blog/healthiest-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/monster-labs-vape-brand-guide-3.webp",
+      "destination": "/images/blog/healthiest-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/monster-labs-vape-brand-guide-4.webp",
+      "destination": "/images/blog/healthiest-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/zyn-vape-brand-guide-1.webp",
+      "destination": "/images/blog/most-popular-nicotine-pouches-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/zyn-vape-brand-guide-2.webp",
+      "destination": "/images/blog/most-popular-nicotine-pouches-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/zyn-vape-brand-guide-3.webp",
+      "destination": "/images/blog/most-popular-nicotine-pouches-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/zyn-vape-brand-guide-4.webp",
+      "destination": "/images/blog/most-popular-nicotine-pouches-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/american-ice-vape-brand-guide-1.webp",
+      "destination": "/images/blog/american-made-vape-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/american-ice-vape-brand-guide-2.webp",
+      "destination": "/images/blog/american-made-vape-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/american-ice-vape-brand-guide-3.webp",
+      "destination": "/images/blog/american-made-vape-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/american-ice-vape-brand-guide-4.webp",
+      "destination": "/images/blog/american-made-vape-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lucy-vape-brand-guide-1.webp",
+      "destination": "/images/blog/nicotine-pouch-brands-ranked-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lucy-vape-brand-guide-2.webp",
+      "destination": "/images/blog/nicotine-pouch-brands-ranked-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lucy-vape-brand-guide-3.webp",
+      "destination": "/images/blog/nicotine-pouch-brands-ranked-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lucy-vape-brand-guide-4.webp",
+      "destination": "/images/blog/nicotine-pouch-brands-ranked-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/noat-vape-brand-guide-1.webp",
+      "destination": "/images/blog/nic-salt-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/noat-vape-brand-guide-2.webp",
+      "destination": "/images/blog/nic-salt-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/noat-vape-brand-guide-3.webp",
+      "destination": "/images/blog/nic-salt-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/noat-vape-brand-guide-4.webp",
+      "destination": "/images/blog/nic-salt-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hookah-labs-vape-brand-guide-1.webp",
+      "destination": "/images/blog/hookah-labs-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hookah-labs-vape-brand-guide-2.webp",
+      "destination": "/images/blog/hookah-labs-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hookah-labs-vape-brand-guide-3.webp",
+      "destination": "/images/blog/hookah-labs-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hookah-labs-vape-brand-guide-4.webp",
+      "destination": "/images/blog/hookah-labs-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parfflo-vape-brand-guide-1.webp",
+      "destination": "/images/blog/parfflo-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parfflo-vape-brand-guide-2.webp",
+      "destination": "/images/blog/parfflo-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parfflo-vape-brand-guide-3.webp",
+      "destination": "/images/blog/parfflo-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/parfflo-vape-brand-guide-4.webp",
+      "destination": "/images/blog/parfflo-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-labs-vape-brand-guide-1.webp",
+      "destination": "/images/blog/geek-labs-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-labs-vape-brand-guide-2.webp",
+      "destination": "/images/blog/geek-labs-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-labs-vape-brand-guide-3.webp",
+      "destination": "/images/blog/geek-labs-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/geek-labs-vape-brand-guide-4.webp",
+      "destination": "/images/blog/geek-labs-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/yovo-vape-brand-guide-1.webp",
+      "destination": "/images/blog/yovo-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/yovo-vape-brand-guide-2.webp",
+      "destination": "/images/blog/yovo-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/yovo-vape-brand-guide-3.webp",
+      "destination": "/images/blog/yovo-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/yovo-vape-brand-guide-4.webp",
+      "destination": "/images/blog/yovo-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rifbar-vape-brand-guide-1.webp",
+      "destination": "/images/blog/rifbar-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rifbar-vape-brand-guide-2.webp",
+      "destination": "/images/blog/rifbar-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rifbar-vape-brand-guide-3.webp",
+      "destination": "/images/blog/rifbar-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rifbar-vape-brand-guide-4.webp",
+      "destination": "/images/blog/rifbar-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rinnbar-vape-brand-guide-1.webp",
+      "destination": "/images/blog/rinnbar-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rinnbar-vape-brand-guide-2.webp",
+      "destination": "/images/blog/rinnbar-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rinnbar-vape-brand-guide-3.webp",
+      "destination": "/images/blog/rinnbar-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/rinnbar-vape-brand-guide-4.webp",
+      "destination": "/images/blog/rinnbar-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hotbox-vape-brand-guide-1.webp",
+      "destination": "/images/blog/hotbox-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hotbox-vape-brand-guide-2.webp",
+      "destination": "/images/blog/hotbox-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hotbox-vape-brand-guide-3.webp",
+      "destination": "/images/blog/hotbox-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/hotbox-vape-brand-guide-4.webp",
+      "destination": "/images/blog/hotbox-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nix-liquids-vape-brand-guide-1.webp",
+      "destination": "/images/blog/best-e-liquid-brands-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nix-liquids-vape-brand-guide-2.webp",
+      "destination": "/images/blog/best-e-liquid-brands-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nix-liquids-vape-brand-guide-3.webp",
+      "destination": "/images/blog/best-e-liquid-brands-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/nix-liquids-vape-brand-guide-4.webp",
+      "destination": "/images/blog/best-e-liquid-brands-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ut-vape-brand-guide-1.webp",
+      "destination": "/images/blog/ut-guide-lineup-prices-and-popular-picks-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ut-vape-brand-guide-2.webp",
+      "destination": "/images/blog/ut-guide-lineup-prices-and-popular-picks-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ut-vape-brand-guide-3.webp",
+      "destination": "/images/blog/ut-guide-lineup-prices-and-popular-picks-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ut-vape-brand-guide-4.webp",
+      "destination": "/images/blog/ut-guide-lineup-prices-and-popular-picks-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/off-stamp-vape-brand-guide-1.webp",
+      "destination": "/images/blog/off-stamp-crystal-cube-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/off-stamp-vape-brand-guide-2.webp",
+      "destination": "/images/blog/off-stamp-crystal-cube-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/off-stamp-vape-brand-guide-3.webp",
+      "destination": "/images/blog/off-stamp-crystal-cube-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/off-stamp-vape-brand-guide-4.webp",
+      "destination": "/images/blog/off-stamp-crystal-cube-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vaporlax-vape-brand-guide-1.webp",
+      "destination": "/images/blog/disposable-vape-brands-list-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vaporlax-vape-brand-guide-2.webp",
+      "destination": "/images/blog/disposable-vape-brands-list-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vaporlax-vape-brand-guide-3.webp",
+      "destination": "/images/blog/disposable-vape-brands-list-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vaporlax-vape-brand-guide-4.webp",
+      "destination": "/images/blog/disposable-vape-brands-list-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puffco-vape-brand-guide-1.webp",
+      "destination": "/images/blog/puffco-new-peak-vaporizer-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puffco-vape-brand-guide-2.webp",
+      "destination": "/images/blog/puffco-new-peak-vaporizer-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puffco-vape-brand-guide-3.webp",
+      "destination": "/images/blog/puffco-new-peak-vaporizer-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/puffco-vape-brand-guide-4.webp",
+      "destination": "/images/blog/puffco-new-peak-vaporizer-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ice-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/raz-pod-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ice-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/raz-pod-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ice-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/raz-pod-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/ice-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/raz-pod-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/watermelon-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/salt-nic-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/watermelon-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/salt-nic-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/watermelon-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/salt-nic-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/watermelon-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/salt-nic-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/blue-razz-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/blue-raspberry-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/blue-razz-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/blue-raspberry-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/blue-razz-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/blue-raspberry-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/blue-razz-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/blue-raspberry-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mango-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/mr-fogger-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mango-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/mr-fogger-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mango-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/mr-fogger-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mango-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/mr-fogger-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/peach-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/vape-flavors-foggers-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/peach-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/vape-flavors-foggers-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/peach-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/vape-flavors-foggers-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/peach-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/vape-flavors-foggers-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/spearmint-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/spearmint-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/spearmint-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/spearmint-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mint-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/mint-flavored-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mint-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/mint-flavored-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mint-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/mint-flavored-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mint-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/mint-flavored-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/menthol-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/funky-republic-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/menthol-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/funky-republic-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/menthol-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/funky-republic-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/menthol-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/funky-republic-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/grape-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/mint-flavor-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/grape-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/mint-flavor-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/grape-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/mint-flavor-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/grape-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/mint-flavor-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cherry-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/diacetyl-free-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cherry-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/diacetyl-free-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cherry-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/diacetyl-free-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cherry-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/diacetyl-free-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/banana-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/low-nicotine-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/banana-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/low-nicotine-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/banana-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/low-nicotine-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/banana-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/low-nicotine-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lemon-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/raz-25000-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lemon-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/raz-25000-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lemon-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/raz-25000-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lemon-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/raz-25000-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pineapple-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/velo-nicotine-pouch-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pineapple-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/velo-nicotine-pouch-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pineapple-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/velo-nicotine-pouch-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/pineapple-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/velo-nicotine-pouch-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/cherry-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/cherry-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/cherry-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/apple-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/cherry-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raspberry-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/lemonade-monster-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raspberry-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/lemonade-monster-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raspberry-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/lemonade-monster-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/raspberry-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/lemonade-monster-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/kiwi-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/nicotine-pouch-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/kiwi-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/nicotine-pouch-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/kiwi-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/nicotine-pouch-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/kiwi-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/nicotine-pouch-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/orange-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/vape-tobacco-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/orange-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/vape-tobacco-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/orange-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/vape-tobacco-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/orange-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/vape-tobacco-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/guava-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/disposable-vape-tobacco-flavor-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/guava-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/disposable-vape-tobacco-flavor-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/guava-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/disposable-vape-tobacco-flavor-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/guava-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/disposable-vape-tobacco-flavor-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/passion-fruit-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/disposable-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/passion-fruit-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/disposable-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/passion-fruit-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/disposable-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/passion-fruit-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/disposable-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dragon-fruit-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/sweet-vape-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dragon-fruit-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/sweet-vape-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dragon-fruit-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/sweet-vape-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/dragon-fruit-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/sweet-vape-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vanilla-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/safest-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vanilla-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/safest-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vanilla-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/safest-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/vanilla-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/safest-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cola-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/tobacco-flavor-vape-options-brands-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cola-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/tobacco-flavor-vape-options-brands-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cola-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/tobacco-flavor-vape-options-brands-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cola-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/tobacco-flavor-vape-options-brands-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lime-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/juice-head-watermelon-lime-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lime-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/juice-head-watermelon-lime-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lime-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/juice-head-watermelon-lime-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/lime-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/juice-head-watermelon-lime-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coconut-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/excision-paradox-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coconut-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/excision-paradox-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coconut-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/excision-paradox-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/coconut-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/excision-paradox-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/tobacco-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/tobacco-pouch-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/tobacco-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/tobacco-pouch-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/tobacco-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/tobacco-pouch-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/tobacco-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/tobacco-pouch-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mixed-berry-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/on-nicotine-pouch-flavors-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mixed-berry-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/on-nicotine-pouch-flavors-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mixed-berry-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/on-nicotine-pouch-flavors-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/mixed-berry-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/on-nicotine-pouch-flavors-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cream-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/kings-crest-vape-juice-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cream-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/kings-crest-vape-juice-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cream-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/kings-crest-vape-juice-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/cream-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/kings-crest-vape-juice-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-banana-vape-flavors-guide-1.webp",
+      "destination": "/images/blog/strawberry-disposable-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-banana-vape-flavors-guide-2.webp",
+      "destination": "/images/blog/strawberry-disposable-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-banana-vape-flavors-guide-3.webp",
+      "destination": "/images/blog/strawberry-disposable-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/strawberry-banana-vape-flavors-guide-4.webp",
+      "destination": "/images/blog/strawberry-disposable-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-payment-faq-1.webp",
+      "destination": "/images/blog/geek-bar-cost-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-payment-faq-2.webp",
+      "destination": "/images/blog/geek-bar-cost-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-payment-faq-3.webp",
+      "destination": "/images/blog/geek-bar-cost-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/crypto-payment-faq-4.webp",
+      "destination": "/images/blog/geek-bar-cost-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-the-order-payment-page-1.webp",
+      "destination": "/images/blog/juice-pod-vape-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-the-order-payment-page-2.webp",
+      "destination": "/images/blog/juice-pod-vape-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-the-order-payment-page-3.webp",
+      "destination": "/images/blog/juice-pod-vape-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/blog/how-to-use-the-order-payment-page-4.webp",
+      "destination": "/images/blog/juice-pod-vape-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/shop.webp",
+      "destination": "/images/banners/e-cigarettes-for-sale-online.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/blog.webp",
+      "destination": "/images/banners/best-vape-brands.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/about.webp",
+      "destination": "/images/banners/vape-stores-online-cheap.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/contact.webp",
+      "destination": "/images/banners/vape-store-open.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/faq.webp",
+      "destination": "/images/banners/where-can-i-buy-disposable-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/help.webp",
+      "destination": "/images/banners/where-do-you-buy-vapes.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/shipping.webp",
+      "destination": "/images/banners/free-vapes-with-free-shipping.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/refunds.webp",
+      "destination": "/images/banners/refund-and-return-policy.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/privacy.webp",
+      "destination": "/images/banners/privacy-policy.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/terms.webp",
+      "destination": "/images/banners/terms-of-service.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/pact-act.webp",
+      "destination": "/images/banners/pact-act-faq.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/california-privacy.webp",
+      "destination": "/images/banners/california-privacy-notice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/wholesale.webp",
+      "destination": "/images/banners/bulk-vapes-for-sale.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/vape-juice.webp",
+      "destination": "/images/banners/best-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/coils-pods.webp",
+      "destination": "/images/banners/coil-for-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/disposables.webp",
+      "destination": "/images/banners/popular-disposable-vape-brands.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/vaporizers.webp",
+      "destination": "/images/banners/best-vaporizers.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/nic-pouches.webp",
+      "destination": "/images/banners/best-nicotine-pouches.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/banners/nixodine.webp",
+      "destination": "/images/banners/best-nicotine-free-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/vape-juice.webp",
+      "destination": "/images/categories/best-vape-juice.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/coils-pods.webp",
+      "destination": "/images/categories/coil-for-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/disposables.webp",
+      "destination": "/images/categories/popular-disposable-vape-brands.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/vaporizers.webp",
+      "destination": "/images/categories/best-vaporizers.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/nic-pouches.webp",
+      "destination": "/images/categories/best-nicotine-pouches.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/categories/nixodine.webp",
+      "destination": "/images/categories/best-nicotine-free-vape.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/hero/hero-1-one-stop-shop.webp",
+      "destination": "/images/hero/cheap-vaping-1.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/hero/hero-2-vapor-clouds.webp",
+      "destination": "/images/hero/cheap-vaping-2.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/hero/hero-3-flavor-clouds.webp",
+      "destination": "/images/hero/cheap-vaping-3.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/hero/hero-4-disposable-pods.webp",
+      "destination": "/images/hero/cheap-vaping-4.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/hero/hero-5-premium-eliquid.webp",
+      "destination": "/images/hero/cheap-vaping-5.webp",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/((?!_next|favicon.ico).*)",

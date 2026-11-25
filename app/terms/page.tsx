@@ -1,18 +1,26 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
 import PageBanner from "@/src/components/PageBanner";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 export const metadata = {
-  title: "Terms of Service | One Stop Vape Store",
-  description: "Terms of service agreement for One Stop Vape Store operated by One Stop Vape Store (SV3 LLC) / SV3 LLC.",
+  title: staticTitle("/terms/", "Terms of Service | One Stop Vape Store"),
+  description: staticMeta("/terms/", "Terms of service agreement for One Stop Vape Store operated by One Stop Vape Store (SV3 LLC) / SV3 LLC."),
+  keywords: seoEntry("/terms/") ? keywordsString(seoEntry("/terms/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/terms/")}` },
 };
 
 export default function TermsPage() {
+  const copy = staticCopy("/terms/");
   return (
     <>
-      <PageBanner slug="terms" label="Terms" />
+      <PageBanner slug="terms" label="Terms" alt={copy?.alt} />
       <div className="max-w-4xl mx-auto px-6 py-24 prose ">
-      <h1><strong>Terms of Service</strong></h1>
+      <h1><strong>{staticH1("/terms/", "Terms of Service")}</strong></h1>
+      {copy && <p>{copy.lead}</p>}
 
       <h2>OVERVIEW</h2>
       <p>This website is operated by One Stop Vape Store (SV3 LLC). Throughout the site, the terms “we”, “us” and “our” refer to One Stop Vape Store (SV3 LLC). One Stop Vape Store (SV3 LLC) offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
@@ -114,6 +122,7 @@ export default function TermsPage() {
 
       <h2>SECTION 20 - CONTACT INFORMATION</h2>
       <p>Questions about the Terms of Service should be sent to us at Sales@onestopvapestore.com</p>
+      {copy && <SeoContent copy={copy} path="/terms/" />}
     </div>
     </>
   );

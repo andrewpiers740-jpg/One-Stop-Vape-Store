@@ -4,14 +4,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { urlMap as UM, rewriteLinks, newBlogSlug, newBlogImage, newCat } from "./lib/urlmap.mjs";
 
 const strict = process.argv.includes("--strict");
 const TARGET = 200;
 const CONTENT = path.resolve("content/blog");
 const products = JSON.parse(fs.readFileSync("src/data/products.json", "utf8"));
-const productSlugs = new Set(products.map((p) => `${p.category}/${p.slug}`));
-const SHOP_CATS = new Set(["vape-juice", "coils-pods", "disposables", "vape-kits", "vaporizers", "nic-pouches", "nixodine"]);
-const STATIC_PATHS = new Set(["/", "/shop/", "/blog/", "/about/", "/contact/", "/faq/", "/help/", "/shipping/", "/refunds/", "/privacy/", "/terms/", "/pact-act/", "/fda-disclaimer/", "/california-privacy/", "/wholesale/", "/cart/", "/checkout/", "/search/"]);
+const productSlugs = new Set(products.map((p) => `${newCat(p.category)}/${p.slug}`));
+const SHOP_CATS = new Set(["vape-juice", "coils-pods", "disposables", "vape-kits", "vaporizers", "nic-pouches", "nixodine", ...Object.values(UM.categories)]);
+const STATIC_PATHS = new Set(["/", "/shop/", "/blog/", "/about/", "/contact/", "/faq/", "/help/", "/shipping/", "/refunds/", "/privacy/", "/terms/", "/pact-act/", "/fda-disclaimer/", "/california-privacy/", "/wholesale/", "/cart/", "/checkout/", "/search/"].concat(Object.values(UM.pages)));
 
 // Compliance: never imply health benefits, safety, cessation or guaranteed outcomes.
 const BANNED = [/\bsafe\b/i, /\bsafer\b/i, /\bsafely\b/i, /\bhealthy\b/i, /\bhealthier\b/i, /non-toxic/i, /guaranteed? success/i, /therapeutic/i, /quit smoking/i, /stop smoking/i, /smoking cessation/i, /\bcure[sd]?\b/i, /harmless/i, /risk-free/i, /harm reduction/i, /better for you/i, /approved by the fda/i, /fda[- ]approved/i, /100% authentic/i, /lab[- ]tested/i, /laboratory/i, /\bpatented\b/i, /pharmaceutical/i];
@@ -23,7 +24,12 @@ const errors = [];
 for (const f of fs.readdirSync(CONTENT).filter((x) => x.endsWith(".mjs")).sort()) {
   const mod = await import(pathToFileURL(path.join(CONTENT, f)).href);
   const list = typeof mod.default === "function" ? mod.default({ products }) : mod.default;
-  for (const p of list) posts.push({ ...p, _file: f });
+  for (const p of list) {
+    // content sources still use the old URLs; rewrite links to the keyword-based URLs so validation and output match the live site
+    p.body = rewriteLinks(p.body);
+    if (Array.isArray(p.faq)) p.faq = p.faq.map((x) => (Array.isArray(x) ? [x[0], rewriteLinks(x[1])] : { ...x, a: rewriteLinks(x.a) }));
+    posts.push({ ...p, _file: f });
+  }
 }
 
 const slugify = (s) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -38,6 +44,7 @@ for (const p of posts) {
   if (!p.slug || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(p.slug)) { err("bad slug"); continue; }
   if (seen.has(p.slug)) { err("duplicate slug"); continue; }
   seen.add(p.slug);
+  seen.add(newBlogSlug(p.slug));
   if (!p.title || p.title.length > 72) warn(`title length ${p.title?.length}`);
   if (!p.summary || p.summary.length < 100 || p.summary.length > 160) warn(`summary length ${p.summary?.length} (aim 110–158)`);
   const w = words(p.body);
@@ -77,8 +84,8 @@ for (const p of out) {
   if (!fs.existsSync(f)) continue;
   const g = JSON.parse(fs.readFileSync(f, "utf8"));
   if (!g.ok || g.mock) continue; // only validated, non-mock AI output replaces the hand-written draft
-  p.body = g.body; p.words = g.words; p.readMinutes = Math.max(2, Math.ceil(g.words / 200));
-  if (g.faq && g.faq.length >= 3) p.faq = g.faq;
+  p.body = rewriteLinks(g.body); p.words = g.words; p.readMinutes = Math.max(2, Math.ceil(g.words / 200));
+  if (g.faq && g.faq.length >= 3) p.faq = g.faq.map((x) => (Array.isArray(x) ? [x[0], rewriteLinks(x[1])] : { ...x, a: rewriteLinks(x.a) }));
   applied++;
 }
 if (applied) console.log("applied " + applied + " AI-expanded posts");
@@ -91,7 +98,10 @@ final.forEach((p, i) => { p.date = new Date(start + ((end - start) * i) / Math.m
 
 const imgFile = path.resolve("docs/blog-images.json");
 const imgMap = fs.existsSync(imgFile) ? JSON.parse(fs.readFileSync(imgFile, "utf8")) : {};
-for (const p of final) p.images = imgMap[p.slug] || [];
+for (const p of final) {
+  p.images = (imgMap[p.slug] || []).map((i) => ({ ...i, src: newBlogImage(i.src) }));
+  p.slug = newBlogSlug(p.slug); // old slug was used above to find AI-expanded text and images
+}
 
 fs.mkdirSync("src/data", { recursive: true });
 fs.writeFileSync("src/data/blog-posts.json", JSON.stringify(final));

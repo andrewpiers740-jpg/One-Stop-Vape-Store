@@ -1,69 +1,69 @@
 {
   "hero": [
     {
-      "src": "/images/hero/hero-1-one-stop-shop.webp",
+      "src": "/images/hero/cheap-vaping-1.webp",
       "alt": "A wall of vape devices and e-liquids in a well-stocked vape shop"
     },
     {
-      "src": "/images/hero/hero-2-vapor-clouds.webp",
+      "src": "/images/hero/cheap-vaping-2.webp",
       "alt": "Adult exhaling a thick vapor cloud against a black background"
     },
     {
-      "src": "/images/hero/hero-3-flavor-clouds.webp",
+      "src": "/images/hero/cheap-vaping-3.webp",
       "alt": "Swirling blue and magenta smoke representing e-liquid flavor"
     },
     {
-      "src": "/images/hero/hero-4-disposable-pods.webp",
+      "src": "/images/hero/cheap-vaping-4.webp",
       "alt": "Rows of slim disposable vape pods on a dark surface"
     },
     {
-      "src": "/images/hero/hero-5-premium-eliquid.webp",
+      "src": "/images/hero/cheap-vaping-5.webp",
       "alt": "Bottles of premium e-liquid lined up on a white table"
     }
   ],
   "banners": {
     "shop": {
-      "src": "/images/banners/shop.webp",
+      "src": "/images/banners/e-cigarettes-for-sale-online.webp",
       "alt": "Blue vapor swirling on a dark background"
     },
     "blog": {
-      "src": "/images/banners/blog.webp",
+      "src": "/images/banners/best-vape-brands.webp",
       "alt": "Wisps of blue smoke on black"
     },
     "about": {
-      "src": "/images/banners/about.webp",
+      "src": "/images/banners/vape-stores-online-cheap.webp",
       "alt": "Soft blue smoke curls"
     },
     "contact": {
-      "src": "/images/banners/contact.webp",
+      "src": "/images/banners/vape-store-open.webp",
       "alt": "Blue vapor trails"
     },
     "faq": {
-      "src": "/images/banners/faq.webp",
+      "src": "/images/banners/where-can-i-buy-disposable-vapes.webp",
       "alt": "Abstract blue smoke"
     },
     "help": {
-      "src": "/images/banners/help.webp",
+      "src": "/images/banners/where-do-you-buy-vapes.webp",
       "alt": "Blue smoke ribbon"
     },
     "shipping": {
-      "src": "/images/banners/shipping.webp",
+      "src": "/images/banners/free-vapes-with-free-shipping.webp",
       "alt": "Streaming blue vapor"
     },
     "refunds": {
-      "src": "/images/banners/refunds.webp",
+      "src": "/images/banners/refund-and-return-policy.webp",
       "alt": "Calm blue smoke"
     },
     "privacy": {
-      "src": "/images/banners/privacy.webp",
+      "src": "/images/banners/privacy-policy.webp",
       "alt": "Dark blue vapor"
     },
     "terms": {
-      "src": "/images/banners/terms.webp",
+      "src": "/images/banners/terms-of-service.webp",
       "alt": "Blue smoke swirl"
     },
     "pact-act": {
-      "src": "/images/banners/pact-act.webp",
+      "src": "/images/banners/pact-act-faq.webp",
       "alt": "Rising blue smoke"
     },
     "fda-disclaimer": {
@@ -71,11 +71,11 @@
       "alt": "Wispy blue smoke"
     },
     "california-privacy": {
-      "src": "/images/banners/california-privacy.webp",
+      "src": "/images/banners/california-privacy-notice.webp",
       "alt": "Blue smoke curve"
     },
     "wholesale": {
-      "src": "/images/banners/wholesale.webp",
+      "src": "/images/banners/bulk-vapes-for-sale.webp",
       "alt": "Bold blue smoke plume"
     },
     "search": {
@@ -91,15 +91,15 @@
       "alt": "Blue vapor wisp"
     },
     "vape-juice": {
-      "src": "/images/banners/vape-juice.webp",
+      "src": "/images/banners/best-vape-juice.webp",
       "alt": "Slices of colorful citrus fruit representing e-liquid flavors"
     },
     "coils-pods": {
-      "src": "/images/banners/coils-pods.webp",
+      "src": "/images/banners/coil-for-vape.webp",
       "alt": "Vape accessories, pods and bottles on a table"
     },
     "disposables": {
-      "src": "/images/banners/disposables.webp",
+      "src": "/images/banners/popular-disposable-vape-brands.webp",
       "alt": "A modern pod device with colorful bokeh lights"
     },
     "vape-kits": {
@@ -107,29 +107,29 @@
       "alt": "A vape starter kit resting on dark volcanic rock"
     },
     "vaporizers": {
-      "src": "/images/banners/vaporizers.webp",
+      "src": "/images/banners/best-vaporizers.webp",
       "alt": "A metal box-mod vaporizer on weathered wood"
     },
     "nic-pouches": {
-      "src": "/images/banners/nic-pouches.webp",
+      "src": "/images/banners/best-nicotine-pouches.webp",
       "alt": "Dark green mint leaves"
     },
     "nixodine": {
-      "src": "/images/banners/nixodine.webp",
+      "src": "/images/banners/best-nicotine-free-vape.webp",
       "alt": "Electric blue neon light bars in the dark"
     }
   },
   "tiles": {
     "vape-juice": {
-      "src": "/images/categories/vape-juice.webp",
+      "src": "/images/categories/best-vape-juice.webp",
       "alt": "Bottles of e-liquid from Pod Juice, Monster Labs, Juice Head and Coastal Clouds"
     },
     "coils-pods": {
-      "src": "/images/categories/coils-pods.webp",
+      "src": "/images/categories/coil-for-vape.webp",
       "alt": "Replacement pods from Off Stamp, Smok, Caliburn and Geekvape"
     },
     "disposables": {
-      "src": "/images/categories/disposables.webp",
+      "src": "/images/categories/popular-disposable-vape-brands.webp",
       "alt": "Disposable vapes from Geek Bar, Lost Mary, Foger and Fifty Bar"
     },
     "vape-kits": {
@@ -137,15 +137,15 @@
       "alt": "Vape and pod kits from Foger, Pod Salt, Mi-Pod and Off Stamp"
     },
     "vaporizers": {
-      "src": "/images/categories/vaporizers.webp",
+      "src": "/images/categories/best-vaporizers.webp",
       "alt": "Vaporizers and accessories from Puffco, Dr Dabber, PAX and Lookah"
     },
     "nic-pouches": {
-      "src": "/images/categories/nic-pouches.webp",
+      "src": "/images/categories/best-nicotine-pouches.webp",
       "alt": "Cans of nicotine pouches from ZYN, LUCY, NOAT and ZIMO"
     },
     "nixodine": {
-      "src": "/images/categories/nixodine.webp",
+      "src": "/images/categories/best-nicotine-free-vape.webp",
       "alt": "Nixodine products from NIX Liquids, Geek Labs, Rinnbar and Rifbar"
     }
   }

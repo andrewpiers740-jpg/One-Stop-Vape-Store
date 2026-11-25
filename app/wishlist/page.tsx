@@ -7,6 +7,7 @@ import PageBanner from "@/src/components/PageBanner";
 export const metadata: Metadata = {
   title: `My Wishlist | ${SITE.name}`,
   description: `View and manage your saved favorite vape products at ${SITE.name}.`,
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `https://${SITE.domain}/pages/wishlist/`,
   },

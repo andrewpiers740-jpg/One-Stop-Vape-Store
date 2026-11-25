@@ -1,0 +1,579 @@
+brand,family,products,primary,intent,volume,kd,basis,secondary_count,status
+Cloud Nurdz,Salts,44,cloud nurdz fumi,C,210,5,brand-level,7,OK
+Cloud Nurdz,eJuice,43,cloud nurdz watermelon berry,C,90,2,brand-level,7,OK
+Cloud Nurdz,Iced Aloe Mango Cloud Salts,1,where to buy cloud nurdz,T,90,6,model-match,7,OK
+Cloud Nurdz,e-Juice,1,fumi cloud nurdz,C,90,8,brand-level,7,OK
+Cloud Nurdz,Iced Sour Watermelon Strawberry Cloud Nurds Salts,1,cloud nurdz salt nic,C,50,0,model-match,7,OK
+Air Factory,Salt,18,air factory blue razz,C,70,1,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+7Daze,Reds Apple Berries e-Juice,1,just reds vape juice,C,90,0,model-match,7,OK
+7Daze,Reds Apple Berries Iced e-Juice,1,reds salt,C,110,5,model-match,7,OK
+7Daze,Reds Apple Berries Iced Salts,1,reds apple ejuice,C,50,3,model-match,7,OK
+7Daze,Reds Apple Berries Salts,1,reds apple salt,C,20,0,model-match,7,OK
+7Daze,Reds Apple Fruit Mix e-Juice,1,reds apple salt nic,C,20,0,model-match,7,OK
+7Daze,Reds Apple Fruit Mix Iced e-Juice,1,reds apple watermelon salt nic,C,20,0,model-match,7,OK
+7Daze,Reds Apple Fruit Mix Iced Salts,1,funky republic vapes,T,70,2,brand-level,7,OK
+7Daze,Reds Apple Fruit Mix Salts,1,atomic 9,C,90,7,brand-level,7,OK
+7Daze,Reds Apple Grape e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Grape Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Grape Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Grape Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Guava e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Guava Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Guava Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Guava Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Mango e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Mango Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Mango Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Mango Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Original Apple e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Original Apple Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Original Apple Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Original Apple Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Peach e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Peach Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Peach Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Peach Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Strawberry e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Strawberry Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Strawberry Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Strawberry Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Watermelon e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Watermelon Iced e-Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Watermelon Iced Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+7Daze,Reds Apple Watermelon Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Pod Juice,,148,pod juice jewel mint,C,590,10,brand-level,10,OK
+Pod Juice,FOG POD,12,oxbar pod juice zodiac edition,C,320,3,brand-level,10,OK
+Pod Juice,Punch Edition,3,jewel mint diamond,C,140,5,brand-level,10,OK
+Pod Juice,Punch Edition Salts,3,pod juice jewel tobacco,C,110,3,brand-level,10,OK
+Pod Juice,x RAZ LTX EDITION,1,raz pod juice,C,110,4,model-match,10,OK
+Pod Juice,-,1,pod juice clear,C,90,3,brand-level,10,OK
+Pod Juice,Jolly Blue Razz Ice RAZ X POD,1,pod juice golden custard,C,90,3,model-match,10,OK
+Pod Juice,Salts,1,jewel mint emerald pod juice,C,50,2,brand-level,10,OK
+Naked100,Crisp Menthol Naked 100 Menthol eJuice,1,naked 100 hawaiian pog vape juice,C,260,3,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+Naked100,All Melon Naked 100 eJuice,1,naked 100 salt nic cuban,C,210,3,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+Naked100,American Patriots Naked 100 eJuice,1,naked cuban blend,C,140,1,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+Naked100,American Patriots Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Berry Naked 100 Menthol eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Berry Very Cool Salt NKD 100 Menthol,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Cuban Blend Naked 100 Tobacco eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Cuban Blend Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Euro Gold Naked 100 eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Hawaiian Pog Naked 100 eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Hawaiian POG Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Lava Flow Naked 100 eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Lava Flow Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Mango Naked 100 eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Mango Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Maui Sun Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Melon Kiwi Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Melon Naked 100 Menthol eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Melon Salt NKD 100 Menthol,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Mint Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Really Berry Naked 100 eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Really Berry Salt NKD 100,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Strawberry Pom Naked 100 Menthol eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Naked100,Strawberry Pom Salt NKD 100 Menthol,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+RAZ,LTX 25000,34,raz ltx 25k,C,480,3,model-match,10,OK
+RAZ,TN9000,30,raz tn9000 price,T,40,3,model-match,10,OK
+RAZ,LTX25000,7,raz ltx 25000,C,260,14,model-match,10,OK
+RAZ,X Pod Juice,5,razz vape,C,5400,11,brand-level,10,OK
+RAZ,RX 50K DEW EDITION,5,raz vue 50k disposable vape,C,90,0,model-match,10,OK
+RAZ,LTX 25000 HOLO EDITION,5,raz vapes 25000,C,210,10,model-match,10,OK
+RAZ,eLiquid,5,raz e liquid,C,170,4,model-match,10,OK
+RAZ,Batch RAZ X Pod Juice,1,best raz vape flavors,C,720,8,model-match,10,OK
+RAZ,z Melon Beard Vape Co The One,1,raz ltx 25k zero nicotine,C,110,10,model-match,10,OK
+RAZ,z Raspberry OILIO Platypus 50K,1,raz vue 50k disposable pods,C,50,8,model-match,10,OK
+RAZ,zle Dazzle RAZ LTX 25000,1,raz vape price,C,1000,19,model-match,10,OK
+RAZ,Gush RAZ LTX 25000,1,raz ryl vape,C,590,9,model-match,10,OK
+RAZ,z Ice RAZ LTX 25000,1,raz vape pod,C,390,7,model-match,10,OK
+RAZ,Ice - RAZ TN9000,1,raz purse vape flavors,C,260,4,model-match,10,OK
+RAZ,Cotton Cloudz - RAZ TN9000,1,raz pod vape,C,390,12,model-match,10,OK
+RAZ,Batch RAZ eLiquid,1,raz vape refills,C,260,5,model-match,10,OK
+Coastal Clouds,E-Juice,45,coastal cloud vape juice,C,140,18,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Coastal Clouds,Salts,21,coastal clouds vape juice review,C,50,1,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Coastal Clouds,,5,coastal clouds e-liquid,C,40,6,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Beard Vape Co,,16,beard 32 vape juice,C,50,5,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Beard Vape Co,SALTS,2,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Beard Vape Co,. SALTS,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Beard Vape Co,E-LIQUID,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Pink Pineapple Beard Vape Co The One,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Berry Lemonade Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Blood Orange Banana Gooseberry Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Blueberry Lemonade Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Cherry Limeade Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Cherry Limeade Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Frosted Cronut Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Fuji Ice Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Fuji Pachamama eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Honeydew Melon Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Kiwi Guava Passionfruit Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Menthol Pachamama eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Pink Berry Ice Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Purple Mango Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Sorbet Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Sour Watermelon Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Starfruit Grape Ice Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Strawberry Guava Jackfruit Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Strawberry Kiwi Ice Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Strawberry Watermelon Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Sweet Peach Pineapple Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,Tobacco Pachamama eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,White Peach Ice Pacha eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Specialty,White Peach Ice Pacha Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Breeze,Pro,19,best breeze pro flavors,C,110,0,model-match,10,OK
+Fume,PRO 30K,24,fume pro,T,320,0,model-match,10,OK
+Geek Bar,Pulse,45,geek bar pulse vs pulse x,C,1300,4,model-match,10,OK
+Geek Bar,Pulse X 25K,29,geekbar pulse x flavors,C,1300,6,model-match,10,OK
+Geek Bar,CLR 50K,25,geek bar clr flavors,C,50,3,model-match,10,OK
+Geek Bar,Pulse X 2 50K,24,geek bar pulse buy online,T,590,24,model-match,10,OK
+Geek Bar,Pulse 2,17,geek bar pulse where to buy,T,320,20,model-match,10,OK
+Geek Bar,Pulse 2 25K,13,geek bar banana taffy freeze 25k,C,110,4,model-match,10,OK
+Geek Bar,SkyView 25k,8,geek bar prices,C,3600,7,brand-level,10,OK
+Geek Bar,Pulse X 2 50K BULL EDITION,5,pulse geek bar price,T,210,24,model-match,10,OK
+Geek Bar,Pulse X 25K THERMAL EDITION,5,geek bar pulse x flavor,C,170,20,model-match,10,OK
+Geek Bar,Pulse THERMAL EDITION,5,buy geek bar pulse x,T,170,25,model-match,10,OK
+Geek Bar,Pulse SAVERS EDITION,5,geek bar pulse x price in store,T,110,15,model-match,10,OK
+Geek Bar,Pulse X 25K Jam Edition,5,all geek bar pulse x flavors,C,140,20,model-match,10,OK
+Geek Bar,Pulse ZERO Nicotine,5,geek bar pulse for sale,T,90,22,model-match,10,OK
+Geek Bar,Pulse Patriot Edition,2,where to buy geek bar pulse x,T,90,23,model-match,10,OK
+Geek Bar,Sour Fcuking Fab GEEKBAR Pulse X 2 50K,1,geek bar best flavors,C,3600,7,model-match,10,OK
+Geek Bar,X 25K,1,best geek bar flavors,C,6600,24,brand-level,10,OK
+Geek Bar,Pulse *Frozen Edition*,1,geek bar x pulse price,T,90,26,model-match,10,OK
+Geek Bar,Pulse X,1,geek bar x pulse flavors,C,70,17,model-match,10,OK
+HorizonTech,100K,17,horizontech 100k vape,C,720,17,model-match,9,OK
+HorizonTech,100K Limited,10,horizon tech 100k vape,C,390,8,model-match,9,OK
+Horizontech,100K SLUSH SERIES,5,horizontech vape 100k,C,110,8,model-match,9,OK
+Juice Head,e-Liquid,33,juicehead vape,T,260,0,brand-level,10,OK
+Juice Head,Salts,26,juice head pouches review,C,260,5,brand-level,10,OK
+Juice Head,30K,8,juice head pouches vs zyn,C,110,0,brand-level,10,OK
+Juice Head,iFLEX 50K Nixodine,8,juice head flex freeze 50k review,C,40,9,model-match,10,OK
+Juice Head,Salt,6,juice head discount,T,110,3,brand-level,10,OK
+Juice Head,ZTN Pouches,5,where to buy juice head pouches,T,70,8,model-match,10,OK
+Juice Head,iFLEX 50K,1,juice head 50k disposable,C,30,9,model-match,10,OK
+Loon,Air Plus,11,loon air flavors,C,480,7,model-match,5,OK (secondaries topped up from the disposables category pool)
+Loon,Maxx,5,loon vape price,T,170,4,brand-level,5,OK (secondaries topped up from the disposables category pool)
+Lost Mary,MT15000 TURBO,44,lost mary mt35k turbo,C,390,12,model-match,10,OK
+Lost Mary,MT35K TURBO,34,lost mary mt15000 turbo price,T,170,12,model-match,10,OK
+Lost Mary,MT35000 Turbo,32,mt35000 lost mary,C,260,19,model-match,10,OK
+Lost Mary,VIZ 55K,20,best lost mary flavors,C,1300,5,brand-level,10,OK
+Lost Mary,Nera Fullview Disposable 2pk,18,lost mary nera fullview 70k,C,320,14,model-match,10,OK
+Lost Mary,35K Turbo,15,lost mary 35k flavors,C,390,12,model-match,10,OK
+Lost Mary,Nera Fullview Kit,10,lost mary nera 70k pods,C,260,10,model-match,10,OK
+Lost Mary,MT35K,1,best lost mary flavours,C,880,6,brand-level,10,OK
+Lost Mary,MT15000 Turbo - Sunday,1,lost mary mt35000 turbo price,T,210,18,model-match,10,OK
+Lost Mary,MT15000 Turbo - Saturday,1,lost mary turbo 35k,C,140,12,model-match,10,OK
+Lost Mary,MT15000 Turbo - Friday,1,lost mary mt15000 flavors,C,90,6,model-match,10,OK
+Lost Mary,MT15000 Turbo - Thursday,1,lost mary mt35000 turbo best flavors,C,90,10,model-match,10,OK
+Lost Mary,MT15000 Turbo- Wednesday,1,mt15000 turbo lost mary,C,90,11,model-match,10,OK
+Lost Mary,MT15000 Turbo - Tuesday,1,lost mary turbo flavors 35000,C,70,8,model-match,10,OK
+Lost Mary,MT15000 Turbo - Monday,1,lost mary turbo price,C,90,14,model-match,10,OK
+Mr Fog,Nova BLUE RAZZ STEEZY,13,mr fog price,T,320,9,brand-level,5,OK (secondaries topped up from the disposables category pool)
+Mr Fog,Nova,11,mr fog vape price,C,210,7,brand-level,5,OK (secondaries topped up from the disposables category pool)
+Mr Fog,Nova MINT STEEZY,3,buy mr fog online,T,140,14,brand-level,5,OK (secondaries topped up from the disposables category pool)
+Mr Fog,BLUE RAZZ STEEZYY,1,mr fog prices,T,90,9,brand-level,5,OK (secondaries topped up from the disposables category pool)
+Off Stamp,X-Cube Kit Crystal,17,off stamp x cube flavors,C,390,3,model-match,10,OK
+Off Stamp,X-Cube Crystal Cube,16,off stamp sweet cube,C,590,12,model-match,10,OK
+Off Stamp,X-Cube Disposable CRYSTAL,11,off stamp xcube,C,260,3,model-match,10,OK
+Off Stamp,Ice Cube Replacement Pod,10,crystal cube off stamp,C,320,7,model-match,10,OK
+Off Stamp,X-Cube Kit,7,off stamp cube battery,C,90,0,model-match,10,OK
+Off Stamp,Sweet Cube Replacement Pod,6,off stamp sweet cube battery,C,70,0,model-match,10,OK
+Off Stamp,Classic Cube Replacement Pod,5,off stamp cube pods,C,70,13,model-match,10,OK
+Off Stamp,X-Cube Disposable CLASSIC,3,off stamp classic cube pods,C,40,9,model-match,10,OK
+Off Stamp,Disposable CRYSTAL,1,off stamp flavors,T,3600,12,brand-level,10,OK
+Oilio,Platypus 50K,18,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+Oilio,Platypus,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+Pod Salt,Onyx Salts,33,onyx vapes,C,40,7,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+Pod Salt,Onyx Cloud X,19,pod salt vape,C,390,8,brand-level,5,OK (secondaries topped up from the vape-kits category pool)
+Pod Salt,Hit 40K,19,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Pod Salt,Air 40K,17,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Pod Salt,Onxy Cloud X,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Pod Salt,40K,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Rifbar,Turbo-X 25k,24,rifbar turbo x,C,90,2,model-match,7,OK
+Rifbar,MIXPRO Ice,14,rifbar price,T,50,2,model-match,7,OK
+Rifbar,MIXPRO Sweet,12,rifbar mixpro review,C,40,0,model-match,7,OK
+Rifbar,MIXPRO Sour,3,rifbar mix pro,C,40,9,model-match,7,OK
+Rifbar,MIXPRO SOUR/ICE,1,rifbar vape,T,1000,6,brand-level,7,OK
+Rinnbar,50000,20,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+Rinnbar,50K Nixodine,19,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Rinnbar,50K,5,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+Rinnbar,50000 Nixodine,1,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Shot Caller,40K,17,shot caller vape review,C,40,4,brand-level,5,OK (secondaries topped up from the disposables category pool)
+UT Bar,Strawberry Banana UT Clear Tank 50K,1,ut bar pro,C,720,7,model-match,6,OK
+UT Bar,Pina Colada UT Clear Tank 50K,1,ut bar pro flavors,C,70,0,model-match,6,OK
+UT,50K,46,flum ut bar 50k disposable vape,C,40,0,model-match,10,OK
+UT,Bar,25,ut vape bar,C,70,1,model-match,10,OK
+UT,Clear Tank 50K,14,clear flum pebble,C,70,0,model-match,10,OK
+UT,BAR PRO,14,best ut bar flavors,C,90,5,model-match,10,OK
+UT,Slushy UT Clear Tank 50K,1,ut vape price,T,260,0,model-match,10,OK
+UT,50K PINK,1,flum pebble,C,4400,5,brand-level,10,OK
+UT,50K Black,1,flum mello flavors,C,1600,4,brand-level,10,OK
+UT,50K Blue,1,flume vape,C,2400,16,brand-level,10,OK
+UT,UT Bar,1,ut puffs,C,390,9,model-match,10,OK
+UT,Bar Sampler Pack,1,utbar vape,C,90,5,model-match,10,OK
+VaporLax,Salt,17,vapor lax,T,320,22,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+VaporLax,,15,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Blue Lush by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Strawberry Cream by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Mixed Berries by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Mango Berry by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Red Grape by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Peach Ice by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Cool Mint by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Sour Cherry by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Strawberry Kiwi by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Luscious by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Mango Dragonfruit by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Citrus Lemonade by Draco,1,popular disposable vape brands,C,1000,21,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the disposables category)"
+VaporLax,Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+X-Posed,35K Kit,20,x posed 35k,C,110,5,model-match,5,OK (secondaries topped up from the vape-kits category pool)
+X-Posed,35K Disposable,19,xposed vape,C,320,7,brand-level,5,OK (secondaries topped up from the disposables category pool)
+EBCREATE,BC Pro 40K,16,bc5000 vape,C,1600,16,model-match,10,OK
+EBCREATE,Smooth Tobacco BC5000,1,elbar bc5000,C,260,10,model-match,10,OK
+EBCREATE,BC5000,1,bc5000 vape price,T,90,0,model-match,10,OK
+EBCREATE,Rinbo Cloudd BC5000,1,elf bar bc 5000,C,170,8,model-match,10,OK
+EBCREATE,Miami Mint BC5000,1,elf bar bc5000 price,T,70,0,model-match,10,OK
+EBCREATE,Clear BC5000,1,elfbar bc5000 prices,T,50,0,model-match,10,OK
+EBCREATE,Peach Berry BC5000,1,bc5000 elf bar,C,50,0,model-match,10,OK
+EBCREATE,Strawberry Watermelon BC5000,1,bc5000 vapes,C,50,2,model-match,10,OK
+EBCREATE,Strawberry Ice BC5000,1,vape bc5000,C,40,1,model-match,10,OK
+EBCREATE,Strawberry Piña Colada BC5000,1,elf bar bc5000 where to buy,T,40,6,model-match,10,OK
+EBCREATE,Strawberry Banana BC5000,1,ebcreate bc pro strawberry blend,C,20,7,model-match,10,OK
+EBCREATE,Peach Ice BC5000,1,ebcreate te6000 price,T,20,0,model-match,10,OK
+EBCREATE,Watermelon Bubblegum BC5000,1,ebcreate 40k,T,210,0,brand-level,10,OK
+EBCREATE,Pineapple Coconut Ice BC5000,1,ebcreate price,T,20,1,model-match,10,OK
+EBCREATE,Triple Berry Ice BC5000,1,bc vape,T,90,10,brand-level,10,OK
+EBCREATE,Tropical SPOAL BC5000,1,ebcreate bc pro review,C,90,9,brand-level,10,OK
+EBCREATE,Lemon Mint BC5000,1,ebcreate bcpro,T,40,4,brand-level,10,OK
+EBCREATE,Watermelon Ice BC5000,1,ebcreate bc pro 40k review,C,30,0,brand-level,10,OK
+EBCREATE,Strawberry Mango BC5000,1,ebcreate vape review,C,30,0,brand-level,10,OK
+EBCREATE,Strawberry Kiwi BC5000,1,ebcreate store discount code,T,20,0,brand-level,10,OK
+EBCREATE,Sakura Grape BC5000,1,ebcreate grape twist,T,20,5,model-match,10,OK
+EBCREATE,Cranberry Grape BC5000,1,ebcreate bc pro grape twist,C,20,4,model-match,10,OK
+EBCREATE,Peach Mango Watermelon BC5000,1,ebcreate discount code,T,20,3,brand-level,10,OK
+EBCREATE,Mango Peach BC5000,1,where to buy ebcreate,T,20,3,brand-level,10,OK
+EBCREATE,Blue Razz Ice BC5000,1,ebcreate clear vape,C,20,0,brand-level,10,OK
+Urban Tale,x Lost Mary Vape Juice,11,lost mary urban tale,C,50,3,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+Urban Tale,Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Suicide Bunny,E-Juice,8,mothers milk by suicide bunny,C,110,2,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Suicide Bunny,Salts,6,suicide bunny mother's milk,C,110,8,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Suicide Bunny,E-Liquid,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+TWIST,Salts,3,twisted e liquid,C,40,16,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+TWIST,e-Liquid,2,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blackberry Jam Monster eJuice,1,monster vape labs,T,1000,3,model-match,10,OK
+Monster Labs,Blackberry Jam Monster eJuice Nicotine Free,1,custard monster vape juice,C,390,5,model-match,10,OK
+Monster Labs,Blackberry Jam Monster Salt Vape Juice,1,tobacco monster vape juice,C,260,4,model-match,10,OK
+Monster Labs,Blueberry Jam Monster eJuice,1,monster vape juice,C,260,21,model-match,10,OK
+Monster Labs,Blueberry Jam Monster eJuice Nicotine Free,1,monster jam ejuice,T,70,0,model-match,10,OK
+Monster Labs,Blueberry Jam Monster Salt Vape Juice,1,jam monster salt nic,C,90,3,model-match,10,OK
+Monster Labs,Cranberry Grape POD MONSTER Salts,1,custard monster vanilla,C,90,3,model-match,10,OK
+Monster Labs,Fizzy Cola POD MONSTER Salts,1,jam monster strawberry,C,70,4,model-match,10,OK
+Monster Labs,Groovin Aloe Grape POD MONSTER Salts,1,monster vapes,C,70,7,model-match,10,OK
+Monster Labs,Jelly Bear POD MONSTER Salts,1,jam monster vape,C,40,2,model-match,10,OK
+Monster Labs,Lit Lemon POD MONSTER SALTS,1,monster pods,C,50,5,model-match,10,OK
+Monster Labs,Mango Madness POD MONSTER Salts,1,monster jam vape juice,C,70,11,model-match,10,OK
+Monster Labs,Pineapple Ice POD MONSTER Salts,1,juice monster vape juice,C,40,7,model-match,10,OK
+Monster Labs,Raspberry Jam Monster eJuice,1,frozen fruit monster mixed berry ice salt nic,C,20,0,model-match,10,OK
+Monster Labs,Raspberry Jam Monster eJuice Nicotine Free,1,fruit monster salts mixed berry,C,20,0,model-match,10,OK
+Monster Labs,Raspberry Jam Monster Salt Vape Juice,1,jam monster juice,C,40,11,model-match,10,OK
+Monster Labs,Spearmint POD MONSTER Salts,1,monster labs vape juice,C,40,12,model-match,10,OK
+Monster Labs,Strawberry Jam Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Jam Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Jam Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Scoops POD MONSTER Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Tropic Thunder POD MONSTER Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,White Peach Razz POD MONSTER Salts,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Banana Ice Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Black Cherry Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Black Cherry Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Black Cherry Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Black Cherry Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Black Cherry Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Frozen Fruit Monster ZERO Nicotine,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blackberry Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blackberry Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blackberry Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blue Raspberry Lemon Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blue Raspberry Lemon Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Raspberry Lemon Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Raspberry Lemon Fruit Monster eJuice Zero Nicotine,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Raspberry Lemon Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Raspberry Lemon Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Vanilla Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Vanilla Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Blueberry Vanilla Custard Monster Swirl Edition eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Butterscotch Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Butterscotch Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Butterscotch Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Creamsicle Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Creamsicle Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Creamsicle Custard Monster Swirl Edition eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Double Mango Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Double Mango Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Double Mango Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Gingerbread Crunch Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Gingerbread Crunch Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mango Peach Guava Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Mixed Berry Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Passion Fruit Orange Guava Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Passion Fruit Orange Guava Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Passion Orange Guava Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Passion Orange Guava Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Passionfruit Orange Guava Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Pumpkin Spice Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Pumpkin Spice Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Pumpkin Spice Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Banana Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Kiwi Pomegranate Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Kiwi Pomegranate Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Kiwi Pomegranate Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Kiwi Pomegranate Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Kiwi Pomegranate Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Ice Frozen Fruit Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Ice Frozen Fruit Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Lime Ice Frozen Fruit Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Vanilla Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Vanilla Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Strawberry Vanilla Custard Monster Swirl Edition eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Vanilla Custard Monster eJuice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Vanilla Custard Monster eJuice Nicotine Free,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Monster Labs,Vanilla Custard Monster Salt Vape Juice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+Mad Hatter,- I Love Cookies -,1,mad hatter vape juice,C,50,3,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+Mad Hatter,- I Love Donuts -,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,,3,i love salts classic menthol,C,90,0,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+I Love Salts,Blue Raspberry,1,i love salts sweet tobacco,C,90,4,brand-level,5,OK (secondaries topped up from the vape-juice category pool)
+I Love Salts,Blue Raspberry Ice,1,i love salts juice,C,70,3,model-match,5,OK (secondaries topped up from the vape-juice category pool)
+I Love Salts,Blue Raspberry Lemon,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Blue Strawberry,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Classic Tobacco,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Grappleberry,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Juicy Apples,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Orange Pineapple Crush,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Peach Mango,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Peach Mango Ice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Pink Lemonade,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Spearmint,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Strawberry Guava,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Strawberry Ice,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Sweet Strawberry,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Sweet Tobacco,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Tropic Mango,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+I Love Salts,Wild Watermelon,1,best vape juice,C,1300,18,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-juice category)"
+FASTA,Alien 51K,15,fasta vapes,C,590,8,brand-level,5,OK (secondaries topped up from the disposables category pool)
+FASTA,40K Disposable,2,fasta burrst,C,90,8,brand-level,5,OK (secondaries topped up from the disposables category pool)
+FASTA,40K Kit,2,fasta vape review,C,50,5,brand-level,5,OK (secondaries topped up from the vape-kits category pool)
+Fifty Bar,20K,62,fifty bar flavors,C,1900,5,brand-level,10,OK
+Fifty Bar,,30,fifty bar vape review,C,480,0,brand-level,10,OK
+Fifty Bar,20K MIDNIGHT SERIES,10,fruitia fifty bar,C,390,0,brand-level,10,OK
+Fifty Bar,20K Silver Series,10,fifty bar lava blast,C,260,1,brand-level,10,OK
+Fifty Bar,20K - Cherry Limeade,1,fifty bar vape price,T,210,0,brand-level,10,OK
+Fifty Bar,20k Mexican Mango,1,fifty bar x fruitia,C,210,0,brand-level,10,OK
+Fifty Bar,20K White Series,1,fiftybars,C,210,0,brand-level,10,OK
+Fifty Bar,V2 White Series,1,best fifty bar prices,C,320,6,brand-level,10,OK
+Float,X 10K,12,flum float vapes,C,480,14,brand-level,7,OK
+FLUM,Pebble,2,flum pebble flavors,C,720,19,model-match,10,OK
+FLUM,Pebble *Christmas Edition*,1,float pebble vs flum pebble,C,90,3,model-match,10,OK
+Foger,Switch Pro Disposable,81,foger switch pro 30k kit,C,720,13,model-match,10,OK
+Foger,Switch Pro Kit,80,fogger switch pro,C,590,10,model-match,10,OK
+Foger,Bit 35K,30,foger bits,C,50,9,model-match,10,OK
+Smok,RPM 4 Pod,1,smok rpm 5 quartz coils,C,320,7,model-match,10,OK
+Smok,RPM 5 Pod,1,best vape for heavy smoker,C,480,1,brand-level,10,OK
+Smok,Nord 5 Pod,1,smok nord coil,C,140,19,model-match,10,OK
+Smok,Nord 6 Pods,1,does smok nord take salt nic,C,20,1,model-match,10,OK
+Smok,Novo 5 Dual Meshed Pods,1,smok novo master,C,590,11,model-match,10,OK
+Smok,Arco Pods,1,smok coils,C,1000,17,brand-level,10,OK
+Smok,Novo Pods,1,smok novo master box,C,260,5,model-match,10,OK
+Smok,NOVO 2X Pods,1,smok novo pro,C,390,15,model-match,10,OK
+Smok,Novo 5 Pods,1,smok novo 2x replacement pods,C,50,7,model-match,10,OK
+Smok,Novo 3 Pods,1,smok deals,T,590,8,brand-level,10,OK
+Smok,Novo 2 Pods,1,og sub-ohm replacement coil 1pc,C,320,0,brand-level,10,OK
+Smok,Novo 4 Pods,1,b-smokestack vapes,C,720,14,brand-level,10,OK
+Smok,Novo 4 Mini Pods,1,smoke shop wholesale,C,880,20,brand-level,10,OK
+Smok,Nord 6 Kit,1,smoking wholesalers,C,720,26,brand-level,10,OK
+Smok,Novo 6 Kit,1,smoktech mag,T,390,11,brand-level,10,OK
+Smok,Novo 5 Kit,1,smoke wholesaler,C,390,16,brand-level,10,OK
+Smok,Novo Master Kit,1,smokers wholesale,C,320,18,brand-level,10,OK
+Smok,Novo Master Box Kit,1,smok parts,C,110,0,brand-level,10,OK
+Smok,Novo Pro Kit,1,smok atomizer,C,110,0,brand-level,10,OK
+Smok,Novo 3,1,best disposable vape for heavy smoker,C,110,1,brand-level,10,OK
+Smok,Novo 2,1,smoke shop distributors,C,210,15,brand-level,10,OK
+Smok,Novo 4 Mini,1,best vapes to quit smoking,C,260,22,brand-level,10,OK
+Smok,Novo 4,1,smoking accessories wholesale,C,170,13,brand-level,10,OK
+Caliburn,GPP Pods,1,caliburn g3 pods,C,480,6,brand-level,10,OK
+Caliburn,A3 Pod 4pk,1,caliburn a3 pods,C,260,11,model-match,10,OK
+Caliburn,A2 Pod 4pk,1,best vape juice for caliburn a2,C,170,2,model-match,10,OK
+Caliburn,G4 Pro Koko Kit,1,caliburn g4 mini,C,390,25,model-match,10,OK
+Caliburn,GZ2 Pod Kit,1,caliburn pods,C,880,23,brand-level,10,OK
+Caliburn,G4 Pro Kit,1,caliburn g4 classic,C,170,15,model-match,10,OK
+Caliburn,A3S Pod Kit,1,caliburn g2,C,480,13,brand-level,10,OK
+Caliburn,GK2 Vape Kit,1,caliburn x,C,140,5,brand-level,10,OK
+Caliburn,A3 Kit,1,uwell caliburn g2,C,170,15,brand-level,10,OK
+Caliburn,AK2 Pod Kit,1,caliburn g pods,C,70,3,brand-level,10,OK
+Geekvape,H45 Hero 2 Pods,1,geekvape zeus tank,T,480,25,brand-level,5,OK (secondaries topped up from the coils-pods category pool)
+Geekvape,H45 Hero 2 Kit,1,coil for vape,C,2900,7,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the coils-pods category)"
+Geekvape,Legend 5 Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Geekvape,Aegis Force Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Geekvape,Aegis Hero 5 Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Geekvape,L200 Aegis Legend 2 Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Geekvape,S100 Aegis Solo 2 Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Vinci,Replacement Pod 1.2ohm,1,voopoo vinci e120,C,320,12,brand-level,5,OK (secondaries topped up from the coils-pods category pool)
+Vinci,Replacement Pod 0.8ohm,1,voopoo vinci s,C,50,12,brand-level,5,OK (secondaries topped up from the coils-pods category pool)
+Voopoo,Drag X2 Kit,1,voopoo drag 6 kit,C,110,8,model-match,10,OK
+Voopoo,Drag S2 Kit,1,voopoo drag 5 review,C,90,7,model-match,10,OK
+Voopoo,Vinci Pod Kit,1,voopoo vrizz 2,T,320,21,brand-level,10,OK
+new product,JUUL Kit,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Suorin,Air Pro,1,vape kits,C,2400,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vape-kits category)"
+Vaporesso,XROS 3,1,vaporesso coils,C,480,14,brand-level,5,OK (secondaries topped up from the vape-kits category pool)
+Vaporesso,XROS 2,1,smok vs vaporesso,C,50,0,brand-level,5,OK (secondaries topped up from the vape-kits category pool)
+Mi-Pod,Pro +,22,mipod pro,C,70,6,model-match,6,OK
+Mi-Pod,2.0,6,mi pod discount code,T,210,0,brand-level,6,OK
+Oxbar,RRD Kit - Pink,1,oxbar,T,3600,6,brand-level,10,OK
+Oxbar,RRD Kit - Cherry Pink,1,oxbar astro maze,C,590,14,brand-level,10,OK
+Dr Dabber,DR. DABBER Switch GO Glass Attachment,1,dr dabber switch 2 for sale,T,480,12,model-match,10,OK
+Dr Dabber,DR. DABBER Switch GO Carb Cap,1,dr dabber ghost 2 review,C,170,0,model-match,10,OK
+Dr Dabber,DR. DABBER Switch GO Base Extender,1,dr dabber hot knife,C,320,10,model-match,10,OK
+Dr Dabber,DR. DABBER Switch GO Sapphire Plus Insert,1,dr. dabber cartridges specials,T,260,10,model-match,10,OK
+Dr Dabber,DR. DABBER Switch GO Quartz Insert,1,dr dabber switch 2 spinner cap,C,110,0,model-match,10,OK
+Dr Dabber,DR. DABBER Switch GO,1,dr dabber 2,C,210,22,model-match,10,OK
+Dr Dabber,DR. DABBER XS Glass Attachment,1,dr dabber swtich,T,170,19,model-match,10,OK
+Dr Dabber,DR. DABBER XS Carb Cap,1,dr dabber switch 2 best price,C,140,15,model-match,10,OK
+Dr Dabber,DR. DABBER XS eChamber,1,dr dabber switch 2 buy,T,90,9,model-match,10,OK
+Dr Dabber,DR. DABBER XS,1,dr dabber switch2,C,110,12,model-match,10,OK
+Dr Dabber,DR.DABBER Tour Bag,1,dr dabber xs price,T,110,20,model-match,10,OK
+Dr Dabber,DR.DABBER Iso-Snaps,1,dr dabber review,C,40,2,model-match,10,OK
+Dr Dabber,DR.DABBER Drop,1,e dabber,C,110,27,model-match,10,OK
+Dr Dabber,DR.DABBER Ghost 2 Glass Mouthpiece,1,dr dabber switch 2 joystick,C,50,8,model-match,10,OK
+Dr Dabber,DR.DABBER Ghost 2 Mouthpiece,1,dr dabber switch sale,T,50,15,model-match,10,OK
+Dr Dabber,DR.DABBER Ghost 2 eChamber,1,dr dabber switch 2 on sale,T,40,11,model-match,10,OK
+Dr Dabber,DR.DABBER Ghost 2,1,dr dabber light review,C,40,9,model-match,10,OK
+Dr Dabber,DR.DABBER Switch 2 Incycler Attachment,1,xs dr dabber,C,50,14,model-match,10,OK
+Dr Dabber,DR.DABBER Switch 2 Glass Attachment,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Dr Dabber,DR.DABBER Switch 2 Carb Cap,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Dr Dabber,DR.DABBER Switch 2 Titanium Insert,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Dr Dabber,DR.DABBER Switch 2 Sapphire Plus Insert,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Dr Dabber,DR.DABBER Switch 2 Quartz Insert,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Dr Dabber,DR.DABBER Switch 2,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+PAX,FOUR Raised Mouthpiece,1,pax four vaporizer,T,70,16,model-match,10,OK
+PAX,FOUR Flat Mouthpiece,1,pax vaporizer review,C,170,3,brand-level,10,OK
+PAX,FOUR Grip Sleeve,1,pax 4 review,C,110,2,brand-level,10,OK
+PAX,FOUR,1,pax 3 vaporizer price,C,70,0,brand-level,10,OK
+PAX,Flow Oven Screens,1,pax plus vaporizer for sale,T,110,7,brand-level,10,OK
+PAX,Flow Raised Mouthpiece,1,pax plus for sale,T,140,23,brand-level,10,OK
+PAX,Flow Flat Mouthpiece,1,the pax era,T,110,19,brand-level,10,OK
+PAX,Mini 2,1,pax plus accessories,C,90,11,brand-level,10,OK
+PAX,Flow Grip Sleeve,1,pax era review,C,70,9,brand-level,10,OK
+PAX,Flow Water Pipe Adapter 2,1,pax weed vape,T,110,27,brand-level,10,OK
+PAX,Flow Charging Dock,1,pax plus vaporizer review,C,70,13,brand-level,10,OK
+PAX,Flow,1,pax 2 review,C,50,7,brand-level,10,OK
+PAX,Puck Press,1,pax plus vaporizer complete kit,T,50,16,brand-level,10,OK
+PAX,Plus Starter Kit,1,pax 3 vaporizer review,C,50,11,brand-level,10,OK
+PAX,Stash Tube,1,pax 2 vaporizer for sale,T,40,14,brand-level,10,OK
+Cartisan,Veil Bar Pro EVO,1,cartisan pro pen neo,T,110,7,model-match,7,OK
+Cartisan,The Inspector,1,cartisan inspector,T,390,10,model-match,7,OK
+Cartisan,Pro Pen NEO 900,1,cartisan veil bar pro manual,T,110,7,model-match,7,OK
+Puffco,Proxy Bub,2,puffco accessories,C,1300,9,brand-level,10,OK
+Puffco,Proxy Wizard,2,puffco peak sale,T,390,1,brand-level,10,OK
+Puffco,Proxy 3D Chamber,2,puffco 3dxl spinner cap,C,70,0,model-match,10,OK
+Puffco,Peak Pro,2,puffco peak pro for sale,T,590,17,model-match,10,OK
+Puffco,Proxy Ryan Fitt Recycler Glass,1,puffco pivot for sale,T,1300,27,brand-level,10,OK
+Puffco,Peak Pro Link,1,used puffco peak,C,390,12,model-match,10,OK
+Puffco,Proxy,1,puffco sale,T,1000,23,brand-level,10,OK
+Puffco,Pivot Travel Case,1,puffco travel pack,C,260,12,model-match,10,OK
+Puffco,Pivot 3D Chamber,1,puffco pivot sale,T,390,28,model-match,10,OK
+Puffco,Pivot Vaporizer,1,green puffco pivot,C,70,2,model-match,10,OK
+Puffco,Proxy Ripple,1,puffco deals,T,210,20,brand-level,10,OK
+Puffco,Peak Pro Oculus Carb Cap with Tether,1,puffco peak dry tops,C,50,0,model-match,10,OK
+Puffco,Peak Pro Joystick Cap,1,puffco pivot joystick,C,40,0,model-match,10,OK
+Puffco,Peak Pro 2.0 Glass,1,puffco peak pro charging dock,C,70,8,model-match,10,OK
+Puffco,Proxy Joystick Cap,1,puffco vapes specials,C,260,26,brand-level,10,OK
+Puffco,Proxy Travel Bag,1,puffco cartridges deals,C,210,21,brand-level,10,OK
+Puffco,Cupsy,1,puffco on sale,T,140,15,brand-level,10,OK
+Puffco,Budsy,1,puffco vapes deals,C,170,21,brand-level,10,OK
+Puffco,Journey Bag,1,cheap puffco,C,140,18,brand-level,10,OK
+Puffco,Peak Pro Glass,1,chamber puffco peak,T,40,3,model-match,10,OK
+Puffco,Peak Travel Glass,1,puffco peak on sale,C,110,22,model-match,10,OK
+Puffco,Peak Pro Travel Glass,1,best concentrate for puffco peak,C,50,7,model-match,10,OK
+Puffco,Peak Pro Power Dock,1,puffco new peak sale,T,70,23,model-match,10,OK
+Puffco,Peak Pro Ryan Fitt Recycler Glass 2.0,1,puffco peak cheap,C,50,12,model-match,10,OK
+Puffco,Proxy Ball Cap,1,where to buy puffco,T,140,22,brand-level,10,OK
+Puffco,Proxy Flower Bowl,1,puffco pieces,T,140,26,brand-level,10,OK
+Puffco,Proxy Travel Pack,1,puffco sales,T,90,25,brand-level,10,OK
+Puffco,Proxy Travel Pipe,1,puffco plus sale,C,90,21,brand-level,10,OK
+Puffco,Proxy Droplet,1,pine puffco pivot,T,40,7,brand-level,10,OK
+Puffco,Peak Pro Travel Pack + Ball Cap,1,new puffco peak sale,C,50,24,model-match,10,OK
+Puffco,Plus Chamber,1,puffco plus for sale,C,90,24,model-match,10,OK
+Puffco,Plus Battery,1,puffco pivot plus,T,70,29,model-match,10,OK
+Puffco,Peak Atomizer,1,dry top for puffco peak,C,40,22,model-match,10,OK
+Puffco,Peak Bowl 3pk,1,puffco by alchemist,C,50,8,brand-level,10,OK
+Puffco,Peak Pro 3D Chamber,1,puffco pivot cheap,C,50,10,brand-level,10,OK
+Puffco,Hot Knife,1,puffco stores,C,70,21,brand-level,10,OK
+Puffco,Plus Kit,1,pivot puffco for sale,T,50,26,brand-level,10,OK
+Puffco,Proxy Kit,1,puffco pivot skins,C,40,12,brand-level,10,OK
+Puffco,Peak,1,puffco pivots,T,50,28,brand-level,10,OK
+Lookah,Bear Battery Limited Edition,1,lookah review,C,50,4,brand-level,5,OK (secondaries topped up from the vaporizers category pool)
+Lookah,Zero Battery,1,lookah python concentrate vape kit,C,30,0,brand-level,5,OK (secondaries topped up from the vaporizers category pool)
+Lookah,Snail 2.0 Battery,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+Lookah,Bear Battery,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+CCELL,Palm Pro Battery,1,ccell palm pro battery,C,170,3,model-match,10,OK
+CCELL,Rizo Battery,1,ccell vape battery,C,390,20,model-match,10,OK
+CCELL,Palm Battery Limited Editions,1,ccell palm battery,T,260,13,model-match,10,OK
+CCELL,Palm Battery,1,ccell 510 battery,C,260,15,model-match,10,OK
+S6XTH SENSE,Pre-Heat Slim Battery,1,best vaporizers,C,260,23,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the vaporizers category)"
+American Ice,Pouches,3,best nicotine pouches,C,9900,26,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nic-pouches category)"
+NOAT,Pouches,10,best nicotine pouches,C,9900,26,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nic-pouches category)"
+ZYN,Pouches,12,lucy pouches vs zyn,C,170,5,model-match,10,OK
+ZYN,Ultra Pouches,8,zyn cinnamon pouches,C,40,12,model-match,10,OK
+ZYN,Pouches AFTER DARK SERIES,2,snus vs zyn,C,1900,9,brand-level,10,OK
+ZYN,After Dark,1,best zyn flavors,C,2400,27,brand-level,10,OK
+ZYN,Mint Sesh+ Pouches,1,sesh vs zyn,C,480,14,model-match,10,OK
+Alp Drifter,s Pouches,4,best nicotine pouches,C,9900,26,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nic-pouches category)"
+Alp Drifter,Pouches,1,best nicotine pouches,C,9900,26,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nic-pouches category)"
+LUCY,Pouches,8,lucy nicotine pouches review,C,210,6,model-match,10,OK
+LUCY,Breakers Pouches,5,lucy breakers review,C,720,10,model-match,10,OK
+AMMO,Nicotine Pouches,4,ammo pouches nicotine,C,210,3,model-match,5,OK (secondaries topped up from the nic-pouches category pool)
+AMMO,Pouches,2,best nicotine pouches,C,9900,26,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nic-pouches category)"
+ZIMO,Pouches,9,zimo nicotine pouches review,C,50,2,model-match,5,OK (secondaries topped up from the nic-pouches category pool)
+Sesh,+ Pouches,3,sesh nicotine pouches review,C,590,1,model-match,5,OK (secondaries topped up from the nic-pouches category pool)
+Hookah Labs,80K,11,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Parfflo,Hookah Blast Nixodine,8,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Geek Labs,Pulse X 50K Nixodine,21,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Geek Labs,X 50K Nixodine,1,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+Geek Labs,Pulse X 50K,1,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+YOVO,JB50000 Kit Nixodine,10,yovo vapes,C,260,0,brand-level,5,OK (secondaries topped up from the nixodine category pool)
+Hotbox,Elite 50K,13,hotbox elite,C,210,7,model-match,5,OK (secondaries topped up from the nixodine category pool)
+Hotbox,Elite Box 50K,1,puff labs hotbox elite,C,70,4,model-match,5,OK (secondaries topped up from the nixodine category pool)
+NIX Liquids,,17,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+NIX Liquids,Salts,9,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+NIX Liquids,Wild Blackberry Gummy NIX Liqiuds,1,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"
+NIX Liquids,Titanic O.G. NIX Liquid Salts,1,best nicotine free vape,C,880,10,category-fallback,10,"OK (FALLBACK: primary = the product name, no Semrush keyword fits; secondaries from the nixodine category)"

@@ -13,9 +13,9 @@ const TAWK_WIDGET = SITE.tawk.widgetId;
 const tawk = { injected: false, loaded: false, started: false }; // survives route changes
 
 const QUICK = [
-  { icon: Truck, q: "Where is my order?", a: "Orders ship within 24–72 business hours with tracking by email. Use the private link in your order email to see its status.", href: "/shipping/" },
-  { icon: CreditCard, q: "How do I pay?", a: "Cash App, Apple Pay, Chime, crypto (save 10%) or gift cards (save 10%). Details are sent right after you place the order.", href: "/faq/" },
-  { icon: HelpCircle, q: "Returns & refunds", a: "Unopened items in original packaging can be returned. Damaged or wrong items are replaced.", href: "/refunds/" },
+  { icon: Truck, q: "Where is my order?", a: "Orders ship within 24–72 business hours with tracking by email. Use the private link in your order email to see its status.", href: "/free-vapes-with-free-shipping/" },
+  { icon: CreditCard, q: "How do I pay?", a: "Cash App, Apple Pay, Chime, crypto (save 10%) or gift cards (save 10%). Details are sent right after you place the order.", href: "/where-can-i-buy-disposable-vapes/" },
+  { icon: HelpCircle, q: "Returns & refunds", a: "Unopened items in original packaging can be returned. Damaged or wrong items are replaced.", href: "/refund-and-return-policy/" },
 ];
 
 export default function SupportChat() {

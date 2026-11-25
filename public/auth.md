@@ -10,8 +10,8 @@ No authentication required. All resources are publicly accessible.
 |---|---|
 | Product Catalog | https://www.onestopvapestore.com/shop/ |
 | Blog | https://www.onestopvapestore.com/blog/ |
-| FAQ | https://www.onestopvapestore.com/faq/ |
-| Wholesale | https://www.onestopvapestore.com/wholesale/ |
+| FAQ | https://www.onestopvapestore.com/where-can-i-buy-disposable-vapes/ |
+| Wholesale | https://www.onestopvapestore.com/bulk-vapes-for-sale/ |
 
 ## Authentication
 ```json

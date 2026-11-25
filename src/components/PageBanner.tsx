@@ -8,14 +8,14 @@ type Banner = { src: string; alt: string };
 
 // Full-width banner image shown at the top of every main and category page. The page's own <h1> stays below it
 // (one h1 per page); the banner only carries a breadcrumb-style label.
-export default function PageBanner({ slug, label, priority = true }: { slug: string; label: string; priority?: boolean }) {
+export default function PageBanner({ slug, label, priority = true, alt }: { slug: string; label: string; priority?: boolean; alt?: string }) {
   const b = (images.banners as Record<string, Banner>)[slug];
   if (!b) return null;
   return (
     <div className="relative w-full overflow-hidden border-b border-zinc-900 bg-black">
       <Image
         src={b.src}
-        alt={b.alt}
+        alt={alt || b.alt}
         width={1920}
         height={480}
         priority={priority}

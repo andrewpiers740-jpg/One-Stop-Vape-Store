@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { SITE } from "@/src/config/site";
+import { staticUrl } from "@/lib/urlmap";
 
 export async function GET() {
   return NextResponse.json({
@@ -10,7 +11,7 @@ export async function GET() {
     services: [
       { id: "product-catalog", type: "catalog", url: `https://${SITE.domain}/shop/` },
       { id: "mcp-server", type: "mcp", url: `https://${SITE.domain}/api/mcp` },
-      { id: "wholesale", type: "b2b", url: `https://${SITE.domain}/wholesale/` }
+      { id: "wholesale", type: "b2b", url: `https://${SITE.domain}${staticUrl("/wholesale/")}` }
     ]
   });
 }

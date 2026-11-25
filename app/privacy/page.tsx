@@ -2,11 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import LegalPage from "@/src/components/LegalPage";
+import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
 
 export const metadata = {
-  title: `Privacy Policy | ${SITE.name}`,
-  description: `How ${SITE.name} collects, uses and protects your personal information when you browse, order or contact us, and the choices you have.`,
-  alternates: { canonical: `https://${SITE.domain}/privacy/` },
+  title: staticTitle("/privacy/", `Privacy Policy | ${SITE.name}`),
+  description: staticMeta("/privacy/", `How ${SITE.name} collects, uses and protects your personal information when you browse, order or contact us, and the choices you have.`),
+  keywords: seoEntry("/privacy/") ? keywordsString(seoEntry("/privacy/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/privacy/")}` },
 };
 
 const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
@@ -14,6 +18,7 @@ const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
 export default function PrivacyPage() {
   return (
     <LegalPage
+      path="/privacy/"
       slug="privacy"
       label="Privacy"
       h1="Privacy Policy"
@@ -63,7 +68,7 @@ export default function PrivacyPage() {
         { id: "security", h2: "How we protect it", body: (<p>The site is served over HTTPS. Order pages use private links, administrative access is passcode protected, and we limit who can see customer records. No online service can promise perfect security, so please use a strong email password and do not share your private order link.</p>) },
         { id: "rights", h2: "Your choices and rights", body: (<>
           <p>You can ask us to access, correct or delete the personal information we hold about you, or to stop sending you non-essential messages. Email {mail} from the address on your order and we will respond within 45 days. We may need to keep some records where the law requires it.</p>
-          <p>California residents have additional rights; see our <Link href="/california-privacy/">California Privacy Notice</Link>.</p>
+          <p>California residents have additional rights; see our <Link href="/california-privacy-notice/">California Privacy Notice</Link>.</p>
         </>) },
         { id: "children", h2: "Children", body: (<p>The store is intended only for adults aged {SITE.compliance.ageThreshold}+. If you believe a minor has given us information, contact us and we will delete it.</p>) },
         { id: "changes", h2: "Changes to this policy", body: (<p>We may update this policy as our practices or the law change. The date at the top shows the latest version. Continued use of the site after an update means you accept the revised policy.</p>) },

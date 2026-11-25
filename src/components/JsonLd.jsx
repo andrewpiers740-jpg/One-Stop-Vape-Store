@@ -25,7 +25,7 @@ export default function JsonLd({ type = "Store", data = {} }) {
     "hasMerchantReturnPolicy": merchantReturnPolicy(),
     "email": SITE.contact.email,
     "telephone": `+1-${SITE.contact.phone}`,
-    "sameAs": [],
+    "sameAs": SITE.sameAs,
     "areaServed": ["United States"],
     "numberOfItems": products.length,
     "priceRange": "$$",

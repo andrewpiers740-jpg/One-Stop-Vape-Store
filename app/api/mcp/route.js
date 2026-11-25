@@ -3,6 +3,7 @@
 import products from "@/src/data/products.json";
 import { SITE } from "@/src/config/site";
 import { searchProducts } from "@/lib/productSearch";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 export const dynamic = "force-dynamic";
 
@@ -34,7 +35,7 @@ export async function POST(request) {
       if (typeof a.slug !== "string") return err(id, -32602, "slug is required");
       const p = products.find((x) => x.slug === a.slug);
       if (!p) return err(id, -32602, "Unknown product");
-      return ok(id, text({ ...p, currency: SITE.contact.currency.code, url: `https://${SITE.domain}/shop/${p.category}/${p.slug}/`, image: `https://${SITE.domain}${p.image}` }));
+      return ok(id, text({ ...p, currency: SITE.contact.currency.code, url: `https://${SITE.domain}${productHref(p)}`, image: `https://${SITE.domain}${p.image}` }));
     }
     return err(id, -32602, "Unknown tool");
   }

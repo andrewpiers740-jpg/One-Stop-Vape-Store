@@ -1,4 +1,5 @@
 import FaqAccordion from "@/src/components/FaqAccordion";
+import { SEO_UPDATED } from "@/lib/seo";
 import React from "react";
 import ProductCard from "@/src/components/ProductCard";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import WishlistButton from "@/src/components/WishlistButton";
 import VariantBuy from "@/src/components/VariantBuy";
 import { productOffers } from "@/lib/schema";
 import { productFaq } from "@/lib/productFaq";
+import { productSeo } from "@/lib/seoPages";
+import { catUrl } from "@/lib/urlmap";
 import PaymentLogos from "@/src/components/PaymentLogos";
 import PostBody from "@/src/components/blog/PostBody";
 import PageBanner from "@/src/components/PageBanner";
@@ -21,7 +24,7 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   // Pre-render the top 100 flagship products statically for instant initial loading
   return (products as any[]).slice(0, 100).map((p) => ({
-    category: p.category,
+    category: catUrl(p.category),
     slug: p.slug,
   }));
 }
@@ -30,15 +33,17 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { slug } = await params;
   const product = (products as any[]).find(p => p.slug === slug);
   if (!product) return {};
+  const sp = productSeo(product);
   return {
-    title: `${product.title} | ${product.brand} | One Stop Vape Store`,
-    description: product.description.substring(0, 155),
+    title: sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`, product.title].find((x) => x.length <= 65) || product.title,
+    description: sp ? sp.meta : product.description.substring(0, 155),
+    keywords: sp ? sp.keywords : undefined,
     alternates: {
-      canonical: `https://${SITE.domain}/shop/${product.category}/${product.slug}/`,
+      canonical: `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`,
     },
     openGraph: {
-      title: `${product.title} | ${SITE.name}`,
-      description: product.description.substring(0, 155),
+      title: sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`, product.title].find((x) => x.length <= 65) || product.title,
+      description: sp ? sp.meta : product.description.substring(0, 155),
       images: [{ url: product.image }],
     }
   };
@@ -54,6 +59,8 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const content: { body?: string; short?: string; faq?: { q: string; a: string }[] } = typeof rawContent === "string" ? { body: rawContent } : rawContent || {};
   const faq = content.faq && content.faq.length === 10 ? content.faq : productFaq(product);
   const shortDesc = content.short || product.description;
+  const sp = productSeo(product);
+  const faqAll = sp ? [...faq, ...sp.faqs] : faq;
 
   const relatedProducts = (products as any[])
     .filter(p => p.brand === product.brand && p.slug !== product.slug)
@@ -65,6 +72,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "dateModified": SEO_UPDATED,
     "name": product.title,
     "image": [product.image],
     "description": shortDesc,
@@ -78,7 +86,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
     "category": product.category,
   };
 
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqAll.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -94,13 +102,13 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
         "@type": "ListItem",
         "position": 2,
         "name": product.category,
-        "item": `https://${SITE.domain}/shop/${product.category}/`
+        "item": `https://${SITE.domain}/shop/${catUrl(product.category)}/`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": product.title,
-        "item": `https://${SITE.domain}/shop/${product.category}/${product.slug}/`
+        "item": `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`
       }
     ]
   };
@@ -129,7 +137,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 mb-2">
             <Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link>
             <ChevronRight size={10} />
-            <Link href={`/shop/${product.category}/`} className="hover:text-emerald-600 transition-colors capitalize">{product.category.replace('-', ' ')}</Link>
+            <Link href={`/shop/${catUrl(product.category)}/`} className="hover:text-emerald-600 transition-colors capitalize">{product.category.replace('-', ' ')}</Link>
             <ChevronRight size={10} />
             <span className="text-slate-600 truncate max-w-[150px]">{product.brand}</span>
           </nav>
@@ -138,7 +146,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           <div className="aspect-square rounded-3xl bg-white border border-zinc-200/80 flex items-center justify-center p-3 sm:p-8 md:p-10 overflow-hidden shadow-xl">
             <SmartImage 
               src={product.image} 
-              alt={product.title} 
+              alt={sp ? sp.altMain : product.title} 
               priority={true}
               className="w-full h-full object-contain transition-transform duration-700 motion-reduce:transition-none [@media(hover:hover)]:hover:scale-105" 
             />
@@ -146,7 +154,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
           
           <div className="grid grid-cols-4 gap-4">
             <div className="aspect-square rounded-xl bg-white border-2 border-emerald-500 p-2 flex items-center justify-center shadow-sm">
-              <SmartImage src={product.image} alt={product.title} className="w-full h-full object-contain" />
+              <SmartImage src={product.image} alt={sp ? sp.altThumb : product.title} className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
@@ -160,7 +168,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
             </div>
             
             <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 uppercase leading-tight">
-              {product.title}
+              {sp ? sp.h1 : product.title}
             </h1>
 
             {/* 5-Star Rating Component */}
@@ -169,6 +177,7 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
               <span className="text-slate-600">•</span>
               <span className="text-xs text-slate-600">Verified Authentic Inventory</span>
             </div>
+            {sp && <p className="mt-2 text-base font-medium leading-relaxed text-slate-900">{sp.lead}</p>}
             <p className="mt-2 text-base leading-relaxed text-slate-700">{shortDesc}</p>
 
           </div>
@@ -248,6 +257,13 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
             </div>
           </div>
 
+          {sp && (
+            <div className="flex flex-col gap-3 border-b border-slate-200 pb-8">
+              <h2 className="text-xs font-black uppercase tracking-widest text-emerald-700">{sp.section.h2}</h2>
+              <p className="text-sm leading-relaxed text-slate-600">{sp.section.p[0]} <Link href={`/shop/${catUrl(product.category)}/`} className="text-emerald-700 underline">Browse the {product.category.replace(/-/g, " ")} category</Link>{product.brand ? <> or <Link href="/brands/" className="text-emerald-700 underline">see all brands</Link></> : null}.</p>
+            </div>
+          )}
+
           {/* Shipping & Trust Guarantees */}
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center gap-3 p-4 rounded-2xl bg-slate-100/40 border border-slate-200">
@@ -276,8 +292,15 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
 
       <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-4xl">
         <h2 id="faq-heading" className="mb-6 text-2xl font-black uppercase tracking-tighter text-slate-900 md:text-3xl">Frequently asked questions</h2>
-        <FaqAccordion items={faq.map((f) => ({ q: f.q, a: f.a }))} />
+        <FaqAccordion items={faqAll.map((f) => ({ q: f.q, a: f.a }))} />
+        <p className="mt-6 text-xs text-slate-500">Last updated: <time dateTime={SEO_UPDATED}>{SEO_UPDATED}</time></p>
       </section>
+
+      {sp && (
+        <ul aria-label="Tags" className="mx-auto -mt-10 flex w-full max-w-4xl flex-wrap gap-2">
+          {sp.tags.map((t) => <li key={t} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700">{t}</li>)}
+        </ul>
+      )}
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (

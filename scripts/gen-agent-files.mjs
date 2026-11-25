@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { SITE, CATEGORIES } from "../src/config/site.js";
+import { urlMap } from "./lib/urlmap.mjs";
 
 const root = process.cwd();
 
@@ -18,21 +19,55 @@ Disallow: /api/crypto/
 Disallow: /api/crypto-rate/
 Disallow: /cart/
 Disallow: /checkout/
+Disallow: /account/
+Disallow: /wishlist/
+Disallow: /search/
 Sitemap: https://${SITE.domain}/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-# AI crawlers — welcome to index product and content pages
+# AI model-training crawlers: not allowed to train on this content
 User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# AI search and answer crawlers: allowed to index and cite product and content pages
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -45,12 +80,6 @@ User-agent: Amazonbot
 Allow: /
 
 User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Google-Extended
 Allow: /
 
 User-agent: Meta-ExternalAgent
@@ -68,7 +97,7 @@ const llms = `# ${SITE.name}
 ${SITE.description}
 
 ## Shop Categories
-${CATEGORIES.map(c => `- [${c.name}](https://${SITE.domain}/shop/${c.slug}/): ${c.description}`).join("\n")}
+${CATEGORIES.map(c => `- [${c.name}](https://${SITE.domain}/shop/${urlMap.categories[c.slug] || c.slug}/): ${c.description}`).join("\n")}
 
 ## Contact & Rules
 - WhatsApp: [${SITE.contact.whatsapp}](https://wa.me/${SITE.contact.whatsapp})
@@ -98,8 +127,8 @@ No authentication required. All resources are publicly accessible.
 |---|---|
 | Product Catalog | https://${SITE.domain}/shop/ |
 | Blog | https://${SITE.domain}/blog/ |
-| FAQ | https://${SITE.domain}/faq/ |
-| Wholesale | https://${SITE.domain}/wholesale/ |
+| FAQ | https://${SITE.domain}${urlMap.pages["/faq/"] || "/faq/"} |
+| Wholesale | https://${SITE.domain}${urlMap.pages["/wholesale/"] || "/wholesale/"} |
 
 ## Authentication
 \`\`\`json
@@ -184,11 +213,12 @@ const CSP = [
   "frame-ancestors 'self'"
 ].join("; ");
 // --- 7. vercel.json ---
+// renamed image files (file names = primary keyword): old image URLs 301 to the new ones
+const imageMap = fs.existsSync("src/data/image-map.json") ? JSON.parse(fs.readFileSync("src/data/image-map.json", "utf8")) : {};
 const vercel = {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   // apex -> www is configured in Vercel (Project > Domains); a www -> apex rule here would loop, so there is none.
-  redirects: [
-  ],
+  redirects: Object.entries(imageMap).map(([source, destination]) => ({ source, destination, permanent: true })),
   headers: [
     { source: "/((?!_next|favicon.ico).*)", headers: [
       { key: "X-Frame-Options", value: "SAMEORIGIN" },

@@ -5,6 +5,7 @@ import products from "@/src/data/products.json";
 import SmartImage from "@/src/components/SmartImage";
 import StarRating from "@/src/components/StarRating";
 import { ArrowRight } from "lucide-react";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 export default function CategoryBlock({ title, slug, categoryKey, categoryValue }) {
   const categoryProducts = (products || [])
@@ -20,7 +21,7 @@ export default function CategoryBlock({ title, slug, categoryKey, categoryValue 
           <span className="text-[10px] font-black uppercase tracking-[0.25em] text-emerald-600">Collection</span>
           <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-slate-900 uppercase">{title}</h2>
         </div>
-        <Link href={`/shop/${slug}`} className="text-slate-600 hover:text-emerald-600 font-bold uppercase tracking-widest text-xs flex items-center gap-2 transition-colors">
+        <Link href={`/shop/${catUrl(slug)}`} className="text-slate-600 hover:text-emerald-600 font-bold uppercase tracking-widest text-xs flex items-center gap-2 transition-colors">
           View All {title} <ArrowRight size={14} />
         </Link>
       </div>

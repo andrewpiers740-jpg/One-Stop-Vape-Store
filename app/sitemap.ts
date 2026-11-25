@@ -3,6 +3,7 @@ import products from "@/src/data/products.json";
 import { SITE, CATEGORIES } from "@/src/config/site";
 import { allCollections, brands, hrefOf, brandHref, pagePath, pageCount as listingPages } from "@/lib/collections";
 import { ALL_POSTS, CATEGORIES as BLOG_CATEGORIES, pageCount } from "@/src/lib/blog";
+import { catUrl, staticUrl } from "@/lib/urlmap";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${SITE.domain}`;
@@ -24,14 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/help",
     "/blog",
   ].map((url) => ({
-    url: `${baseUrl}${url}/`,
+    url: `${baseUrl}${url === "" ? "" : staticUrl(url + "/").slice(0, -1)}/`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: url === "" ? 1 : 0.7,
   }));
 
   const categoryPages: MetadataRoute.Sitemap = CATEGORIES.map((cat: any) => ({
-    url: `${baseUrl}/shop/${cat.slug}/`,
+    url: `${baseUrl}/shop/${catUrl(cat.slug)}/`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
@@ -50,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const productPages: MetadataRoute.Sitemap = products.map((prod: any) => ({
-    url: `${baseUrl}/shop/${prod.category}/${prod.slug}/`,
+    url: `${baseUrl}/shop/${catUrl(prod.category)}/${prod.slug}/`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.5,

@@ -15,6 +15,17 @@ export const SITE = {
   indexNowKey: "6d7c406455fb4b66bc9010d5246997b3", // Static fallback key
   locale: "en-US",
   
+  // Official profiles (Organization schema sameAs). Tracking parameters removed.
+  sameAs: [
+    "https://www.tiktok.com/@one_stop_v_s",
+    "https://pin.it/4QybkIfHp",
+    "https://www.facebook.com/share/1LM5kFdUE8/",
+    "https://www.reddit.com/u/one_stop_v_s/",
+    "https://www.instagram.com/one_stop_v_s",
+    "https://www.threads.com/@one_stop_v_s",
+    "https://x.com/one_stop_v_s",
+    "https://t.me/one_stop_v_s",
+  ],
   contact: {
     email: "sales@onestopvapestore.com",
     phone: "774-734-1372",

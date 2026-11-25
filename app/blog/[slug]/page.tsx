@@ -10,6 +10,9 @@ import PageBanner from "@/src/components/PageBanner";
 import PostBody from "@/src/components/blog/PostBody";
 import BlogCard, { fmtDate } from "@/src/components/blog/BlogCard";
 import { ALL_POSTS, getPost, relatedPosts, relatedProducts } from "@/src/lib/blog";
+import { blogSeo } from "@/lib/seoPages";
+import { SEO_UPDATED } from "@/lib/seo";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 export const dynamicParams = false;
 export const generateStaticParams = () => ALL_POSTS.map((p) => ({ slug: p.slug }));
@@ -20,9 +23,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
   const url = `https://${SITE.domain}/blog/${post.slug}/`;
   const img = post.images[0];
+  const bs = blogSeo(post, relatedProducts(post, 4));
   return {
-    title: `${post.title} | ${SITE.name}`,
-    description: post.summary,
+    title: bs ? bs.title : `${post.title} | ${SITE.name}`,
+    description: bs ? bs.meta : post.summary,
+    keywords: bs ? bs.keywords : undefined,
     alternates: { canonical: url },
     openGraph: { title: post.title, description: post.summary, url, type: "article", publishedTime: post.date, images: img ? [{ url: `https://${SITE.domain}${img.src}`, width: img.w, height: img.h, alt: img.alt }] : [] },
     twitter: { card: "summary_large_image", title: post.title, description: post.summary },
@@ -37,6 +42,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const hero = post.images[0];
   const related = relatedPosts(post, 3);
   const prods = relatedProducts(post, 4);
+  const bs = blogSeo(post, prods);
+  const faqAll = bs ? [...post.faq, ...bs.faqs] : post.faq;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -45,11 +52,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     description: post.summary,
     image: post.images.map((i) => `${base}${i.src}`),
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: SEO_UPDATED,
     author: { "@type": "Organization", name: `${SITE.name} Editorial`, url: `${base}/` },
     publisher: { "@type": "Organization", name: SITE.legalName, logo: { "@type": "ImageObject", url: `${base}/brand/icon-512.png` } },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${base}/blog/${post.slug}/` },
+    ...(bs ? { keywords: bs.keywords } : {}),
   };
+  const faqSchema = faqAll.length ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqAll.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) } : null;
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -66,6 +75,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <article className="mx-auto max-w-4xl px-6 py-12 text-slate-900 md:py-20">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+        {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
         <header className="mb-10 flex flex-col gap-5">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600">
@@ -73,29 +83,46 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <Link href="/blog/" className="hover:text-emerald-600">Blog</Link><ChevronRight size={10} />
             <Link href={`/blog/category/${post.categorySlug}/`} className="truncate text-slate-600 hover:text-emerald-600">{post.category}</Link>
           </nav>
-          <h1 className="text-3xl font-black leading-[1.08] tracking-tighter text-slate-900 md:text-5xl">{post.title}</h1>
+          <h1 className="text-3xl font-black leading-[1.08] tracking-tighter text-slate-900 md:text-5xl">{bs ? bs.h1 : post.title}</h1>
+          {bs && bs.lead && <p className="text-base font-medium leading-relaxed text-slate-900">{bs.lead}</p>}
           <p className="border-l-4 border-emerald-500 py-1 pl-5 text-lg italic leading-relaxed text-slate-700">{post.summary}</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-xs font-medium text-slate-600">
             <span className="font-bold text-emerald-600">{SITE.name} Editorial</span>
             <time dateTime={post.date}>{fmtDate(post.date)}</time>
+            <span>Last updated: <time dateTime={SEO_UPDATED}>{SEO_UPDATED}</time></span>
             <span className="flex items-center gap-1.5"><Clock size={12} /> {post.readMinutes} min read</span>
           </div>
         </header>
 
         {hero && (
           <figure className="mb-12 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
-            <Image src={hero.src} alt={hero.alt} width={hero.w} height={hero.h} priority sizes="(min-width:896px) 896px, 100vw" className="aspect-video w-full object-cover" />
+            <Image src={hero.src} alt={bs ? bs.heroAlt(hero) : hero.alt} width={hero.w} height={hero.h} priority sizes="(min-width:896px) 896px, 100vw" className="aspect-video w-full object-cover" />
             {hero.by && <figcaption className="px-4 py-2 text-[11px] text-slate-600">Photo by <a href={`${hero.byUrl}?utm_source=one_stop_vape_store&utm_medium=referral`} target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">{hero.by}</a> on <a href="https://unsplash.com/?utm_source=one_stop_vape_store&utm_medium=referral" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-700">Unsplash</a></figcaption>}
           </figure>
         )}
 
         <PostBody body={post.body} inlineImages={post.images.slice(1)} />
 
-        {post.faq.length > 0 && (
+        {bs && (
+          <section aria-labelledby="shop-primary" className="mt-12">
+            <h2 id="shop-primary" className="mb-3 text-2xl font-black tracking-tight text-slate-900">{bs.section.h2}</h2>
+            <p className="mb-6 leading-relaxed text-slate-700">{bs.section.before}{bs.links.map((l: { href: string; text: string }, i: number) => <React.Fragment key={l.href}>{i > 0 && ", "}<Link href={l.href} className="font-bold text-emerald-700 underline">{l.text}</Link></React.Fragment>)}{bs.section.tail}</p>
+            <h2 className="mb-3 text-2xl font-black tracking-tight text-slate-900">{bs.related.h2}</h2>
+            <p className="leading-relaxed text-slate-700">{bs.related.p[0]}</p>
+          </section>
+        )}
+
+        {faqAll.length > 0 && (
           <section aria-labelledby="faq" className="mt-14">
             <h2 id="faq" className="mb-4 text-2xl font-black tracking-tight text-emerald-600 md:text-3xl">Frequently asked questions</h2>
-            <FaqAccordion items={post.faq.map((f) => ({ q: f.q, a: f.a }))} />
+            <FaqAccordion items={faqAll.map((f) => ({ q: f.q, a: f.a }))} />
           </section>
+        )}
+
+        {bs && (
+          <ul aria-label="Tags" className="mt-8 flex flex-wrap gap-2">
+            {bs.tags.map((t) => <li key={t} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700">{t}</li>)}
+          </ul>
         )}
 
         <p className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-xs leading-relaxed text-slate-600">
@@ -112,7 +139,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               {post.shop.map((c) => (
-                <Link key={c} href={`/shop/${c}/`} className="rounded-xl bg-slate-200 px-5 py-2.5 text-xs font-bold uppercase text-slate-900 hover:bg-zinc-700">Shop {c.replace(/-/g, " ")}</Link>
+                <Link key={c} href={`/shop/${catUrl(c)}/`} className="rounded-xl bg-slate-200 px-5 py-2.5 text-xs font-bold uppercase text-slate-900 hover:bg-zinc-700">Shop {c.replace(/-/g, " ")}</Link>
               ))}
             </div>
           </section>

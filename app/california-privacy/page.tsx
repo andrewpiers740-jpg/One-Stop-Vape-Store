@@ -2,11 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import LegalPage from "@/src/components/LegalPage";
+import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
 
 export const metadata = {
-  title: `California Privacy Notice (CCPA/CPRA) | ${SITE.name}`,
-  description: `California residents: what personal information ${SITE.name} collects, how it is used, and how to exercise your CCPA/CPRA rights.`,
-  alternates: { canonical: `https://${SITE.domain}/california-privacy/` },
+  title: staticTitle("/california-privacy/", `California Privacy Notice (CCPA/CPRA) | ${SITE.name}`),
+  description: staticMeta("/california-privacy/", `California residents: what personal information ${SITE.name} collects, how it is used, and how to exercise your CCPA/CPRA rights.`),
+  keywords: seoEntry("/california-privacy/") ? keywordsString(seoEntry("/california-privacy/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/california-privacy/")}` },
 };
 
 const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
@@ -14,12 +18,13 @@ const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
 export default function CaliforniaPrivacyPage() {
   return (
     <LegalPage
+      path="/california-privacy/"
       slug="california-privacy"
       label="California Privacy"
       h1="California Privacy Notice"
       updated="November 6, 2026"
       toc={false}
-      intro={<p>This notice supplements our <Link href="/privacy/">Privacy Policy</Link> and applies to California residents under the California Consumer Privacy Act as amended by the California Privacy Rights Act (CCPA/CPRA).</p>}
+      intro={<p>This notice supplements our <Link href="/privacy-policy/">Privacy Policy</Link> and applies to California residents under the California Consumer Privacy Act as amended by the California Privacy Rights Act (CCPA/CPRA).</p>}
       sections={[
         { id: "categories", h2: "Categories of personal information we collect", body: (<>
           <p>In the past 12 months we have collected the following categories, from you directly or automatically when you use the site:</p>

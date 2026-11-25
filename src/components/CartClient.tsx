@@ -6,6 +6,7 @@ import { useCart, itemKey } from "@/src/components/CartProvider";
 import { SITE } from "@/src/config/site";
 import SmartImage from "@/src/components/SmartImage";
 import { money } from "@/lib/order";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 export default function CartClient() {
   const { items, subtotal, setQty, remove, ready } = useCart();
@@ -34,7 +35,7 @@ export default function CartClient() {
               <SmartImage src={i.image || ""} alt={i.title} className="h-full w-full object-contain" />
             </div>
             <div className="flex min-w-0 flex-1 flex-col gap-2">
-              <Link href={`/shop/${i.category || "all"}/${i.slug}/`} className="line-clamp-2 text-sm font-bold text-slate-900 hover:text-emerald-600">{i.title}</Link>
+              <Link href={productHref(i)} className="line-clamp-2 text-sm font-bold text-slate-900 hover:text-emerald-600">{i.title}</Link>
               <span className="text-xs text-slate-600">{i.brand}</span>
               <div className="mt-auto flex items-center justify-between gap-3">
                 <div className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100">

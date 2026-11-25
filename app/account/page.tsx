@@ -5,6 +5,7 @@ import PageBanner from "@/src/components/PageBanner";
 export const metadata = {
   title: `My Account | ${SITE.name}`,
   description: `Manage your account details at ${SITE.name}.`,
+  robots: { index: false, follow: true },
 };
 
 export default function AccountPage() {

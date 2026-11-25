@@ -2,17 +2,22 @@ import React from "react";
 import PageBanner from "@/src/components/PageBanner";
 import FaqAccordion from "@/src/components/FaqAccordion";
 import OpenDetailsOnHash from "@/src/components/OpenDetailsOnHash";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 // Shared shell for policy / information pages: banner, exactly one <h1>, then <h2> sections with optional <h3> sub-sections.
 export type Section = { id: string; h2: string; body: React.ReactNode };
 
-export default function LegalPage({ slug, label, h1, updated, intro, sections, toc = true, accordion = false }: { slug: string; label: string; h1: string; updated?: string; intro: React.ReactNode; sections: Section[]; toc?: boolean; accordion?: boolean }) {
+export default function LegalPage({ slug, label, h1, updated, intro, sections, toc = true, accordion = false, path }: { slug: string; label: string; h1: string; updated?: string; intro: React.ReactNode; sections: Section[]; toc?: boolean; accordion?: boolean; path?: string }) {
+  const copy = path ? staticCopy(path) : null;
   return (
     <>
-      <PageBanner slug={slug} label={label} />
+      <PageBanner slug={slug} label={label} alt={copy?.alt} />
       <article className="mx-auto max-w-4xl px-6 py-16 text-slate-800 md:py-24">
-        <h1 className="mb-3 text-3xl font-black tracking-tight text-slate-900 md:text-5xl">{h1}</h1>
+        <h1 className="mb-3 text-3xl font-black tracking-tight text-slate-900 md:text-5xl">{path ? staticH1(path, h1) : h1}</h1>
         {updated && <p className="mb-6 text-xs font-bold uppercase tracking-widest text-slate-600">Last updated {updated}</p>}
+        {copy && <p className="mb-4 text-base font-medium leading-relaxed text-slate-900">{copy.lead}</p>}
         <div className="mb-10 space-y-4 text-base leading-relaxed">{intro}</div>
         {toc && sections.length > 4 && (
           <nav aria-label="On this page" className="mb-12 rounded-2xl border border-slate-200 bg-slate-50 p-5">
@@ -34,6 +39,7 @@ export default function LegalPage({ slug, label, h1, updated, intro, sections, t
           </section>
         ))}
       </article>
+      {copy && path && <SeoContent copy={copy} path={path} />}
     </>
   );
 }

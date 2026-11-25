@@ -4,13 +4,16 @@ import { Metadata } from "next";
 import { SITE } from "@/src/config/site";
 import { HelpCircle, ShieldCheck, Truck, CreditCard, Box, Sparkles, MessageSquare } from "lucide-react";
 import PageBanner from "@/src/components/PageBanner";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 export const metadata: Metadata = {
-  title: `Frequently Asked Questions | ${SITE.name}`,
-  description: `Common questions regarding Nixodine formulations, PACT Act adult verification, tracked regional-carrier shipping, crypto discounts, and wholesale options at ${SITE.name}.`,
-  alternates: {
-    canonical: `https://${SITE.domain}/faq/`,
-  },
+  title: staticTitle("/faq/", `Frequently Asked Questions | ${SITE.name}`),
+  description: staticMeta("/faq/", `Common questions regarding Nixodine formulations, PACT Act adult verification, tracked regional-carrier shipping, crypto discounts, and wholesale options at ${SITE.name}.`),
+  keywords: seoEntry("/faq/") ? keywordsString(seoEntry("/faq/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/faq/")}` },
 };
 
 const FAQ_SECTIONS = [
@@ -137,6 +140,7 @@ const FAQ_SECTIONS = [
 
 
 export default function FAQPage() {
+  const copy = staticCopy("/faq/");
   const allFaqs = FAQ_SECTIONS.flatMap(s => s.items);
 
   const faqSchema = {
@@ -154,7 +158,7 @@ export default function FAQPage() {
 
   return (
     <>
-      <PageBanner slug="faq" label="FAQ" />
+      <PageBanner slug="faq" label="FAQ" alt={copy?.alt} />
       <div className="max-w-[1440px] mx-auto px-6 py-12 md:py-20 text-slate-900 flex flex-col gap-16">
       <script
         type="application/ld+json"
@@ -168,8 +172,9 @@ export default function FAQPage() {
           <span>Support & Help Center</span>
         </div>
         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-          Frequently Asked <span className="text-emerald-600">Questions</span>
+          {staticH1("/faq/", "Frequently Asked Questions")}
         </h1>
+        {copy && <p className="text-slate-900 text-base font-medium leading-relaxed">{copy.lead}</p>}
         <p className="text-slate-600 text-sm md:text-base leading-relaxed">
           Clear answers on shipping procedures, PACT Act compliance, Nixodine formulations, crypto discounts, and order tracking.
         </p>
@@ -215,6 +220,7 @@ export default function FAQPage() {
         </div>
       </div>
 
+      {copy && <SeoContent copy={copy} path="/faq/" />}
     </div>
     </>
   );

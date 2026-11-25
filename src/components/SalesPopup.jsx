@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ShoppingBag, X } from "lucide-react";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 // "Recent purchase" notification driven by REAL confirmed orders (see /api/recent-orders). It shows nothing until
 // there are genuine orders, and never invents names, places or products.
@@ -51,7 +52,7 @@ export default function SalesPopup() {
       </div>
       <div className="min-w-0 text-xs leading-snug">
         <p className="text-slate-600">A customer in <b className="text-slate-900">{s.state}</b> bought</p>
-        <p className="truncate font-bold text-slate-900">{s.qty > 1 ? `${s.qty} × ` : ""}{s.slug ? <Link href={`/shop/${s.category}/${s.slug}/`} className="hover:text-emerald-600">{s.title}</Link> : s.title}</p>
+        <p className="truncate font-bold text-slate-900">{s.qty > 1 ? `${s.qty} × ` : ""}{s.slug ? <Link href={productHref(s)} className="hover:text-emerald-600">{s.title}</Link> : s.title}</p>
         <p className="text-[11px] text-slate-600">{ago(s.at)}</p>
       </div>
       <button type="button" aria-label="Dismiss notification" onClick={() => { setDismissed(true); try { sessionStorage.setItem("osv-sales-dismissed", "1"); } catch { /* ignore */ } }} className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-700"><X size={14} /></button>

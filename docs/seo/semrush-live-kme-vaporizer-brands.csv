@@ -1,0 +1,70 @@
+target,keyword,volume,kd,intent
+ccell,ccell batteries,260,30,T
+ccell,ccell kap,70,3,IC
+ccell,ccell pod battery,40,24,TN
+ccell,ccell vapes,390,31,NC
+ccell,ccell vape battery,390,20,C
+ccell,ccell rizo,170,11,C
+ccell,ccell cart battery,90,25,C
+ccell,ccell cartridge battery,70,14,C
+ccell,ccell tank,40,9,IT
+ccell,ccell palm battery,260,13,T
+ccell,ccell 510,50,10,T
+ccell,ccell 510 cartridge,50,10,TN
+ccell,ccell stylo,320,13,C
+ccell,ccell battery pen,90,23,T
+ccell,ccell m4,50,3,C
+ccell,ccell palm pro battery,170,3,C
+ccell,ccell 510 battery,260,15,C
+ccell,ccell vape pen,140,13,NC
+ccell,ccell palm pro 510 battery,110,2,C
+ccell,ccell battery 510,50,20,C
+ccell,ccell evomax,50,25,TN
+ccell,ccell m6t,50,18,IT
+ccell,ccell palm vape battery,40,19,C
+ccell,ccell battery vape,170,20,C
+lookah,lookah pen,170,22,TN
+lookah,lookah pens,110,16,N
+lookah,lookah vapes,110,30,TN
+lookah,lookah rig,110,29,TN
+lookah,lookah wax pen,110,13,TN
+lookah,lookah seahorse 2,320,13,N
+lookah,lookah zero,480,19,N
+lookah,lookah devices,50,6,N
+lookah,lookah review,50,4,C
+lookah,lookah for sale,40,12,TN
+lookah,lookah seahorse king,720,11,TN
+lookah,lookah dab rig,590,22,N
+lookah,lookah egg,480,23,N
+lookah,lookah vape,390,17,N
+lookah,lookah ff1,110,12,IT
+lookah,lookah pro,90,17,N
+lookah,lookah swordfish price,70,13,TN
+cartisan,cartisan vapes,170,11,N
+cartisan,cartisan vape pipe,70,5,T
+cartisan,cartisan pro pen,50,1,TN
+cartisan,cartisan veil,50,11,TN
+cartisan,cartisan wax atomizer,50,7,T
+cartisan,cartisan veil bar,170,9,TN
+cartisan,cartisan veil bar neo,170,8,IT
+cartisan,cartisan pipe vape,50,4,T
+cartisan,cartisan veil bar pro evo,590,8,IT
+cartisan,cartisan pen,210,15,N
+cartisan,cartisan the inspector,210,9,T
+cartisan,cartisan inspector review,40,2,C
+cartisan,cartisan inspector,390,10,T
+cartisan,cartisan vape battery,210,11,N
+cartisan,cartisan pipe,140,4,IT
+cartisan,cartisan 510 battery,210,10,N
+cartisan,cartisan batteries,50,8,N
+cartisan,cartisan cart battery,50,8,N
+cartisan,cartisan 510,40,9,NC
+cartisan,cartisan pro pen neo,110,7,T
+cartisan,cartisan evo 510 battery,390,4,TN
+cartisan,cartisan veil bar pro manual,110,7,T
+cartisan,cartisan ego 510 battery,50,9,TN
+vaporlax,vaporlax,590,7,TN
+vaporlax,vaporlax vape,70,9,TN
+vaporlax,vapor lax,320,22,T
+i-love-salts,i love salts sweet tobacco,90,4,C
+i-love-salts,i love salts classic menthol,90,0,C

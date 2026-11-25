@@ -2,11 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import LegalPage from "@/src/components/LegalPage";
+import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
 
 export const metadata = {
-  title: `Help Center — Orders, Payments, Shipping & Returns | ${SITE.name}`,
-  description: `Get help with ordering, paying by Cash App, Apple Pay, Chime, crypto or gift card, shipping, adult signature, returns and your account at ${SITE.name}.`,
-  alternates: { canonical: `https://${SITE.domain}/help/` },
+  title: staticTitle("/help/", `Help Center — Orders, Payments, Shipping & Returns | ${SITE.name}`),
+  description: staticMeta("/help/", `Get help with ordering, paying by Cash App, Apple Pay, Chime, crypto or gift card, shipping, adult signature, returns and your account at ${SITE.name}.`),
+  keywords: seoEntry("/help/") ? keywordsString(seoEntry("/help/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/help/")}` },
 };
 
 const tel = `tel:+1${SITE.contact.phone.replace(/\D/g, "")}`;
@@ -14,6 +18,7 @@ const tel = `tel:+1${SITE.contact.phone.replace(/\D/g, "")}`;
 export default function HelpCenterPage() {
   return (
     <LegalPage
+      path="/help/"
       slug="help"
       label="Help Center"
       h1="Help Center"
@@ -38,19 +43,19 @@ export default function HelpCenterPage() {
         </>) },
         { id: "shipping", h2: "Shipping and delivery", body: (<>
           <h3>How long does delivery take?</h3>
-          <p>Orders are processed within 24–72 business hours from our Stock Warehouse in Phoenix, Arizona. You receive a tracking email once your parcel is on its way. See the <Link href="/shipping/">Shipping Policy</Link> for carriers and delivery times.</p>
+          <p>Orders are processed within 24–72 business hours from our Stock Warehouse in Phoenix, Arizona. You receive a tracking email once your parcel is on its way. See the <Link href="/free-vapes-with-free-shipping/">Shipping Policy</Link> for carriers and delivery times.</p>
           <h3>What is adult signature delivery?</h3>
-          <p>Federal law requires an adult aged {SITE.compliance.ageThreshold}+ to sign for vapor products. Please make sure someone of age is available to receive the parcel; see our <Link href="/pact-act/">PACT Act FAQ</Link>.</p>
+          <p>Federal law requires an adult aged {SITE.compliance.ageThreshold}+ to sign for vapor products. Please make sure someone of age is available to receive the parcel; see our <Link href="/pact-act-faq/">PACT Act FAQ</Link>.</p>
         </>) },
         { id: "returns", h2: "Returns, exchanges and damaged items", body: (<>
-          <p>Contact us within 30 days of purchase to arrange a return or exchange. Please read the <Link href="/refunds/">Returns & Refund Policy</Link> first, because opened or used e-liquid and devices cannot be returned. If your parcel arrives damaged or incorrect, email photos and your order number right away and we will make it right.</p>
+          <p>Contact us within 30 days of purchase to arrange a return or exchange. Please read the <Link href="/refund-and-return-policy/">Returns & Refund Policy</Link> first, because opened or used e-liquid and devices cannot be returned. If your parcel arrives damaged or incorrect, email photos and your order number right away and we will make it right.</p>
         </>) },
         { id: "account", h2: "Your account, wishlist and cart", body: (<p>Your cart and <Link href="/wishlist/">wishlist</Link> are saved in your browser on this device. Clearing browser data removes them. Your orders are available through the private link in each order email.</p>) },
         { id: "more", h2: "More help", body: (<ul>
-          <li><Link href="/faq/">Frequently asked questions</Link> — products, nicotine strengths, payments and shipping.</li>
-          <li><Link href="/wholesale/">Wholesale inquiries</Link> — bulk pricing for retailers.</li>
-          <li><Link href="/contact/">Contact us</Link> — form, phone, email and WhatsApp.</li>
-          <li><Link href="/fda-disclaimer/">FDA disclaimer</Link> and <Link href="/terms/">Terms of Service</Link>.</li>
+          <li><Link href="/where-can-i-buy-disposable-vapes/">Frequently asked questions</Link> — products, nicotine strengths, payments and shipping.</li>
+          <li><Link href="/bulk-vapes-for-sale/">Wholesale inquiries</Link> — bulk pricing for retailers.</li>
+          <li><Link href="/vape-store-open/">Contact us</Link> — form, phone, email and WhatsApp.</li>
+          <li><Link href="/fda-disclaimer/">FDA disclaimer</Link> and <Link href="/terms-of-service/">Terms of Service</Link>.</li>
         </ul>) },
       ]}
     />

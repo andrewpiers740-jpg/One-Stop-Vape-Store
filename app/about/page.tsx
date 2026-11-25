@@ -2,16 +2,21 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import LegalPage from "@/src/components/LegalPage";
+import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
 
 export const metadata = {
-  title: `About Us | ${SITE.name}`,
-  description: `${SITE.name} is operated by ${SITE.legalName}, established December 2022, shipping adult-only vaping and nicotine products from Phoenix, Arizona. Our mission, values, what we sell and how we operate.`,
-  alternates: { canonical: `https://${SITE.domain}/about/` },
+  title: staticTitle("/about/", `About Us | ${SITE.name}`),
+  description: staticMeta("/about/", `${SITE.name} is operated by ${SITE.legalName}, established December 2022, shipping adult-only vaping and nicotine products from Phoenix, Arizona. Our mission, values, what we sell and how we operate.`),
+  keywords: seoEntry("/about/") ? keywordsString(seoEntry("/about/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/about/")}` },
 };
 
 export default function AboutPage() {
   return (
     <LegalPage
+      path="/about/"
       slug="about"
       label="About"
       h1="About One Stop Vape Store"
@@ -19,7 +24,7 @@ export default function AboutPage() {
       intro={
         <>
           <p>{SITE.name} is an online retailer of vaping and nicotine products for adults aged {SITE.compliance.ageThreshold} and over. We are operated by {SITE.legalName}, were established in December 2022 and ship from Phoenix, Arizona. This page explains what we stand for, what we sell, how an order works and what we do not do. Nicotine is addictive, and our products are for adults only.</p>
-          <p>For a longer introduction, read <Link href="/blog/about-one-stop-vape-store/">about One Stop Vape Store</Link>.</p>
+          <p>For a longer introduction, read <Link href="/blog/geek-vape-tank-replacement/">about One Stop Vape Store</Link>.</p>
         </>
       }
       sections={[
@@ -28,7 +33,7 @@ export default function AboutPage() {
           <p>Our products are intended for current smokers, vapers and tobacco users. We have no interest in selling to minors. Underage use is a serious problem for our industry, and it threatens adult access to the products we sell. Quick shipping, a good range of products and dependable customer service are our priorities.</p>
         </>) },
         { id: "story", h2: "Our story", body: (<>
-          <p>{SITE.legalName} established {SITE.name} in December 2022, after the PACT Act changed how nicotine products can be shipped. We built our ordering and shipping around those rules from the start: adult signature on every delivery, labeled parcels, tax and licensing compliance and a network of regional carriers that handle these parcels. See our <Link href="/pact-act/">PACT Act FAQ</Link> and <Link href="/shipping/">shipping policy</Link>.</p>
+          <p>{SITE.legalName} established {SITE.name} in December 2022, after the PACT Act changed how nicotine products can be shipped. We built our ordering and shipping around those rules from the start: adult signature on every delivery, labeled parcels, tax and licensing compliance and a network of regional carriers that handle these parcels. See our <Link href="/pact-act-faq/">PACT Act FAQ</Link> and <Link href="/free-vapes-with-free-shipping/">shipping policy</Link>.</p>
           <p>We have grown our catalog to more than 2,500 products, and we keep adding guides and policies so that customers can see how we work before they order.</p>
         </>) },
         { id: "values", h2: "Our values", body: (<>
@@ -44,11 +49,11 @@ export default function AboutPage() {
           <p>We aim for consistent, reliable service and clear communication, and we stand behind our published policies.</p>
         </>) },
         { id: "provide", h2: "What we provide", body: (<>
-          <p>Our catalog includes <Link href="/shop/disposables/">disposable vapes</Link>, <Link href="/shop/vape-juice/">vape juice</Link> and nicotine salts, <Link href="/shop/vape-kits/">vape kits</Link>, <Link href="/shop/vaporizers/">vaporizers</Link>, <Link href="/shop/coils-pods/">replacement pods and coils</Link>, <Link href="/shop/nic-pouches/">nicotine pouches</Link> and <Link href="/shop/nixodine/">Nixodine devices</Link>. We also supply registered retailers through our <Link href="/wholesale/">wholesale</Link> program.</p>
+          <p>Our catalog includes <Link href="/shop/popular-disposable-vape-brands/">disposable vapes</Link>, <Link href="/shop/best-vape-juice/">vape juice</Link> and nicotine salts, <Link href="/shop/vape-kits/">vape kits</Link>, <Link href="/shop/best-vaporizers/">vaporizers</Link>, <Link href="/shop/coil-for-vape/">replacement pods and coils</Link>, <Link href="/shop/best-nicotine-pouches/">nicotine pouches</Link> and <Link href="/shop/best-nicotine-free-vape/">Nixodine devices</Link>. We also supply registered retailers through our <Link href="/bulk-vapes-for-sale/">wholesale</Link> program.</p>
           <p>Orders are processed in 24 to 72 business hours and delivered by regional carrier with adult signature. We accept Cash App, Apple Pay, Chime, cryptocurrency and gift cards, with 10% off for cryptocurrency and gift card payments. The minimum order is ${SITE.order.minOrder}, and orders of ${SITE.order.freeShippingThreshold} or more after discount ship free.</p>
         </>) },
         { id: "compliance", h2: "Compliance and responsible sales", body: (<>
-          <p>We verify age at our age gate and on delivery, follow the PACT Act, and publish our <Link href="/terms/">terms</Link>, <Link href="/privacy/">privacy policy</Link>, <Link href="/refunds/">refund policy</Link> and <Link href="/fda-disclaimer/">FDA disclaimer</Link>. We cannot ship where the law does not allow it, and customers are responsible for knowing the rules where they live.</p>
+          <p>We verify age at our age gate and on delivery, follow the PACT Act, and publish our <Link href="/terms-of-service/">terms</Link>, <Link href="/privacy-policy/">privacy policy</Link>, <Link href="/refund-and-return-policy/">refund policy</Link> and <Link href="/fda-disclaimer/">FDA disclaimer</Link>. We cannot ship where the law does not allow it, and customers are responsible for knowing the rules where they live.</p>
         </>) },
         { id: "claims", h2: "What we do not do", body: (<>
           <ul>
@@ -60,7 +65,7 @@ export default function AboutPage() {
         </>) },
         { id: "contact", h2: "Where to find us", body: (<>
           <p>{SITE.legalName}, doing business as {SITE.name}<br />{SITE.contact.location}</p>
-          <p>Email <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>, call <a href={`tel:+1${SITE.contact.phone.replace(/\D/g, "")}`}>{SITE.contact.phone}</a> or use our <Link href="/contact/">contact page</Link>.</p>
+          <p>Email <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>, call <a href={`tel:+1${SITE.contact.phone.replace(/\D/g, "")}`}>{SITE.contact.phone}</a> or use our <Link href="/vape-store-open/">contact page</Link>.</p>
         </>) },
       ]}
     />

@@ -5,6 +5,7 @@ import { SITE } from "@/src/config/site";
 import SmartImage from "@/src/components/SmartImage";
 import StarRating from "@/src/components/StarRating";
 import { Heart, Trash2, ShoppingBag, ArrowRight, MessageSquare } from "lucide-react";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 export interface WishlistItem {
   id: string;
@@ -157,7 +158,7 @@ export default function WishlistClient() {
                 <div className="flex flex-col gap-1.5">
                   <span className="text-[10px] text-slate-600 uppercase font-black tracking-widest">{item.brand}</span>
                   <Link
-                    href={`/shop/${item.category}/${item.slug}/`}
+                    href={productHref(item)}
                     className="text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors line-clamp-1 tracking-tight"
                   >
                     {item.title}
@@ -170,7 +171,7 @@ export default function WishlistClient() {
               {/* Action buttons */}
               <div className="flex flex-col gap-2 pt-3 border-t border-slate-200/60">
                 <Link
-                  href={`/shop/${item.category}/${item.slug}/`}
+                  href={productHref(item)}
                   className="w-full py-2.5 bg-slate-200 hover:bg-zinc-700 text-slate-900 text-xs font-black uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
                 >
                   <ShoppingBag size={14} />

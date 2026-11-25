@@ -14,6 +14,10 @@ import HeroBrandSlider, { HeroSlide } from "@/src/components/HeroBrandSlider";
 import { brandBySlug, getCollection, collectionsOf, hrefOf, brandHref } from "@/lib/collections";
 import siteImages from "@/src/data/site-images.json";
 import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Sparkles } from "lucide-react";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import SeoContent from "@/src/components/catalog/SeoContent";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 // Hero slides: the five brands with the widest range in stock, each with three real product photos.
 const HERO_BRANDS: { slug: string; kicker: string; blurb: string; from1: string; to1: string; glow: string }[] = [
@@ -33,12 +37,20 @@ function heroSlides(): HeroSlide[] {
     const lines = collectionsOf("disposables", "line").filter((l) => l.products.every((p: any) => brandBySlug[h.slug].label.toLowerCase().split(" ")[0] === String(p.brand).toLowerCase().split(" ")[0])).slice(0, 3).map((l) => ({ label: l.label, href: hrefOf(l) }));
     return [{
       brand: b.label, href: brandHref(b.slug), count: b.count, from: Math.min(...list.map((p: any) => p.price)), kicker: h.kicker, blurb: h.blurb, from1: h.from1, to1: h.to1, glow: h.glow,
-      products: pick.map((p: any) => ({ title: p.title, image: p.image, href: `/shop/${p.category}/${p.slug}/`, price: p.price })), lines,
+      products: pick.map((p: any) => ({ title: p.title, image: p.image, href: productHref(p), price: p.price })), lines,
     }];
   });
 }
 
+export const metadata = {
+  title: staticTitle("/", `${SITE.name} — ${SITE.tagline}`),
+  description: staticMeta("/", "Shop premium disposable vapes, nixodine, nicotine salts, pouches and pod systems. Fast US shipping from Phoenix, Arizona. Adults 21+ only."),
+  keywords: seoEntry("/") ? keywordsString(seoEntry("/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}/` },
+};
+
 export default function HomePage() {
+  const copy = staticCopy("/");
   // Get flagship products (Geek Bar, Lost Mary, Nixodine)
   const featuredProducts = (products as any[])
     .filter(p => ["Geek Bar", "Lost Mary", "Hookah Labs", "Fifty Bar"].includes(p.brand))
@@ -64,9 +76,10 @@ export default function HomePage() {
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.92] text-slate-900">
-              THE ULTIMATE <span className="text-emerald-600">VAPE</span> DESTINATION.
+              {copy ? `${staticH1("/", "The ultimate vape destination").toUpperCase()}` : <>THE ULTIMATE <span className="text-emerald-600">VAPE</span> DESTINATION.</>}
             </h1>
             
+            {copy && <p className="text-slate-900 text-base md:text-lg font-medium leading-relaxed max-w-xl">{copy.lead}</p>}
             <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
               From flagship Geek Bar disposables and Nixodine alternatives to authentic nicotine salts. Tracked delivery across the United States from our Phoenix Stock Warehouse.
             </p>
@@ -80,7 +93,7 @@ export default function HomePage() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/shop/nixodine" 
+                href="/shop/best-nicotine-free-vape" 
                 className="w-full sm:w-auto px-10 py-5 bg-slate-100 hover:bg-slate-200 text-slate-900 font-black uppercase tracking-widest rounded-full border border-slate-200 transition-all duration-300 text-center flex items-center justify-center gap-2"
               >
                 <Sparkles size={16} className="text-emerald-600" />
@@ -119,7 +132,7 @@ export default function HomePage() {
           {CATEGORIES.map((cat) => (
             <Link 
               key={cat.slug} 
-              href={`/shop/${cat.slug}/`} 
+              href={`/shop/${catUrl(cat.slug)}/`} 
               className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 transition-all duration-500 hover:border-emerald-500/50"
             >
               <Image src={(siteImages.tiles as Record<string, { src: string; alt: string }>)[cat.slug]?.src ?? ""} alt={(siteImages.tiles as Record<string, { src: string; alt: string }>)[cat.slug]?.alt ?? cat.name} fill sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -212,6 +225,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {copy && <SeoContent copy={copy} path="/" />}
     </div>
   );
 }

@@ -102,16 +102,16 @@ export default function Nav({ menu: MEGA = {} }) {
   }, [rawWishlist]);
 
   const navItems = [
-    { name: "Wholesale", href: "/wholesale" },
-    { name: "Vape Juice", href: "/shop/vape-juice" },
-    { name: "Coils & Pods", href: "/shop/coils-pods" },
-    { name: "Disposable Vapes", href: "/shop/disposables" },
+    { name: "Wholesale", href: "/bulk-vapes-for-sale" },
+    { name: "Vape Juice", href: "/shop/best-vape-juice" },
+    { name: "Coils & Pods", href: "/shop/coil-for-vape" },
+    { name: "Disposable Vapes", href: "/shop/popular-disposable-vape-brands" },
     { name: "Vape Kits", href: "/shop/vape-kits" },
-    { name: "Vaporizers", href: "/shop/vaporizers" },
-    { name: "Nicotine Pouches", href: "/shop/nic-pouches" },
-    { name: "Nixodine", href: "/shop/nixodine" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Vaporizers", href: "/shop/best-vaporizers" },
+    { name: "Nicotine Pouches", href: "/shop/best-nicotine-pouches" },
+    { name: "Nixodine", href: "/shop/best-nicotine-free-vape" },
+    { name: "About", href: "/vape-stores-online-cheap" },
+    { name: "Contact", href: "/vape-store-open" },
   ];
 
   return (

@@ -1,18 +1,26 @@
 import React from "react";
 import { SITE } from "@/src/config/site";
 import PageBanner from "@/src/components/PageBanner";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 export const metadata = {
-  title: "FDA Disclaimer | One Stop Vape Store",
-  description: "Official FDA compliance statement and legal disclaimer.",
+  title: staticTitle("/fda-disclaimer/", "FDA Disclaimer | One Stop Vape Store"),
+  description: staticMeta("/fda-disclaimer/", "Official FDA compliance statement and legal disclaimer."),
+  keywords: seoEntry("/fda-disclaimer/") ? keywordsString(seoEntry("/fda-disclaimer/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/fda-disclaimer/")}` },
 };
 
 export default function FdaDisclaimerPage() {
+  const copy = staticCopy("/fda-disclaimer/");
   return (
     <>
-      <PageBanner slug="fda-disclaimer" label="FDA Disclaimer" />
+      <PageBanner slug="fda-disclaimer" label="FDA Disclaimer" alt={copy?.alt} />
       <div className="max-w-4xl mx-auto px-6 py-24 prose ">
-      <h1><strong>FDA Disclaimer</strong></h1>
+      <h1><strong>{staticH1("/fda-disclaimer/", "FDA Disclaimer")}</strong></h1>
+      {copy && <p>{copy.lead}</p>}
 
       <p>
         <em>&ldquo;The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products and the testimonials made have not been confirmed by FDA- approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. Please consult your healthcare professional about potential interactions or other possible complications before using any product. The Federal Food, Drug, and Cosmetic Act requires this notice. SV3 LLC shall not be held liable for the medical claims made by customer testimonials.</em>
@@ -33,7 +41,7 @@ export default function FdaDisclaimerPage() {
 
       <h2>Adult-only sales and compliance</h2>
       <h3>Age verification</h3>
-      <p>Customers must confirm they are 21+ before entering the store and again at checkout, and an adult must sign for delivery. See our <a href="/pact-act/">PACT Act FAQ</a> and <a href="/shipping/">Shipping Policy</a>.</p>
+      <p>Customers must confirm they are 21+ before entering the store and again at checkout, and an adult must sign for delivery. See our <a href="/pact-act-faq/">PACT Act FAQ</a> and <a href="/free-vapes-with-free-shipping/">Shipping Policy</a>.</p>
       <h3>State and local laws</h3>
       <p>Laws on vapor products, flavors and nicotine pouches differ by state and city. It is your responsibility to make sure that buying, receiving and using these products is lawful where you live. We may decline or cancel any order that cannot be shipped lawfully.</p>
 
@@ -54,6 +62,7 @@ export default function FdaDisclaimerPage() {
           </a>
         </p>
       </footer>
+      {copy && <SeoContent copy={copy} path="/fda-disclaimer/" />}
     </div>
     </>
   );

@@ -4,21 +4,29 @@ import { SITE } from "@/src/config/site";
 import EnquiryForm from "@/src/components/EnquiryForm";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import PageBanner from "@/src/components/PageBanner";
+import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
+import { seoEntry } from "@/lib/seo";
+import { staticUrl } from "@/lib/urlmap";
+import SeoContent from "@/src/components/catalog/SeoContent";
 
 export const metadata = {
-  title: "Contact Us | One Stop Vape Store",
-  description: "Get in touch with the One Stop Vape Store support team. Support for orders, hardware inquiries, and shipping updates via WhatsApp and Email.",
+  title: staticTitle("/contact/", "Contact Us | One Stop Vape Store"),
+  description: staticMeta("/contact/", "Get in touch with the One Stop Vape Store support team. Support for orders, hardware inquiries, and shipping updates via WhatsApp and Email."),
+  keywords: seoEntry("/contact/") ? keywordsString(seoEntry("/contact/")!) : undefined,
+  alternates: { canonical: `https://${SITE.domain}${staticUrl("/contact/")}` },
 };
 
 export default function ContactPage() {
+  const copy = staticCopy("/contact/");
   return (
     <>
-      <PageBanner slug="contact" label="Contact" />
+      <PageBanner slug="contact" label="Contact" alt={copy?.alt} />
       <div className="max-w-[1440px] mx-auto px-6 py-12 flex flex-col gap-24">
       
       <div className="flex flex-col gap-4 max-w-3xl">
         <p className="text-emerald-600 text-[10px] font-black uppercase tracking-[0.3em]">Support Hub</p>
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase leading-none">Get in Touch</h1>
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 uppercase leading-none">{staticH1("/contact/", "Get in Touch")}</h1>
+        {copy && <p className="text-slate-900 text-lg font-medium leading-relaxed">{copy.lead}</p>}
         <p className="text-slate-600 text-lg leading-relaxed">
           Need assistance with an order or have a question about our collections? Our team is available Monday to Saturday, 9:00 AM to 7:00 PM Pacific Standard Time, to help.
         </p>
@@ -84,13 +92,14 @@ export default function ContactPage() {
           <li>Order status, payment details and tracking.</li>
           <li>Product questions: strength, pack size, puff count, compatibility.</li>
           <li>Shipping, adult signature and delivery problems.</li>
-          <li>Returns and RMA requests. See our <Link className="text-brand-700 underline" href="/refunds/">refund policy</Link>.</li>
-          <li>Wholesale inquiries. See our <Link className="text-brand-700 underline" href="/wholesale/">wholesale page</Link>.</li>
+          <li>Returns and RMA requests. See our <Link className="text-brand-700 underline" href="/refund-and-return-policy/">refund policy</Link>.</li>
+          <li>Wholesale inquiries. See our <Link className="text-brand-700 underline" href="/bulk-vapes-for-sale/">wholesale page</Link>.</li>
         </ul>
         <h3 className="mt-6 text-lg font-black text-slate-900">What we will never ask for</h3>
-        <p className="mt-2">We never ask for card numbers, passwords, private keys or seed phrases in messages. If someone claiming to be us asks for these, do not reply, and tell us. Our products are for adults aged 21 and over, and we make no health claims. For other answers, see the <Link className="text-brand-700 underline" href="/faq/">FAQ</Link>, the <Link className="text-brand-700 underline" href="/help/">help center</Link> and <Link className="text-brand-700 underline" href="/shipping/">shipping policy</Link>.</p>
+        <p className="mt-2">We never ask for card numbers, passwords, private keys or seed phrases in messages. If someone claiming to be us asks for these, do not reply, and tell us. Our products are for adults aged 21 and over, and we make no health claims. For other answers, see the <Link className="text-brand-700 underline" href="/where-can-i-buy-disposable-vapes/">FAQ</Link>, the <Link className="text-brand-700 underline" href="/where-do-you-buy-vapes/">help center</Link> and <Link className="text-brand-700 underline" href="/free-vapes-with-free-shipping/">shipping policy</Link>.</p>
       </section>
 
+      {copy && <SeoContent copy={copy} path="/contact/" />}
     </div>
     </>
   );

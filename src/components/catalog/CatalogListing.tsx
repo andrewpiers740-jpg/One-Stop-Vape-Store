@@ -6,14 +6,16 @@ import PageBanner from "@/src/components/PageBanner";
 import FilterDrawer from "@/src/components/catalog/FilterDrawer";
 import FilterSidebar, { FacetGroup } from "@/src/components/catalog/FilterSidebar";
 import Pagination from "@/src/components/catalog/Pagination";
+import SeoContent, { SeoCopy } from "@/src/components/catalog/SeoContent";
 import { SITE } from "@/src/config/site";
 
 export type Crumb = { label: string; href?: string };
 
 // One layout for every shop listing: breadcrumbs, heading + intro, filter sidebar, product grid, pagination, JSON-LD.
 export default function CatalogListing({
-  bannerSlug, bannerLabel, crumbs, h1, intro, total, products, base, first, page, pages, groups, current, clearHref, chips = [], path,
+  bannerSlug, bannerLabel, crumbs, h1, intro, total, products, base, first, page, pages, groups, current, clearHref, chips = [], path, seo = null,
 }: {
+  seo?: SeoCopy | null;
   bannerSlug: string; bannerLabel: string; crumbs: Crumb[]; h1: string; intro: string; total: number; products: any[];
   base: string; first?: string; page: number; pages: number; groups: FacetGroup[]; current: string; clearHref?: string; chips?: Crumb[]; path: string;
 }) {
@@ -24,7 +26,7 @@ export default function CatalogListing({
   ];
   return (
     <>
-      <PageBanner slug={bannerSlug} label={bannerLabel} />
+      <PageBanner slug={bannerSlug} label={bannerLabel} alt={seo?.alt} />
       {ld.map((o, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />)}
       <div className="mx-auto max-w-[1440px] px-4 py-8 text-slate-900 sm:px-6 md:py-12">
         <nav aria-label="Breadcrumb" className="mb-5 flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-600">
@@ -67,6 +69,7 @@ export default function CatalogListing({
           </main>
         </div>
       </div>
+      {seo && <SeoContent copy={seo} path={path} />}
     </>
   );
 }

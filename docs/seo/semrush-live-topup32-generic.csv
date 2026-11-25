@@ -1,0 +1,28 @@
+target,keyword,volume,kd,intent
+vape-juice,best vape flavour,480,30,C
+vape-juice,best vape.juice,70,31,C
+vape-juice,e cig liquid flavors,40,31,C
+vape-juice,e cigarette liquid flavors,40,32,C
+vape-juice,100ml vape juice,90,32,C
+vape-juice,ejuice vapor,70,31,T
+vape-juice,vape juice brands,390,31,C
+vape-juice,vape liquid brands,70,30,C
+vape-juice,best e liquid,320,31,C
+disposables,disposable tobacco vapes,70,32,C
+disposables,affordable disposable vapes,210,30,C
+disposables,refillable disposable vapes,50,30,C
+disposables,good flavored vapes,70,30,C
+disposables,best flavored vape,40,30,C
+disposables,affordable vapes,90,31,C
+disposables,popular vape brands,1600,30,IC
+disposables,disposable vapes flavours,5400,30,IC
+disposables,nicotine disposable vape,260,32,IC
+disposables,brands of e-cigarettes,480,30,IC
+vape-kits,vapor kit,320,31,C
+vape-kits,cheap refillable vapes,170,31,C
+vape-kits,small refillable vapes,260,31,C
+vape-kits,smok vape mods for sale,140,32,T
+smok,smok vap,140,31,N
+smok,smok vape tanks,110,30,IC
+geekvape,geekvape mods,1300,31,N
+geekvape,geekvape box mod,480,30,N

@@ -6,6 +6,7 @@ import SearchBox from "@/src/components/SearchBox";
 import { CATEGORIES, SITE } from "@/src/config/site";
 import { search } from "@/lib/search";
 import { brands, brandHref } from "@/lib/collections";
+import { catUrl, productHref } from "@/lib/catUrls";
 
 // Search results. Search pages are not indexed (the category, collection and brand pages are the indexable ones).
 export const metadata = { title: `Search | ${SITE.name}`, robots: { index: false, follow: true } };
@@ -80,7 +81,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center">
                 <p className="mb-2 text-lg font-black">No products found for &ldquo;{q}&rdquo;</p>
                 <p className="mb-6 text-sm text-slate-600">Check the spelling, try fewer words, or browse a category.</p>
-                <div className="flex flex-wrap justify-center gap-2">{CATEGORIES.map((c) => <Link key={c.slug} href={`/shop/${c.slug}/`} className={chip(false)}>{c.name}</Link>)}</div>
+                <div className="flex flex-wrap justify-center gap-2">{CATEGORIES.map((c) => <Link key={c.slug} href={`/shop/${catUrl(c.slug)}/`} className={chip(false)}>{c.name}</Link>)}</div>
               </div>
             )}
 
@@ -104,7 +105,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
             </section>
             <section className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <h2 className="mb-4 text-xs font-black uppercase tracking-widest text-slate-600">Categories</h2>
-              <div className="flex flex-wrap gap-2">{CATEGORIES.map((c) => <Link key={c.slug} href={`/shop/${c.slug}/`} className={chip(false)}>{c.name}</Link>)}</div>
+              <div className="flex flex-wrap gap-2">{CATEGORIES.map((c) => <Link key={c.slug} href={`/shop/${catUrl(c.slug)}/`} className={chip(false)}>{c.name}</Link>)}</div>
             </section>
           </div>
         )}
