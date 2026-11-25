@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/privacy/", `Privacy Policy | ${SITE.name}`),
   description: staticMeta("/privacy/", `How ${SITE.name} collects, uses and protects your personal information when you browse, order or contact us, and the choices you have.`),
   keywords: seoEntry("/privacy/") ? keywordsString(seoEntry("/privacy/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/privacy/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
 

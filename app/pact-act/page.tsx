@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/pact-act/", `PACT Act FAQ for Vape Buyers | ${SITE.name}`),
   description: staticMeta("/pact-act/", `Plain answers about the PACT Act and vape shipping: adult signature, package labels, taxes, licensing, carriers and how ${SITE.name} complies.`),
   keywords: seoEntry("/pact-act/") ? keywordsString(seoEntry("/pact-act/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/pact-act/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function PactActPage() {
   return (

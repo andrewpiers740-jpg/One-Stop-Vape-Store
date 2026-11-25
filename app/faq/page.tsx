@@ -8,13 +8,15 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata: Metadata = {
+const pageMeta: Metadata = {
   title: staticTitle("/faq/", `Frequently Asked Questions | ${SITE.name}`),
   description: staticMeta("/faq/", `Common questions regarding Nixodine formulations, PACT Act adult verification, tracked regional-carrier shipping, crypto discounts, and wholesale options at ${SITE.name}.`),
   keywords: seoEntry("/faq/") ? keywordsString(seoEntry("/faq/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/faq/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const FAQ_SECTIONS = [
   {

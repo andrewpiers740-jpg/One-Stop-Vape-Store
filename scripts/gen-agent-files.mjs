@@ -113,6 +113,8 @@ ${CATEGORIES.map(c => `- [${c.name}](https://${SITE.domain}/shop/${urlMap.catego
 - [Auth Policy](https://${SITE.domain}/auth.md)
 `;
 fs.writeFileSync(path.join(root, "public/llms.txt"), llms);
+// markdown twin of llms.txt: served at / when a client sends Accept: text/markdown (see middleware.js)
+fs.writeFileSync(path.join(root, "public/llms.md"), llms);
 
 // --- 3. auth.md ---
 const auth = `# Auth.md
@@ -195,6 +197,7 @@ fs.writeFileSync(path.join(root, "public/.well-known/mcp/server-card.json"), JSO
 const D = `https://${SITE.domain}`;
 const wkw = (f, o) => fs.writeFileSync(path.join(root, "public/.well-known", f), JSON.stringify(o, null, 2));
 wkw("oauth-protected-resource", { resource: D, resource_name: `${SITE.name} Public Catalog`, authorization_servers: [], scopes_supported: [], bearer_methods_supported: [], resource_documentation: `${D}/auth.md`, resource_policy_uri: `${D}/terms/`, note: "All catalog resources are public. No OAuth tokens are required." });
+wkw("oauth-authorization-server", { issuer: D, authorization_endpoint: null, token_endpoint: null, jwks_uri: null, grant_types_supported: [], response_types_supported: [], scopes_supported: [], note: `${SITE.name} has no protected APIs. All catalog resources are public.`, public_resources: [`${D}/shop/`, `${D}/blog/`, `${D}/llms.txt`, `${D}/.well-known/api-catalog`, `${D}/.well-known/agent-skills/index.json`, `${D}/.well-known/mcp/server-card.json`], agent_auth: { register_uri: null, identity_types_supported: ["none"], credential_types_supported: ["none"], notes: "No registration required. All content is publicly accessible to agents." } });
 wkw("openid-configuration", { issuer: D, public_site: true, note: `${SITE.name} does not operate an OpenID Connect provider.`, authorization_endpoint: null, token_endpoint: null, userinfo_endpoint: null, jwks_uri: null, scopes_supported: [], response_types_supported: [], grant_types_supported: [], subject_types_supported: [], id_token_signing_alg_values_supported: [] });
 wkw("acp.json", { protocol: { name: "acp", version: "0.1.0" }, name: SITE.name, description: SITE.description, api_base_url: D, homepage: D, transports: ["https"], capabilities: { services: ["product-catalog", "blog", "faq", "wholesale"], ordering: "human-assisted", catalog_endpoint: `${D}/api/acp/catalog`, currency: SITE.contact.currency.code, minimum_order: SITE.order.minOrder, free_shipping_threshold: SITE.order.freeShippingThreshold }, contact: { email: SITE.contact.email, whatsapp: `https://wa.me/${SITE.contact.whatsapp}` }, legal: { age_restriction: "21+", product_type: "nicotine products" } });
 wkw("ucp", { ucp: "1.0", protocol_version: "1.0", spec: "https://ucp.dev/specification/overview/", schema: "https://ucp.dev/schema/v1.json", site: D, name: SITE.name, description: SITE.description, services: [{ id: "product-catalog", type: "catalog", url: `${D}/shop/` }, { id: "ucp-services", type: "commerce", url: `${D}/api/ucp/services`, description: "Read-only; orders are completed by a human" }], capabilities: ["browse", "inquiry", "content"], endpoints: { catalog: `${D}/api/products`, mcp: `${D}/api/mcp`, api_catalog: `${D}/.well-known/api-catalog`, llms_txt: `${D}/llms.txt` }, currency: SITE.contact.currency.code, legal: { age_restriction: "21+", product_type: "nicotine products" } });
@@ -230,7 +233,12 @@ const vercel = {
     { source: "/.well-known/agent-skills/index.json", headers: [{ key: "Content-Type", value: "application/json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/mcp/server-card.json", headers: [{ key: "Content-Type", value: "application/json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/auth.md", headers: [{ key: "Content-Type", value: "text/markdown; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
-    { source: "/llms.txt", headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] }
+    { source: "/llms.txt", headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
+    { source: "/llms.md", headers: [{ key: "Content-Type", value: "text/markdown; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
+    // static images and logos: cache for 30 days (file names are keyword slugs and change only when renamed)
+    { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }] },
+    { source: "/brand/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }] },
+    { source: "/logos/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }] }
   ]
 };
 fs.writeFileSync(path.join(root, "vercel.json"), JSON.stringify(vercel, null, 2));

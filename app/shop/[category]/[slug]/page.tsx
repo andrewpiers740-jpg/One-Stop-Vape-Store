@@ -18,6 +18,7 @@ import PostBody from "@/src/components/blog/PostBody";
 import PageBanner from "@/src/components/PageBanner";
 import { notFound } from "next/navigation";
 import { Check, MessageSquare, ShieldCheck, Truck, ChevronRight } from "lucide-react";
+import { social } from "@/lib/social";
 
 export const dynamicParams = true;
 
@@ -41,11 +42,12 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     alternates: {
       canonical: `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`,
     },
-    openGraph: {
+    ...social({
       title: sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`, product.title].find((x) => x.length <= 65) || product.title,
       description: sp ? sp.meta : product.description.substring(0, 155),
-      images: [{ url: product.image }],
-    }
+      url: `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`,
+      image: { url: `https://${SITE.domain}${product.image}`, width: 1200, height: 900, alt: product.title },
+    }),
   };
 }
 

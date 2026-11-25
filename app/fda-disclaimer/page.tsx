@@ -5,13 +5,15 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/fda-disclaimer/", "FDA Disclaimer | One Stop Vape Store"),
   description: staticMeta("/fda-disclaimer/", "Official FDA compliance statement and legal disclaimer."),
   keywords: seoEntry("/fda-disclaimer/") ? keywordsString(seoEntry("/fda-disclaimer/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/fda-disclaimer/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function FdaDisclaimerPage() {
   const copy = staticCopy("/fda-disclaimer/");

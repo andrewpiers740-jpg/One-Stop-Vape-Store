@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/refunds/", `Refund and Return Policy | ${SITE.name}`),
   description: staticMeta("/refunds/", `How returns, exchanges and refunds work at ${SITE.name}: 30-day window, RMA, 15% restocking fee, refunds to the original payment method, and items we cannot accept.`),
   keywords: seoEntry("/refunds/") ? keywordsString(seoEntry("/refunds/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/refunds/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function ReturnsPage() {
   return (

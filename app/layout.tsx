@@ -9,6 +9,7 @@ import SalesPopup from "@/src/components/SalesPopup";
 import SupportChat from "@/src/components/SupportChat";
 import JsonLd from "@/src/components/JsonLd";
 import { CartProvider } from "@/src/components/CartProvider";
+import { OG_IMAGE } from "@/lib/social";
 import "./globals.css";
 
 const META_DESCRIPTION = "Shop premium disposable vapes, nixodine, nicotine salts, pouches and pod systems. Fast US shipping from Phoenix, Arizona. Adults 21+ only.";
@@ -24,11 +25,13 @@ export const metadata = {
     siteName: SITE.name,
     locale: "en_US",
     type: "website",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE.name,
     description: META_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,

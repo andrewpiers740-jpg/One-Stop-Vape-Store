@@ -5,6 +5,7 @@ import { seoEntry, seoTitle, seoMeta, seoH1, listingCopy, factsFor } from "@/lib
 import { keywordsString } from "@/lib/seoPages";
 import { brandUrl, brandKeyOf } from "@/lib/urlmap";
 import { brands, brandBySlug, brandProducts, brandHref, hrefOf, pagePath, pageSlice, pageCount, parsePage, allPageParams, describeSet, facetsFor, getCollection } from "@/lib/collections";
+import { social } from "@/lib/social";
 
 // One indexable page per brand across every category: /brands/<brand>/ (+ /page/N/).
 export const dynamicParams = false;
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const e = n === 1 ? seoEntry(brandHref(b.slug)) : null;
   const t = e ? seoTitle(e, "", " Vapes & Products") : `${b.label} Vapes & Products${n > 1 ? ` – Page ${n}` : ""} | ${SITE.name}`;
   const desc = e ? seoMeta(e, factsFor(brandProducts(b.slug)), d.meta) : d.meta;
-  return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, openGraph: { title: t, description: desc, url: canonical } };
+  return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, ...social({ title: t, description: desc, url: canonical }) };
 }
 
 export default async function BrandPage({ params }: { params: Promise<Params> }) {

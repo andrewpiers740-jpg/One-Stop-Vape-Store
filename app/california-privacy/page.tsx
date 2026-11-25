@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/california-privacy/", `California Privacy Notice (CCPA/CPRA) | ${SITE.name}`),
   description: staticMeta("/california-privacy/", `California residents: what personal information ${SITE.name} collects, how it is used, and how to exercise your CCPA/CPRA rights.`),
   keywords: seoEntry("/california-privacy/") ? keywordsString(seoEntry("/california-privacy/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/california-privacy/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
 

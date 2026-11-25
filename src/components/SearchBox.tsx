@@ -99,7 +99,7 @@ export default function SearchBox({ variant = "nav", initial = "", autoFocus = f
             <X size={big ? 18 : 14} />
           </button>
         )}
-        <button type="submit" aria-label="Submit search" className={`absolute top-1/2 -translate-y-1/2 text-slate-600 hover:text-emerald-600 ${big ? "left-5" : "right-2.5"}`}>
+        <button type="submit" aria-label="Submit search" className={`absolute top-1/2 -translate-y-1/2 text-slate-600 hover:text-emerald-600 ${big ? "left-3.5 p-1.5" : "right-0.5 p-2"}`}>
           <Search size={big ? 22 : 14} />
         </button>
       </form>

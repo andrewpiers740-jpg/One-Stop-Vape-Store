@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/about/", `About Us | ${SITE.name}`),
   description: staticMeta("/about/", `${SITE.name} is operated by ${SITE.legalName}, established December 2022, shipping adult-only vaping and nicotine products from Phoenix, Arizona. Our mission, values, what we sell and how we operate.`),
   keywords: seoEntry("/about/") ? keywordsString(seoEntry("/about/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/about/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function AboutPage() {
   return (

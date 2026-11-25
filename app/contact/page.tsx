@@ -8,13 +8,15 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/contact/", "Contact Us | One Stop Vape Store"),
   description: staticMeta("/contact/", "Get in touch with the One Stop Vape Store support team. Support for orders, hardware inquiries, and shipping updates via WhatsApp and Email."),
   keywords: seoEntry("/contact/") ? keywordsString(seoEntry("/contact/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/contact/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function ContactPage() {
   const copy = staticCopy("/contact/");

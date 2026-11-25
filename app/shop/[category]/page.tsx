@@ -5,6 +5,7 @@ import { seoEntry, seoTitle, seoMeta, seoH1, listingCopy, factsFor } from "@/lib
 import { keywordsString } from "@/lib/seoPages";
 import { catUrl, catKeyOf } from "@/lib/urlmap";
 import { getCollection, hrefOf, catHref, pageSlice, pageCount, describeSet, facetsFor, collectionsOf, brands, brandHref } from "@/lib/collections";
+import { social } from "@/lib/social";
 
 export async function generateStaticParams() {
   return CATEGORIES.map((c) => ({ category: catUrl(c.slug) }));
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const e = seoEntry(catHref(slug));
   const title = seoTitle(e, `${category.name} | ${SITE.name}`);
   const description = seoMeta(e, factsFor(all?.products || []), d.meta);
-  return { title, description, keywords: e ? keywordsString(e) : undefined, alternates: { canonical: `https://${SITE.domain}${catHref(slug)}` }, openGraph: { title, description, url: `https://${SITE.domain}${catHref(slug)}` } };
+  return { title, description, keywords: e ? keywordsString(e) : undefined, alternates: { canonical: `https://${SITE.domain}${catHref(slug)}` }, ...social({ title, description, url: `https://${SITE.domain}${catHref(slug)}` }) };
 }
 
 // Category page: first page of the category with the faceted sidebar. Every facet is a link to an indexable page.

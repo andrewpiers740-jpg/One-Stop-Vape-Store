@@ -8,13 +8,15 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/wholesale/", `Wholesale & B2B Inquiries | ${SITE.name}`),
   description: staticMeta("/wholesale/", `Volume pricing for registered adult-only retailers: disposables, e-liquids, pods and nicotine pouches shipped from Phoenix, Arizona. How to apply, what to prepare and what we need from your business.`),
   keywords: seoEntry("/wholesale/") ? keywordsString(seoEntry("/wholesale/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/wholesale/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const steps = [
   ["Send an inquiry", "Use the form on this page, or contact us by email or WhatsApp. Tell us your business name, what you want to stock and your estimated monthly volume."],

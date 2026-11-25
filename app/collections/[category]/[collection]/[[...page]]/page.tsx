@@ -5,6 +5,7 @@ import { seoEntry, seoTitle, seoMeta, seoH1, listingCopy, factsFor } from "@/lib
 import { keywordsString } from "@/lib/seoPages";
 import { catUrl, catKeyOf, collUrl, collKeyOf } from "@/lib/urlmap";
 import { allCollections, getCollection, hrefOf, catHref, pagePath, pageSlice, pageCount, parsePage, allPageParams, describeSet, facetsFor, collectionsOf } from "@/lib/collections";
+import { social } from "@/lib/social";
 
 // Indexable collection pages: /collections/<category>/<collection>/ (+ /page/N/).
 export const dynamicParams = false;
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const e = n === 1 ? seoEntry(hrefOf(c)) : null;
   const t = e ? seoTitle(e, "") : `${c.label}${n > 1 ? ` – Page ${n}` : ""} | ${SITE.name}`;
   const desc = e ? seoMeta(e, factsFor(c.products), d.meta) : d.meta;
-  return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, openGraph: { title: t, description: desc, url: canonical } };
+  return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, ...social({ title: t, description: desc, url: canonical }) };
 }
 
 export default async function CollectionPage({ params }: { params: Promise<Params> }) {

@@ -19,6 +19,7 @@ export default function PageBanner({ slug, label, priority = true, alt }: { slug
         width={1920}
         height={480}
         priority={priority}
+        fetchPriority={priority ? "high" : undefined}
         sizes="100vw"
         className="h-40 w-full object-cover sm:h-52 lg:h-64"
       />

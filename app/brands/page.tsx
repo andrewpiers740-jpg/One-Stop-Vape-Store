@@ -3,12 +3,14 @@ import Link from "next/link";
 import PageBanner from "@/src/components/PageBanner";
 import { SITE } from "@/src/config/site";
 import { brands, brandHref } from "@/lib/collections";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: `Vape Brands A–Z: Geek Bar, Lost Mary, Foger and more | ${SITE.name}`,
   description: `Browse all ${brands.length} vape, nixodine and nicotine pouch brands at ${SITE.name}. One page per brand with every product, price and variation. Adults 21+ only.`,
   alternates: { canonical: `https://${SITE.domain}/brands/` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function BrandsPage() {
   const groups: Record<string, typeof brands> = {};

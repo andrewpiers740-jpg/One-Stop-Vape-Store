@@ -4,16 +4,18 @@ import { seoEntry } from "@/lib/seo";
 import SeoContent from "@/src/components/catalog/SeoContent";
 import { SITE, CATEGORIES } from "@/src/config/site";
 import { getCollection, hrefOf, catHref, pageSlice, pageCount, facetsFor, collectionsOf, brands, brandHref, describeSet } from "@/lib/collections";
+import { withSocial } from "@/lib/social";
 
 const all = getCollection("all", "all")!;
 const d = describeSet("the full catalog", all.products, "");
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/shop/", `Shop All Vapes: ${all.products.length.toLocaleString()} products | ${SITE.name}`),
   description: staticMeta("/shop/", `Browse the complete ${SITE.name} catalog by category, brand, price, flavor and strength. ${d.meta}`.slice(0, 200)),
   keywords: seoEntry("/shop/") ? keywordsString(seoEntry("/shop/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}/shop/` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function ShopPage() {
   const copy = staticCopy("/shop/");

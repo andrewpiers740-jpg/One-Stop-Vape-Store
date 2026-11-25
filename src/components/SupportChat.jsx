@@ -28,20 +28,32 @@ export default function SupportChat() {
     if (!TAWK_PROPERTY || pathname?.startsWith("/admin")) return;
     if (tawk.loaded) { setTawkReady(true); return; }
     if (tawk.injected) return;
-    tawk.injected = true;
-    window.Tawk_API = window.Tawk_API || {};
-    // autoStart off: the tawk.to bubble is never drawn on page load; it only starts when the visitor taps "Live chat".
-    window.Tawk_API.autoStart = false;
-    window.Tawk_LoadStart = new Date();
-    window.Tawk_API.onChatMaximized = () => setOpen(false);
-    window.Tawk_API.onChatMinimized = () => { try { window.Tawk_API.hideWidget(); } catch { /* ignore */ } };
-    const s = document.createElement("script");
-    s.async = true;
-    s.src = `https://embed.tawk.to/${TAWK_PROPERTY}/${TAWK_WIDGET}`;
-    s.charset = "UTF-8";
-    s.setAttribute("crossorigin", "*");
-    s.onload = () => { tawk.loaded = true; setTawkReady(true); };
-    document.head.appendChild(s);
+    const inject = () => {
+      if (tawk.injected) return;
+      tawk.injected = true;
+      window.Tawk_API = window.Tawk_API || {};
+      // autoStart off: the tawk.to bubble is never drawn on page load; it only starts when the visitor taps "Live chat".
+      window.Tawk_API.autoStart = false;
+      window.Tawk_LoadStart = new Date();
+      window.Tawk_API.onChatMaximized = () => setOpen(false);
+      window.Tawk_API.onChatMinimized = () => { try { window.Tawk_API.hideWidget(); } catch { /* ignore */ } };
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = `https://embed.tawk.to/${TAWK_PROPERTY}/${TAWK_WIDGET}`;
+      s.charset = "UTF-8";
+      s.setAttribute("crossorigin", "*");
+      s.onload = () => { tawk.loaded = true; setTawkReady(true); };
+      document.head.appendChild(s);
+    };
+    // Performance: the chat script (about 250 KB, 500 ms of main-thread blocking) is not loaded during first paint or hydration.
+    // It loads on the visitor's first tap, scroll or keypress, or after 10 s idle, whichever comes first.
+    const events = ["pointerdown", "keydown", "scroll", "touchstart"];
+    let timer;
+    const cleanup = () => { events.forEach((ev) => window.removeEventListener(ev, go)); window.clearTimeout(timer); };
+    function go() { cleanup(); inject(); }
+    events.forEach((ev) => window.addEventListener(ev, go, { once: true, passive: true }));
+    timer = window.setTimeout(go, 10000);
+    return cleanup;
   }, [pathname]);
 
   if (pathname?.startsWith("/admin")) return null;

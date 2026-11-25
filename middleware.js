@@ -31,7 +31,7 @@ export function middleware(request) {
   if (moved) return NextResponse.redirect(new URL(moved, request.url), 308);
   const accept = request.headers.get('accept') || '';
   if (request.nextUrl.pathname === '/' && prefersMarkdownOverHtml(accept)) {
-    return NextResponse.rewrite(new URL('/llms.txt', request.url));
+    return NextResponse.rewrite(new URL('/llms.md', request.url));
   }
   return NextResponse.next();
 }

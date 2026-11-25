@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/shipping/", `Shipping Policy | ${SITE.name}`),
   description: staticMeta("/shipping/", `Processing times, regional carrier delivery estimates, free shipping over $${SITE.order.freeShippingThreshold}, adult signature (21+), lost or damaged packages and returns at ${SITE.name}.`),
   keywords: seoEntry("/shipping/") ? keywordsString(seoEntry("/shipping/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/shipping/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const mail = <a href={`mailto:${SITE.contact.email}`}>{SITE.contact.email}</a>;
 

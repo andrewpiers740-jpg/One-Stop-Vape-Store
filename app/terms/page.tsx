@@ -5,13 +5,15 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/terms/", "Terms of Service | One Stop Vape Store"),
   description: staticMeta("/terms/", "Terms of service agreement for One Stop Vape Store operated by One Stop Vape Store (SV3 LLC) / SV3 LLC."),
   keywords: seoEntry("/terms/") ? keywordsString(seoEntry("/terms/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/terms/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function TermsPage() {
   const copy = staticCopy("/terms/");

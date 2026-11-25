@@ -15,7 +15,7 @@ export default function ProductCard({ product: p, showBadge = true }: { product:
   const hasOptions = getVariantGroups(p as any).length > 0;
   return (
     <article className="group flex h-full flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-2.5 transition-all sm:rounded-3xl sm:p-3.5 duration-300 hover:border-emerald-500/50 hover:shadow-lg">
-      <Link href={href} aria-label={p.title} className="relative block aspect-square overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm sm:rounded-2xl sm:p-4 lg:p-5">
+      <Link href={href} className="relative block aspect-square overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm sm:rounded-2xl sm:p-4 lg:p-5">
         <SmartImage src={p.image} alt={p.title} className="h-full w-full object-contain transition-transform duration-500 motion-reduce:transition-none [@media(hover:hover)]:group-hover:scale-105" />
         {showBadge && (
           <span className="absolute left-3 top-3 rounded-md border border-emerald-500/30 bg-white/90 px-2.5 py-1 text-[9px] font-black uppercase tracking-widest text-emerald-700 backdrop-blur">

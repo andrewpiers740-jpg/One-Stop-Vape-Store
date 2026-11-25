@@ -18,6 +18,7 @@ import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@
 import { seoEntry } from "@/lib/seo";
 import SeoContent from "@/src/components/catalog/SeoContent";
 import { catUrl, productHref } from "@/lib/catUrls";
+import { withSocial } from "@/lib/social";
 
 // Hero slides: the five brands with the widest range in stock, each with three real product photos.
 const HERO_BRANDS: { slug: string; kicker: string; blurb: string; from1: string; to1: string; glow: string }[] = [
@@ -42,12 +43,13 @@ function heroSlides(): HeroSlide[] {
   });
 }
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/", `${SITE.name} — ${SITE.tagline}`),
   description: staticMeta("/", "Shop premium disposable vapes, nixodine, nicotine salts, pouches and pod systems. Fast US shipping from Phoenix, Arizona. Adults 21+ only."),
   keywords: seoEntry("/") ? keywordsString(seoEntry("/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}/` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function HomePage() {
   const copy = staticCopy("/");

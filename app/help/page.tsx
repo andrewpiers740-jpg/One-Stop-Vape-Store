@@ -5,13 +5,15 @@ import LegalPage from "@/src/components/LegalPage";
 import { staticTitle, staticMeta, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import { staticUrl } from "@/lib/urlmap";
+import { withSocial } from "@/lib/social";
 
-export const metadata = {
+const pageMeta = {
   title: staticTitle("/help/", `Help Center — Orders, Payments, Shipping & Returns | ${SITE.name}`),
   description: staticMeta("/help/", `Get help with ordering, paying by Cash App, Apple Pay, Chime, crypto or gift card, shipping, adult signature, returns and your account at ${SITE.name}.`),
   keywords: seoEntry("/help/") ? keywordsString(seoEntry("/help/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}${staticUrl("/help/")}` },
 };
+export const metadata = withSocial(pageMeta);
 
 const tel = `tel:+1${SITE.contact.phone.replace(/\D/g, "")}`;
 

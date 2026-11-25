@@ -1,0 +1,28 @@
+{
+  "issuer": "https://www.onestopvapestore.com",
+  "authorization_endpoint": null,
+  "token_endpoint": null,
+  "jwks_uri": null,
+  "grant_types_supported": [],
+  "response_types_supported": [],
+  "scopes_supported": [],
+  "note": "One Stop Vape Store has no protected APIs. All catalog resources are public.",
+  "public_resources": [
+    "https://www.onestopvapestore.com/shop/",
+    "https://www.onestopvapestore.com/blog/",
+    "https://www.onestopvapestore.com/llms.txt",
+    "https://www.onestopvapestore.com/.well-known/api-catalog",
+    "https://www.onestopvapestore.com/.well-known/agent-skills/index.json",
+    "https://www.onestopvapestore.com/.well-known/mcp/server-card.json"
+  ],
+  "agent_auth": {
+    "register_uri": null,
+    "identity_types_supported": [
+      "none"
+    ],
+    "credential_types_supported": [
+      "none"
+    ],
+    "notes": "No registration required. All content is publicly accessible to agents."
+  }
+}

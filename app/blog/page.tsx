@@ -7,13 +7,15 @@ import { ALL_POSTS, pageOf, pageCount } from "@/src/lib/blog";
 import { staticCopy, staticTitle, staticMeta, staticH1, keywordsString } from "@/lib/seoPages";
 import { seoEntry } from "@/lib/seo";
 import SeoContent from "@/src/components/catalog/SeoContent";
+import { withSocial } from "@/lib/social";
 
-export const metadata: Metadata = {
+const pageMeta: Metadata = {
   title: staticTitle("/blog/", `Vape Guides, Reviews & How-Tos | ${SITE.name} Blog`),
   description: staticMeta("/blog/", `${ALL_POSTS.length} guides on disposables, pods, e-liquid, nicotine pouches, paying with crypto or gift cards, shipping and more from ${SITE.name}.`),
   keywords: seoEntry("/blog/") ? keywordsString(seoEntry("/blog/")!) : undefined,
   alternates: { canonical: `https://${SITE.domain}/blog/` },
 };
+export const metadata = withSocial(pageMeta);
 
 export default function BlogPage() {
   const copy = staticCopy("/blog/");
