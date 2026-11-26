@@ -28,6 +28,22 @@
         }
       ],
       "title": "One Stop Vape Store MCP Server"
+    },
+    {
+      "anchor": "https://www.onestopvapestore.com/api/search",
+      "type": "application/json",
+      "https://www.iana.org/assignments/link-relations/service-desc": [
+        {
+          "href": "https://www.onestopvapestore.com/openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "title": "One Stop Vape Store OpenAPI description"
+    },
+    {
+      "anchor": "https://www.onestopvapestore.com/.well-known/search",
+      "type": "text/markdown",
+      "title": "One Stop Vape Store site search (Markdown)"
     }
   ]
 }

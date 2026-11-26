@@ -18,6 +18,7 @@ Sitemap: https://www.onestopvapestore.com/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
+# robots.txt is advisory: it relies on each crawler honoring it. Training crawlers are disallowed; search, citation and live-retrieval bots are allowed.
 # AI model-training crawlers: not allowed to train on this content
 User-agent: GPTBot
 Disallow: /
@@ -32,6 +33,12 @@ User-agent: Applebot-Extended
 Disallow: /
 
 User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
 Disallow: /
 
 # AI search and answer crawlers: allowed to index and cite product and content pages
@@ -69,12 +76,6 @@ User-agent: Applebot
 Allow: /
 
 User-agent: Amazonbot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: cohere-ai

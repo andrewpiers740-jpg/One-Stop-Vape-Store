@@ -1,0 +1,271 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "One Stop Vape Store public catalog API",
+    "version": "1.0.0",
+    "description": "Free, read-only access to the product catalog and site search. Orders are completed by a human at checkout; no endpoint takes payment.",
+    "contact": {
+      "name": "One Stop Vape Store",
+      "email": "sales@onestopvapestore.com",
+      "url": "https://www.onestopvapestore.com/contact/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.onestopvapestore.com"
+    }
+  ],
+  "x-agent-access": {
+    "cost": "free",
+    "mode": "read-only",
+    "ordering": "human-completed",
+    "documentation": "https://www.onestopvapestore.com/llms.txt"
+  },
+  "paths": {
+    "/api/products/": {
+      "get": {
+        "operationId": "listProducts",
+        "summary": "List or filter products",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "Keywords",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "description": "Category slug",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_price",
+            "in": "query",
+            "required": false,
+            "description": "Maximum price in USD",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum results",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching products",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/products/{slug}/": {
+      "get": {
+        "operationId": "getProduct",
+        "summary": "One product by slug",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The product",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No such product"
+          }
+        }
+      }
+    },
+    "/api/categories/": {
+      "get": {
+        "operationId": "listCategories",
+        "summary": "Product categories with counts",
+        "responses": {
+          "200": {
+            "description": "Categories",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/": {
+      "get": {
+        "operationId": "searchProducts",
+        "summary": "Ranked product search with filters",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "Keywords",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "description": "Category slug",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brand",
+            "in": "query",
+            "required": false,
+            "description": "Brand",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "strength",
+            "in": "query",
+            "required": false,
+            "description": "nicotine-free or with-nicotine",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_price",
+            "in": "query",
+            "required": false,
+            "description": "Maximum price in USD",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum results (1-100)",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ranked results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/search": {
+      "get": {
+        "operationId": "agentSearch",
+        "summary": "Search products and guides; results as Markdown",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "Keywords",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum products (1-25)",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Markdown starting with '# Search results for:'",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mcp/": {
+      "post": {
+        "operationId": "mcp",
+        "summary": "Model Context Protocol endpoint (JSON-RPC 2.0; tools: search, product details, categories, policies)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-RPC response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

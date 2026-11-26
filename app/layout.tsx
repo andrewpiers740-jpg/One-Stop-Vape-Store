@@ -46,6 +46,11 @@ export const metadata = {
     languages: { "en-US": "./", "x-default": "./" },
   },
   other: {
+    // Agent discovery: advertise the Markdown search endpoint to AI agents that read the page head.
+    "agent:endpoint": `https://${SITE.domain}/.well-known/search?q={query}`,
+    "agent:instructions": `Search ${SITE.name} products and guides. Replace {query} with URL-encoded keywords. Returns ranked Markdown links to product pages and guides. Read-only; orders are completed by a human at checkout.`,
+    "agent:method": "GET",
+    "agent:documentation": `https://${SITE.domain}/llms.txt`,
     "google-site-verification": SITE.gscVerification,
     "og:updated_time": new Date().toISOString(),
   },

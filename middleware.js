@@ -6,7 +6,7 @@ import imageMap from './src/data/image-map.json';
 const IMAGE_REDIRECTS = new Map(Object.entries(imageMap));
 
 /**
- * Markdown negotiation (agents): serve the llms.txt summary at "/" only when the client
+ * Markdown negotiation (agents): serve a page's Markdown version only when the client
  * genuinely prefers text/markdown over text/html. A client that sends
  * "text/html, text/markdown;q=0.9" (normal browsers/crawlers) keeps getting HTML.
  */
@@ -26,16 +26,27 @@ function prefersMarkdownOverHtml(accept) {
   return mdQ > 0 && mdQ > htmlQ;
 }
 
+// pages with no useful Markdown version (private, transactional or not indexable)
+const NO_MARKDOWN = /^\/(api|admin|_next|order|cart|checkout|account|wishlist|search|thank-you)/i;
+
 export function middleware(request) {
   const moved = IMAGE_REDIRECTS.get(request.nextUrl.pathname);
   if (moved) return NextResponse.redirect(new URL(moved, request.url), 308);
   const accept = request.headers.get('accept') || '';
-  if (request.nextUrl.pathname === '/' && prefersMarkdownOverHtml(accept)) {
-    return NextResponse.rewrite(new URL('/llms.md', request.url));
+  const p = request.nextUrl.pathname;
+  if (prefersMarkdownOverHtml(accept) && !NO_MARKDOWN.test(p)) {
+    // any page: answer with its Markdown version (app/api/md/route.js renders it from the normal HTML)
+    const headers = new Headers(request.headers);
+    headers.set('x-md-path', p);
+    return NextResponse.rewrite(new URL('/api/md', request.url), { request: { headers } });
   }
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/', '/images/:path*'],
+  matcher: [
+    '/images/:path*',
+    // runs only for requests whose Accept header mentions text/markdown, so normal page loads skip the middleware entirely
+    { source: '/((?!_next/|api/|images/|brand/|logos/|admin|.*\\..*).*)', has: [{ type: 'header', key: 'accept', value: '.*text/markdown.*' }] },
+  ],
 };

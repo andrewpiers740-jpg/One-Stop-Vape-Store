@@ -26,7 +26,8 @@ const nextConfig: NextConfig = {
     return redirectData.redirects;
   },
   async rewrites() {
-    return { beforeFiles: redirectData.rewrites, afterFiles: [], fallback: [] };
+    // /.well-known/search is the agent search endpoint (Markdown results); .well-known paths are exempt from the trailing-slash redirect.
+    return { beforeFiles: [...redirectData.rewrites, { source: "/.well-known/search", destination: "/api/agent-search" }], afterFiles: [], fallback: [] };
   },
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

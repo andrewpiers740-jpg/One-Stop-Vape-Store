@@ -1,38 +1,58 @@
 {
-  "ucp": "1.0",
-  "protocol_version": "1.0",
-  "spec": "https://ucp.dev/specification/overview/",
-  "schema": "https://ucp.dev/schema/v1.json",
+  "ucp": {
+    "version": "2026-08-25",
+    "services": {
+      "com.onestopvapestore.catalog": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://www.onestopvapestore.com/llms.txt",
+          "transport": "rest",
+          "endpoint": "https://www.onestopvapestore.com/api/products/",
+          "schema": "https://www.onestopvapestore.com/openapi.json"
+        },
+        {
+          "version": "2026-08-25",
+          "spec": "https://www.onestopvapestore.com/llms.txt",
+          "transport": "mcp",
+          "endpoint": "https://www.onestopvapestore.com/api/mcp/",
+          "schema": "https://www.onestopvapestore.com/.well-known/mcp/server-card.json"
+        }
+      ]
+    },
+    "capabilities": {
+      "com.onestopvapestore.catalog.search": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://www.onestopvapestore.com/llms.txt",
+          "schema": "https://www.onestopvapestore.com/openapi.json"
+        }
+      ],
+      "com.onestopvapestore.catalog.browse": [
+        {
+          "version": "2026-08-25",
+          "spec": "https://www.onestopvapestore.com/llms.txt",
+          "schema": "https://www.onestopvapestore.com/openapi.json"
+        }
+      ]
+    }
+  },
+  "spec": "https://ucp.dev/2026-08-25/specification/overview/",
   "site": "https://www.onestopvapestore.com",
   "name": "One Stop Vape Store",
   "description": "One Stop Vape Store (SV3 LLC, established December 2022) is the premier destination for premium disposable vapes, nixodine innovations, nicotine salts, nicotine pouches, and advanced pod systems with fast US shipping from Phoenix, Arizona.",
-  "services": [
-    {
-      "id": "product-catalog",
-      "type": "catalog",
-      "url": "https://www.onestopvapestore.com/shop/"
-    },
-    {
-      "id": "ucp-services",
-      "type": "commerce",
-      "url": "https://www.onestopvapestore.com/api/ucp/services",
-      "description": "Read-only; orders are completed by a human"
-    }
-  ],
-  "capabilities": [
-    "browse",
-    "inquiry",
-    "content"
-  ],
   "endpoints": {
-    "catalog": "https://www.onestopvapestore.com/api/products",
-    "mcp": "https://www.onestopvapestore.com/api/mcp",
+    "catalog": "https://www.onestopvapestore.com/api/products/",
+    "categories": "https://www.onestopvapestore.com/api/categories/",
+    "search": "https://www.onestopvapestore.com/.well-known/search?q={query}",
+    "mcp": "https://www.onestopvapestore.com/api/mcp/",
+    "openapi": "https://www.onestopvapestore.com/openapi.json",
     "api_catalog": "https://www.onestopvapestore.com/.well-known/api-catalog",
     "llms_txt": "https://www.onestopvapestore.com/llms.txt"
   },
   "currency": "USD",
   "legal": {
     "age_restriction": "21+",
-    "product_type": "nicotine products"
+    "product_type": "nicotine products",
+    "ordering": "human-completed"
   }
 }

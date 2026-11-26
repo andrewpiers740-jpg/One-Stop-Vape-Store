@@ -24,3 +24,5 @@ One Stop Vape Store (SV3 LLC, established December 2022) is the premier destinat
 - [Agent Skills](https://www.onestopvapestore.com/.well-known/agent-skills/index.json)
 - [MCP Server](https://www.onestopvapestore.com/.well-known/mcp/server-card.json)
 - [Auth Policy](https://www.onestopvapestore.com/auth.md)
+- [Site Search (Markdown)](https://www.onestopvapestore.com/.well-known/search?q={query}): ranked product and guide results for any query
+- [AI Catalog](https://www.onestopvapestore.com/.well-known/ai-catalog.json)
