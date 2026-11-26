@@ -1,0 +1,50 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "name": "One Stop Vape Store",
+    "url": "https://www.onestopvapestore.com/",
+    "description": "One Stop Vape Store (SV3 LLC, established December 2022) is the premier destination for premium disposable vapes, nixodine innovations, nicotine salts, nicotine pouches, and advanced pod systems with fast US shipping from Phoenix, Arizona.",
+    "contact": "sales@onestopvapestore.com",
+    "legalName": "SV3 LLC"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:onestopvapestore.com:catalog:products",
+      "displayName": "One Stop Vape Store product catalog (JSON)",
+      "type": "application/json",
+      "url": "https://www.onestopvapestore.com/api/products/",
+      "representativeQueries": [
+        "disposable vapes with free shipping",
+        "Geek Bar Pulse flavors and prices",
+        "nicotine pouches by strength",
+        "nicotine free vape Nixodine",
+        "nic salt e-liquid 50mg"
+      ]
+    },
+    {
+      "identifier": "urn:air:onestopvapestore.com:search:site-search",
+      "displayName": "One Stop Vape Store site search (Markdown)",
+      "type": "text/markdown",
+      "url": "https://www.onestopvapestore.com/.well-known/search?q=",
+      "representativeQueries": [
+        "best disposable vape brands",
+        "lost mary flavors",
+        "vape kits for beginners",
+        "coils and pods for vapes",
+        "vape juice 30ml"
+      ]
+    },
+    {
+      "identifier": "urn:air:onestopvapestore.com:tools:mcp-server",
+      "displayName": "One Stop Vape Store MCP server card",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.onestopvapestore.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "search vape products by keyword",
+        "get product details and price",
+        "list product categories",
+        "get shipping and return policy"
+      ]
+    }
+  ]
+}

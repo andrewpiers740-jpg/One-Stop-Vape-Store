@@ -223,22 +223,20 @@ const wkw = (f, o) => fs.writeFileSync(path.join(root, "public/.well-known", f),
 wkw("oauth-protected-resource", { resource: D, resource_name: `${SITE.name} Public Catalog`, authorization_servers: [], scopes_supported: [], bearer_methods_supported: [], resource_documentation: `${D}/auth.md`, resource_policy_uri: `${D}/terms/`, note: "All catalog resources are public. No OAuth tokens are required." });
 // ai-catalog (AI Catalog spec): lets registries and agents discover this site's machine-readable resources, with example queries for semantic indexing
 const URN = "urn:air:" + SITE.domain.replace(/^www\./, "");
-wkw("ai-catalog.json", {
+const AIC = {
   specVersion: "1.0",
   host: { name: SITE.name, url: D + "/", description: SITE.description, contact: SITE.contact.email, legalName: SITE.legalName },
   entries: [
     { identifier: URN + ":catalog:products", displayName: SITE.name + " product catalog (JSON)", type: "application/json", url: D + "/api/products/",
       representativeQueries: ["disposable vapes with free shipping", "Geek Bar Pulse flavors and prices", "nicotine pouches by strength", "nicotine free vape Nixodine", "nic salt e-liquid 50mg"] },
-    { identifier: URN + ":search:site-search", displayName: SITE.name + " site search (Markdown)", type: "text/markdown", url: D + "/.well-known/search?q={query}",
+    { identifier: URN + ":search:site-search", displayName: SITE.name + " site search (Markdown)", type: "text/markdown", url: D + "/.well-known/search?q=",
       representativeQueries: ["best disposable vape brands", "lost mary flavors", "vape kits for beginners", "coils and pods for vapes", "vape juice 30ml"] },
-    { identifier: URN + ":tools:mcp-server", displayName: SITE.name + " MCP server card", type: "application/json", url: D + "/.well-known/mcp/server-card.json",
+    { identifier: URN + ":tools:mcp-server", displayName: SITE.name + " MCP server card", type: "application/mcp-server-card+json", url: D + "/.well-known/mcp/server-card.json",
       representativeQueries: ["search vape products by keyword", "get product details and price", "list product categories", "get shipping and return policy"] },
-    { identifier: URN + ":docs:llms", displayName: SITE.name + " site summary for language models", type: "text/markdown", url: D + "/llms.md",
-      representativeQueries: ["what does One Stop Vape Store sell", "where does One Stop Vape Store ship from", "minimum order and free shipping", "payment methods accepted"] },
-    { identifier: URN + ":policy:shipping", displayName: SITE.name + " shipping and delivery policy", type: "text/html", url: D + "/free-vapes-with-free-shipping/",
-      representativeQueries: ["how long does vape shipping take", "free shipping over 200 dollars", "adult signature required delivery"] },
   ],
-});
+};
+wkw("ai-catalog.json", AIC);
+wkw("ard.json", AIC);
 // poppy.json: public discovery declaration. Website-only (no sessions or auth), so no auth block is needed.
 wkw("poppy.json", { protocol_version: "0.1", organization: { name: SITE.name, domain: SITE.domain.replace(/^www\./, "") }, web: {} });
 wkw("oauth-authorization-server", { issuer: D, authorization_endpoint: null, token_endpoint: null, jwks_uri: null, grant_types_supported: [], response_types_supported: [], scopes_supported: [], note: `${SITE.name} has no protected APIs. All catalog resources are public.`, public_resources: [`${D}/shop/`, `${D}/blog/`, `${D}/llms.txt`, `${D}/.well-known/api-catalog`, `${D}/.well-known/agent-skills/index.json`, `${D}/.well-known/mcp/server-card.json`], agent_auth: { register_uri: null, identity_types_supported: ["none"], credential_types_supported: ["none"], notes: "No registration required. All content is publicly accessible to agents." } });
@@ -294,13 +292,14 @@ const vercel = {
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       { key: "Permissions-Policy", value: "geolocation=(), microphone=(), camera=()" },
       { key: "Content-Security-Policy-Report-Only", value: CSP },
-      { key: "Link", value: "</.well-known/openid-configuration>; rel=\"openid-configuration\", </.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\"" }
+      { key: "Link", value: "</.well-known/ard.json>; rel=\"ard\", </.well-known/openid-configuration>; rel=\"openid-configuration\", </.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/agent-skills/index.json>; rel=\"describedby\", </llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"auth\"" }
     ]},
     { source: "/.well-known/api-catalog", headers: [{ key: "Content-Type", value: "application/linkset+json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/agent-skills/index.json", headers: [{ key: "Content-Type", value: "application/json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/mcp/server-card.json", headers: [{ key: "Content-Type", value: "application/json" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/auth.md", headers: [{ key: "Content-Type", value: "text/markdown; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/llms.txt", headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
+    { source: "/.well-known/ard.json", headers: [{ key: "Content-Type", value: "application/json; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/ai-catalog.json", headers: [{ key: "Content-Type", value: "application/json; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/.well-known/poppy.json", headers: [{ key: "Content-Type", value: "application/json; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },
     { source: "/openapi.json", headers: [{ key: "Content-Type", value: "application/json; charset=utf-8" }, { key: "Access-Control-Allow-Origin", value: "*" }] },

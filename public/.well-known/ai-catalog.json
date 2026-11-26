@@ -25,7 +25,7 @@
       "identifier": "urn:air:onestopvapestore.com:search:site-search",
       "displayName": "One Stop Vape Store site search (Markdown)",
       "type": "text/markdown",
-      "url": "https://www.onestopvapestore.com/.well-known/search?q={query}",
+      "url": "https://www.onestopvapestore.com/.well-known/search?q=",
       "representativeQueries": [
         "best disposable vape brands",
         "lost mary flavors",
@@ -37,36 +37,13 @@
     {
       "identifier": "urn:air:onestopvapestore.com:tools:mcp-server",
       "displayName": "One Stop Vape Store MCP server card",
-      "type": "application/json",
+      "type": "application/mcp-server-card+json",
       "url": "https://www.onestopvapestore.com/.well-known/mcp/server-card.json",
       "representativeQueries": [
         "search vape products by keyword",
         "get product details and price",
         "list product categories",
         "get shipping and return policy"
-      ]
-    },
-    {
-      "identifier": "urn:air:onestopvapestore.com:docs:llms",
-      "displayName": "One Stop Vape Store site summary for language models",
-      "type": "text/markdown",
-      "url": "https://www.onestopvapestore.com/llms.md",
-      "representativeQueries": [
-        "what does One Stop Vape Store sell",
-        "where does One Stop Vape Store ship from",
-        "minimum order and free shipping",
-        "payment methods accepted"
-      ]
-    },
-    {
-      "identifier": "urn:air:onestopvapestore.com:policy:shipping",
-      "displayName": "One Stop Vape Store shipping and delivery policy",
-      "type": "text/html",
-      "url": "https://www.onestopvapestore.com/free-vapes-with-free-shipping/",
-      "representativeQueries": [
-        "how long does vape shipping take",
-        "free shipping over 200 dollars",
-        "adult signature required delivery"
       ]
     }
   ]
