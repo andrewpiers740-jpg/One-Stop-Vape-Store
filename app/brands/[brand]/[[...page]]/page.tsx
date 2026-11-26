@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const canonical = `https://${SITE.domain}${pagePath(brandHref(b.slug), n)}`;
   const e = n === 1 ? seoEntry(brandHref(b.slug)) : null;
   const t = e ? seoTitle(e, "", " Vapes & Products") : `${b.label} Vapes & Products${n > 1 ? ` – Page ${n}` : ""} | ${SITE.name}`;
-  const desc = e ? seoMeta(e, factsFor(brandProducts(b.slug)), d.meta) : d.meta;
+  const desc0 = e ? seoMeta(e, factsFor(brandProducts(b.slug)), d.meta) : d.meta;
+  const desc = n > 1 ? `${desc0} Page ${n}.` : desc0; // paginated pages need their own description
   return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, ...social({ title: t, description: desc, url: canonical }) };
 }
 

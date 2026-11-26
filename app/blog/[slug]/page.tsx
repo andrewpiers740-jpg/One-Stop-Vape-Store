@@ -11,7 +11,7 @@ import PostBody from "@/src/components/blog/PostBody";
 import BlogCard, { fmtDate } from "@/src/components/blog/BlogCard";
 import { ALL_POSTS, getPost, relatedPosts, relatedProducts } from "@/src/lib/blog";
 import { blogSeo } from "@/lib/seoPages";
-import { SEO_UPDATED } from "@/lib/seo";
+import { SEO_UPDATED, distinctTitle } from "@/lib/seo";
 import { catUrl, productHref } from "@/lib/catUrls";
 
 export const dynamicParams = false;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const img = post.images[0];
   const bs = blogSeo(post, relatedProducts(post, 4));
   return {
-    title: bs ? bs.title : `${post.title} | ${SITE.name}`,
+    title: bs ? distinctTitle(bs.title, bs.h1, { suffix: " | Blog" }) : `${post.title} | ${SITE.name}`,
     description: bs ? bs.meta : post.summary,
     keywords: bs ? bs.keywords : undefined,
     alternates: { canonical: url },

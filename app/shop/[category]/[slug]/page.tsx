@@ -1,5 +1,5 @@
 import FaqAccordion from "@/src/components/FaqAccordion";
-import { SEO_UPDATED } from "@/lib/seo";
+import { SEO_UPDATED, distinctTitle } from "@/lib/seo";
 import React from "react";
 import ProductCard from "@/src/components/ProductCard";
 import Link from "next/link";
@@ -22,6 +22,20 @@ import { social } from "@/lib/social";
 
 export const dynamicParams = true;
 
+// SEO titles that more than one product would otherwise share (computed once per server instance)
+let dupSet: Set<string> | null = null;
+function dupTitles(): Set<string> {
+  if (!dupSet) {
+    const count = new Map<string, number>();
+    for (const p of products as any[]) {
+      const s = productSeo(p);
+      if (s) count.set(s.title, (count.get(s.title) || 0) + 1);
+    }
+    dupSet = new Set([...count].filter(([, n]) => n > 1).map(([t]) => t));
+  }
+  return dupSet;
+}
+
 export async function generateStaticParams() {
   // Pre-render the top 100 flagship products statically for instant initial loading
   return (products as any[]).slice(0, 100).map((p) => ({
@@ -35,15 +49,20 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const product = (products as any[]).find(p => p.slug === slug);
   if (!product) return {};
   const sp = productSeo(product);
+  const h1 = sp ? sp.h1 : product.title;
+  let ptitle = sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`].find((x) => x.length <= 65) || product.title;
+  // two products can share one SEO title: fall back to their own (different) h1
+  if (sp && dupTitles().has(sp.title)) ptitle = [`Buy ${h1} | ${SITE.name}`, `${h1} | ${SITE.name}`, `Buy ${h1}`].find((x) => x.length <= 70) || h1;
+  ptitle = distinctTitle(ptitle, h1, { prefix: "Buy " });
   return {
-    title: sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`, product.title].find((x) => x.length <= 65) || product.title,
+    title: ptitle,
     description: sp ? sp.meta : product.description.substring(0, 155),
     keywords: sp ? sp.keywords : undefined,
     alternates: {
       canonical: `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`,
     },
     ...social({
-      title: sp ? sp.title : [`Buy ${product.title} | ${SITE.name}`, `${product.title} | ${SITE.name}`, `Buy ${product.title}`, product.title].find((x) => x.length <= 65) || product.title,
+      title: ptitle,
       description: sp ? sp.meta : product.description.substring(0, 155),
       url: `https://${SITE.domain}/shop/${catUrl(product.category)}/${product.slug}/`,
       image: { url: `https://${SITE.domain}${product.image}`, width: 1200, height: 900, alt: product.title },
@@ -74,9 +93,8 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "dateModified": SEO_UPDATED,
     "name": product.title,
-    "image": [product.image],
+    "image": [String(product.image || "").startsWith("/") ? `https://${SITE.domain}${product.image}` : product.image],
     "description": shortDesc,
     "sku": product.id,
     "brand": {

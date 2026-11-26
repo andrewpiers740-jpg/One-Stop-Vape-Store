@@ -1,6 +1,5 @@
 import { SITE } from "@/src/config/site";
 import { merchantReturnPolicy } from "@/lib/schema";
-import products from "@/src/data/products.json";
 
 export default function JsonLd({ type = "Store", data = {} }) {
   const base = {
@@ -27,7 +26,6 @@ export default function JsonLd({ type = "Store", data = {} }) {
     "telephone": `+1-${SITE.contact.phone}`,
     "sameAs": SITE.sameAs,
     "areaServed": ["United States"],
-    "numberOfItems": products.length,
     "priceRange": "$$",
     "brand": { "@type": "Brand", "name": "One Stop Vape Store" },
     "makesOffer": {

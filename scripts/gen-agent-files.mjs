@@ -22,9 +22,9 @@ Disallow: /checkout/
 Disallow: /account/
 Disallow: /wishlist/
 Disallow: /search/
-Sitemap: https://${SITE.domain}/sitemap.xml
-
 Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://${SITE.domain}/sitemap.xml
 
 # robots.txt is advisory: it relies on each crawler honoring it. Training crawlers are disallowed; search, citation and live-retrieval bots are allowed.
 # AI model-training crawlers: not allowed to train on this content

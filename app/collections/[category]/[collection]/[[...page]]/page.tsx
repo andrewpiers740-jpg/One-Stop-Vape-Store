@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import CatalogListing from "@/src/components/catalog/CatalogListing";
-import { SITE } from "@/src/config/site";
+import { SITE, CATEGORIES } from "@/src/config/site";
 import { seoEntry, seoTitle, seoMeta, seoH1, listingCopy, factsFor } from "@/lib/seo";
 import { keywordsString } from "@/lib/seoPages";
 import { catUrl, catKeyOf, collUrl, collKeyOf } from "@/lib/urlmap";
@@ -26,8 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const d = describeSet(c.label, c.products, c.category === "all" ? "" : (c.label.startsWith("All ") ? "" : ""));
   const canonical = `https://${SITE.domain}${pagePath(hrefOf(c), n)}`;
   const e = n === 1 ? seoEntry(hrefOf(c)) : null;
-  const t = e ? seoTitle(e, "") : `${c.label}${n > 1 ? ` – Page ${n}` : ""} | ${SITE.name}`;
-  const desc = e ? seoMeta(e, factsFor(c.products), d.meta) : d.meta;
+  // two collections can share a label (e.g. "Foger" under two categories): add the category so their titles differ
+  const sameLabel = allCollections.some((x) => x !== c && x.label === c.label);
+  const catName = CATEGORIES.find((x) => x.slug === c.category)?.name;
+  const lbl = sameLabel && catName ? `${c.label} (${catName})` : c.label;
+  const t = e ? seoTitle(e, "") : `${lbl}${n > 1 ? ` – Page ${n}` : ""} | ${SITE.name}`;
+  const desc0 = e ? seoMeta(e, factsFor(c.products), d.meta) : d.meta;
+  const desc = n > 1 ? `${desc0} Page ${n}.` : desc0; // paginated pages need their own description
   return { title: t, description: desc, keywords: e ? keywordsString(e) : undefined, alternates: { canonical }, ...social({ title: t, description: desc, url: canonical }) };
 }
 
