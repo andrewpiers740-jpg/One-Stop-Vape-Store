@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LazyWidgets />
         </CartProvider>
         <JsonLd />
-        <Script src="/js/webmcp.js" strategy="lazyOnload" />
+        <Script src="/js/webmcp.js" strategy="afterInteractive" />
       </body>
     </html>
   );

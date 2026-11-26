@@ -220,7 +220,12 @@ fs.writeFileSync(path.join(root, "public/.well-known/mcp/server-card.json"), JSO
 // --- 6b. OAuth / OIDC / ACP / UCP discovery (public site: no auth, live read-only commerce endpoints) ---
 const D = `https://${SITE.domain}`;
 const wkw = (f, o) => fs.writeFileSync(path.join(root, "public/.well-known", f), JSON.stringify(o, null, 2));
-wkw("oauth-protected-resource", { resource: D, resource_name: `${SITE.name} Public Catalog`, authorization_servers: [], scopes_supported: [], bearer_methods_supported: [], resource_documentation: `${D}/auth.md`, resource_policy_uri: `${D}/terms/`, note: "All catalog resources are public. No OAuth tokens are required." });
+// served by app/api/well-known/[name]/route.js (rewritten from /.well-known/<name>) with Content-Type: application/json
+const JSON_WK = ["oauth-protected-resource", "oauth-authorization-server", "openid-configuration", "ucp"];
+fs.mkdirSync(path.join(root, "src/data/well-known"), { recursive: true });
+for (const n of JSON_WK) fs.rmSync(path.join(root, "public/.well-known", n), { force: true });
+const wkd = (f, o) => fs.writeFileSync(path.join(root, "src/data/well-known", f + ".json"), JSON.stringify(o, null, 2));
+wkd("oauth-protected-resource", { resource: D, resource_name: `${SITE.name} Public Catalog`, authorization_servers: [], scopes_supported: [], bearer_methods_supported: [], resource_documentation: `${D}/auth.md`, resource_policy_uri: `${D}/terms/`, note: "All catalog resources are public. No OAuth tokens are required." });
 // ai-catalog (AI Catalog spec): lets registries and agents discover this site's machine-readable resources, with example queries for semantic indexing
 const URN = "urn:air:" + SITE.domain.replace(/^www\./, "");
 const AIC = {
@@ -239,12 +244,12 @@ wkw("ai-catalog.json", AIC);
 wkw("ard.json", AIC);
 // poppy.json: public discovery declaration. Website-only (no sessions or auth), so no auth block is needed.
 wkw("poppy.json", { protocol_version: "0.1", organization: { name: SITE.name, domain: SITE.domain.replace(/^www\./, "") }, web: {} });
-wkw("oauth-authorization-server", { issuer: D, authorization_endpoint: null, token_endpoint: null, jwks_uri: null, grant_types_supported: [], response_types_supported: [], scopes_supported: [], note: `${SITE.name} has no protected APIs. All catalog resources are public.`, public_resources: [`${D}/shop/`, `${D}/blog/`, `${D}/llms.txt`, `${D}/.well-known/api-catalog`, `${D}/.well-known/agent-skills/index.json`, `${D}/.well-known/mcp/server-card.json`], agent_auth: { register_uri: null, identity_types_supported: ["none"], credential_types_supported: ["none"], notes: "No registration required. All content is publicly accessible to agents." } });
-wkw("openid-configuration", { issuer: D, public_site: true, note: `${SITE.name} does not operate an OpenID Connect provider.`, authorization_endpoint: null, token_endpoint: null, userinfo_endpoint: null, jwks_uri: null, scopes_supported: [], response_types_supported: [], grant_types_supported: [], subject_types_supported: [], id_token_signing_alg_values_supported: [] });
+wkd("oauth-authorization-server", { issuer: D, authorization_endpoint: null, token_endpoint: null, jwks_uri: null, grant_types_supported: [], response_types_supported: [], scopes_supported: [], note: `${SITE.name} has no protected APIs. All catalog resources are public.`, public_resources: [`${D}/shop/`, `${D}/blog/`, `${D}/llms.txt`, `${D}/.well-known/api-catalog`, `${D}/.well-known/agent-skills/index.json`, `${D}/.well-known/mcp/server-card.json`], agent_auth: { register_uri: null, identity_types_supported: ["none"], credential_types_supported: ["none"], notes: "No registration required. All content is publicly accessible to agents." } });
+wkd("openid-configuration", { issuer: D, public_site: true, note: `${SITE.name} does not operate an OpenID Connect provider.`, authorization_endpoint: null, token_endpoint: null, userinfo_endpoint: null, jwks_uri: null, scopes_supported: [], response_types_supported: [], grant_types_supported: [], subject_types_supported: [], id_token_signing_alg_values_supported: [] });
 wkw("acp.json", { protocol: { name: "acp", version: "0.1.0" }, name: SITE.name, description: SITE.description, api_base_url: D, homepage: D, transports: ["https"], capabilities: { services: ["product-catalog", "blog", "faq", "wholesale"], ordering: "human-assisted", catalog_endpoint: `${D}/api/acp/catalog`, currency: SITE.contact.currency.code, minimum_order: SITE.order.minOrder, free_shipping_threshold: SITE.order.freeShippingThreshold }, contact: { email: SITE.contact.email, whatsapp: `https://wa.me/${SITE.contact.whatsapp}` }, legal: { age_restriction: "21+", product_type: "nicotine products" } });
 const UCPV = "2026-08-25";
 // Only capabilities this site really provides are declared (vendor namespace, read-only catalog). Orders are completed by a human, so no dev.ucp.shopping checkout is advertised.
-wkw("ucp", {
+wkd("ucp", {
   ucp: {
     version: UCPV,
     services: {

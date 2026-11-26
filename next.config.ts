@@ -29,7 +29,7 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     // /.well-known/search is the agent search endpoint (Markdown results); .well-known paths are exempt from the trailing-slash redirect.
-    return { beforeFiles: [...redirectData.rewrites, { source: "/.well-known/search", destination: "/api/agent-search" }], afterFiles: [], fallback: [] };
+    return { beforeFiles: [...redirectData.rewrites, { source: "/.well-known/search", destination: "/api/agent-search" }, { source: "/.well-known/:name(oauth-protected-resource|oauth-authorization-server|openid-configuration|ucp)", destination: "/api/well-known/:name" }], afterFiles: [], fallback: [] };
   },
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

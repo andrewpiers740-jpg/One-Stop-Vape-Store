@@ -24,7 +24,7 @@ export default function PaymentLogos({ className = "", heading = "We accept" }: 
           >
             {l.src ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={l.src} alt={l.id === "cashapp" || l.id === "tether" ? "" : l.label} width={l.id === "applepay" ? 40 : 24} height={24} className={l.id === "applepay" ? "h-6 w-10 object-contain" : "h-6 w-6 object-contain"} loading="lazy" />
+              <img src={l.src} alt={l.id === "cashapp" || l.id === "tether" ? `${l.label} logo` : l.label} width={l.id === "applepay" ? 40 : 24} height={24} className={l.id === "applepay" ? "h-6 w-10 object-contain" : "h-6 w-6 object-contain"} loading="lazy" />
             ) : (
               <span className="text-lg font-black lowercase tracking-tight text-[#007a4d]" aria-label={l.label}>chime</span>
             )}
