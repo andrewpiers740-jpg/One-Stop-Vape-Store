@@ -329,7 +329,7 @@ export default function TrustpilotReviews() {
                 >
                   <article className={`relative flex h-full flex-col justify-between gap-5 overflow-hidden rounded-3xl border bg-white p-7 md:p-8 ${isActive ? "border-trust/50 shadow-2xl shadow-trust/20" : "border-slate-200 shadow-lg"}`}>
                     <Quote size={72} aria-hidden="true" className="pointer-events-none absolute -right-2 -top-2 rotate-180 text-trust/10" />
-                    <div className="relative flex flex-col gap-4">
+                    <div className={`relative flex flex-col gap-4 ${isActive ? "" : "invisible"}`}>
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
                           <Stars size={14} />
@@ -345,7 +345,7 @@ export default function TrustpilotReviews() {
                       <h3 className="text-lg font-black leading-snug tracking-tight text-slate-900">&ldquo;{rev.title}&rdquo;</h3>
                       <p className="text-sm leading-relaxed text-slate-600 line-clamp-6">{rev.comment}</p>
                     </div>
-                    <div className="relative flex items-center justify-between gap-3 border-t border-slate-200/70 pt-4 text-xs">
+                    <div className={`relative flex items-center justify-between gap-3 border-t border-slate-200/70 pt-4 text-xs ${isActive ? "" : "invisible"}`}>
                       <div className="flex items-center gap-3">
                         <span aria-hidden="true" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-trust-dark text-sm font-black text-white">{rev.name.charAt(0)}</span>
                         <div>

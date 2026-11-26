@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   transpilePackages: ['motion'],
+  // the whole stylesheet is about 13 KB: inline it in the HTML instead of a render-blocking request
+  experimental: { inlineCss: true },
   // Keyword-based URLs: old URLs 301-redirect to the new ones (src/data/redirects.json, built from scripts/build-url-map.mjs);
   // top-level static pages keep their internal route and are served at the new URL through a rewrite.
   async redirects() {

@@ -5,11 +5,11 @@ import { megaMenu } from "@/lib/collections";
 import Footer from "@/src/components/Footer";
 import AnnouncementBar from "@/src/components/AnnouncementBar";
 import AgeGateModal from "@/src/components/AgeGateModal";
-import SalesPopup from "@/src/components/SalesPopup";
-import SupportChat from "@/src/components/SupportChat";
 import JsonLd from "@/src/components/JsonLd";
 import { CartProvider } from "@/src/components/CartProvider";
 import { OG_IMAGE } from "@/lib/social";
+import LazyWidgets from "@/src/components/LazyWidgets";
+import Script from "next/script";
 import "./globals.css";
 
 const META_DESCRIPTION = "Shop premium disposable vapes, nixodine, nicotine salts, pouches and pod systems. Fast US shipping from Phoenix, Arizona. Adults 21+ only.";
@@ -65,9 +65,6 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={SITE.locale} className="dark selection:bg-emerald-500 selection:text-white">
-      <head>
-        <script src="/js/webmcp.js" defer></script>
-      </head>
       <body className="bg-white text-slate-900 antialiased min-h-screen flex flex-col font-sans">
         <CartProvider>
           <AnnouncementBar />
@@ -77,10 +74,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
           <AgeGateModal />
-          <SalesPopup />
-          <SupportChat />
+          <LazyWidgets />
         </CartProvider>
         <JsonLd />
+        <Script src="/js/webmcp.js" strategy="lazyOnload" />
       </body>
     </html>
   );

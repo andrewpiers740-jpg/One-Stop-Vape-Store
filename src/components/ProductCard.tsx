@@ -6,6 +6,9 @@ import AddToCartButton from "@/src/components/AddToCartButton";
 import { getVariantGroups } from "@/lib/variants";
 import { catUrl, productHref } from "@/lib/catUrls";
 
+// grid cards show the image at about 250px, so use the 400px copy (made by scripts/images-responsive.mjs) instead of the 800px original
+const thumbOf = (s?: string) => (s && s.startsWith("/images/products/") && !s.includes("/thumbs/") ? s.replace("/images/products/", "/images/products/thumbs/") : s);
+
 type P = { slug: string; title: string; brand?: string; category: string; price: number; priceDisplay?: string; image: string; badge?: string; nicotine?: string; packSize?: string; rawPrice?: string; rating?: number; reviewsCount?: number };
 
 // One tile for every product grid on the site: white image frame, brand, title, rating, price, and a working
@@ -16,7 +19,7 @@ export default function ProductCard({ product: p, showBadge = true }: { product:
   return (
     <article className="group flex h-full flex-col gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-2.5 transition-all sm:rounded-3xl sm:p-3.5 duration-300 hover:border-emerald-500/50 hover:shadow-lg">
       <Link href={href} className="relative block aspect-square overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-sm sm:rounded-2xl sm:p-4 lg:p-5">
-        <SmartImage src={p.image} alt={p.title} className="h-full w-full object-contain transition-transform duration-500 motion-reduce:transition-none [@media(hover:hover)]:group-hover:scale-105" />
+        <SmartImage src={thumbOf(p.image)} alt={p.title} className="h-full w-full object-contain transition-transform duration-500 motion-reduce:transition-none [@media(hover:hover)]:group-hover:scale-105" />
         {showBadge && (
           <span className="absolute left-3 top-3 rounded-md border border-emerald-500/30 bg-white/90 px-2.5 py-1 text-[9px] font-black uppercase tracking-widest text-emerald-700 backdrop-blur">
             {p.badge || "In stock"}

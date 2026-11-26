@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { preload } from "react-dom";
 import Link from "next/link";
 import { SITE } from "@/src/config/site";
 import images from "@/src/data/site-images.json";
@@ -11,16 +11,23 @@ type Banner = { src: string; alt: string };
 export default function PageBanner({ slug, label, priority = true, alt }: { slug: string; label: string; priority?: boolean; alt?: string }) {
   const b = (images.banners as Record<string, Banner>)[slug];
   if (!b) return null;
+  // smaller copies made by scripts/images-responsive.mjs; the browser picks one with srcSet
+  const responsive = /^\/images\/banners\/.+\.webp$/.test(b.src);
+  const srcSet = responsive ? `${b.src.replace(/\.webp$/, "-640.webp")} 640w, ${b.src.replace(/\.webp$/, "-1280.webp")} 1280w, ${b.src} 1920w` : undefined;
+  if (priority) preload(b.src, { as: "image", fetchPriority: "high", ...(srcSet ? { imageSrcSet: srcSet, imageSizes: "100vw" } : {}) });
   return (
     <div className="relative w-full overflow-hidden border-b border-zinc-900 bg-black">
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={b.src}
+        srcSet={srcSet}
+        sizes="100vw"
         alt={alt || b.alt}
         width={1920}
         height={480}
-        priority={priority}
-        fetchPriority={priority ? "high" : undefined}
-        sizes="100vw"
+        fetchPriority={priority ? "high" : "auto"}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
         className="h-40 w-full object-cover sm:h-52 lg:h-64"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" aria-hidden="true" />
