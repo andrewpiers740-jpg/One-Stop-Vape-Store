@@ -6,7 +6,10 @@ import { pagePath } from "@/lib/collections";
 export default function Pagination({ base, page, pages, first }: { base: string; page: number; pages: number; first?: string }) {
   const href = (n: number) => (n <= 1 && first ? first : pagePath(base, n));
   if (pages <= 1) return null;
+  // Keep every page within a few clicks: short series link every page; longer ones also link every 5th page, so any page is at most two hops from page 1.
   const nums = new Set<number>([1, pages, page, page - 1, page + 1, page - 2, page + 2].filter((n) => n >= 1 && n <= pages));
+  if (pages <= 15) for (let n = 1; n <= pages; n++) nums.add(n);
+  else for (let n = 5; n <= pages; n += 5) nums.add(n);
   const sorted = [...nums].sort((a, b) => a - b);
   const items: (number | "gap")[] = [];
   sorted.forEach((n, i) => { if (i && n - sorted[i - 1] > 1) items.push("gap"); items.push(n); });

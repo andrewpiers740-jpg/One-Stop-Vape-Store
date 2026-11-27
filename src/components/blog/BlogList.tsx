@@ -7,7 +7,7 @@ import BlogCard from "@/src/components/blog/BlogCard";
 export default function BlogList({ posts, activeCategory, page, pages, basePath }: { posts: BlogPost[]; activeCategory?: string; page: number; pages: number; basePath: string }) {
   const chip = (on: boolean) => `rounded-full border px-4 py-2 text-[11px] font-black uppercase tracking-widest transition-colors ${on ? "border-emerald-500 bg-emerald-500 text-white" : "border-slate-200 text-slate-600 hover:border-emerald-500/50 hover:text-slate-900"}`;
   const href = (n: number) => (n === 1 ? basePath : `${basePath}page/${n}/`);
-  const nums = Array.from({ length: pages }, (_, i) => i + 1).filter((n) => n === 1 || n === pages || Math.abs(n - page) <= 2);
+  const nums = Array.from({ length: pages }, (_, i) => i + 1).filter((n) => n === 1 || n === pages || Math.abs(n - page) <= 2 || pages <= 15 || n % 5 === 0); // short series link every page; longer ones every 5th, so deep pages stay within a few clicks
   return (
     <div className="flex flex-col gap-10">
       <nav aria-label="Blog categories" className="flex flex-wrap gap-2">
